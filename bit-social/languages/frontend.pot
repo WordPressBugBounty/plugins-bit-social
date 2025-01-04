@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"POT-Creation-Date: Mon Dec 30 2024 06:48:01 GMT+0000 (Coordinated Universal "
+"Time)\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: frontend/_plugin-commons/components/License.pro.tsx:72
+msgid "License & Activation"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:75
+msgid "Version"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:82
+#: frontend/_plugin-commons/components/License.pro.tsx:104
+msgid "Pro Version"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:82
+msgid "Not Activated"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:92
+msgid "Buy Pro Version"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:120
+msgid "Deactivate License"
+msgstr ""
+
+#: frontend/_plugin-commons/components/License.pro.tsx:132
+msgid "Activate License"
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseActivationNotice.pro.tsx:15
+msgid ""
+"Please ensure that your product subscription is valid. If needed, try "
+"deactivating and reactivating your license."
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseActivationNotice.pro.tsx:19
+msgid ""
+"For further assistance, feel free to reach out to our live support or email "
+"us at support@bitapps.pro ."
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseActivationNotice.pro.tsx:24
+msgid "Your license is invalid, try reactivate"
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:17
+msgid "Manage license"
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:21
+msgid ""
+"Please update your license to ensure you receive the latest security "
+"updates and bug fixes. \n"
+"          Using an outdated or unofficial license may leave your system "
+"vulnerable to security breaches and data leaks. \n"
+"          We cannot take responsibility for issues arising from such "
+"scenarios. For your safety, always download from the official Bit Apps "
+"server."
+msgstr ""
+
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:26
+msgid "Your license is invalid"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:22
+msgid "Checking updates"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:34
+msgid "New version available"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:37
+msgid ""
+"Please update to the latest version to ensure plugin security and optimal "
+"performance. Stay safe and enjoy the enhanced features!"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:54
+msgid "is up to date"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
+msgid "Improvement"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:30
+msgid ""
+"Allow the collection of diagnostic data and error reports to enhance the "
+"application's performance. Please review our"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:39
+msgid "Privacy Policy"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:41
+msgid "for more information."
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/SupportLinks.tsx:34
+msgid "Support"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/SupportPage.tsx:38
+msgid "About"
+msgstr ""
+
+#: frontend/src/pages/Error404/Error404.tsx:29
+msgid "Redirecting Home in"
+msgstr ""
+
+#: frontend/src/pages/Error404/Error404.tsx:32
+msgid "Go The Home"
+msgstr ""
