@@ -21,7 +21,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.2.5';
+    public const VERSION = '1.2.6';
 
     public const DB_VERSION = '1.1.0';
 
@@ -63,11 +63,8 @@ class Config
                 return plugin_dir_path(self::get('MAIN_FILE'));
 
             case 'SITE_URL':
-                $parsedUrl = parse_url(get_admin_url());
-                $siteUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
-                $siteUrl .= empty($parsedUrl['port']) ? null : ':' . $parsedUrl['port'];
 
-                return $siteUrl;
+                return site_url();
             case 'SITE_NAME':
                 return get_bloginfo('name');
 

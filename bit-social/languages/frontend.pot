@@ -1,16 +1,41 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Mon Dec 30 2024 06:48:01 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Tue Jan 07 2025 10:50:22 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:51
+msgid "Join Our Facebook Community"
+msgstr ""
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:54
+msgid "Connect, share, and grow with like-minded individuals"
+msgstr ""
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:58
+msgid "Exclusive Content"
+msgstr ""
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:59
+msgid "Daily Discussion"
+msgstr ""
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:60
+msgid "Special Events"
+msgstr ""
+
+#: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:77
+msgid "Join Now"
+msgstr ""
 
 #: frontend/_plugin-commons/components/License.pro.tsx:72
 msgid "License & Activation"
 msgstr ""
 
 #: frontend/_plugin-commons/components/License.pro.tsx:75
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:56
 msgid "Version"
 msgstr ""
 
@@ -70,6 +95,16 @@ msgstr ""
 msgid "Your license is invalid"
 msgstr ""
 
+#: frontend/_plugin-commons/components/PluginUpdateNotice.tsx:64
+msgid "Plugin Update Required (%s)"
+msgstr ""
+
+#: frontend/_plugin-commons/components/PluginUpdateNotice.tsx:66
+msgid ""
+"Please update both Free and Pro plugins to the latest version. Keeping them "
+"the same is crucial to avoid potential issues."
+msgstr ""
+
 #: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:22
 msgid "Checking updates"
 msgstr ""
@@ -86,6 +121,45 @@ msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/CheckNewUpdate.tsx:54
 msgid "is up to date"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:27
+msgid "Cash Back"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:39
+#: frontend/src/pages/root/DefaultDashboard.tsx:18
+msgid "Hi"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:42
+msgid "We want your feedback!"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:43
+msgid "Write a review"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:44
+msgid "of your experience with %s, and we'll send you a"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:45
+msgid "$10 Cash back"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:45
+msgid "to say thanks!"
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:47
+msgid ""
+"To claim your cash back, simply reply to support with a screenshot or link "
+"of your review."
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/GiveReview.tsx:67
+msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
@@ -106,6 +180,10 @@ msgstr ""
 msgid "for more information."
 msgstr ""
 
+#: frontend/_plugin-commons/components/SupportPage/RecommendedPlugins.tsx:44
+msgid "Recommended Plugins"
+msgstr ""
+
 #: frontend/_plugin-commons/components/SupportPage/SupportLinks.tsx:34
 msgid "Support"
 msgstr ""
@@ -114,10 +192,734 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: frontend/src/components/AdvanceSchedule.tsx:26
+msgid "Advance Schedule Feature on Pro!"
+msgstr ""
+
+#: frontend/src/components/AdvanceSchedule.tsx:36
+#: frontend/src/components/BuyPro.tsx:72
+#: frontend/src/components/utilities/ProWrapper.tsx:23
+msgid "Buy Pro"
+msgstr ""
+
+#: frontend/src/components/AdvanceSchedule.tsx:44
+msgid "Advance Schedule"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:43
+msgid "Bit Social Pro"
+msgstr ""
+
+#: frontend/src/components/CronWarning.tsx:21
+msgid "Your <b>WP_CRON</b> are disabled"
+msgstr ""
+
+#: frontend/src/components/CronWarning.tsx:26
+msgid "Cron Settings"
+msgstr ""
+
+#: frontend/src/components/CronWarning.tsx:41
+#: frontend/src/components/Note.tsx:29
+#: frontend/src/components/Note.tsx:58
+#: frontend/src/components/Note.tsx:86
+msgid "Learn more"
+msgstr ""
+
+#: frontend/src/components/DeveloperVisitText.tsx:16
+msgid "To get app credentials, Visit"
+msgstr ""
+
+#: frontend/src/components/DeveloperVisitText.tsx:24
+msgid "Developer"
+msgstr ""
+
+#: frontend/src/components/Note.tsx:14
+msgid ""
+"<b>Accounts:</b> To add your desired social platform, click on the "
+"<b>\"Connect Account\"</b> button. A modal will appear displaying various "
+"social platforms where you will find two options. First one is "
+"<b>\"Connect\"</b> button to connect your platform directly and another one "
+"is <b>\"Custom app\"</b> option which will work by entering your personal "
+"app credentials."
+msgstr ""
+
+#: frontend/src/components/Note.tsx:22
+msgid ""
+"To set it up, click on the <b>\"Connect Account\"</b> button and follow the "
+"next step!"
+msgstr ""
+
+#: frontend/src/components/Note.tsx:40
+msgid "Schedules"
+msgstr ""
+
+#: frontend/src/components/Note.tsx:41
+msgid ""
+"You can automatically schedule your Publish WordPress posts to be shared on "
+" social media platforms. This feature allows you to filter your posts, "
+"ensuring that only the content you want to share at your chosen times."
+msgstr ""
+
+#: frontend/src/components/Note.tsx:47
+msgid ""
+"To set it up, click on the <b>\"Create Schedule\"</b> button and follow the "
+"next step!"
+msgstr ""
+
+#: frontend/src/components/Note.tsx:68
+msgid "Share Now"
+msgstr ""
+
+#: frontend/src/components/Note.tsx:69
+msgid ""
+"You can instantly share and automatically schedule your written posts to be "
+"shared on your social media platforms. There you will find a save draft (to "
+"save your content for future), publish (to share instantly), and setup "
+"schedule option to ensure that the content you have written will be shared "
+"at your chosen times."
+msgstr ""
+
+#: frontend/src/components/Note.tsx:75
+msgid ""
+"To set it up, click on the <b>\"Share Post\"</b> button and follow the next "
+"step!"
+msgstr ""
+
+#: frontend/src/components/utilities/DocsLink.tsx:24
+msgid "Doc Link"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:71
+msgid "Show Smart Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/YoutubeLink.tsx:37
+msgid "Tutorial"
+msgstr ""
+
+#: frontend/src/pages/Accounts/Accounts.tsx:84
+#: frontend/src/pages/AutoPost/ui/AccountTree.tsx:69
+#: frontend/src/pages/AutoPost/ui/ProGroupTree.pro.tsx:88
+msgid "Groups"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:162
+msgid "Profile"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:179
+msgid "Page"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:188
+msgid "Linkedin Page feature on pro"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:216
+msgid "Account connect failed"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AppCard.tsx:17
+msgid "Manage"
+msgstr ""
+
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:49
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:70
+msgid "Connect Account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountEmpty.tsx:21
+msgid "Connect your social account first!"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:9
+msgid "You can only add verified locations."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:11
+msgid ""
+"If you need to add another Google account, simply log out of or switch "
+"Google accounts first."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:21
+msgid ""
+"If you need to add another %s  account, simply log out of or switch %s "
+"accounts first."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:34
+msgid "Total %s accounts found"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:92
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:27
+msgid "Custom App"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:47
+msgid "Saved"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:56
+msgid "Save"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppsDropdownMenu.tsx:23
+msgid "Click me!"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/ConnectButton.tsx:68
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:22
+msgid "Connect"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:148
+msgid "Connect Custom %s App"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:167
+msgid "Homepage URI"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:185
+msgid "Redirect URI"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:206
+msgid "Api Version"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:218
+msgid "App Name"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:236
+msgid "App Key or Client ID"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:246
+msgid "App Secret or Client Secret"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:266
+msgid "Add"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:272
+msgid "Connected Apps"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnectionModal.tsx:290
+msgid "No App Found"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/Platforms/ui/ProfileList.tsx:36
+msgid "All"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:16
+msgid ""
+"To connect your social media accounts, click <b>\"Connect Account\"</b>  "
+"There are two methods available:"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:23
+msgid "It will automatically connect your social account without any credentials"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:29
+msgid ""
+"It will show you a form to input app credentials to create your own app and "
+"connect your social account."
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:38
+msgid "You can find more about it here"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:56
+msgid "Create Group"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:62
+#: frontend/src/pages/Schedules/internals/CreateScheduleModal.tsx:208
+msgid "Cancel"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:65
+msgid "Create"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AccountTree.tsx:131
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:179
+#: frontend/src/pages/root/DefaultDashboard.tsx:28
+#: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
+#: frontend/src/pages/ShareNow/ShareBox.tsx:304
+msgid "Accounts"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:167
+msgid "Delay"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:200
+msgid "Auto Post Settings"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:202
+msgid "All auto post related settings here."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:210
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:32
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:49
+msgid "Doc here"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:232
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:318
+msgid "You have to create and select account first to enable this option!"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:259
+msgid "Share posts default type <b>Post</b>"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/TemplateBox.tsx:12
+msgid "Post templates"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/TemplateBox.tsx:19
+msgid "Templates"
+msgstr ""
+
+#: frontend/src/pages/Calendar/DataCellRender.tsx:58
+msgid "Add schedule"
+msgstr ""
+
+#: frontend/src/pages/Calendar/DayCellDataCard.tsx:33
+msgid "Start Date:"
+msgstr ""
+
+#: frontend/src/pages/Calendar/DayCellDataCard.tsx:43
+msgid "Post Type:"
+msgstr ""
+
+#: frontend/src/pages/Calendar/DayCellDataCard.tsx:47
+msgid "Post Time:"
+msgstr ""
+
+#: frontend/src/pages/Calendar/DayCellDataCard.tsx:61
+msgid "Run Times:"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:22
+msgid "Click here to know more about Calendar"
+msgstr ""
+
+#: frontend/src/pages/Error404/Error404.tsx:24
+msgid "Oops !"
+msgstr ""
+
+#: frontend/src/pages/Error404/Error404.tsx:26
+msgid "404 - Not Found"
+msgstr ""
+
 #: frontend/src/pages/Error404/Error404.tsx:29
-msgid "Redirecting Home in"
+msgid "Redirecting Home in %s second"
 msgstr ""
 
 #: frontend/src/pages/Error404/Error404.tsx:32
 msgid "Go The Home"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:50
+msgid "Christmas offer"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:28
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:59
+msgid "Get $10 Cashback"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:61
+msgid "Thank you for using Bit Social"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:68
+msgid "Give us a review on WordPress by clicking the"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:74
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:100
+msgid "Review us"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:76
+msgid "button and send an email with the review link to"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:80
+msgid "We will honour you with <b> $10 cashback</b> for your time & effort."
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:85
+msgid "Suggestions on how you may write the review:"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:88
+msgid "1. What features do you like most in Bit Social?"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:90
+msgid "2. Which software did you previously used for these features?"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:75
+msgid "For More Details"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:81
+msgid "Click Here"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:78
+msgid "More"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:119
+msgid "Filter"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:125
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:166
+msgid "Reset"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:17
+msgid "Filter:"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:20
+msgid "Date"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:25
+msgid "Status"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:30
+msgid "Schedule"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:35
+msgid "Platform"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:62
+msgid "Success"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:64
+msgid "Error"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:87
+msgid "Visit"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:98
+msgid "Retry"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:269
+#: frontend/src/pages/Schedules/internals/Settings.tsx:151
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:247
+msgid "Visit our documentation"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:278
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:336
+#: frontend/src/pages/ShareNow/Posts.tsx:336
+msgid "Refresh"
+msgstr ""
+
+#: frontend/src/pages/root/DefaultDashboard.tsx:22
+msgid "Welcome to Bit Social"
+msgstr ""
+
+#: frontend/src/pages/root/DefaultDashboard.tsx:24
+msgid "Thanks for using Bit Social"
+msgstr ""
+
+#: frontend/src/pages/root/DefaultDashboard.tsx:25
+msgid "Smart solution for WordPress post Schedule"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:54
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:55
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:47
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:47
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:57
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:56
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:47
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:47
+#: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:144
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:129
+#: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:41
+msgid "Media"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:67
+msgid "Post Link"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:75
+msgid "Share the post link on Pinterest"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/PostFilter.tsx:205
+msgid "Posts matched by current filters"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:84
+msgid "Start"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:88
+msgid "Next post"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:96
+msgid "Edit"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:105
+msgid "Delete"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:183
+msgid "In Progress"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:187
+#: frontend/src/pages/ShareNow/Posts.tsx:209
+msgid "Completed"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:327
+msgid "How to create schedule"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:109
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:192
+msgid "Local time: %s ; Time Zone: (%s)"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:142
+msgid ""
+"If your start time has passed, updating the interval will set your next "
+"post to local time plus the new interval! For example, current time 06:00 "
+"PM, updated Post interval: 2 hours. Next post will be at 08:00 PM."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:176
+msgid "Set a sleep timer"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Template.tsx:51
+msgid "Please select an account"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:23
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:40
+msgid "Cron Setup"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:25
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:42
+msgid "All settings here"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:41
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:58
+msgid "For more accurate results, you must establish a genuine"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:48
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:65
+msgid "Cron job"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:50
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:67
+msgid ""
+"on your hosting or server and enable this option to disregard the built-in "
+"Cron job.Otherwise, the auto-post and scheduling tools might not operate "
+"promptly, and you might have delays."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:60
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:76
+msgid "For your website, the Cron Job command is:"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:76
+msgid "External Cron"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeCronSettings.free.tsx:82
+#: frontend/src/pages/Settings/ProCronSettings.pro.tsx:94
+msgid "Enable External Cron"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:150
+#: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:151
+#: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:148
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:175
+#: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:160
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
+#: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:148
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:148
+msgid "Upload"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:28
+msgid "Link"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/Posts.tsx:212
+msgid "Draft"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/Posts.tsx:215
+msgid "Missed"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/Posts.tsx:326
+msgid "How to share a post instantly"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/Posts.tsx:345
+#: frontend/src/pages/ShareNow/Posts.tsx:380
+msgid "Share Post"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:169
+msgid "Continue"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:209
+msgid "Repeat"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:238
+msgid ""
+"If your start time has passed, updating the interval will set your next "
+"post to local time plus the new interval! For example, current time 06:00 "
+"PM, updated Post interval:2 hours. Next post will be at 08:00 PM."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:43
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:60
+msgid "Discord Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:59
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:60
+msgid "Product Image"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:68
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:69
+msgid "All Images"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:82
+msgid "Facebook Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:127
+msgid "Preview"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:47
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:64
+msgid "Google Business Profile Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:38
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:55
+msgid "Instagram Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:68
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:86
+msgid ""
+"Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px "
+"resolution (recommended 1080px), and under 8MB."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:84
+msgid "Linkedin Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:38
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:55
+msgid "Pinterest Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:18
+msgid "See less"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:18
+msgid "See more"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
+msgid "Page name"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:43
+msgid "Just Now"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:72
+msgid "Like"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:77
+msgid "Comment"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:82
+msgid "Share"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/PreviewDummy.tsx:10
+msgid "Preview (Coming Soon)"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/PreviewDummy.tsx:30
+msgid "Coming Soon"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:60
+#: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:43
+msgid "Tumblr Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:59
+#: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:42
+msgid "X (Twitter) Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/ui/TemplateDocLink.tsx:10
+msgid "You can setup %s post settings below."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/ui/TemplateDocLink.tsx:18
+msgid "Doc here."
 msgstr ""

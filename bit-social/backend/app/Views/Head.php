@@ -72,7 +72,6 @@ class Head
                 'changelogVersion' => Config::getOption('changelog_version', '0.0.0'),
                 'pluginSlug'       => Config::SLUG,
                 'baseAuthStateURL' => Config::get('BASE_AUTH_STATE_URL'),
-                'rootURL'          => Config::get('SITE_URL'),
                 'wpCronStatus'     => Config::get('WP_CRON_STATUS'),
                 'loggedInUserName' => wp_get_current_user()->display_name,
 
