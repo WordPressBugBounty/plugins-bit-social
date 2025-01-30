@@ -6,10 +6,10 @@ use BitApps\Social\HTTP\Controllers\AnalyticsController;
 use BitApps\Social\HTTP\Controllers\AuthController;
 use BitApps\Social\HTTP\Controllers\AutoPostController;
 use BitApps\Social\HTTP\Controllers\ChangelogController;
-use BitApps\Social\HTTP\Controllers\CommonController;
 use BitApps\Social\HTTP\Controllers\CustomAppController;
 use BitApps\Social\HTTP\Controllers\LogController;
 use BitApps\Social\HTTP\Controllers\PluginImprovementController;
+use BitApps\Social\HTTP\Controllers\ProxyController;
 use BitApps\Social\HTTP\Controllers\RetryController;
 use BitApps\Social\HTTP\Controllers\ScheduleController;
 use BitApps\Social\HTTP\Controllers\SettingsController;
@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 
 Route::noAuth()->group(
     function () {
-        Route::post('proxy/route', [CommonController::class, 'fetchProxyUrlData']);
+        Route::post('proxy/route', [ProxyController::class, 'proxyRequest']);
 
         Route::post('changelog-version/update', [ChangelogController::class, 'updateChangelogVersion']);
 

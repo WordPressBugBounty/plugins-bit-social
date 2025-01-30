@@ -21,7 +21,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.2.6';
+    public const VERSION = '1.2.7';
 
     public const DB_VERSION = '1.1.0';
 
@@ -36,6 +36,8 @@ class Config
     public const CLASS_PREFIX = 'BS';
 
     public const ASSETS_FOLDER = 'assets';
+
+    public const PRO_PLUGIN_VAR_PREFIX = 'bit_social_pro_';
 
     public const PRO_PLUGIN_SLUG = 'bit-social-pro';
 

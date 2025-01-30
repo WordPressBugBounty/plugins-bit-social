@@ -15,7 +15,11 @@ return [
 
     'License & Activation' => __('License & Activation', 'undefined'),
 
+    'Dev Version On' => __('Dev Version On', 'undefined'),
+
     'Version' => __('Version', 'undefined'),
+
+    'Code Name:' => __('Code Name:', 'undefined'),
 
     'Pro Version' => __('Pro Version', 'undefined'),
 
@@ -47,6 +51,10 @@ return [
 
     'Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.' => __('Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.', 'undefined'),
 
+    'Updating...' => __('Updating...', 'undefined'),
+
+    'Update Now' => __('Update Now', 'undefined'),
+
     'Checking updates' => __('Checking updates', 'undefined'),
 
     'New version available' => __('New version available', 'undefined'),
@@ -54,6 +62,10 @@ return [
     'Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!' => __('Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!', 'undefined'),
 
     'is up to date' => __('is up to date', 'undefined'),
+
+    'Zapier Alternative in WordPress Unlimited Task.' => __('Zapier Alternative in WordPress Unlimited Task.', 'undefined'),
+
+    'An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.' => __('An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.', 'undefined'),
 
     'Cash Back' => __('Cash Back', 'undefined'),
 
@@ -99,6 +111,8 @@ return [
 
     'Cron Settings' => __('Cron Settings', 'undefined'),
 
+    'the scheduled post or share now post may not publish on time!' => __('the scheduled post or share now post may not publish on time!', 'undefined'),
+
     'Learn more' => __('Learn more', 'undefined'),
 
     'To get app credentials, Visit' => __('To get app credentials, Visit', 'undefined'),
@@ -127,13 +141,21 @@ return [
 
     'Tutorial' => __('Tutorial', 'undefined'),
 
+    'Accounts' => __('Accounts', 'undefined'),
+
     'Groups' => __('Groups', 'undefined'),
+
+    'Search accounts' => __('Search accounts', 'undefined'),
 
     'Profile' => __('Profile', 'undefined'),
 
     'Page' => __('Page', 'undefined'),
 
     'Linkedin Page feature on pro' => __('Linkedin Page feature on pro', 'undefined'),
+
+    'Board Not Found' => __('Board Not Found', 'undefined'),
+
+    'Account Not Found' => __('Account Not Found', 'undefined'),
 
     'Account connect failed' => __('Account connect failed', 'undefined'),
 
@@ -157,13 +179,25 @@ return [
 
     'Save' => __('Save', 'undefined'),
 
+    'No' => __('No', 'undefined'),
+
+    'Are you sure to delete this app?' => __('Are you sure to delete this app?', 'undefined'),
+
+    'Yes, Delete' => __('Yes, Delete', 'undefined'),
+
+    'Delete the app' => __('Delete the app', 'undefined'),
+
     'Click me!' => __('Click me!', 'undefined'),
 
     'Connect' => __('Connect', 'undefined'),
 
+    'Back' => __('Back', 'undefined'),
+
     'Connect Custom %s App' => __('Connect Custom %s App', 'undefined'),
 
     'Homepage URI' => __('Homepage URI', 'undefined'),
+
+    'Click to copy' => __('Click to copy', 'undefined'),
 
     'Redirect URI' => __('Redirect URI', 'undefined'),
 
@@ -181,6 +215,24 @@ return [
 
     'No App Found' => __('No App Found', 'undefined'),
 
+    'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'undefined'),
+
+    'Enable Automatic Posting, Scheduling, and Sharing' => __('Enable Automatic Posting, Scheduling, and Sharing', 'undefined'),
+
+    'Disable' => __('Disable', 'undefined'),
+
+    'Enable' => __('Enable', 'undefined'),
+
+    'disable' => __('disable', 'undefined'),
+
+    'enable' => __('enable', 'undefined'),
+
+    'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'undefined'),
+
+    'Yes, delete' => __('Yes, delete', 'undefined'),
+
+    'Are you sure?' => __('Are you sure?', 'undefined'),
+
     'All' => __('All', 'undefined'),
 
     'To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:' => __('To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:', 'undefined'),
@@ -191,13 +243,31 @@ return [
 
     'You can find more about it here' => __('You can find more about it here', 'undefined'),
 
+    'Add to group' => __('Add to group', 'undefined'),
+
+    'No accounts found!' => __('No accounts found!', 'undefined'),
+
     'Create Group' => __('Create Group', 'undefined'),
 
     'Cancel' => __('Cancel', 'undefined'),
 
     'Create' => __('Create', 'undefined'),
 
-    'Accounts' => __('Accounts', 'undefined'),
+    'Name' => __('Name', 'undefined'),
+
+    'New group' => __('New group', 'undefined'),
+
+    'Yes, Remove' => __('Yes, Remove', 'undefined'),
+
+    'Remove account from this group?' => __('Remove account from this group?', 'undefined'),
+
+    'No Groups found!' => __('No Groups found!', 'undefined'),
+
+    'immediately' => __('immediately', 'undefined'),
+
+    'Select All' => __('Select All', 'undefined'),
+
+    'Immediately' => __('Immediately', 'undefined'),
 
     'Delay' => __('Delay', 'undefined'),
 
@@ -207,9 +277,27 @@ return [
 
     'Doc here' => __('Doc here', 'undefined'),
 
+    'When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.' => __('When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.', 'undefined'),
+
+    'Share posts automatically' => __('Share posts automatically', 'undefined'),
+
     'You have to create and select account first to enable this option!' => __('You have to create and select account first to enable this option!', 'undefined'),
 
+    'Automatically share specific post types, like blogs or products, to your social accounts when published.' => __('Automatically share specific post types, like blogs or products, to your social accounts when published.', 'undefined'),
+
+    'Share posts type' => __('Share posts type', 'undefined'),
+
+    'Post Type: Post' => __('Post Type: Post', 'undefined'),
+
     'Share posts default type <b>Post</b>' => __('Share posts default type <b>Post</b>', 'undefined'),
+
+    'Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing' => __('Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing', 'undefined'),
+
+    'Share post delay' => __('Share post delay', 'undefined'),
+
+    'If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.' => __('If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.', 'undefined'),
+
+    'Enable auto post log' => __('Enable auto post log', 'undefined'),
 
     'Post templates' => __('Post templates', 'undefined'),
 
@@ -235,7 +323,13 @@ return [
 
     'Go The Home' => __('Go The Home', 'undefined'),
 
-    'Christmas offer' => __('Christmas offer', 'undefined'),
+    'WP Auto Post' => __('WP Auto Post', 'undefined'),
+
+    'WP Post Schedules' => __('WP Post Schedules', 'undefined'),
+
+    'Calendar' => __('Calendar', 'undefined'),
+
+    'Logs' => __('Logs', 'undefined'),
 
     'Get $10 Cashback' => __('Get $10 Cashback', 'undefined'),
 
@@ -255,37 +349,89 @@ return [
 
     '2. Which software did you previously used for these features?' => __('2. Which software did you previously used for these features?', 'undefined'),
 
+    'What\'s New?' => __('What\'s New?', 'undefined'),
+
     'For More Details' => __('For More Details', 'undefined'),
 
     'Click Here' => __('Click Here', 'undefined'),
 
+    'Upcoming Integrations' => __('Upcoming Integrations', 'undefined'),
+
+    'Settings' => __('Settings', 'undefined'),
+
+    'Changelog' => __('Changelog', 'undefined'),
+
     'More' => __('More', 'undefined'),
+
+    'Facebook' => __('Facebook', 'undefined'),
+
+    'Linkedin' => __('Linkedin', 'undefined'),
+
+    'Google Business Profile' => __('Google Business Profile', 'undefined'),
+
+    'Pinterest' => __('Pinterest', 'undefined'),
+
+    'Discord' => __('Discord', 'undefined'),
+
+    'Tumblr' => __('Tumblr', 'undefined'),
+
+    'X (twitter)' => __('X (twitter)', 'undefined'),
+
+    'Instagram' => __('Instagram', 'undefined'),
 
     'Filter' => __('Filter', 'undefined'),
 
     'Reset' => __('Reset', 'undefined'),
 
-    'Filter:' => __('Filter:', 'undefined'),
+    'Logs filter' => __('Logs filter', 'undefined'),
 
     'Date' => __('Date', 'undefined'),
 
     'Status' => __('Status', 'undefined'),
 
+    'Success' => __('Success', 'undefined'),
+
+    'Error' => __('Error', 'undefined'),
+
     'Schedule' => __('Schedule', 'undefined'),
 
     'Platform' => __('Platform', 'undefined'),
 
-    'Success' => __('Success', 'undefined'),
+    'Filter:' => __('Filter:', 'undefined'),
 
-    'Error' => __('Error', 'undefined'),
+    'to' => __('to', 'undefined'),
+
+    'Account' => __('Account', 'undefined'),
+
+    'Response' => __('Response', 'undefined'),
 
     'Visit' => __('Visit', 'undefined'),
 
     'Retry' => __('Retry', 'undefined'),
 
+    'Related schedule was deleted' => __('Related schedule was deleted', 'undefined'),
+
+    'Actions' => __('Actions', 'undefined'),
+
+    'Hide' => __('Hide', 'undefined'),
+
+    'Details' => __('Details', 'undefined'),
+
+    'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'undefined'),
+
+    'Confirm' => __('Confirm', 'undefined'),
+
+    'Delete Logs' => __('Delete Logs', 'undefined'),
+
     'Visit our documentation' => __('Visit our documentation', 'undefined'),
 
     'Refresh' => __('Refresh', 'undefined'),
+
+    'Active Account' => __('Active Account', 'undefined'),
+
+    'Published Post' => __('Published Post', 'undefined'),
+
+    'Active Schedule' => __('Active Schedule', 'undefined'),
 
     'Welcome to Bit Social' => __('Welcome to Bit Social', 'undefined'),
 
@@ -293,11 +439,65 @@ return [
 
     'Smart solution for WordPress post Schedule' => __('Smart solution for WordPress post Schedule', 'undefined'),
 
+    'Minute' => __('Minute', 'undefined'),
+
+    'Hour' => __('Hour', 'undefined'),
+
+    'Day' => __('Day', 'undefined'),
+
+    'Week' => __('Week', 'undefined'),
+
+    'Month' => __('Month', 'undefined'),
+
+    'Year' => __('Year', 'undefined'),
+
+    'Customize post message' => __('Customize post message', 'undefined'),
+
     'Media' => __('Media', 'undefined'),
+
+    'First comment' => __('First comment', 'undefined'),
 
     'Post Link' => __('Post Link', 'undefined'),
 
     'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'undefined'),
+
+    'Schedule Share' => __('Schedule Share', 'undefined'),
+
+    'Scheduled Direct Share' => __('Scheduled Direct Share', 'undefined'),
+
+    'All times' => __('All times', 'undefined'),
+
+    'Today' => __('Today', 'undefined'),
+
+    'last 7 days' => __('last 7 days', 'undefined'),
+
+    'last 15 days' => __('last 15 days', 'undefined'),
+
+    'last 30 days' => __('last 30 days', 'undefined'),
+
+    'last 90 days' => __('last 90 days', 'undefined'),
+
+    'last 180 days' => __('last 180 days', 'undefined'),
+
+    'last 365 days' => __('last 365 days', 'undefined'),
+
+    'custom date range' => __('custom date range', 'undefined'),
+
+    'By the published time of the posts' => __('By the published time of the posts', 'undefined'),
+
+    'Select publish date' => __('Select publish date', 'undefined'),
+
+    'By post type' => __('By post type', 'undefined'),
+
+    'Select post type' => __('Select post type', 'undefined'),
+
+    'By the post category and tag' => __('By the post category and tag', 'undefined'),
+
+    'Select category or tag' => __('Select category or tag', 'undefined'),
+
+    'Select Specific Post' => __('Select Specific Post', 'undefined'),
+
+    'Post ID: Post Title' => __('Post ID: Post Title', 'undefined'),
 
     'Posts matched by current filters' => __('Posts matched by current filters', 'undefined'),
 
@@ -307,19 +507,79 @@ return [
 
     'Edit' => __('Edit', 'undefined'),
 
+    'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'undefined'),
+
+    'Delete?' => __('Delete?', 'undefined'),
+
     'Delete' => __('Delete', 'undefined'),
+
+    'Title' => __('Title', 'undefined'),
+
+    'Created At' => __('Created At', 'undefined'),
+
+    'Start Scheduled Post' => __('Start Scheduled Post', 'undefined'),
+
+    'Interval' => __('Interval', 'undefined'),
+
+    'Next Post' => __('Next Post', 'undefined'),
 
     'In Progress' => __('In Progress', 'undefined'),
 
     'Completed' => __('Completed', 'undefined'),
 
+    'Active' => __('Active', 'undefined'),
+
+    'Paused' => __('Paused', 'undefined'),
+
+    'Action' => __('Action', 'undefined'),
+
+    'Search schedule' => __('Search schedule', 'undefined'),
+
     'How to create schedule' => __('How to create schedule', 'undefined'),
+
+    'Create Schedule' => __('Create Schedule', 'undefined'),
+
+    'No schedule found!' => __('No schedule found!', 'undefined'),
+
+    'Monday' => __('Monday', 'undefined'),
+
+    'Tuesday' => __('Tuesday', 'undefined'),
+
+    'Wednesday' => __('Wednesday', 'undefined'),
+
+    'Thursday' => __('Thursday', 'undefined'),
+
+    'Friday' => __('Friday', 'undefined'),
+
+    'Saturday' => __('Saturday', 'undefined'),
+
+    'Sunday' => __('Sunday', 'undefined'),
+
+    'Enter a name' => __('Enter a name', 'undefined'),
+
+    'Start date & time' => __('Start date & time', 'undefined'),
 
     'Local time: %s ; Time Zone: (%s)' => __('Local time: %s ; Time Zone: (%s)', 'undefined'),
 
+    'Post interval' => __('Post interval', 'undefined'),
+
     'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.', 'undefined'),
 
+    'Order posts by' => __('Order posts by', 'undefined'),
+
+    'Randomly without duplicates' => __('Randomly without duplicates', 'undefined'),
+
+    'Randomly' => __('Randomly', 'undefined'),
+
+    'Start from the oldest to new posts' => __('Start from the oldest to new posts', 'undefined'),
+
+    'Start from the latest to old posts' => __('Start from the latest to old posts', 'undefined'),
+
     'Set a sleep timer' => __('Set a sleep timer', 'undefined'),
+
+    'Set sleep days' => __('Set sleep days', 'undefined'),
+
+    'Select sleep days' => __('Select sleep days', 'undefined'),
 
     'Please select an account' => __('Please select an account', 'undefined'),
 
@@ -333,15 +593,41 @@ return [
 
     'on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.' => __('on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.', 'undefined'),
 
+    'Cron Job settings' => __('Cron Job settings', 'undefined'),
+
     'For your website, the Cron Job command is:' => __('For your website, the Cron Job command is:', 'undefined'),
+
+    'Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!' => __('Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!', 'undefined'),
 
     'External Cron' => __('External Cron', 'undefined'),
 
     'Enable External Cron' => __('Enable External Cron', 'undefined'),
 
-    'Upload' => __('Upload', 'undefined'),
+    'Post' => __('Post', 'undefined'),
+
+    'Write your custom post' => __('Write your custom post', 'undefined'),
 
     'Link' => __('Link', 'undefined'),
+
+    'https://example.com' => __('https://example.com', 'undefined'),
+
+    'Add Image' => __('Add Image', 'undefined'),
+
+    'Upload' => __('Upload', 'undefined'),
+
+    'Add a button (optional)' => __('Add a button (optional)', 'undefined'),
+
+    'Select Button' => __('Select Button', 'undefined'),
+
+    'Link for your button*' => __('Link for your button*', 'undefined'),
+
+    'Make comment' => __('Make comment', 'undefined'),
+
+    'Enable to selected image shared' => __('Enable to selected image shared', 'undefined'),
+
+    'Add a link' => __('Add a link', 'undefined'),
+
+    'Enable to the link shared as a card' => __('Enable to the link shared as a card', 'undefined'),
 
     'Draft' => __('Draft', 'undefined'),
 
@@ -351,17 +637,49 @@ return [
 
     'Share Post' => __('Share Post', 'undefined'),
 
+    'No Share Post found!' => __('No Share Post found!', 'undefined'),
+
+    'Untitled Share Now' => __('Untitled Share Now', 'undefined'),
+
+    'Something went wrong!' => __('Something went wrong!', 'undefined'),
+
+    'Edit Schedule' => __('Edit Schedule', 'undefined'),
+
+    'Setup Schedule' => __('Setup Schedule', 'undefined'),
+
+    'Edit Share Now' => __('Edit Share Now', 'undefined'),
+
     'Continue' => __('Continue', 'undefined'),
+
+    'Edit schedule' => __('Edit schedule', 'undefined'),
+
+    'Please, insert a valid start date & time first!' => __('Please, insert a valid start date & time first!', 'undefined'),
 
     'Repeat' => __('Repeat', 'undefined'),
 
     'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.', 'undefined'),
 
-    'Discord Template Settings' => __('Discord Template Settings', 'undefined'),
+    'Only custom message' => __('Only custom message', 'undefined'),
+
+    'Link card' => __('Link card', 'undefined'),
+
+    'Feature image' => __('Feature image', 'undefined'),
 
     'Product Image' => __('Product Image', 'undefined'),
 
     'All Images' => __('All Images', 'undefined'),
+
+    'Discord Template Settings' => __('Discord Template Settings', 'undefined'),
+
+    'Custom message settings.' => __('Custom message settings.', 'undefined'),
+
+    'Custom Message' => __('Custom Message', 'undefined'),
+
+    'Post styling and type setup.' => __('Post styling and type setup.', 'undefined'),
+
+    'Posting type' => __('Posting type', 'undefined'),
+
+    'Trim Message' => __('Trim Message', 'undefined'),
 
     'Facebook Template Settings' => __('Facebook Template Settings', 'undefined'),
 
@@ -369,13 +687,23 @@ return [
 
     'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'undefined'),
 
+    'Select a post link button.' => __('Select a post link button.', 'undefined'),
+
+    'Add a button' => __('Add a button', 'undefined'),
+
+    'All images' => __('All images', 'undefined'),
+
     'Instagram Template Settings' => __('Instagram Template Settings', 'undefined'),
 
     'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'undefined'),
 
+    'Your comment' => __('Your comment', 'undefined'),
+
     'Linkedin Template Settings' => __('Linkedin Template Settings', 'undefined'),
 
     'Pinterest Template Settings' => __('Pinterest Template Settings', 'undefined'),
+
+    'Post link' => __('Post link', 'undefined'),
 
     'See less' => __('See less', 'undefined'),
 
