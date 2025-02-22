@@ -1,6 +1,8 @@
 <?php
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 return [
+    'Changelog' => __('Changelog', 'undefined'),
+
     'Join Our Facebook Community' => __('Join Our Facebook Community', 'undefined'),
 
     'Connect, share, and grow with like-minded individuals' => __('Connect, share, and grow with like-minded individuals', 'undefined'),
@@ -358,8 +360,6 @@ return [
     'Upcoming Integrations' => __('Upcoming Integrations', 'undefined'),
 
     'Settings' => __('Settings', 'undefined'),
-
-    'Changelog' => __('Changelog', 'undefined'),
 
     'More' => __('More', 'undefined'),
 

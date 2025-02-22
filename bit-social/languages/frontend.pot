@@ -1,10 +1,15 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Jan 30 2025 11:54:17 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sat Feb 22 2025 09:03:11 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: frontend/_plugin-commons/components/Changelog/ui/Changelog.tsx:30
+#: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:16
+msgid "Changelog"
+msgstr ""
 
 #: frontend/_plugin-commons/components/FacebookCommunityCard.tsx:51
 msgid "Join Our Facebook Community"
@@ -191,7 +196,7 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:11
 msgid "Improvement"
 msgstr ""
 
@@ -218,7 +223,7 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: frontend/_plugin-commons/components/SupportPage/SupportPage.tsx:40
+#: frontend/_plugin-commons/components/SupportPage/SupportPage.tsx:41
 msgid "About"
 msgstr ""
 
@@ -811,16 +816,12 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:14
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:15
 msgid "Upcoming Integrations"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:15
 msgid "Settings"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:16
-msgid "Changelog"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:78

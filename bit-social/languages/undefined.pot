@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bit Social 1.2.7\n"
+"Project-Id-Version: Bit Social 1.2.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/undefined\n"
 "Last-Translator: Bit Apps <developer@bitapps.pro>\n"
 "Language-Team: Bit Apps <support@bitapps.pro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-30T11:54:17+00:00\n"
+"POT-Creation-Date: 2025-02-22T09:03:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -44,12 +44,12 @@ msgid "Every "
 msgstr ""
 
 #: backend/app/Views/PluginPageActions.php:19
-#: languages/frontend-extracted-strings.php:360
+#: languages/frontend-extracted-strings.php:362
 msgid "Settings"
 msgstr ""
 
 #: backend/app/Views/PluginPageActions.php:23
-#: languages/frontend-extracted-strings.php:98
+#: languages/frontend-extracted-strings.php:100
 msgid "Support"
 msgstr ""
 
@@ -58,710 +58,710 @@ msgid "Bit Social - Your social of automation's"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:4
-msgid "Join Our Facebook Community"
+msgid "Changelog"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:6
-msgid "Connect, share, and grow with like-minded individuals"
+msgid "Join Our Facebook Community"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:8
-msgid "Exclusive Content"
+msgid "Connect, share, and grow with like-minded individuals"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:10
-msgid "Daily Discussion"
+msgid "Exclusive Content"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:12
-msgid "Special Events"
+msgid "Daily Discussion"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:14
-msgid "Join Now"
+msgid "Special Events"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:16
-msgid "License & Activation"
+msgid "Join Now"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:18
-msgid "Dev Version On"
+msgid "License & Activation"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:20
-msgid "Version"
+msgid "Dev Version On"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:22
-msgid "Code Name:"
+msgid "Version"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:24
-msgid "Pro Version"
+msgid "Code Name:"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:26
-msgid "Not Activated"
+msgid "Pro Version"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:28
-msgid "Buy Pro Version"
+msgid "Not Activated"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:30
-msgid "Deactivate License"
+msgid "Buy Pro Version"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:32
-msgid "Activate License"
+msgid "Deactivate License"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:34
-msgid "Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license."
+msgid "Activate License"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:36
-msgid "For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro ."
+msgid "Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:38
-msgid "Your license is invalid, try reactivate"
+msgid "For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro ."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:40
+msgid "Your license is invalid, try reactivate"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:42
 msgid "Manage license"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:44
+#: languages/frontend-extracted-strings.php:46
 msgid ""
 "Please update your license to ensure you receive the latest security updates and bug fixes. \n"
 "          Using an outdated or unofficial license may leave your system vulnerable to security breaches and data leaks. \n"
 "          We cannot take responsibility for issues arising from such scenarios. For your safety, always download from the official Bit Apps server."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:48
+#: languages/frontend-extracted-strings.php:50
 msgid "Your license is invalid"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:50
+#: languages/frontend-extracted-strings.php:52
 msgid "Plugin Update Required (%s)"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:52
+#: languages/frontend-extracted-strings.php:54
 msgid "Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:54
+#: languages/frontend-extracted-strings.php:56
 msgid "Updating..."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:56
+#: languages/frontend-extracted-strings.php:58
 msgid "Update Now"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:58
+#: languages/frontend-extracted-strings.php:60
 msgid "Checking updates"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:60
+#: languages/frontend-extracted-strings.php:62
 msgid "New version available"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:62
+#: languages/frontend-extracted-strings.php:64
 msgid "Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:64
+#: languages/frontend-extracted-strings.php:66
 msgid "is up to date"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:66
+#: languages/frontend-extracted-strings.php:68
 msgid "Zapier Alternative in WordPress Unlimited Task."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:68
+#: languages/frontend-extracted-strings.php:70
 msgid "An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:70
+#: languages/frontend-extracted-strings.php:72
 msgid "Cash Back"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:72
+#: languages/frontend-extracted-strings.php:74
 msgid "Hi"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:74
+#: languages/frontend-extracted-strings.php:76
 msgid "We want your feedback!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:76
+#: languages/frontend-extracted-strings.php:78
 msgid "Write a review"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:78
+#: languages/frontend-extracted-strings.php:80
 msgid "of your experience with %s, and we'll send you a"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:80
+#: languages/frontend-extracted-strings.php:82
 msgid "$10 Cash back"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:82
+#: languages/frontend-extracted-strings.php:84
 msgid "to say thanks!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:84
+#: languages/frontend-extracted-strings.php:86
 msgid "To claim your cash back, simply reply to support with a screenshot or link of your review."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:86
+#: languages/frontend-extracted-strings.php:88
 msgid "Review Now"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:88
+#: languages/frontend-extracted-strings.php:90
 msgid "Improvement"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:90
+#: languages/frontend-extracted-strings.php:92
 msgid "Allow the collection of diagnostic data and error reports to enhance the application's performance. Please review our"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:92
+#: languages/frontend-extracted-strings.php:94
 msgid "Privacy Policy"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:94
+#: languages/frontend-extracted-strings.php:96
 msgid "for more information."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:96
+#: languages/frontend-extracted-strings.php:98
 msgid "Recommended Plugins"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:100
+#: languages/frontend-extracted-strings.php:102
 msgid "About"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:102
+#: languages/frontend-extracted-strings.php:104
 msgid "Advance Schedule Feature on Pro!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:104
+#: languages/frontend-extracted-strings.php:106
 msgid "Buy Pro"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:106
+#: languages/frontend-extracted-strings.php:108
 msgid "Advance Schedule"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:108
+#: languages/frontend-extracted-strings.php:110
 msgid "Bit Social Pro"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:110
+#: languages/frontend-extracted-strings.php:112
 msgid "Your <b>WP_CRON</b> are disabled"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:112
+#: languages/frontend-extracted-strings.php:114
 msgid "Cron Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:114
+#: languages/frontend-extracted-strings.php:116
 msgid "the scheduled post or share now post may not publish on time!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:116
+#: languages/frontend-extracted-strings.php:118
 msgid "Learn more"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:118
+#: languages/frontend-extracted-strings.php:120
 msgid "To get app credentials, Visit"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:120
+#: languages/frontend-extracted-strings.php:122
 msgid "Developer"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:122
+#: languages/frontend-extracted-strings.php:124
 msgid "<b>Accounts:</b> To add your desired social platform, click on the <b>\"Connect Account\"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>\"Connect\"</b> button to connect your platform directly and another one is <b>\"Custom app\"</b> option which will work by entering your personal app credentials."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:124
+#: languages/frontend-extracted-strings.php:126
 msgid "To set it up, click on the <b>\"Connect Account\"</b> button and follow the next step!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:126
+#: languages/frontend-extracted-strings.php:128
 msgid "Schedules"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:128
+#: languages/frontend-extracted-strings.php:130
 msgid "You can automatically schedule your Publish WordPress posts to be shared on  social media platforms. This feature allows you to filter your posts, ensuring that only the content you want to share at your chosen times."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:130
+#: languages/frontend-extracted-strings.php:132
 msgid "To set it up, click on the <b>\"Create Schedule\"</b> button and follow the next step!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:132
+#: languages/frontend-extracted-strings.php:134
 msgid "Share Now"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:134
+#: languages/frontend-extracted-strings.php:136
 msgid "You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:136
+#: languages/frontend-extracted-strings.php:138
 msgid "To set it up, click on the <b>\"Share Post\"</b> button and follow the next step!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:138
+#: languages/frontend-extracted-strings.php:140
 msgid "Doc Link"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:140
+#: languages/frontend-extracted-strings.php:142
 msgid "Show Smart Tags"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:142
+#: languages/frontend-extracted-strings.php:144
 msgid "Tutorial"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:144
+#: languages/frontend-extracted-strings.php:146
 msgid "Accounts"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:146
+#: languages/frontend-extracted-strings.php:148
 msgid "Groups"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:148
+#: languages/frontend-extracted-strings.php:150
 msgid "Search accounts"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:150
+#: languages/frontend-extracted-strings.php:152
 msgid "Profile"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:152
+#: languages/frontend-extracted-strings.php:154
 msgid "Page"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:154
+#: languages/frontend-extracted-strings.php:156
 msgid "Linkedin Page feature on pro"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:156
+#: languages/frontend-extracted-strings.php:158
 msgid "Board Not Found"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:158
+#: languages/frontend-extracted-strings.php:160
 msgid "Account Not Found"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:160
+#: languages/frontend-extracted-strings.php:162
 msgid "Account connect failed"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:162
+#: languages/frontend-extracted-strings.php:164
 msgid "Manage"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:164
+#: languages/frontend-extracted-strings.php:166
 msgid "Connect Account"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:166
+#: languages/frontend-extracted-strings.php:168
 msgid "Connect your social account first!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:168
+#: languages/frontend-extracted-strings.php:170
 msgid "You can only add verified locations."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:170
+#: languages/frontend-extracted-strings.php:172
 msgid "If you need to add another Google account, simply log out of or switch Google accounts first."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:172
+#: languages/frontend-extracted-strings.php:174
 msgid "If you need to add another %s  account, simply log out of or switch %s accounts first."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:174
+#: languages/frontend-extracted-strings.php:176
 msgid "Total %s accounts found"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:176
+#: languages/frontend-extracted-strings.php:178
 msgid "Custom App"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:178
+#: languages/frontend-extracted-strings.php:180
 msgid "Saved"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:180
+#: languages/frontend-extracted-strings.php:182
 msgid "Save"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:182
+#: languages/frontend-extracted-strings.php:184
 msgid "No"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:184
+#: languages/frontend-extracted-strings.php:186
 msgid "Are you sure to delete this app?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:186
+#: languages/frontend-extracted-strings.php:188
 msgid "Yes, Delete"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:188
+#: languages/frontend-extracted-strings.php:190
 msgid "Delete the app"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:190
+#: languages/frontend-extracted-strings.php:192
 msgid "Click me!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:192
+#: languages/frontend-extracted-strings.php:194
 msgid "Connect"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:194
+#: languages/frontend-extracted-strings.php:196
 msgid "Back"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:196
+#: languages/frontend-extracted-strings.php:198
 msgid "Connect Custom %s App"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:198
+#: languages/frontend-extracted-strings.php:200
 msgid "Homepage URI"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:200
+#: languages/frontend-extracted-strings.php:202
 msgid "Click to copy"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:202
+#: languages/frontend-extracted-strings.php:204
 msgid "Redirect URI"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:204
+#: languages/frontend-extracted-strings.php:206
 msgid "Api Version"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:206
+#: languages/frontend-extracted-strings.php:208
 msgid "App Name"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:208
+#: languages/frontend-extracted-strings.php:210
 msgid "App Key or Client ID"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:210
+#: languages/frontend-extracted-strings.php:212
 msgid "App Secret or Client Secret"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:212
+#: languages/frontend-extracted-strings.php:214
 msgid "Add"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:214
+#: languages/frontend-extracted-strings.php:216
 msgid "Connected Apps"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:216
+#: languages/frontend-extracted-strings.php:218
 msgid "No App Found"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:218
+#: languages/frontend-extracted-strings.php:220
 msgid "It will no longer be able to automatic posting, scheduling, and sharing"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:220
+#: languages/frontend-extracted-strings.php:222
 msgid "Enable Automatic Posting, Scheduling, and Sharing"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:222
+#: languages/frontend-extracted-strings.php:224
 msgid "Disable"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:224
+#: languages/frontend-extracted-strings.php:226
 msgid "Enable"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:226
+#: languages/frontend-extracted-strings.php:228
 msgid "disable"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:228
+#: languages/frontend-extracted-strings.php:230
 msgid "enable"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:230
+#: languages/frontend-extracted-strings.php:232
 msgid "This account also be deleted from related schedule!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:232
+#: languages/frontend-extracted-strings.php:234
 msgid "Yes, delete"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:234
+#: languages/frontend-extracted-strings.php:236
 msgid "Are you sure?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:236
+#: languages/frontend-extracted-strings.php:238
 msgid "All"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:238
+#: languages/frontend-extracted-strings.php:240
 msgid "To connect your social media accounts, click <b>\"Connect Account\"</b>  There are two methods available:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:240
+#: languages/frontend-extracted-strings.php:242
 msgid "It will automatically connect your social account without any credentials"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:242
+#: languages/frontend-extracted-strings.php:244
 msgid "It will show you a form to input app credentials to create your own app and connect your social account."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:244
+#: languages/frontend-extracted-strings.php:246
 msgid "You can find more about it here"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:246
+#: languages/frontend-extracted-strings.php:248
 msgid "Add to group"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:248
+#: languages/frontend-extracted-strings.php:250
 msgid "No accounts found!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:250
+#: languages/frontend-extracted-strings.php:252
 msgid "Create Group"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:252
+#: languages/frontend-extracted-strings.php:254
 msgid "Cancel"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:254
+#: languages/frontend-extracted-strings.php:256
 msgid "Create"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:256
+#: languages/frontend-extracted-strings.php:258
 msgid "Name"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:258
+#: languages/frontend-extracted-strings.php:260
 msgid "New group"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:260
+#: languages/frontend-extracted-strings.php:262
 msgid "Yes, Remove"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:262
+#: languages/frontend-extracted-strings.php:264
 msgid "Remove account from this group?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:264
+#: languages/frontend-extracted-strings.php:266
 msgid "No Groups found!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:266
+#: languages/frontend-extracted-strings.php:268
 msgid "immediately"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:268
+#: languages/frontend-extracted-strings.php:270
 msgid "Select All"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:270
+#: languages/frontend-extracted-strings.php:272
 msgid "Immediately"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:272
+#: languages/frontend-extracted-strings.php:274
 msgid "Delay"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:274
+#: languages/frontend-extracted-strings.php:276
 msgid "Auto Post Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:276
+#: languages/frontend-extracted-strings.php:278
 msgid "All auto post related settings here."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:278
+#: languages/frontend-extracted-strings.php:280
 msgid "Doc here"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:280
+#: languages/frontend-extracted-strings.php:282
 msgid "When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:282
+#: languages/frontend-extracted-strings.php:284
 msgid "Share posts automatically"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:284
+#: languages/frontend-extracted-strings.php:286
 msgid "You have to create and select account first to enable this option!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:286
+#: languages/frontend-extracted-strings.php:288
 msgid "Automatically share specific post types, like blogs or products, to your social accounts when published."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:288
+#: languages/frontend-extracted-strings.php:290
 msgid "Share posts type"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:290
+#: languages/frontend-extracted-strings.php:292
 msgid "Post Type: Post"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:292
+#: languages/frontend-extracted-strings.php:294
 msgid "Share posts default type <b>Post</b>"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:294
+#: languages/frontend-extracted-strings.php:296
 msgid "Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:296
+#: languages/frontend-extracted-strings.php:298
 msgid "Share post delay"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:298
+#: languages/frontend-extracted-strings.php:300
 msgid "If you don't want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:300
+#: languages/frontend-extracted-strings.php:302
 msgid "Enable auto post log"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:302
+#: languages/frontend-extracted-strings.php:304
 msgid "Post templates"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:304
+#: languages/frontend-extracted-strings.php:306
 msgid "Templates"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:306
+#: languages/frontend-extracted-strings.php:308
 msgid "Add schedule"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:308
+#: languages/frontend-extracted-strings.php:310
 msgid "Start Date:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:310
+#: languages/frontend-extracted-strings.php:312
 msgid "Post Type:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:312
+#: languages/frontend-extracted-strings.php:314
 msgid "Post Time:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:314
+#: languages/frontend-extracted-strings.php:316
 msgid "Run Times:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:316
+#: languages/frontend-extracted-strings.php:318
 msgid "Click here to know more about Calendar"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:318
+#: languages/frontend-extracted-strings.php:320
 msgid "Oops !"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:320
+#: languages/frontend-extracted-strings.php:322
 msgid "404 - Not Found"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:322
+#: languages/frontend-extracted-strings.php:324
 msgid "Redirecting Home in %s second"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:324
+#: languages/frontend-extracted-strings.php:326
 msgid "Go The Home"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:326
+#: languages/frontend-extracted-strings.php:328
 msgid "WP Auto Post"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:328
+#: languages/frontend-extracted-strings.php:330
 msgid "WP Post Schedules"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:330
+#: languages/frontend-extracted-strings.php:332
 msgid "Calendar"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:332
+#: languages/frontend-extracted-strings.php:334
 msgid "Logs"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:334
+#: languages/frontend-extracted-strings.php:336
 msgid "Get $10 Cashback"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:336
+#: languages/frontend-extracted-strings.php:338
 msgid "Thank you for using Bit Social"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:338
+#: languages/frontend-extracted-strings.php:340
 msgid "Give us a review on WordPress by clicking the"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:340
+#: languages/frontend-extracted-strings.php:342
 msgid "Review us"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:342
+#: languages/frontend-extracted-strings.php:344
 msgid "button and send an email with the review link to"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:344
+#: languages/frontend-extracted-strings.php:346
 msgid "We will honour you with <b> $10 cashback</b> for your time & effort."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:346
+#: languages/frontend-extracted-strings.php:348
 msgid "Suggestions on how you may write the review:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:348
+#: languages/frontend-extracted-strings.php:350
 msgid "1. What features do you like most in Bit Social?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:350
+#: languages/frontend-extracted-strings.php:352
 msgid "2. Which software did you previously used for these features?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:352
+#: languages/frontend-extracted-strings.php:354
 msgid "What's New?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:354
+#: languages/frontend-extracted-strings.php:356
 msgid "For More Details"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:356
+#: languages/frontend-extracted-strings.php:358
 msgid "Click Here"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:358
+#: languages/frontend-extracted-strings.php:360
 msgid "Upcoming Integrations"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:362
-msgid "Changelog"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:364

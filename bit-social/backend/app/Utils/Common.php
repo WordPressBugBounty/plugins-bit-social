@@ -14,7 +14,8 @@ trait Common
         'pinterest'             => 497,
         'discord'               => 2000,
         'tumblr'                => 4096,
-        'googleBusinessProfile' => 750
+        'googleBusinessProfile' => 750,
+        'instagram'             => 2200,
     ];
 
     /**

@@ -35,7 +35,7 @@ class Head
             wp_enqueue_script($slug . '-index-MODULE', Config::getENV('DEV_URL') . '/src/main.tsx', [], null);
             // wp_enqueue_style('load-id', 'http://wpdev.co/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&amp;load%5Bchunk_1%5D=,site-icon,l10n,buttons,media-views,wp-auth-check&amp;ver=6.6.2', [], null);
         } else {
-            wp_enqueue_script($slug . '-index-MODULE', Config::get('ASSET_URI') . "/main-{$codeName}.js", [], $version);
+            wp_enqueue_script($slug . '-index-MODULE', Config::get('ASSET_URI') . "/main-{$codeName}.js", [], ''); // WARNING: Do not add version in production, it may cause unexpected behavior.
             wp_enqueue_style($slug . '-styles', Config::get('ASSET_URI') . "/main-{$slug}-ba-assets-{$codeName}.css", null, $version, 'screen');
         }
 
@@ -57,6 +57,7 @@ class Head
             Config::withPrefix('localized_script'),
             [
                 'nonce'            => wp_create_nonce(Config::withPrefix('nonce')),
+                'rootURL'          => Config::get('ROOT_URI'),
                 'assetsURL'        => Config::get('ASSET_URI'),
                 'siteUrl'          => Config::get('SITE_URL'),
                 'siteName'         => Config::get('SITE_NAME'),
