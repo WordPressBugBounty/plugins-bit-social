@@ -21,7 +21,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.2.9';
+    public const VERSION = '1.3.0';
 
     public const DB_VERSION = '1.1.0';
 

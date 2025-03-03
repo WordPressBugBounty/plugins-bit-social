@@ -68,7 +68,7 @@ class SmartTag
 
                 break;
             case 'post_tags':
-                $value = $this->getPostTerms($post->ID, 'post_tag');
+                $value = $this->getPostTerms($post->ID, 'tag');
 
                 break;
             case 'post_categories':
@@ -139,7 +139,17 @@ class SmartTag
         $postType = get_post_type($postId);
 
         if ($postType === 'product') {
-            $taxonomyFieldName = $taxonomyFieldName === 'post_tag' ? 'product_tag' : 'product_cat';
+            $taxonomyFieldName = $taxonomyFieldName === 'tag' ? 'product_tag' : 'product_cat';
+        } else {
+            $taxonomies = get_object_taxonomies($postType, 'names');
+
+            foreach ($taxonomies as $item) {
+                if (strpos($item, $taxonomyFieldName) !== false) {
+                    $taxonomyFieldName = $item;
+
+                    break;
+                }
+            }
         }
 
         $postTerms = wp_get_post_terms($postId, $taxonomyFieldName, ['fields' => 'names']);

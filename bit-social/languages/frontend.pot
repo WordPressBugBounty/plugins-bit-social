@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Feb 27 2025 11:34:41 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Mon Mar 03 2025 09:20:25 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -816,7 +816,7 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:18
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:15
 msgid "Upcoming Integrations"
 msgstr ""
 
