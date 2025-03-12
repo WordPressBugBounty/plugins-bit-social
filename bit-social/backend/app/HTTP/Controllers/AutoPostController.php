@@ -84,7 +84,7 @@ class AutoPostController
             return AutoPostService::createAutoPostDelay($post, $postId, $autoPostSettings);
         }
 
-        if ($post->post_status === 'publish' && $postBefore->post_status === 'future') {
+        if ((!isset($postBefore->post_status) && $post->post_status === 'publish') || ($post->post_status === 'publish' && $postBefore->post_status === 'future')) {
             return $this->executeSocialPost($postId);
         }
 

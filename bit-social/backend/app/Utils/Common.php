@@ -71,7 +71,7 @@ trait Common
         }
 
         $content = $this->replaceTagValue($template->content, $post);
-        $comment = $this->replaceTagValue($template->comment, $post);
+        $comment = isset($template->comment) ? $this->replaceTagValue($template->comment, $post) : null;
 
         $propertyTagMap = [
             'isFeaturedImage' => SmartTag::tag('featuredImageUrl'),
