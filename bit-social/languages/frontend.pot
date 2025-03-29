@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Mar 12 2025 10:12:11 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sat Mar 29 2025 09:47:26 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -35,42 +35,42 @@ msgstr ""
 msgid "Join Now"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:102
+#: frontend/_plugin-commons/components/License.pro.tsx:108
 msgid "License & Activation"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:106
+#: frontend/_plugin-commons/components/License.pro.tsx:112
 msgid "Dev Version On"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:111
+#: frontend/_plugin-commons/components/License.pro.tsx:117
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:62
 msgid "Version"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:114
-#: frontend/_plugin-commons/components/License.pro.tsx:152
+#: frontend/_plugin-commons/components/License.pro.tsx:120
+#: frontend/_plugin-commons/components/License.pro.tsx:158
 msgid "Code Name:"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:127
-#: frontend/_plugin-commons/components/License.pro.tsx:149
+#: frontend/_plugin-commons/components/License.pro.tsx:133
+#: frontend/_plugin-commons/components/License.pro.tsx:155
 msgid "Pro Version"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:127
+#: frontend/_plugin-commons/components/License.pro.tsx:133
 msgid "Not Activated"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:137
+#: frontend/_plugin-commons/components/License.pro.tsx:143
 msgid "Buy Pro Version"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:174
+#: frontend/_plugin-commons/components/License.pro.tsx:181
 msgid "Deactivate License"
 msgstr ""
 
-#: frontend/_plugin-commons/components/License.pro.tsx:186
+#: frontend/_plugin-commons/components/License.pro.tsx:194
 msgid "Activate License"
 msgstr ""
 
@@ -817,6 +817,10 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:18
+msgid "Fixed"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
 msgid "Upcoming Integrations"
 msgstr ""
 
@@ -1057,7 +1061,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:59
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:129
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:74
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:74
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:73
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:41
 msgid "Media"
 msgstr ""
@@ -1417,7 +1421,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:102
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:107
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:107
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:106
 msgid "Post"
 msgstr ""
 
@@ -1428,7 +1432,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:112
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:112
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:110
 msgid "Write your custom post"
 msgstr ""
 
@@ -1437,7 +1441,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:127
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:113
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:127
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:127
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:28
 msgid "Link"
 msgstr ""
@@ -1446,7 +1450,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:133
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:131
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:131
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:135
 msgid "https://example.com"
 msgstr ""
 
@@ -1457,7 +1461,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:156
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:141
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:144
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:144
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:148
 msgid "Add Image"
 msgstr ""
 
@@ -1468,7 +1472,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:160
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:148
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:148
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:152
 msgid "Upload"
 msgstr ""
 

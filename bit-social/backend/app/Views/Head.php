@@ -60,6 +60,7 @@ class Head
                 'rootURL'          => Config::get('ROOT_URI'),
                 'assetsURL'        => Config::get('ASSET_URI'),
                 'siteUrl'          => Config::get('SITE_URL'),
+                'siteBaseURL'      => is_multisite() ? network_site_url() : site_url(),
                 'siteName'         => Config::get('SITE_NAME'),
                 'baseURL'          => Config::get('ADMIN_URL') . 'admin.php?page=' . Config::SLUG . '#',
                 'ajaxURL'          => admin_url('admin-ajax.php'),

@@ -9,7 +9,6 @@ trait Common
 {
     public $platformLimitations = [
         'facebook'              => 63206,
-        'twitter'               => 280,
         'linkedin'              => 3000,
         'pinterest'             => 497,
         'discord'               => 2000,
@@ -191,10 +190,6 @@ trait Common
         $backSlashNCount = substr_count($content, "\n");
         $textLength = \strlen($content) - $backSlashNCount;
         $maxLength = $this->platformLimitations[$platform] ?? $textLength;
-
-        if ($platform === 'twitter' && !empty($link)) {
-            $maxLength = $maxLength - \strlen($link); // twitter count characters for a link also
-        }
 
         if ($textLength > $maxLength) {
             return substr($content, 0, $maxLength);

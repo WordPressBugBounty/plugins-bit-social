@@ -357,6 +357,8 @@ return [
 
     'Click Here' => __('Click Here', 'undefined'),
 
+    'Fixed' => __('Fixed', 'undefined'),
+
     'Upcoming Integrations' => __('Upcoming Integrations', 'undefined'),
 
     'Settings' => __('Settings', 'undefined'),
