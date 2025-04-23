@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bit Social 1.3.2\n"
+"Project-Id-Version: Bit Social 1.3.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/undefined\n"
 "Last-Translator: Bit Apps <developer@bitapps.pro>\n"
 "Language-Team: Bit Apps <support@bitapps.pro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-29T09:47:27+00:00\n"
+"POT-Creation-Date: 2025-04-23T08:30:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 
@@ -44,7 +44,7 @@ msgid "Every "
 msgstr ""
 
 #: backend/app/Views/PluginPageActions.php:19
-#: languages/frontend-extracted-strings.php:364
+#: languages/frontend-extracted-strings.php:366
 msgid "Settings"
 msgstr ""
 
@@ -761,750 +761,854 @@ msgid "Click Here"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:360
-msgid "Fixed"
+msgid "Integrations"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:362
+msgid "Features"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:364
 msgid "Upcoming Integrations"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:366
+#: languages/frontend-extracted-strings.php:368
 msgid "More"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:368
+#: languages/frontend-extracted-strings.php:370
 msgid "Facebook"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:370
+#: languages/frontend-extracted-strings.php:372
 msgid "Linkedin"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:372
+#: languages/frontend-extracted-strings.php:374
 msgid "Google Business Profile"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:374
+#: languages/frontend-extracted-strings.php:376
 msgid "Pinterest"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:376
+#: languages/frontend-extracted-strings.php:378
 msgid "Discord"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:378
+#: languages/frontend-extracted-strings.php:380
 msgid "Tumblr"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:380
+#: languages/frontend-extracted-strings.php:382
 msgid "X (twitter)"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:382
+#: languages/frontend-extracted-strings.php:384
 msgid "Instagram"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:384
+#: languages/frontend-extracted-strings.php:386
 msgid "Filter"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:386
+#: languages/frontend-extracted-strings.php:388
 msgid "Reset"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:388
+#: languages/frontend-extracted-strings.php:390
 msgid "Logs filter"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:390
+#: languages/frontend-extracted-strings.php:392
 msgid "Date"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:392
+#: languages/frontend-extracted-strings.php:394
 msgid "Status"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:394
+#: languages/frontend-extracted-strings.php:396
 msgid "Success"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:396
+#: languages/frontend-extracted-strings.php:398
 msgid "Error"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:398
+#: languages/frontend-extracted-strings.php:400
 msgid "Schedule"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:400
+#: languages/frontend-extracted-strings.php:402
 msgid "Platform"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:402
+#: languages/frontend-extracted-strings.php:404
 msgid "Filter:"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:404
+#: languages/frontend-extracted-strings.php:406
 msgid "to"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:406
+#: languages/frontend-extracted-strings.php:408
 msgid "Account"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:408
+#: languages/frontend-extracted-strings.php:410
 msgid "Response"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:410
+#: languages/frontend-extracted-strings.php:412
 msgid "Visit"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:412
+#: languages/frontend-extracted-strings.php:414
 msgid "Retry"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:414
+#: languages/frontend-extracted-strings.php:416
 msgid "Related schedule was deleted"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:416
+#: languages/frontend-extracted-strings.php:418
 msgid "Actions"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:418
+#: languages/frontend-extracted-strings.php:420
 msgid "Hide"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:420
+#: languages/frontend-extracted-strings.php:422
 msgid "Details"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:422
+#: languages/frontend-extracted-strings.php:424
 msgid "Are you sure to delete this logs?"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:424
+#: languages/frontend-extracted-strings.php:426
 msgid "Confirm"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:426
+#: languages/frontend-extracted-strings.php:428
 msgid "Delete Logs"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:428
+#: languages/frontend-extracted-strings.php:430
 msgid "Visit our documentation"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:430
+#: languages/frontend-extracted-strings.php:432
 msgid "Refresh"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:432
+#: languages/frontend-extracted-strings.php:434
 msgid "Active Account"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:434
+#: languages/frontend-extracted-strings.php:436
 msgid "Published Post"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:436
+#: languages/frontend-extracted-strings.php:438
 msgid "Active Schedule"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:438
+#: languages/frontend-extracted-strings.php:440
 msgid "Welcome to Bit Social"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:440
+#: languages/frontend-extracted-strings.php:442
 msgid "Thanks for using Bit Social"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:442
+#: languages/frontend-extracted-strings.php:444
 msgid "Smart solution for WordPress post Schedule"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:444
+#: languages/frontend-extracted-strings.php:446
 msgid "Minute"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:446
+#: languages/frontend-extracted-strings.php:448
 msgid "Hour"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:448
+#: languages/frontend-extracted-strings.php:450
 msgid "Day"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:450
+#: languages/frontend-extracted-strings.php:452
 msgid "Week"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:452
+#: languages/frontend-extracted-strings.php:454
 msgid "Month"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:454
+#: languages/frontend-extracted-strings.php:456
 msgid "Year"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:456
+#: languages/frontend-extracted-strings.php:458
 msgid "Customize post message"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:458
+#: languages/frontend-extracted-strings.php:460
 msgid "Media"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:460
+#: languages/frontend-extracted-strings.php:462
 msgid "First comment"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:462
+#: languages/frontend-extracted-strings.php:464
 msgid "Post Link"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:464
+#: languages/frontend-extracted-strings.php:466
 msgid "Share the post link on Pinterest"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:466
-msgid "Schedule Share"
-msgstr ""
-
 #: languages/frontend-extracted-strings.php:468
-msgid "Scheduled Direct Share"
+msgid "Add video"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:470
-msgid "All times"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:472
-msgid "Today"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:474
-msgid "last 7 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:476
-msgid "last 15 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:478
-msgid "last 30 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:480
-msgid "last 90 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:482
-msgid "last 180 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:484
-msgid "last 365 days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:486
-msgid "custom date range"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:488
-msgid "By the published time of the posts"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:490
-msgid "Select publish date"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:492
-msgid "By post type"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:494
-msgid "Select post type"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:496
-msgid "By the post category and tag"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:498
-msgid "Select category or tag"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:500
-msgid "Select Specific Post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:502
-msgid "Post ID: Post Title"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:504
-msgid "Posts matched by current filters"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:506
-msgid "Start"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:508
-msgid "Next post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:510
-msgid "Edit"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:512
-msgid "Are you sure you want to delete this schedule?"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:514
-msgid "Delete?"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:516
-msgid "Delete"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:518
-msgid "Title"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:520
-msgid "Created At"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:522
-msgid "Start Scheduled Post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:524
-msgid "Interval"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:526
-msgid "Next Post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:528
-msgid "In Progress"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:530
-msgid "Completed"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:532
-msgid "Active"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:534
-msgid "Paused"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:536
-msgid "Action"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:538
-msgid "Search schedule"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:540
-msgid "How to create schedule"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:542
-msgid "Create Schedule"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:544
-msgid "No schedule found!"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:546
-msgid "Monday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:548
-msgid "Tuesday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:550
-msgid "Wednesday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:552
-msgid "Thursday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:554
-msgid "Friday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:556
-msgid "Saturday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:558
-msgid "Sunday"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:560
-msgid "Enter a name"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:562
-msgid "Start date & time"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:564
-msgid "Local time: %s ; Time Zone: (%s)"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:566
-msgid "Post interval"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:568
-msgid "If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM."
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:570
-msgid "Order posts by"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:572
-msgid "Randomly without duplicates"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:574
-msgid "Randomly"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:576
-msgid "Start from the oldest to new posts"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:578
-msgid "Start from the latest to old posts"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:580
-msgid "Set a sleep timer"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:582
-msgid "Set sleep days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:584
-msgid "Select sleep days"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:586
-msgid "Please select an account"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:588
-msgid "Cron Setup"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:590
-msgid "All settings here"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:592
-msgid "For more accurate results, you must establish a genuine"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:594
-msgid "Cron job"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:596
-msgid "on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays."
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:598
-msgid "Cron Job settings"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:600
-msgid "For your website, the Cron Job command is:"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:602
-msgid "Activate Bit Social's external cron feature for continuous cron job operation even if there is no user's hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:604
-msgid "External Cron"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:606
-msgid "Enable External Cron"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:608
-msgid "Post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:610
-msgid "Write your custom post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:612
-msgid "Link"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:614
-msgid "https://example.com"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:616
-msgid "Add Image"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:618
 msgid "Upload"
 msgstr ""
 
+#: languages/frontend-extracted-strings.php:472
+msgid "Privacy settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:474
+msgid "Public to everyone"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:476
+msgid "Mutual follow friends"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:478
+msgid "Follower of creator"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:480
+msgid "Self only"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:482
+msgid "Others"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:484
+msgid "Allow Comment"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:486
+msgid "Allow Duet"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:488
+msgid "Allow Stitch"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:490
+msgid "Schedule Share"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:492
+msgid "Scheduled Direct Share"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:494
+msgid "All times"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:496
+msgid "Today"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:498
+msgid "last 7 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:500
+msgid "last 15 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:502
+msgid "last 30 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:504
+msgid "last 90 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:506
+msgid "last 180 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:508
+msgid "last 365 days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:510
+msgid "custom date range"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:512
+msgid "By the published time of the posts"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:514
+msgid "Select publish date"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:516
+msgid "By post type"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:518
+msgid "Select post type"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:520
+msgid "By the post category and tag"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:522
+msgid "Select category or tag"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:524
+msgid "Select Specific Post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:526
+msgid "Post ID: Post Title"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:528
+msgid "Posts matched by current filters"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:530
+msgid "Start"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:532
+msgid "Next post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:534
+msgid "Edit"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:536
+msgid "Are you sure you want to delete this schedule?"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:538
+msgid "Delete?"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:540
+msgid "Delete"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:542
+msgid "Title"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:544
+msgid "Created At"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:546
+msgid "Start Scheduled Post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:548
+msgid "Interval"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:550
+msgid "Next Post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:552
+msgid "In Progress"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:554
+msgid "Completed"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:556
+msgid "Active"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:558
+msgid "Paused"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:560
+msgid "Re-schedule"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:562
+msgid "Action"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:564
+msgid "Search schedule"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:566
+msgid "How to create schedule"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:568
+msgid "Create Schedule"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:570
+msgid "No schedule found!"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:572
+msgid "Monday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:574
+msgid "Tuesday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:576
+msgid "Wednesday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:578
+msgid "Thursday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:580
+msgid "Friday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:582
+msgid "Saturday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:584
+msgid "Sunday"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:586
+msgid "Enter a name"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:588
+msgid "Start date & time"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:590
+msgid "Local time: %s ; Time Zone: (%s)"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:592
+msgid "Post interval"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:594
+msgid "If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM."
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:596
+msgid "Order posts by"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:598
+msgid "Randomly without duplicates"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:600
+msgid "Randomly"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:602
+msgid "Start from the oldest to new posts"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:604
+msgid "Start from the latest to old posts"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:606
+msgid "Set a sleep timer"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:608
+msgid "Set sleep days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:610
+msgid "Select sleep days"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:612
+msgid "Please select an account"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:614
+msgid "Cron Setup"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:616
+msgid "All settings here"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:618
+msgid "For more accurate results, you must establish a genuine"
+msgstr ""
+
 #: languages/frontend-extracted-strings.php:620
-msgid "Add a button (optional)"
+msgid "Cron job"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:622
-msgid "Select Button"
+msgid "on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:624
-msgid "Link for your button*"
+msgid "Cron Job settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:626
-msgid "Make comment"
+msgid "For your website, the Cron Job command is:"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:628
-msgid "Enable to selected image shared"
+msgid "Activate Bit Social's external cron feature for continuous cron job operation even if there is no user's hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:630
-msgid "Add a link"
+msgid "External Cron"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:632
-msgid "Enable to the link shared as a card"
+msgid "Enable External Cron"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:634
-msgid "Draft"
+msgid "Post"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:636
-msgid "Missed"
+msgid "Write your custom post"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:638
-msgid "How to share a post instantly"
+msgid "Link"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:640
-msgid "Share Post"
+msgid "https://example.com"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:642
-msgid "No Share Post found!"
+msgid "Add Image"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:644
-msgid "Untitled Share Now"
+msgid "Add a button (optional)"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:646
-msgid "Something went wrong!"
+msgid "Select Button"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:648
-msgid "Edit Schedule"
+msgid "Link for your button*"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:650
-msgid "Setup Schedule"
+msgid "Make comment"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:652
-msgid "Edit Share Now"
+msgid "Enable to selected image shared"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:654
-msgid "Continue"
+msgid "Add a link"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:656
-msgid "Edit schedule"
+msgid "Description"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:658
-msgid "Please, insert a valid start date & time first!"
+msgid "Share more about your video here"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:660
-msgid "Repeat"
+msgid "Enable to the link shared as a card"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:662
-msgid "If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM."
+msgid "Untitled Share Now"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:664
-msgid "Only custom message"
+msgid "Something went wrong!"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:666
-msgid "Link card"
+msgid "Edit Schedule"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:668
-msgid "Feature image"
+msgid "Setup Schedule"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:670
-msgid "Product Image"
+msgid "Edit Share Now"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:672
-msgid "All Images"
+msgid "Draft"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:674
-msgid "Discord Template Settings"
+msgid "Missed"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:676
-msgid "Custom message settings."
+msgid "Re-post"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:678
-msgid "Custom Message"
+msgid "How to share a post instantly"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:680
-msgid "Post styling and type setup."
+msgid "Share Post"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:682
-msgid "Posting type"
+msgid "No Share Post found!"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:684
-msgid "Trim Message"
+msgid "Continue"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:686
-msgid "Facebook Template Settings"
+msgid "Edit schedule"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:688
-msgid "Preview"
+msgid "Please, insert a valid start date & time first!"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:690
-msgid "Google Business Profile Template Settings"
+msgid "Repeat"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:692
-msgid "Select a post link button."
+msgid "If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:694
-msgid "Add a button"
+msgid "Only custom message"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:696
-msgid "All images"
+msgid "Link card"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:698
-msgid "Instagram Template Settings"
+msgid "Feature image"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:700
-msgid "Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB."
+msgid "Product Image"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:702
-msgid "Your comment"
+msgid "All Images"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:704
-msgid "Linkedin Template Settings"
+msgid "Discord Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:706
-msgid "Pinterest Template Settings"
+msgid "Custom message settings."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:708
-msgid "Post link"
+msgid "Custom Message"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:710
-msgid "See less"
+msgid "Post styling and type setup."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:712
-msgid "See more"
+msgid "Posting type"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:714
-msgid "Page name"
+msgid "Trim Message"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:716
-msgid "Just Now"
+msgid "Facebook Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:718
-msgid "Like"
+msgid "Preview"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:720
-msgid "Comment"
+msgid "Google Business Profile Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:722
-msgid "Share"
+msgid "Select a post link button."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:724
-msgid "Preview (Coming Soon)"
+msgid "Add a button"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:726
-msgid "Coming Soon"
+msgid "All images"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:728
-msgid "Tumblr Template Settings"
+msgid "Instagram Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:730
-msgid "X (Twitter) Template Settings"
+msgid "Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:732
-msgid "You can setup %s post settings below."
+msgid "Your comment"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:734
+msgid "Linkedin Template Settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:736
+msgid "Pinterest Template Settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:738
+msgid "Post link"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:740
+msgid "See less"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:742
+msgid "See more"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:744
+msgid "Page name"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:746
+msgid "Just Now"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:748
+msgid "Like"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:750
+msgid "Comment"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:752
+msgid "Share"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:754
+msgid "Preview (Coming Soon)"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:756
+msgid "Coming Soon"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:758
+msgid "Only Message"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:760
+msgid "PUBLIC TO EVERYONE"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:762
+msgid "MUTUAL FOLLOW FRIENDS"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:764
+msgid "FOLLOWER OF CREATOR"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:766
+msgid "SELF ONLY"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:768
+msgid "Tiktok Template Settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:770
+msgid "Who can see your post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:772
+msgid "Turn this on to let viewers share feedback or engage with your post through comments."
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:774
+msgid "Allow comments"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:776
+msgid "Enable this to let others create side-by-side reaction or collaboration videos with your post"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:778
+msgid "Allow others to clip up to 5 seconds of your post for their own content"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:780
+msgid "Tumblr Template Settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:782
+msgid "X (Twitter) Template Settings"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:784
+msgid "You can setup %s post settings below."
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:786
 msgid "Doc here."
 msgstr ""
 

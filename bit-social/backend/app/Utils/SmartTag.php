@@ -21,7 +21,8 @@ class SmartTag
         'featuredImageUrl'        => ['key' => 'featured_image_url', 'label' => 'Featured Image URL', 'description' => 'Post featured image URL', 'type' => 'free'],
         'postContentFull'         => ['key' => 'post_content_full', 'label' => 'Post Full Content', 'description' => 'Post full content', 'type' => 'free'],
         'postContent40'           => ['key' => 'post_content_short_40', 'label' => 'Post Content Short 40', 'description' => 'Post content share default first 40 characters, You can set the number whatever you want', 'type' => 'free'],
-        'postExcerpt'             => ['key' => 'post_excerpt', 'label' => 'Post Excerpt', 'description' => 'Post excerpt', 'type' => 'free'],
+        'postExcerpt'             => ['key' => 'post_excerpt', 'label' => 'Post Full Excerpt', 'description' => 'Post excerpt', 'type' => 'free'],
+        'postExcerpt40'           => ['key' => 'post_excerpt_short_40', 'label' => 'Post Excerpt Short 40', 'description' => 'default first 40 characters, You can set the number whatever you want', 'type' => 'pro'],
         'postLink'                => ['key' => 'post_link', 'label' => 'Post Link', 'description' => 'Post link', 'type' => 'free'],
         'productName'             => ['key' => 'product_name', 'label' => 'Product Name', 'description' => 'WC Product name', 'type' => 'pro'],
         'productDescription'      => ['key' => 'product_description', 'label' => 'Product Description', 'description' => 'WC Product description', 'type' => 'pro'],
@@ -87,7 +88,13 @@ class SmartTag
             case 'post_content_short_40':
 
                 $value = strip_tags($post->post_content);
-                $value = $this->getPostContentShort($value, 40);
+                $value = $this->getContentShort($value, 40);
+
+                break;
+            case 'post_excerpt_short_40':
+
+                $value = $post->post_excerpt;
+                $value = $this->getContentShort($value, 40);
 
                 break;
             case 'featured_image_url':
@@ -121,7 +128,13 @@ class SmartTag
                 if (preg_match('/^post_content_short_(\d+)$/', $key, $matches)) {
                     $length = \intval($matches[1]); // Get the integer value after 'short_'
                     $value = wp_strip_all_tags($post->post_content);
-                    $value = $this->getPostContentShort($value, $length); // Pass the length dynamically
+                    $value = $this->getContentShort($value, $length); // Pass the length dynamically
+                }
+
+                if (preg_match('/^post_excerpt_short_(\d+)$/', $key, $matches)) {
+                    $length = \intval($matches[1]); // Get the integer value after 'short_'
+                    $value = $post->post_excerpt;
+                    $value = $this->getContentShort($value, $length); // Pass the length dynamically
                 }
 
                 break;

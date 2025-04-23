@@ -357,7 +357,9 @@ return [
 
     'Click Here' => __('Click Here', 'undefined'),
 
-    'Fixed' => __('Fixed', 'undefined'),
+    'Integrations' => __('Integrations', 'undefined'),
+
+    'Features' => __('Features', 'undefined'),
 
     'Upcoming Integrations' => __('Upcoming Integrations', 'undefined'),
 
@@ -463,6 +465,28 @@ return [
 
     'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'undefined'),
 
+    'Add video' => __('Add video', 'undefined'),
+
+    'Upload' => __('Upload', 'undefined'),
+
+    'Privacy settings' => __('Privacy settings', 'undefined'),
+
+    'Public to everyone' => __('Public to everyone', 'undefined'),
+
+    'Mutual follow friends' => __('Mutual follow friends', 'undefined'),
+
+    'Follower of creator' => __('Follower of creator', 'undefined'),
+
+    'Self only' => __('Self only', 'undefined'),
+
+    'Others' => __('Others', 'undefined'),
+
+    'Allow Comment' => __('Allow Comment', 'undefined'),
+
+    'Allow Duet' => __('Allow Duet', 'undefined'),
+
+    'Allow Stitch' => __('Allow Stitch', 'undefined'),
+
     'Schedule Share' => __('Schedule Share', 'undefined'),
 
     'Scheduled Direct Share' => __('Scheduled Direct Share', 'undefined'),
@@ -532,6 +556,8 @@ return [
     'Active' => __('Active', 'undefined'),
 
     'Paused' => __('Paused', 'undefined'),
+
+    'Re-schedule' => __('Re-schedule', 'undefined'),
 
     'Action' => __('Action', 'undefined'),
 
@@ -615,8 +641,6 @@ return [
 
     'Add Image' => __('Add Image', 'undefined'),
 
-    'Upload' => __('Upload', 'undefined'),
-
     'Add a button (optional)' => __('Add a button (optional)', 'undefined'),
 
     'Select Button' => __('Select Button', 'undefined'),
@@ -629,17 +653,11 @@ return [
 
     'Add a link' => __('Add a link', 'undefined'),
 
+    'Description' => __('Description', 'undefined'),
+
+    'Share more about your video here' => __('Share more about your video here', 'undefined'),
+
     'Enable to the link shared as a card' => __('Enable to the link shared as a card', 'undefined'),
-
-    'Draft' => __('Draft', 'undefined'),
-
-    'Missed' => __('Missed', 'undefined'),
-
-    'How to share a post instantly' => __('How to share a post instantly', 'undefined'),
-
-    'Share Post' => __('Share Post', 'undefined'),
-
-    'No Share Post found!' => __('No Share Post found!', 'undefined'),
 
     'Untitled Share Now' => __('Untitled Share Now', 'undefined'),
 
@@ -650,6 +668,18 @@ return [
     'Setup Schedule' => __('Setup Schedule', 'undefined'),
 
     'Edit Share Now' => __('Edit Share Now', 'undefined'),
+
+    'Draft' => __('Draft', 'undefined'),
+
+    'Missed' => __('Missed', 'undefined'),
+
+    'Re-post' => __('Re-post', 'undefined'),
+
+    'How to share a post instantly' => __('How to share a post instantly', 'undefined'),
+
+    'Share Post' => __('Share Post', 'undefined'),
+
+    'No Share Post found!' => __('No Share Post found!', 'undefined'),
 
     'Continue' => __('Continue', 'undefined'),
 
@@ -724,6 +754,28 @@ return [
     'Preview (Coming Soon)' => __('Preview (Coming Soon)', 'undefined'),
 
     'Coming Soon' => __('Coming Soon', 'undefined'),
+
+    'Only Message' => __('Only Message', 'undefined'),
+
+    'PUBLIC TO EVERYONE' => __('PUBLIC TO EVERYONE', 'undefined'),
+
+    'MUTUAL FOLLOW FRIENDS' => __('MUTUAL FOLLOW FRIENDS', 'undefined'),
+
+    'FOLLOWER OF CREATOR' => __('FOLLOWER OF CREATOR', 'undefined'),
+
+    'SELF ONLY' => __('SELF ONLY', 'undefined'),
+
+    'Tiktok Template Settings' => __('Tiktok Template Settings', 'undefined'),
+
+    'Who can see your post' => __('Who can see your post', 'undefined'),
+
+    'Turn this on to let viewers share feedback or engage with your post through comments.' => __('Turn this on to let viewers share feedback or engage with your post through comments.', 'undefined'),
+
+    'Allow comments' => __('Allow comments', 'undefined'),
+
+    'Enable this to let others create side-by-side reaction or collaboration videos with your post' => __('Enable this to let others create side-by-side reaction or collaboration videos with your post', 'undefined'),
+
+    'Allow others to clip up to 5 seconds of your post for their own content' => __('Allow others to clip up to 5 seconds of your post for their own content', 'undefined'),
 
     'Tumblr Template Settings' => __('Tumblr Template Settings', 'undefined'),
 

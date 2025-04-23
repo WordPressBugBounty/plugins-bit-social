@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sat Mar 29 2025 09:47:26 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Wed Apr 23 2025 08:30:53 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,7 +196,6 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:11
 msgid "Improvement"
 msgstr ""
 
@@ -218,7 +217,7 @@ msgstr ""
 msgid "Recommended Plugins"
 msgstr ""
 
-#: frontend/_plugin-commons/components/SupportPage/SupportLinks.tsx:34
+#: frontend/_plugin-commons/components/SupportPage/SupportLinks.tsx:56
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:17
 msgid "Support"
 msgstr ""
@@ -344,7 +343,7 @@ msgstr ""
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
 #: frontend/src/pages/root/DefaultDashboard.tsx:28
 #: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
-#: frontend/src/pages/ShareNow/ShareBox.tsx:305
+#: frontend/src/pages/ShareNow/ShareBox.tsx:310
 msgid "Accounts"
 msgstr ""
 
@@ -418,7 +417,7 @@ msgstr ""
 msgid "Total %s accounts found"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:92
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:93
 #: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:27
 msgid "Custom App"
 msgstr ""
@@ -440,9 +439,9 @@ msgid "Are you sure to delete this app?"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:61
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:224
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:306
-#: frontend/src/pages/ShareNow/Posts.tsx:237
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:238
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:335
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:253
 msgid "Yes, Delete"
 msgstr ""
 
@@ -816,8 +815,12 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:18
-msgid "Fixed"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:11
+msgid "Integrations"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:15
+msgid "Features"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
@@ -885,8 +888,8 @@ msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:132
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:38
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:210
-#: frontend/src/pages/ShareNow/Posts.tsx:222
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:227
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:242
 msgid "Status"
 msgstr ""
 
@@ -955,19 +958,19 @@ msgid "Details"
 msgstr ""
 
 #: frontend/src/pages/Logs/Logs.tsx:242
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:304
-#: frontend/src/pages/ShareNow/Posts.tsx:304
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:333
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:336
 msgid "Are you sure to delete this logs?"
 msgstr ""
 
 #: frontend/src/pages/Logs/Logs.tsx:243
-#: frontend/src/pages/ShareNow/Posts.tsx:305
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:337
 msgid "Confirm"
 msgstr ""
 
 #: frontend/src/pages/Logs/Logs.tsx:246
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:309
-#: frontend/src/pages/ShareNow/Posts.tsx:308
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:338
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:340
 msgid "Delete Logs"
 msgstr ""
 
@@ -978,8 +981,8 @@ msgid "Visit our documentation"
 msgstr ""
 
 #: frontend/src/pages/Logs/Logs.tsx:273
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:336
-#: frontend/src/pages/ShareNow/Posts.tsx:336
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:365
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:368
 msgid "Refresh"
 msgstr ""
 
@@ -1039,6 +1042,7 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:68
 #: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:63
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:70
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:98
 #: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:63
 #: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:63
 msgid "Customize post message"
@@ -1050,6 +1054,8 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:75
 #: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:79
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:77
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:50
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:106
 #: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:70
 #: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:70
 #: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:76
@@ -1060,6 +1066,8 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:59
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:129
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:72
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:74
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:73
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:41
@@ -1079,6 +1087,72 @@ msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:102
 msgid "Share the post link on Pinterest"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:113
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:138
+msgid "Add video"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:117
+#: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:150
+#: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:151
+#: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:148
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:175
+#: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:160
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:142
+#: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:148
+#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:152
+msgid "Upload"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:124
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:149
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:104
+msgid "Privacy settings"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:128
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:153
+msgid "Public to everyone"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:129
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:154
+msgid "Mutual follow friends"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:130
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:155
+msgid "Follower of creator"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:131
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:156
+msgid "Self only"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:136
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
+msgid "Others"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:143
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:169
+msgid "Allow Comment"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:151
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:177
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:139
+msgid "Allow Duet"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:159
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:185
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:153
+msgid "Allow Stitch"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/PostCard.tsx:31
@@ -1170,18 +1244,19 @@ msgid "Next post"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:96
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:272
 msgid "Edit"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:99
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:222
-#: frontend/src/pages/ShareNow/Posts.tsx:235
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:236
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:251
 msgid "Are you sure you want to delete this schedule?"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:103
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:227
-#: frontend/src/pages/ShareNow/Posts.tsx:240
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:241
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:256
 msgid "Delete?"
 msgstr ""
 
@@ -1189,71 +1264,75 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:149
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:166
 #: frontend/src/pages/Schedules/internals/Settings.tsx:93
-#: frontend/src/pages/ShareNow/Posts.tsx:149
-#: frontend/src/pages/ShareNow/ShareBox.tsx:325
+#: frontend/src/pages/ShareNow/ShareBox.tsx:330
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:169
 msgid "Title"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:155
-#: frontend/src/pages/ShareNow/Posts.tsx:155
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:172
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:175
 msgid "Created At"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:160
-#: frontend/src/pages/ShareNow/Posts.tsx:160
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:177
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:180
 msgid "Start Scheduled Post"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:171
-#: frontend/src/pages/ShareNow/Posts.tsx:172
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:188
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:192
 msgid "Interval"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:176
-#: frontend/src/pages/ShareNow/Posts.tsx:177
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:193
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:197
 msgid "Next Post"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:183
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:200
 msgid "In Progress"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:187
-#: frontend/src/pages/ShareNow/Posts.tsx:209
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:204
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:229
 msgid "Completed"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:196
-#: frontend/src/pages/ShareNow/Posts.tsx:193
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:213
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:213
 msgid "Active"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:197
-#: frontend/src/pages/ShareNow/Posts.tsx:198
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:214
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:218
 msgid "Paused"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:233
-#: frontend/src/pages/ShareNow/Posts.tsx:246
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:255
+msgid "Re-schedule"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:262
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:278
 msgid "Action"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:294
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:323
 msgid "Search schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:327
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:356
 msgid "How to create schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:339
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:375
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:368
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:404
 msgid "Create Schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:372
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:401
 msgid "No schedule found!"
 msgstr ""
 
@@ -1465,17 +1544,6 @@ msgstr ""
 msgid "Add Image"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:150
-#: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:151
-#: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:148
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:175
-#: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:160
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
-#: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:148
-#: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:152
-msgid "Upload"
-msgstr ""
-
 #: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:137
 msgid "Add a button (optional)"
 msgstr ""
@@ -1502,49 +1570,61 @@ msgstr ""
 msgid "Add a link"
 msgstr ""
 
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:119
+msgid "Description"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:124
+msgid "Share more about your video here"
+msgstr ""
+
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:21
 msgid "Enable to the link shared as a card"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/Posts.tsx:212
-msgid "Draft"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/Posts.tsx:215
-msgid "Missed"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/Posts.tsx:326
-msgid "How to share a post instantly"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/Posts.tsx:345
-#: frontend/src/pages/ShareNow/Posts.tsx:380
-msgid "Share Post"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/Posts.tsx:373
-msgid "No Share Post found!"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/ShareBox.tsx:329
+#: frontend/src/pages/ShareNow/ShareBox.tsx:334
 msgid "Untitled Share Now"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:349
+#: frontend/src/pages/ShareNow/ShareBox.tsx:354
 msgid "Something went wrong!"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:374
+#: frontend/src/pages/ShareNow/ShareBox.tsx:379
 msgid "Edit Schedule"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:374
+#: frontend/src/pages/ShareNow/ShareBox.tsx:379
 msgid "Setup Schedule"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/ShareNow.tsx:41
 msgid "Edit Share Now"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:232
+msgid "Draft"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:235
+msgid "Missed"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:265
+msgid "Re-post"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:358
+msgid "How to share a post instantly"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:377
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:412
+msgid "Share Post"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:405
+msgid "No Share Post found!"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:169
@@ -1654,6 +1734,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:69
 #: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:63
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
@@ -1671,6 +1752,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:69
 #: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:63
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
@@ -1688,6 +1770,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:82
 #: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:77
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
@@ -1705,6 +1788,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:82
 #: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:77
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
@@ -1722,6 +1806,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:113
 #: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:110
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:100
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:168
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:93
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:92
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:76
@@ -1824,6 +1909,54 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/PreviewDummy.tsx:30
 msgid "Coming Soon"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:43
+msgid "Only Message"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:50
+msgid "PUBLIC TO EVERYONE"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:54
+msgid "MUTUAL FOLLOW FRIENDS"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:58
+msgid "FOLLOWER OF CREATOR"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:62
+msgid "SELF ONLY"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:72
+msgid "Tiktok Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:104
+msgid "Who can see your post"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:119
+msgid ""
+"Turn this on to let viewers share feedback or engage with your post through "
+"comments."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:122
+msgid "Allow comments"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:136
+msgid ""
+"Enable this to let others create side-by-side reaction or collaboration "
+"videos with your post"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:150
+msgid "Allow others to clip up to 5 seconds of your post for their own content"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:60

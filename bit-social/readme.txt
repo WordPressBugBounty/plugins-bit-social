@@ -5,7 +5,7 @@ Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
 Tested up to: 6.7.1
 Requires PHP: 7.4
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -62,11 +62,13 @@ https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 * [Discord Documentation](https://bit-social.com/docs/accounts/connect-your-discord-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=q85NrjFQ33Y&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=7)
 * [Twitter Documentation](https://bit-social.com/docs/bit-social/accounts/schedule-auto-publish-wordpress-posts-to-twitter/) - [Watch Video](https://www.youtube.com/watch?v=nI1oYZ91jto&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=8)
 * [Pinterest Documentation](https://bit-social.com/documentation/accounts/connect-your-pinterest-account-with-bit-social/)
+* [Instagram Documentation](https://bit-social.com/documentation/accounts/connect-your-instagram-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=m44aFan4Nr4&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=26)
+* [TikTok Documentation](https://bit-social.com/documentation/accounts/connect-your-tiktok-account-with-bit-social/)
 
 == Upcoming Platforms: ==
 
-* Instagram
-* Telegram
+* Bluesky
+* Youtube
 
 ==
 Bit Social - The Best Scheduling WP Plugin! by **- Lari**
@@ -193,6 +195,16 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 
 
 == Changelog ==
+
+= v1.3.3 (April 23, 2025) =
+
+* Integration:
+    * TikTok: Create posts with your authorized custom app — one-click connect coming soon!
+
+* Features:
+   * Re-Schedule Button: Allows you to modify and reschedule previously completed or missed schedules.
+   * Smart Tags: A new tag {post_excerpt_short_40} has been added, allowing you to dynamically shorten the length of your post excerpt to any specified number of characters.
+
 
 = v1.3.2 (March 29, 2025) =
 

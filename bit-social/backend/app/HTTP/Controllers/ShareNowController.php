@@ -19,10 +19,23 @@ class ShareNowController
             ->desc()
             ->paginate($page, $limit);
 
+        $missedScheduleIds = [];
+
         foreach ($shareNowData['data'] as $data) {
             $actionHook = Config::VAR_PREFIX . $data->id . '_cron_exec';
             $hookArgument['schedule_id'] = $data->id;
             $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
+
+            $settings = $data->config['settings'];
+            $repeat = $settings['repeat'] ?? false;
+            $isStatusActive = $data->status === Schedule::status['ACTIVE'];
+            $addTwoMinutes = 120;
+
+            // Check share now missed post
+
+            if ($isStatusActive && !$repeat && !empty($data->started_at) && strtotime($data->started_at) + $addTwoMinutes < current_time('timestamp')) {
+                $missedScheduleIds[] = $data->id;
+            }
 
             if ($nextPostTimeStamp) {
                 $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
@@ -35,6 +48,21 @@ class ShareNowController
 
                 $data->human_readable_next_publish = 'in ' . $humanReadableTime;
                 $data->next_published_at = $exactDateTime;
+            }
+        }
+
+        if (!empty($missedScheduleIds)) {
+            global $wpdb;
+            $table = Config::get('WP_DB_PREFIX') . Config::VAR_PREFIX . 'schedules';
+            $missedStatus = Schedule::status['MISSED'];
+
+            $placeholders = implode(',', array_fill(0, \count($missedScheduleIds), '%d'));
+            $query = "UPDATE {$table} SET status = %d WHERE id IN ({$placeholders})";
+
+            $response = $wpdb->query($wpdb->prepare($query, $missedStatus, ...$missedScheduleIds));
+
+            if ($response) {
+                $this->removeScheduleHook($missedScheduleIds);
             }
         }
 
@@ -261,6 +289,12 @@ class ShareNowController
             $scheduleRunTime = $scheduleRunTime + $delay;
         } elseif ($wpNextSchedule && !empty($schedule['started_at']) && strtotime($schedule['started_at']) < $wpTimeStamp) {
             $scheduleRunTime = $wpNextSchedule;
+        }
+
+        // When share now start date undefined
+
+        if (empty($schedule['started_at'])) {
+            $schedule->update(['started_at' => date('Y-m-d H:i:s', $wpTimeStamp)])->save();
         }
 
         return wp_schedule_single_event($scheduleRunTime, $actionHook, [$hookArgument]);

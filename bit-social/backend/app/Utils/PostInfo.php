@@ -11,13 +11,13 @@ trait PostInfo
         }
     }
 
-    public function getPostContentShort($postContent, $length)
+    public function getContentShort($content, $length)
     {
-        if (\strlen($postContent) > $length) {
-            return substr($postContent, 0, $length);
+        if (\strlen($content) > $length) {
+            return substr($content, 0, $length);
         }
 
-        return $postContent;
+        return $content;
     }
 
     public static function getAllImages($postId)

@@ -53,6 +53,16 @@ class SocialTemplateController
             'comment'     => '',
             'trimMessage' => true
         ],
+
+        'tiktok' => [
+            'allowComment' => true,
+            'content'      => '{post_title}',
+            'duet'         => false,
+            'postingType'  => 'onlyMessage',
+            'privacyLevel' => 'PUBLIC_TO_EVERYONE',
+            'stitch'       => false,
+            'trimMessage'  => true
+        ],
     ];
 
     public function socialTemplates()

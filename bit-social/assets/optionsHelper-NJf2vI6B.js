@@ -1,0 +1,1 @@
+import{R as i,E as s}from"./main-true-brooms-decide.js";globalThis.jotaiAtomCache=globalThis.jotaiAtomCache||{cache:new Map,get(t,o){return this.cache.has(t)?this.cache.get(t):(this.cache.set(t,o),o)}};function r(t,o){const{isProClient:e}=i(s);return t==="postingType"&&new Set(["isAllImages","isProductImage"]).has(o)&&!e}export{r as i};
