@@ -1,788 +1,786 @@
 <?php
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 return [
-    'Changelog' => __('Changelog', 'undefined'),
+    'Changelog' => __('Changelog', 'bit-social'),
 
-    'Join Our Facebook Community' => __('Join Our Facebook Community', 'undefined'),
+    'Join Our Facebook Community' => __('Join Our Facebook Community', 'bit-social'),
 
-    'Connect, share, and grow with like-minded individuals' => __('Connect, share, and grow with like-minded individuals', 'undefined'),
+    'Connect, share, and grow with like-minded individuals' => __('Connect, share, and grow with like-minded individuals', 'bit-social'),
 
-    'Exclusive Content' => __('Exclusive Content', 'undefined'),
+    'Exclusive Content' => __('Exclusive Content', 'bit-social'),
 
-    'Daily Discussion' => __('Daily Discussion', 'undefined'),
+    'Daily Discussion' => __('Daily Discussion', 'bit-social'),
 
-    'Special Events' => __('Special Events', 'undefined'),
+    'Special Events' => __('Special Events', 'bit-social'),
 
-    'Join Now' => __('Join Now', 'undefined'),
+    'Join Now' => __('Join Now', 'bit-social'),
 
-    'License & Activation' => __('License & Activation', 'undefined'),
+    'License & Activation' => __('License & Activation', 'bit-social'),
 
-    'Dev Version On' => __('Dev Version On', 'undefined'),
+    'Dev Version On' => __('Dev Version On', 'bit-social'),
 
-    'Version' => __('Version', 'undefined'),
+    'Version' => __('Version', 'bit-social'),
 
-    'Code Name:' => __('Code Name:', 'undefined'),
+    'Code Name:' => __('Code Name:', 'bit-social'),
 
-    'Pro Version' => __('Pro Version', 'undefined'),
+    'Pro Version' => __('Pro Version', 'bit-social'),
 
-    'Not Activated' => __('Not Activated', 'undefined'),
+    'Not Activated' => __('Not Activated', 'bit-social'),
 
-    'Buy Pro Version' => __('Buy Pro Version', 'undefined'),
+    'Buy Pro Version' => __('Buy Pro Version', 'bit-social'),
 
-    'Deactivate License' => __('Deactivate License', 'undefined'),
+    'Deactivate License' => __('Deactivate License', 'bit-social'),
 
-    'Activate License' => __('Activate License', 'undefined'),
+    'Activate License' => __('Activate License', 'bit-social'),
 
-    'Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license.' => __('Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license.', 'undefined'),
+    'Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license.' => __('Please ensure that your product subscription is valid. If needed, try deactivating and reactivating your license.', 'bit-social'),
 
-    'For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro .' => __('For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro .', 'undefined'),
+    'For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro .' => __('For further assistance, feel free to reach out to our live support or email us at support@bitapps.pro .', 'bit-social'),
 
-    'Your license is invalid, try reactivate' => __('Your license is invalid, try reactivate', 'undefined'),
+    'Your license is invalid, try reactivate' => __('Your license is invalid, try reactivate', 'bit-social'),
 
-    'Manage license' => __('Manage license', 'undefined'),
+    'Manage license' => __('Manage license', 'bit-social'),
 
     'Please update your license to ensure you receive the latest security updates and bug fixes. 
           Using an outdated or unofficial license may leave your system vulnerable to security breaches and data leaks. 
           We cannot take responsibility for issues arising from such scenarios. For your safety, always download from the official Bit Apps server.' => __('Please update your license to ensure you receive the latest security updates and bug fixes. 
           Using an outdated or unofficial license may leave your system vulnerable to security breaches and data leaks. 
-          We cannot take responsibility for issues arising from such scenarios. For your safety, always download from the official Bit Apps server.', 'undefined'),
+          We cannot take responsibility for issues arising from such scenarios. For your safety, always download from the official Bit Apps server.', 'bit-social'),
 
-    'Your license is invalid' => __('Your license is invalid', 'undefined'),
+    'Your license is invalid' => __('Your license is invalid', 'bit-social'),
 
-    'Plugin Update Required (%s)' => __('Plugin Update Required (%s)', 'undefined'),
+    'Plugin Update Required (%s)' => __('Plugin Update Required (%s)', 'bit-social'),
 
-    'Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.' => __('Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.', 'undefined'),
+    'Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.' => __('Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.', 'bit-social'),
 
-    'Updating...' => __('Updating...', 'undefined'),
+    'Updating...' => __('Updating...', 'bit-social'),
 
-    'Update Now' => __('Update Now', 'undefined'),
+    'Update Now' => __('Update Now', 'bit-social'),
 
-    'Checking updates' => __('Checking updates', 'undefined'),
+    'Checking updates' => __('Checking updates', 'bit-social'),
 
-    'New version available' => __('New version available', 'undefined'),
+    'New version available' => __('New version available', 'bit-social'),
 
-    'Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!' => __('Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!', 'undefined'),
+    'Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!' => __('Please update to the latest version to ensure plugin security and optimal performance. Stay safe and enjoy the enhanced features!', 'bit-social'),
 
-    'is up to date' => __('is up to date', 'undefined'),
+    'is up to date' => __('is up to date', 'bit-social'),
 
-    'Zapier Alternative in WordPress Unlimited Task.' => __('Zapier Alternative in WordPress Unlimited Task.', 'undefined'),
+    'Zapier Alternative in WordPress Unlimited Task.' => __('Zapier Alternative in WordPress Unlimited Task.', 'bit-social'),
 
-    'An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.' => __('An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.', 'undefined'),
+    'An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.' => __('An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.', 'bit-social'),
 
-    'Cash Back' => __('Cash Back', 'undefined'),
+    'Cash Back' => __('Cash Back', 'bit-social'),
 
-    'Hi' => __('Hi', 'undefined'),
+    'Hi' => __('Hi', 'bit-social'),
 
-    'We want your feedback!' => __('We want your feedback!', 'undefined'),
+    'We want your feedback!' => __('We want your feedback!', 'bit-social'),
 
-    'Write a review' => __('Write a review', 'undefined'),
+    'Write a review' => __('Write a review', 'bit-social'),
 
-    'of your experience with %s, and we\'ll send you a' => __('of your experience with %s, and we\'ll send you a', 'undefined'),
+    'of your experience with %s, and we\'ll send you a' => __('of your experience with %s, and we\'ll send you a', 'bit-social'),
 
-    '$10 Cash back' => __('$10 Cash back', 'undefined'),
+    '$10 Cash back' => __('$10 Cash back', 'bit-social'),
 
-    'to say thanks!' => __('to say thanks!', 'undefined'),
+    'to say thanks!' => __('to say thanks!', 'bit-social'),
 
-    'To claim your cash back, simply reply to support with a screenshot or link of your review.' => __('To claim your cash back, simply reply to support with a screenshot or link of your review.', 'undefined'),
+    'To claim your cash back, simply reply to support with a screenshot or link of your review.' => __('To claim your cash back, simply reply to support with a screenshot or link of your review.', 'bit-social'),
 
-    'Review Now' => __('Review Now', 'undefined'),
+    'Review Now' => __('Review Now', 'bit-social'),
 
-    'Improvement' => __('Improvement', 'undefined'),
+    'Improvement' => __('Improvement', 'bit-social'),
 
-    'Allow the collection of diagnostic data and error reports to enhance the application\'s performance. Please review our' => __('Allow the collection of diagnostic data and error reports to enhance the application\'s performance. Please review our', 'undefined'),
+    'Allow the collection of diagnostic data and error reports to enhance the application\'s performance. Please review our' => __('Allow the collection of diagnostic data and error reports to enhance the application\'s performance. Please review our', 'bit-social'),
 
-    'Privacy Policy' => __('Privacy Policy', 'undefined'),
+    'Privacy Policy' => __('Privacy Policy', 'bit-social'),
 
-    'for more information.' => __('for more information.', 'undefined'),
+    'for more information.' => __('for more information.', 'bit-social'),
 
-    'Recommended Plugins' => __('Recommended Plugins', 'undefined'),
+    'Recommended Plugins' => __('Recommended Plugins', 'bit-social'),
 
-    'Support' => __('Support', 'undefined'),
+    'Support' => __('Support', 'bit-social'),
 
-    'About' => __('About', 'undefined'),
+    'About' => __('About', 'bit-social'),
 
-    'Advance Schedule Feature on Pro!' => __('Advance Schedule Feature on Pro!', 'undefined'),
+    'Advance Schedule Feature on Pro!' => __('Advance Schedule Feature on Pro!', 'bit-social'),
 
-    'Buy Pro' => __('Buy Pro', 'undefined'),
+    'Buy Pro' => __('Buy Pro', 'bit-social'),
 
-    'Advance Schedule' => __('Advance Schedule', 'undefined'),
+    'Advance Schedule' => __('Advance Schedule', 'bit-social'),
 
-    'Bit Social Pro' => __('Bit Social Pro', 'undefined'),
+    'Bit Social Pro' => __('Bit Social Pro', 'bit-social'),
 
-    'Your <b>WP_CRON</b> are disabled' => __('Your <b>WP_CRON</b> are disabled', 'undefined'),
+    'Your <b>WP_CRON</b> are disabled' => __('Your <b>WP_CRON</b> are disabled', 'bit-social'),
 
-    'Cron Settings' => __('Cron Settings', 'undefined'),
+    'Cron Settings' => __('Cron Settings', 'bit-social'),
 
-    'the scheduled post or share now post may not publish on time!' => __('the scheduled post or share now post may not publish on time!', 'undefined'),
+    'the scheduled post or share now post may not publish on time!' => __('the scheduled post or share now post may not publish on time!', 'bit-social'),
 
-    'Learn more' => __('Learn more', 'undefined'),
+    'Learn more' => __('Learn more', 'bit-social'),
 
-    'To get app credentials, Visit' => __('To get app credentials, Visit', 'undefined'),
+    'To get app credentials, Visit' => __('To get app credentials, Visit', 'bit-social'),
 
-    'Developer' => __('Developer', 'undefined'),
+    'Developer' => __('Developer', 'bit-social'),
 
-    '<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.' => __('<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.', 'undefined'),
+    '<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.' => __('<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.', 'bit-social'),
 
-    'To set it up, click on the <b>"Connect Account"</b> button and follow the next step!' => __('To set it up, click on the <b>"Connect Account"</b> button and follow the next step!', 'undefined'),
+    'To set it up, click on the <b>"Connect Account"</b> button and follow the next step!' => __('To set it up, click on the <b>"Connect Account"</b> button and follow the next step!', 'bit-social'),
 
-    'Schedules' => __('Schedules', 'undefined'),
+    'Schedules' => __('Schedules', 'bit-social'),
 
-    'You can automatically schedule your Publish WordPress posts to be shared on  social media platforms. This feature allows you to filter your posts, ensuring that only the content you want to share at your chosen times.' => __('You can automatically schedule your Publish WordPress posts to be shared on  social media platforms. This feature allows you to filter your posts, ensuring that only the content you want to share at your chosen times.', 'undefined'),
+    'You can automatically schedule your Publish WordPress posts to be shared on  social media platforms. This feature allows you to filter your posts, ensuring that only the content you want to share at your chosen times.' => __('You can automatically schedule your Publish WordPress posts to be shared on  social media platforms. This feature allows you to filter your posts, ensuring that only the content you want to share at your chosen times.', 'bit-social'),
 
-    'To set it up, click on the <b>"Create Schedule"</b> button and follow the next step!' => __('To set it up, click on the <b>"Create Schedule"</b> button and follow the next step!', 'undefined'),
+    'To set it up, click on the <b>"Create Schedule"</b> button and follow the next step!' => __('To set it up, click on the <b>"Create Schedule"</b> button and follow the next step!', 'bit-social'),
 
-    'Share Now' => __('Share Now', 'undefined'),
+    'Share Now' => __('Share Now', 'bit-social'),
 
-    'You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.' => __('You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.', 'undefined'),
+    'You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.' => __('You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.', 'bit-social'),
 
-    'To set it up, click on the <b>"Share Post"</b> button and follow the next step!' => __('To set it up, click on the <b>"Share Post"</b> button and follow the next step!', 'undefined'),
+    'To set it up, click on the <b>"Share Post"</b> button and follow the next step!' => __('To set it up, click on the <b>"Share Post"</b> button and follow the next step!', 'bit-social'),
 
-    'Doc Link' => __('Doc Link', 'undefined'),
+    'Doc Link' => __('Doc Link', 'bit-social'),
 
-    'Show Smart Tags' => __('Show Smart Tags', 'undefined'),
+    'Show Smart Tags' => __('Show Smart Tags', 'bit-social'),
 
-    'Tutorial' => __('Tutorial', 'undefined'),
+    'Tutorial' => __('Tutorial', 'bit-social'),
 
-    'Accounts' => __('Accounts', 'undefined'),
+    'Accounts' => __('Accounts', 'bit-social'),
 
-    'Groups' => __('Groups', 'undefined'),
+    'Groups' => __('Groups', 'bit-social'),
 
-    'Search accounts' => __('Search accounts', 'undefined'),
+    'Search accounts' => __('Search accounts', 'bit-social'),
 
-    'Profile' => __('Profile', 'undefined'),
+    'Profile' => __('Profile', 'bit-social'),
 
-    'Page' => __('Page', 'undefined'),
+    'Page' => __('Page', 'bit-social'),
 
-    'Linkedin Page feature on pro' => __('Linkedin Page feature on pro', 'undefined'),
+    'Linkedin Page feature on pro' => __('Linkedin Page feature on pro', 'bit-social'),
 
-    'Board Not Found' => __('Board Not Found', 'undefined'),
+    'Board Not Found' => __('Board Not Found', 'bit-social'),
 
-    'Account Not Found' => __('Account Not Found', 'undefined'),
+    'Account Not Found' => __('Account Not Found', 'bit-social'),
 
-    'Account connect failed' => __('Account connect failed', 'undefined'),
+    'Account connect failed' => __('Account connect failed', 'bit-social'),
 
-    'Manage' => __('Manage', 'undefined'),
+    'Manage' => __('Manage', 'bit-social'),
 
-    'Connect Account' => __('Connect Account', 'undefined'),
+    'Connect Account' => __('Connect Account', 'bit-social'),
 
-    'Connect your social account first!' => __('Connect your social account first!', 'undefined'),
+    'Connect your social account first!' => __('Connect your social account first!', 'bit-social'),
 
-    'You can only add verified locations.' => __('You can only add verified locations.', 'undefined'),
+    'You can only add verified locations.' => __('You can only add verified locations.', 'bit-social'),
 
-    'If you need to add another Google account, simply log out of or switch Google accounts first.' => __('If you need to add another Google account, simply log out of or switch Google accounts first.', 'undefined'),
+    'If you need to add another Google account, simply log out of or switch Google accounts first.' => __('If you need to add another Google account, simply log out of or switch Google accounts first.', 'bit-social'),
 
-    'If you need to add another %s  account, simply log out of or switch %s accounts first.' => __('If you need to add another %s  account, simply log out of or switch %s accounts first.', 'undefined'),
+    'If you need to add another %s  account, simply log out of or switch %s accounts first.' => __('If you need to add another %s  account, simply log out of or switch %s accounts first.', 'bit-social'),
 
-    'Total %s accounts found' => __('Total %s accounts found', 'undefined'),
+    'Total %s accounts found' => __('Total %s accounts found', 'bit-social'),
 
-    'Custom App' => __('Custom App', 'undefined'),
+    'Custom App' => __('Custom App', 'bit-social'),
 
-    'Saved' => __('Saved', 'undefined'),
+    'Saved' => __('Saved', 'bit-social'),
 
-    'Save' => __('Save', 'undefined'),
+    'Save' => __('Save', 'bit-social'),
 
-    'No' => __('No', 'undefined'),
+    'No' => __('No', 'bit-social'),
 
-    'Are you sure to delete this app?' => __('Are you sure to delete this app?', 'undefined'),
+    'Are you sure to delete this app?' => __('Are you sure to delete this app?', 'bit-social'),
 
-    'Yes, Delete' => __('Yes, Delete', 'undefined'),
+    'Yes, Delete' => __('Yes, Delete', 'bit-social'),
 
-    'Delete the app' => __('Delete the app', 'undefined'),
+    'Delete the app' => __('Delete the app', 'bit-social'),
 
-    'Click me!' => __('Click me!', 'undefined'),
+    'Click me!' => __('Click me!', 'bit-social'),
 
-    'Connect' => __('Connect', 'undefined'),
+    'Connect' => __('Connect', 'bit-social'),
 
-    'Back' => __('Back', 'undefined'),
+    'Back' => __('Back', 'bit-social'),
 
-    'Connect Custom %s App' => __('Connect Custom %s App', 'undefined'),
+    'Connect Custom %s App' => __('Connect Custom %s App', 'bit-social'),
 
-    'Homepage URI' => __('Homepage URI', 'undefined'),
+    'Homepage URI' => __('Homepage URI', 'bit-social'),
 
-    'Click to copy' => __('Click to copy', 'undefined'),
+    'Click to copy' => __('Click to copy', 'bit-social'),
 
-    'Redirect URI' => __('Redirect URI', 'undefined'),
+    'Redirect URI' => __('Redirect URI', 'bit-social'),
 
-    'Api Version' => __('Api Version', 'undefined'),
+    'Api Version' => __('Api Version', 'bit-social'),
 
-    'App Name' => __('App Name', 'undefined'),
+    'App Name' => __('App Name', 'bit-social'),
 
-    'App Key or Client ID' => __('App Key or Client ID', 'undefined'),
+    'App Key or Client ID' => __('App Key or Client ID', 'bit-social'),
 
-    'App Secret or Client Secret' => __('App Secret or Client Secret', 'undefined'),
+    'App Secret or Client Secret' => __('App Secret or Client Secret', 'bit-social'),
 
-    'Add' => __('Add', 'undefined'),
+    'Add' => __('Add', 'bit-social'),
 
-    'Connected Apps' => __('Connected Apps', 'undefined'),
+    'Connected Apps' => __('Connected Apps', 'bit-social'),
 
-    'No App Found' => __('No App Found', 'undefined'),
+    'No App Found' => __('No App Found', 'bit-social'),
 
-    'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'undefined'),
+    'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'bit-social'),
 
-    'Enable Automatic Posting, Scheduling, and Sharing' => __('Enable Automatic Posting, Scheduling, and Sharing', 'undefined'),
+    'Enable Automatic Posting, Scheduling, and Sharing' => __('Enable Automatic Posting, Scheduling, and Sharing', 'bit-social'),
 
-    'Disable' => __('Disable', 'undefined'),
+    'Disable' => __('Disable', 'bit-social'),
 
-    'Enable' => __('Enable', 'undefined'),
+    'Enable' => __('Enable', 'bit-social'),
 
-    'disable' => __('disable', 'undefined'),
+    'disable' => __('disable', 'bit-social'),
 
-    'enable' => __('enable', 'undefined'),
+    'enable' => __('enable', 'bit-social'),
 
-    'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'undefined'),
+    'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'bit-social'),
 
-    'Yes, delete' => __('Yes, delete', 'undefined'),
+    'Yes, delete' => __('Yes, delete', 'bit-social'),
 
-    'Are you sure?' => __('Are you sure?', 'undefined'),
+    'Are you sure?' => __('Are you sure?', 'bit-social'),
 
-    'All' => __('All', 'undefined'),
+    'All' => __('All', 'bit-social'),
 
-    'To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:' => __('To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:', 'undefined'),
+    'To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:' => __('To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:', 'bit-social'),
 
-    'It will automatically connect your social account without any credentials' => __('It will automatically connect your social account without any credentials', 'undefined'),
+    'It will automatically connect your social account without any credentials' => __('It will automatically connect your social account without any credentials', 'bit-social'),
 
-    'It will show you a form to input app credentials to create your own app and connect your social account.' => __('It will show you a form to input app credentials to create your own app and connect your social account.', 'undefined'),
+    'It will show you a form to input app credentials to create your own app and connect your social account.' => __('It will show you a form to input app credentials to create your own app and connect your social account.', 'bit-social'),
 
-    'You can find more about it here' => __('You can find more about it here', 'undefined'),
+    'You can find more about it here' => __('You can find more about it here', 'bit-social'),
 
-    'Add to group' => __('Add to group', 'undefined'),
+    'Add to group' => __('Add to group', 'bit-social'),
 
-    'No accounts found!' => __('No accounts found!', 'undefined'),
+    'No accounts found!' => __('No accounts found!', 'bit-social'),
 
-    'Create Group' => __('Create Group', 'undefined'),
+    'Create Group' => __('Create Group', 'bit-social'),
 
-    'Cancel' => __('Cancel', 'undefined'),
+    'Cancel' => __('Cancel', 'bit-social'),
 
-    'Create' => __('Create', 'undefined'),
+    'Create' => __('Create', 'bit-social'),
 
-    'Name' => __('Name', 'undefined'),
+    'Name' => __('Name', 'bit-social'),
 
-    'New group' => __('New group', 'undefined'),
+    'New group' => __('New group', 'bit-social'),
 
-    'Yes, Remove' => __('Yes, Remove', 'undefined'),
+    'Yes, Remove' => __('Yes, Remove', 'bit-social'),
 
-    'Remove account from this group?' => __('Remove account from this group?', 'undefined'),
+    'Remove account from this group?' => __('Remove account from this group?', 'bit-social'),
 
-    'No Groups found!' => __('No Groups found!', 'undefined'),
+    'No Groups found!' => __('No Groups found!', 'bit-social'),
 
-    'immediately' => __('immediately', 'undefined'),
+    'immediately' => __('immediately', 'bit-social'),
 
-    'Select All' => __('Select All', 'undefined'),
+    'Select All' => __('Select All', 'bit-social'),
 
-    'Immediately' => __('Immediately', 'undefined'),
+    'Immediately' => __('Immediately', 'bit-social'),
 
-    'Delay' => __('Delay', 'undefined'),
+    'Delay' => __('Delay', 'bit-social'),
 
-    'Auto Post Settings' => __('Auto Post Settings', 'undefined'),
+    'Auto Post Settings' => __('Auto Post Settings', 'bit-social'),
 
-    'All auto post related settings here.' => __('All auto post related settings here.', 'undefined'),
+    'All auto post related settings here.' => __('All auto post related settings here.', 'bit-social'),
 
-    'Doc here' => __('Doc here', 'undefined'),
+    'Doc here' => __('Doc here', 'bit-social'),
 
-    'When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.' => __('When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.', 'undefined'),
+    'When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.' => __('When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.', 'bit-social'),
 
-    'Share posts automatically' => __('Share posts automatically', 'undefined'),
+    'Share posts automatically' => __('Share posts automatically', 'bit-social'),
 
-    'You have to create and select account first to enable this option!' => __('You have to create and select account first to enable this option!', 'undefined'),
+    'You have to create and select account first to enable this option!' => __('You have to create and select account first to enable this option!', 'bit-social'),
 
-    'Automatically share specific post types, like blogs or products, to your social accounts when published.' => __('Automatically share specific post types, like blogs or products, to your social accounts when published.', 'undefined'),
+    'Automatically share specific post types, like blogs or products, to your social accounts when published.' => __('Automatically share specific post types, like blogs or products, to your social accounts when published.', 'bit-social'),
 
-    'Share posts type' => __('Share posts type', 'undefined'),
+    'Share posts type' => __('Share posts type', 'bit-social'),
 
-    'Post Type: Post' => __('Post Type: Post', 'undefined'),
+    'Post Type: Post' => __('Post Type: Post', 'bit-social'),
 
-    'Share posts default type <b>Post</b>' => __('Share posts default type <b>Post</b>', 'undefined'),
+    'Share posts default type <b>Post</b>' => __('Share posts default type <b>Post</b>', 'bit-social'),
 
-    'Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing' => __('Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing', 'undefined'),
+    'Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing' => __('Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing', 'bit-social'),
 
-    'Share post delay' => __('Share post delay', 'undefined'),
+    'Share post delay' => __('Share post delay', 'bit-social'),
 
-    'If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.' => __('If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.', 'undefined'),
+    'If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.' => __('If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.', 'bit-social'),
 
-    'Enable auto post log' => __('Enable auto post log', 'undefined'),
+    'Enable auto post log' => __('Enable auto post log', 'bit-social'),
 
-    'Post templates' => __('Post templates', 'undefined'),
+    'Post templates' => __('Post templates', 'bit-social'),
 
-    'Templates' => __('Templates', 'undefined'),
+    'Templates' => __('Templates', 'bit-social'),
 
-    'Add schedule' => __('Add schedule', 'undefined'),
+    'Add schedule' => __('Add schedule', 'bit-social'),
 
-    'Start Date:' => __('Start Date:', 'undefined'),
+    'Start Date:' => __('Start Date:', 'bit-social'),
 
-    'Post Type:' => __('Post Type:', 'undefined'),
+    'Post Type:' => __('Post Type:', 'bit-social'),
 
-    'Post Time:' => __('Post Time:', 'undefined'),
+    'Post Time:' => __('Post Time:', 'bit-social'),
 
-    'Run Times:' => __('Run Times:', 'undefined'),
+    'Run Times:' => __('Run Times:', 'bit-social'),
 
-    'Click here to know more about Calendar' => __('Click here to know more about Calendar', 'undefined'),
+    'Click here to know more about Calendar' => __('Click here to know more about Calendar', 'bit-social'),
 
-    'Oops !' => __('Oops !', 'undefined'),
+    'Oops !' => __('Oops !', 'bit-social'),
 
-    '404 - Not Found' => __('404 - Not Found', 'undefined'),
+    '404 - Not Found' => __('404 - Not Found', 'bit-social'),
 
-    'Redirecting Home in %s second' => __('Redirecting Home in %s second', 'undefined'),
+    'Redirecting Home in %s second' => __('Redirecting Home in %s second', 'bit-social'),
 
-    'Go The Home' => __('Go The Home', 'undefined'),
+    'Go The Home' => __('Go The Home', 'bit-social'),
 
-    'WP Auto Post' => __('WP Auto Post', 'undefined'),
+    'WP Auto Post' => __('WP Auto Post', 'bit-social'),
 
-    'WP Post Schedules' => __('WP Post Schedules', 'undefined'),
+    'WP Post Schedules' => __('WP Post Schedules', 'bit-social'),
 
-    'Calendar' => __('Calendar', 'undefined'),
+    'Calendar' => __('Calendar', 'bit-social'),
 
-    'Logs' => __('Logs', 'undefined'),
+    'Logs' => __('Logs', 'bit-social'),
 
-    'Get $10 Cashback' => __('Get $10 Cashback', 'undefined'),
+    'Get $10 Cashback' => __('Get $10 Cashback', 'bit-social'),
 
-    'Thank you for using Bit Social' => __('Thank you for using Bit Social', 'undefined'),
+    'Thank you for using Bit Social' => __('Thank you for using Bit Social', 'bit-social'),
 
-    'Give us a review on WordPress by clicking the' => __('Give us a review on WordPress by clicking the', 'undefined'),
+    'Give us a review on WordPress by clicking the' => __('Give us a review on WordPress by clicking the', 'bit-social'),
 
-    'Review us' => __('Review us', 'undefined'),
+    'Review us' => __('Review us', 'bit-social'),
 
-    'button and send an email with the review link to' => __('button and send an email with the review link to', 'undefined'),
+    'button and send an email with the review link to' => __('button and send an email with the review link to', 'bit-social'),
 
-    'We will honour you with <b> $10 cashback</b> for your time & effort.' => __('We will honour you with <b> $10 cashback</b> for your time & effort.', 'undefined'),
+    'We will honour you with <b> $10 cashback</b> for your time & effort.' => __('We will honour you with <b> $10 cashback</b> for your time & effort.', 'bit-social'),
 
-    'Suggestions on how you may write the review:' => __('Suggestions on how you may write the review:', 'undefined'),
+    'Suggestions on how you may write the review:' => __('Suggestions on how you may write the review:', 'bit-social'),
 
-    '1. What features do you like most in Bit Social?' => __('1. What features do you like most in Bit Social?', 'undefined'),
+    '1. What features do you like most in Bit Social?' => __('1. What features do you like most in Bit Social?', 'bit-social'),
 
-    '2. Which software did you previously used for these features?' => __('2. Which software did you previously used for these features?', 'undefined'),
+    '2. Which software did you previously used for these features?' => __('2. Which software did you previously used for these features?', 'bit-social'),
 
-    'What\'s New?' => __('What\'s New?', 'undefined'),
+    'What\'s New?' => __('What\'s New?', 'bit-social'),
 
-    'For More Details' => __('For More Details', 'undefined'),
+    'For More Details' => __('For More Details', 'bit-social'),
 
-    'Click Here' => __('Click Here', 'undefined'),
+    'Click Here' => __('Click Here', 'bit-social'),
 
-    'Integrations' => __('Integrations', 'undefined'),
+    'Improvements' => __('Improvements', 'bit-social'),
 
-    'Features' => __('Features', 'undefined'),
+    'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
 
-    'Upcoming Integrations' => __('Upcoming Integrations', 'undefined'),
+    'Settings' => __('Settings', 'bit-social'),
 
-    'Settings' => __('Settings', 'undefined'),
+    'More' => __('More', 'bit-social'),
 
-    'More' => __('More', 'undefined'),
+    'Facebook' => __('Facebook', 'bit-social'),
 
-    'Facebook' => __('Facebook', 'undefined'),
+    'Linkedin' => __('Linkedin', 'bit-social'),
 
-    'Linkedin' => __('Linkedin', 'undefined'),
+    'Google Business Profile' => __('Google Business Profile', 'bit-social'),
 
-    'Google Business Profile' => __('Google Business Profile', 'undefined'),
+    'Pinterest' => __('Pinterest', 'bit-social'),
 
-    'Pinterest' => __('Pinterest', 'undefined'),
+    'Discord' => __('Discord', 'bit-social'),
 
-    'Discord' => __('Discord', 'undefined'),
+    'Tumblr' => __('Tumblr', 'bit-social'),
 
-    'Tumblr' => __('Tumblr', 'undefined'),
+    'X (twitter)' => __('X (twitter)', 'bit-social'),
 
-    'X (twitter)' => __('X (twitter)', 'undefined'),
+    'Instagram' => __('Instagram', 'bit-social'),
 
-    'Instagram' => __('Instagram', 'undefined'),
+    'Filter' => __('Filter', 'bit-social'),
 
-    'Filter' => __('Filter', 'undefined'),
+    'Reset' => __('Reset', 'bit-social'),
 
-    'Reset' => __('Reset', 'undefined'),
+    'Logs filter' => __('Logs filter', 'bit-social'),
 
-    'Logs filter' => __('Logs filter', 'undefined'),
+    'Date' => __('Date', 'bit-social'),
 
-    'Date' => __('Date', 'undefined'),
+    'Status' => __('Status', 'bit-social'),
 
-    'Status' => __('Status', 'undefined'),
+    'Success' => __('Success', 'bit-social'),
 
-    'Success' => __('Success', 'undefined'),
+    'Error' => __('Error', 'bit-social'),
 
-    'Error' => __('Error', 'undefined'),
+    'Schedule' => __('Schedule', 'bit-social'),
 
-    'Schedule' => __('Schedule', 'undefined'),
+    'Platform' => __('Platform', 'bit-social'),
 
-    'Platform' => __('Platform', 'undefined'),
+    'Filter:' => __('Filter:', 'bit-social'),
 
-    'Filter:' => __('Filter:', 'undefined'),
+    'to' => __('to', 'bit-social'),
 
-    'to' => __('to', 'undefined'),
+    'Account' => __('Account', 'bit-social'),
 
-    'Account' => __('Account', 'undefined'),
+    'Response' => __('Response', 'bit-social'),
 
-    'Response' => __('Response', 'undefined'),
+    'Visit' => __('Visit', 'bit-social'),
 
-    'Visit' => __('Visit', 'undefined'),
+    'Retry' => __('Retry', 'bit-social'),
 
-    'Retry' => __('Retry', 'undefined'),
+    'Related schedule was deleted' => __('Related schedule was deleted', 'bit-social'),
 
-    'Related schedule was deleted' => __('Related schedule was deleted', 'undefined'),
+    'Actions' => __('Actions', 'bit-social'),
 
-    'Actions' => __('Actions', 'undefined'),
+    'Hide' => __('Hide', 'bit-social'),
 
-    'Hide' => __('Hide', 'undefined'),
+    'Details' => __('Details', 'bit-social'),
 
-    'Details' => __('Details', 'undefined'),
+    'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'bit-social'),
 
-    'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'undefined'),
+    'Confirm' => __('Confirm', 'bit-social'),
 
-    'Confirm' => __('Confirm', 'undefined'),
+    'Delete Logs' => __('Delete Logs', 'bit-social'),
 
-    'Delete Logs' => __('Delete Logs', 'undefined'),
+    'Visit our documentation' => __('Visit our documentation', 'bit-social'),
 
-    'Visit our documentation' => __('Visit our documentation', 'undefined'),
+    'Refresh' => __('Refresh', 'bit-social'),
 
-    'Refresh' => __('Refresh', 'undefined'),
+    'Active Account' => __('Active Account', 'bit-social'),
 
-    'Active Account' => __('Active Account', 'undefined'),
+    'Published Post' => __('Published Post', 'bit-social'),
 
-    'Published Post' => __('Published Post', 'undefined'),
+    'Active Schedule' => __('Active Schedule', 'bit-social'),
 
-    'Active Schedule' => __('Active Schedule', 'undefined'),
+    'Welcome to Bit Social' => __('Welcome to Bit Social', 'bit-social'),
 
-    'Welcome to Bit Social' => __('Welcome to Bit Social', 'undefined'),
+    'Thanks for using Bit Social' => __('Thanks for using Bit Social', 'bit-social'),
 
-    'Thanks for using Bit Social' => __('Thanks for using Bit Social', 'undefined'),
+    'Smart solution for WordPress post Schedule' => __('Smart solution for WordPress post Schedule', 'bit-social'),
 
-    'Smart solution for WordPress post Schedule' => __('Smart solution for WordPress post Schedule', 'undefined'),
+    'Minute' => __('Minute', 'bit-social'),
 
-    'Minute' => __('Minute', 'undefined'),
+    'Hour' => __('Hour', 'bit-social'),
 
-    'Hour' => __('Hour', 'undefined'),
+    'Day' => __('Day', 'bit-social'),
 
-    'Day' => __('Day', 'undefined'),
+    'Week' => __('Week', 'bit-social'),
 
-    'Week' => __('Week', 'undefined'),
+    'Month' => __('Month', 'bit-social'),
 
-    'Month' => __('Month', 'undefined'),
+    'Year' => __('Year', 'bit-social'),
 
-    'Year' => __('Year', 'undefined'),
+    'Customize post message' => __('Customize post message', 'bit-social'),
 
-    'Customize post message' => __('Customize post message', 'undefined'),
+    'Media' => __('Media', 'bit-social'),
 
-    'Media' => __('Media', 'undefined'),
+    'First comment' => __('First comment', 'bit-social'),
 
-    'First comment' => __('First comment', 'undefined'),
+    'Post Link' => __('Post Link', 'bit-social'),
 
-    'Post Link' => __('Post Link', 'undefined'),
+    'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'bit-social'),
 
-    'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'undefined'),
+    'Add video' => __('Add video', 'bit-social'),
 
-    'Add video' => __('Add video', 'undefined'),
+    'Upload' => __('Upload', 'bit-social'),
 
-    'Upload' => __('Upload', 'undefined'),
+    'Privacy settings' => __('Privacy settings', 'bit-social'),
 
-    'Privacy settings' => __('Privacy settings', 'undefined'),
+    'Public to everyone' => __('Public to everyone', 'bit-social'),
 
-    'Public to everyone' => __('Public to everyone', 'undefined'),
+    'Mutual follow friends' => __('Mutual follow friends', 'bit-social'),
 
-    'Mutual follow friends' => __('Mutual follow friends', 'undefined'),
+    'Follower of creator' => __('Follower of creator', 'bit-social'),
 
-    'Follower of creator' => __('Follower of creator', 'undefined'),
+    'Self only' => __('Self only', 'bit-social'),
 
-    'Self only' => __('Self only', 'undefined'),
+    'Others' => __('Others', 'bit-social'),
 
-    'Others' => __('Others', 'undefined'),
+    'Allow Comment' => __('Allow Comment', 'bit-social'),
 
-    'Allow Comment' => __('Allow Comment', 'undefined'),
+    'Allow Duet' => __('Allow Duet', 'bit-social'),
 
-    'Allow Duet' => __('Allow Duet', 'undefined'),
+    'Allow Stitch' => __('Allow Stitch', 'bit-social'),
 
-    'Allow Stitch' => __('Allow Stitch', 'undefined'),
+    'Schedule Share' => __('Schedule Share', 'bit-social'),
 
-    'Schedule Share' => __('Schedule Share', 'undefined'),
+    'Scheduled Direct Share' => __('Scheduled Direct Share', 'bit-social'),
 
-    'Scheduled Direct Share' => __('Scheduled Direct Share', 'undefined'),
+    'All times' => __('All times', 'bit-social'),
 
-    'All times' => __('All times', 'undefined'),
+    'Today' => __('Today', 'bit-social'),
 
-    'Today' => __('Today', 'undefined'),
+    'last 7 days' => __('last 7 days', 'bit-social'),
 
-    'last 7 days' => __('last 7 days', 'undefined'),
+    'last 15 days' => __('last 15 days', 'bit-social'),
 
-    'last 15 days' => __('last 15 days', 'undefined'),
+    'last 30 days' => __('last 30 days', 'bit-social'),
 
-    'last 30 days' => __('last 30 days', 'undefined'),
+    'last 90 days' => __('last 90 days', 'bit-social'),
 
-    'last 90 days' => __('last 90 days', 'undefined'),
+    'last 180 days' => __('last 180 days', 'bit-social'),
 
-    'last 180 days' => __('last 180 days', 'undefined'),
+    'last 365 days' => __('last 365 days', 'bit-social'),
 
-    'last 365 days' => __('last 365 days', 'undefined'),
+    'custom date range' => __('custom date range', 'bit-social'),
 
-    'custom date range' => __('custom date range', 'undefined'),
+    'By the published time of the posts' => __('By the published time of the posts', 'bit-social'),
 
-    'By the published time of the posts' => __('By the published time of the posts', 'undefined'),
+    'Select publish date' => __('Select publish date', 'bit-social'),
 
-    'Select publish date' => __('Select publish date', 'undefined'),
+    'By post type' => __('By post type', 'bit-social'),
 
-    'By post type' => __('By post type', 'undefined'),
+    'Select post type' => __('Select post type', 'bit-social'),
 
-    'Select post type' => __('Select post type', 'undefined'),
+    'By the post category and tag' => __('By the post category and tag', 'bit-social'),
 
-    'By the post category and tag' => __('By the post category and tag', 'undefined'),
+    'Select category or tag' => __('Select category or tag', 'bit-social'),
 
-    'Select category or tag' => __('Select category or tag', 'undefined'),
+    'Select Specific Post' => __('Select Specific Post', 'bit-social'),
 
-    'Select Specific Post' => __('Select Specific Post', 'undefined'),
+    'Post ID: Post Title' => __('Post ID: Post Title', 'bit-social'),
 
-    'Post ID: Post Title' => __('Post ID: Post Title', 'undefined'),
+    'Posts matched by current filters' => __('Posts matched by current filters', 'bit-social'),
 
-    'Posts matched by current filters' => __('Posts matched by current filters', 'undefined'),
+    'Start' => __('Start', 'bit-social'),
 
-    'Start' => __('Start', 'undefined'),
+    'Next post' => __('Next post', 'bit-social'),
 
-    'Next post' => __('Next post', 'undefined'),
+    'Edit' => __('Edit', 'bit-social'),
 
-    'Edit' => __('Edit', 'undefined'),
+    'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'bit-social'),
 
-    'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'undefined'),
+    'Delete?' => __('Delete?', 'bit-social'),
 
-    'Delete?' => __('Delete?', 'undefined'),
+    'Delete' => __('Delete', 'bit-social'),
 
-    'Delete' => __('Delete', 'undefined'),
+    'Title' => __('Title', 'bit-social'),
 
-    'Title' => __('Title', 'undefined'),
+    'Created At' => __('Created At', 'bit-social'),
 
-    'Created At' => __('Created At', 'undefined'),
+    'Start Scheduled Post' => __('Start Scheduled Post', 'bit-social'),
 
-    'Start Scheduled Post' => __('Start Scheduled Post', 'undefined'),
+    'Interval' => __('Interval', 'bit-social'),
 
-    'Interval' => __('Interval', 'undefined'),
+    'Next Post' => __('Next Post', 'bit-social'),
 
-    'Next Post' => __('Next Post', 'undefined'),
+    'In Progress' => __('In Progress', 'bit-social'),
 
-    'In Progress' => __('In Progress', 'undefined'),
+    'Completed' => __('Completed', 'bit-social'),
 
-    'Completed' => __('Completed', 'undefined'),
+    'Active' => __('Active', 'bit-social'),
 
-    'Active' => __('Active', 'undefined'),
+    'Paused' => __('Paused', 'bit-social'),
 
-    'Paused' => __('Paused', 'undefined'),
+    'Re-schedule' => __('Re-schedule', 'bit-social'),
 
-    'Re-schedule' => __('Re-schedule', 'undefined'),
+    'Action' => __('Action', 'bit-social'),
 
-    'Action' => __('Action', 'undefined'),
+    'Search schedule' => __('Search schedule', 'bit-social'),
 
-    'Search schedule' => __('Search schedule', 'undefined'),
+    'How to create schedule' => __('How to create schedule', 'bit-social'),
 
-    'How to create schedule' => __('How to create schedule', 'undefined'),
+    'Create Schedule' => __('Create Schedule', 'bit-social'),
 
-    'Create Schedule' => __('Create Schedule', 'undefined'),
+    'No schedule found!' => __('No schedule found!', 'bit-social'),
 
-    'No schedule found!' => __('No schedule found!', 'undefined'),
+    'Monday' => __('Monday', 'bit-social'),
 
-    'Monday' => __('Monday', 'undefined'),
+    'Tuesday' => __('Tuesday', 'bit-social'),
 
-    'Tuesday' => __('Tuesday', 'undefined'),
+    'Wednesday' => __('Wednesday', 'bit-social'),
 
-    'Wednesday' => __('Wednesday', 'undefined'),
+    'Thursday' => __('Thursday', 'bit-social'),
 
-    'Thursday' => __('Thursday', 'undefined'),
+    'Friday' => __('Friday', 'bit-social'),
 
-    'Friday' => __('Friday', 'undefined'),
+    'Saturday' => __('Saturday', 'bit-social'),
 
-    'Saturday' => __('Saturday', 'undefined'),
+    'Sunday' => __('Sunday', 'bit-social'),
 
-    'Sunday' => __('Sunday', 'undefined'),
+    'Enter a name' => __('Enter a name', 'bit-social'),
 
-    'Enter a name' => __('Enter a name', 'undefined'),
+    'Start date & time' => __('Start date & time', 'bit-social'),
 
-    'Start date & time' => __('Start date & time', 'undefined'),
+    'Local time: %s ; Time Zone: (%s)' => __('Local time: %s ; Time Zone: (%s)', 'bit-social'),
 
-    'Local time: %s ; Time Zone: (%s)' => __('Local time: %s ; Time Zone: (%s)', 'undefined'),
+    'Post interval' => __('Post interval', 'bit-social'),
 
-    'Post interval' => __('Post interval', 'undefined'),
+    'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.', 'bit-social'),
 
-    'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.', 'undefined'),
+    'Order posts by' => __('Order posts by', 'bit-social'),
 
-    'Order posts by' => __('Order posts by', 'undefined'),
+    'Randomly without duplicates' => __('Randomly without duplicates', 'bit-social'),
 
-    'Randomly without duplicates' => __('Randomly without duplicates', 'undefined'),
+    'Randomly' => __('Randomly', 'bit-social'),
 
-    'Randomly' => __('Randomly', 'undefined'),
+    'Start from the oldest to new posts' => __('Start from the oldest to new posts', 'bit-social'),
 
-    'Start from the oldest to new posts' => __('Start from the oldest to new posts', 'undefined'),
+    'Start from the latest to old posts' => __('Start from the latest to old posts', 'bit-social'),
 
-    'Start from the latest to old posts' => __('Start from the latest to old posts', 'undefined'),
+    'Set a sleep timer' => __('Set a sleep timer', 'bit-social'),
 
-    'Set a sleep timer' => __('Set a sleep timer', 'undefined'),
+    'Set sleep days' => __('Set sleep days', 'bit-social'),
 
-    'Set sleep days' => __('Set sleep days', 'undefined'),
+    'Select sleep days' => __('Select sleep days', 'bit-social'),
 
-    'Select sleep days' => __('Select sleep days', 'undefined'),
+    'Please select an account' => __('Please select an account', 'bit-social'),
 
-    'Please select an account' => __('Please select an account', 'undefined'),
+    'Cron Setup' => __('Cron Setup', 'bit-social'),
 
-    'Cron Setup' => __('Cron Setup', 'undefined'),
+    'All settings here' => __('All settings here', 'bit-social'),
 
-    'All settings here' => __('All settings here', 'undefined'),
+    'For more accurate results, you must establish a genuine' => __('For more accurate results, you must establish a genuine', 'bit-social'),
 
-    'For more accurate results, you must establish a genuine' => __('For more accurate results, you must establish a genuine', 'undefined'),
+    'Cron job' => __('Cron job', 'bit-social'),
 
-    'Cron job' => __('Cron job', 'undefined'),
+    'on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.' => __('on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.', 'bit-social'),
 
-    'on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.' => __('on your hosting or server and enable this option to disregard the built-in Cron job.Otherwise, the auto-post and scheduling tools might not operate promptly, and you might have delays.', 'undefined'),
+    'Cron Job settings' => __('Cron Job settings', 'bit-social'),
 
-    'Cron Job settings' => __('Cron Job settings', 'undefined'),
+    'For your website, the Cron Job command is:' => __('For your website, the Cron Job command is:', 'bit-social'),
 
-    'For your website, the Cron Job command is:' => __('For your website, the Cron Job command is:', 'undefined'),
+    'Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!' => __('Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!', 'bit-social'),
 
-    'Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!' => __('Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!', 'undefined'),
+    'External Cron' => __('External Cron', 'bit-social'),
 
-    'External Cron' => __('External Cron', 'undefined'),
+    'Enable External Cron' => __('Enable External Cron', 'bit-social'),
 
-    'Enable External Cron' => __('Enable External Cron', 'undefined'),
+    'Post' => __('Post', 'bit-social'),
 
-    'Post' => __('Post', 'undefined'),
+    'Write your custom post' => __('Write your custom post', 'bit-social'),
 
-    'Write your custom post' => __('Write your custom post', 'undefined'),
+    'Link' => __('Link', 'bit-social'),
 
-    'Link' => __('Link', 'undefined'),
+    'https://example.com' => __('https://example.com', 'bit-social'),
 
-    'https://example.com' => __('https://example.com', 'undefined'),
+    'Add Image' => __('Add Image', 'bit-social'),
 
-    'Add Image' => __('Add Image', 'undefined'),
+    'Add a button (optional)' => __('Add a button (optional)', 'bit-social'),
 
-    'Add a button (optional)' => __('Add a button (optional)', 'undefined'),
+    'Select Button' => __('Select Button', 'bit-social'),
 
-    'Select Button' => __('Select Button', 'undefined'),
+    'Link for your button*' => __('Link for your button*', 'bit-social'),
 
-    'Link for your button*' => __('Link for your button*', 'undefined'),
+    'Make comment' => __('Make comment', 'bit-social'),
 
-    'Make comment' => __('Make comment', 'undefined'),
+    'Enable to selected image shared' => __('Enable to selected image shared', 'bit-social'),
 
-    'Enable to selected image shared' => __('Enable to selected image shared', 'undefined'),
+    'Add a link' => __('Add a link', 'bit-social'),
 
-    'Add a link' => __('Add a link', 'undefined'),
+    'Description' => __('Description', 'bit-social'),
 
-    'Description' => __('Description', 'undefined'),
+    'Share more about your video here' => __('Share more about your video here', 'bit-social'),
 
-    'Share more about your video here' => __('Share more about your video here', 'undefined'),
+    'Enable to the link shared as a card' => __('Enable to the link shared as a card', 'bit-social'),
 
-    'Enable to the link shared as a card' => __('Enable to the link shared as a card', 'undefined'),
+    'Untitled Share Now' => __('Untitled Share Now', 'bit-social'),
 
-    'Untitled Share Now' => __('Untitled Share Now', 'undefined'),
+    'Something went wrong!' => __('Something went wrong!', 'bit-social'),
 
-    'Something went wrong!' => __('Something went wrong!', 'undefined'),
+    'Edit Schedule' => __('Edit Schedule', 'bit-social'),
 
-    'Edit Schedule' => __('Edit Schedule', 'undefined'),
+    'Setup Schedule' => __('Setup Schedule', 'bit-social'),
 
-    'Setup Schedule' => __('Setup Schedule', 'undefined'),
+    'Edit Share Now' => __('Edit Share Now', 'bit-social'),
 
-    'Edit Share Now' => __('Edit Share Now', 'undefined'),
+    'Draft' => __('Draft', 'bit-social'),
 
-    'Draft' => __('Draft', 'undefined'),
+    'Missed' => __('Missed', 'bit-social'),
 
-    'Missed' => __('Missed', 'undefined'),
+    'Re-post' => __('Re-post', 'bit-social'),
 
-    'Re-post' => __('Re-post', 'undefined'),
+    'How to share a post instantly' => __('How to share a post instantly', 'bit-social'),
 
-    'How to share a post instantly' => __('How to share a post instantly', 'undefined'),
+    'Share Post' => __('Share Post', 'bit-social'),
 
-    'Share Post' => __('Share Post', 'undefined'),
+    'No Share Post found!' => __('No Share Post found!', 'bit-social'),
 
-    'No Share Post found!' => __('No Share Post found!', 'undefined'),
+    'Continue' => __('Continue', 'bit-social'),
 
-    'Continue' => __('Continue', 'undefined'),
+    'Edit schedule' => __('Edit schedule', 'bit-social'),
 
-    'Edit schedule' => __('Edit schedule', 'undefined'),
+    'Please, insert a valid start date & time first!' => __('Please, insert a valid start date & time first!', 'bit-social'),
 
-    'Please, insert a valid start date & time first!' => __('Please, insert a valid start date & time first!', 'undefined'),
+    'Repeat' => __('Repeat', 'bit-social'),
 
-    'Repeat' => __('Repeat', 'undefined'),
+    'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.', 'bit-social'),
 
-    'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.', 'undefined'),
+    'Only custom message' => __('Only custom message', 'bit-social'),
 
-    'Only custom message' => __('Only custom message', 'undefined'),
+    'Link card' => __('Link card', 'bit-social'),
 
-    'Link card' => __('Link card', 'undefined'),
+    'Feature image' => __('Feature image', 'bit-social'),
 
-    'Feature image' => __('Feature image', 'undefined'),
+    'Product Image' => __('Product Image', 'bit-social'),
 
-    'Product Image' => __('Product Image', 'undefined'),
+    'All Images' => __('All Images', 'bit-social'),
 
-    'All Images' => __('All Images', 'undefined'),
+    'Discord Template Settings' => __('Discord Template Settings', 'bit-social'),
 
-    'Discord Template Settings' => __('Discord Template Settings', 'undefined'),
+    'Custom message settings.' => __('Custom message settings.', 'bit-social'),
 
-    'Custom message settings.' => __('Custom message settings.', 'undefined'),
+    'Custom Message' => __('Custom Message', 'bit-social'),
 
-    'Custom Message' => __('Custom Message', 'undefined'),
+    'Post styling and type setup.' => __('Post styling and type setup.', 'bit-social'),
 
-    'Post styling and type setup.' => __('Post styling and type setup.', 'undefined'),
+    'Posting type' => __('Posting type', 'bit-social'),
 
-    'Posting type' => __('Posting type', 'undefined'),
+    'Trim Message' => __('Trim Message', 'bit-social'),
 
-    'Trim Message' => __('Trim Message', 'undefined'),
+    'Facebook Template Settings' => __('Facebook Template Settings', 'bit-social'),
 
-    'Facebook Template Settings' => __('Facebook Template Settings', 'undefined'),
+    'Preview' => __('Preview', 'bit-social'),
 
-    'Preview' => __('Preview', 'undefined'),
+    'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'bit-social'),
 
-    'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'undefined'),
+    'Select a post link button.' => __('Select a post link button.', 'bit-social'),
 
-    'Select a post link button.' => __('Select a post link button.', 'undefined'),
+    'Add a button' => __('Add a button', 'bit-social'),
 
-    'Add a button' => __('Add a button', 'undefined'),
+    'All images' => __('All images', 'bit-social'),
 
-    'All images' => __('All images', 'undefined'),
+    'Instagram Template Settings' => __('Instagram Template Settings', 'bit-social'),
 
-    'Instagram Template Settings' => __('Instagram Template Settings', 'undefined'),
+    'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'bit-social'),
 
-    'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'undefined'),
+    'Your comment' => __('Your comment', 'bit-social'),
 
-    'Your comment' => __('Your comment', 'undefined'),
+    'Linkedin Template Settings' => __('Linkedin Template Settings', 'bit-social'),
 
-    'Linkedin Template Settings' => __('Linkedin Template Settings', 'undefined'),
+    'Pinterest Template Settings' => __('Pinterest Template Settings', 'bit-social'),
 
-    'Pinterest Template Settings' => __('Pinterest Template Settings', 'undefined'),
+    'Post link' => __('Post link', 'bit-social'),
 
-    'Post link' => __('Post link', 'undefined'),
+    'See less' => __('See less', 'bit-social'),
 
-    'See less' => __('See less', 'undefined'),
+    'See more' => __('See more', 'bit-social'),
 
-    'See more' => __('See more', 'undefined'),
+    'Page name' => __('Page name', 'bit-social'),
 
-    'Page name' => __('Page name', 'undefined'),
+    'Just Now' => __('Just Now', 'bit-social'),
 
-    'Just Now' => __('Just Now', 'undefined'),
+    'Like' => __('Like', 'bit-social'),
 
-    'Like' => __('Like', 'undefined'),
+    'Comment' => __('Comment', 'bit-social'),
 
-    'Comment' => __('Comment', 'undefined'),
+    'Share' => __('Share', 'bit-social'),
 
-    'Share' => __('Share', 'undefined'),
+    'Preview (Coming Soon)' => __('Preview (Coming Soon)', 'bit-social'),
 
-    'Preview (Coming Soon)' => __('Preview (Coming Soon)', 'undefined'),
+    'Coming Soon' => __('Coming Soon', 'bit-social'),
 
-    'Coming Soon' => __('Coming Soon', 'undefined'),
+    'Only Message' => __('Only Message', 'bit-social'),
 
-    'Only Message' => __('Only Message', 'undefined'),
+    'PUBLIC TO EVERYONE' => __('PUBLIC TO EVERYONE', 'bit-social'),
 
-    'PUBLIC TO EVERYONE' => __('PUBLIC TO EVERYONE', 'undefined'),
+    'MUTUAL FOLLOW FRIENDS' => __('MUTUAL FOLLOW FRIENDS', 'bit-social'),
 
-    'MUTUAL FOLLOW FRIENDS' => __('MUTUAL FOLLOW FRIENDS', 'undefined'),
+    'FOLLOWER OF CREATOR' => __('FOLLOWER OF CREATOR', 'bit-social'),
 
-    'FOLLOWER OF CREATOR' => __('FOLLOWER OF CREATOR', 'undefined'),
+    'SELF ONLY' => __('SELF ONLY', 'bit-social'),
 
-    'SELF ONLY' => __('SELF ONLY', 'undefined'),
+    'Tiktok Template Settings' => __('Tiktok Template Settings', 'bit-social'),
 
-    'Tiktok Template Settings' => __('Tiktok Template Settings', 'undefined'),
+    'Who can see your post' => __('Who can see your post', 'bit-social'),
 
-    'Who can see your post' => __('Who can see your post', 'undefined'),
+    'Turn this on to let viewers share feedback or engage with your post through comments.' => __('Turn this on to let viewers share feedback or engage with your post through comments.', 'bit-social'),
 
-    'Turn this on to let viewers share feedback or engage with your post through comments.' => __('Turn this on to let viewers share feedback or engage with your post through comments.', 'undefined'),
+    'Allow comments' => __('Allow comments', 'bit-social'),
 
-    'Allow comments' => __('Allow comments', 'undefined'),
+    'Enable this to let others create side-by-side reaction or collaboration videos with your post' => __('Enable this to let others create side-by-side reaction or collaboration videos with your post', 'bit-social'),
 
-    'Enable this to let others create side-by-side reaction or collaboration videos with your post' => __('Enable this to let others create side-by-side reaction or collaboration videos with your post', 'undefined'),
+    'Allow others to clip up to 5 seconds of your post for their own content' => __('Allow others to clip up to 5 seconds of your post for their own content', 'bit-social'),
 
-    'Allow others to clip up to 5 seconds of your post for their own content' => __('Allow others to clip up to 5 seconds of your post for their own content', 'undefined'),
+    'Tumblr Template Settings' => __('Tumblr Template Settings', 'bit-social'),
 
-    'Tumblr Template Settings' => __('Tumblr Template Settings', 'undefined'),
+    'X (Twitter) Template Settings' => __('X (Twitter) Template Settings', 'bit-social'),
 
-    'X (Twitter) Template Settings' => __('X (Twitter) Template Settings', 'undefined'),
+    'You can setup %s post settings below.' => __('You can setup %s post settings below.', 'bit-social'),
 
-    'You can setup %s post settings below.' => __('You can setup %s post settings below.', 'undefined'),
-
-    'Doc here.' => __('Doc here.', 'undefined')
+    'Doc here.' => __('Doc here.', 'bit-social')
 ];
 /* THIS IS THE END OF THE GENERATED FILE */

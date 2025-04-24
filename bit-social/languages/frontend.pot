@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Apr 23 2025 08:30:53 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Apr 24 2025 07:24:58 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -343,7 +343,7 @@ msgstr ""
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
 #: frontend/src/pages/root/DefaultDashboard.tsx:28
 #: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
-#: frontend/src/pages/ShareNow/ShareBox.tsx:310
+#: frontend/src/pages/ShareNow/ShareBox.tsx:314
 msgid "Accounts"
 msgstr ""
 
@@ -815,15 +815,11 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:11
-msgid "Integrations"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
+msgid "Improvements"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:15
-msgid "Features"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:14
 msgid "Upcoming Integrations"
 msgstr ""
 
@@ -1266,7 +1262,7 @@ msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:166
 #: frontend/src/pages/Schedules/internals/Settings.tsx:93
-#: frontend/src/pages/ShareNow/ShareBox.tsx:330
+#: frontend/src/pages/ShareNow/ShareBox.tsx:334
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:169
 msgid "Title"
 msgstr ""
@@ -1582,19 +1578,19 @@ msgstr ""
 msgid "Enable to the link shared as a card"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:334
+#: frontend/src/pages/ShareNow/ShareBox.tsx:338
 msgid "Untitled Share Now"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:354
+#: frontend/src/pages/ShareNow/ShareBox.tsx:358
 msgid "Something went wrong!"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:379
+#: frontend/src/pages/ShareNow/ShareBox.tsx:383
 msgid "Edit Schedule"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:379
+#: frontend/src/pages/ShareNow/ShareBox.tsx:383
 msgid "Setup Schedule"
 msgstr ""
 
