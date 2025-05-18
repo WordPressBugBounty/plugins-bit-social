@@ -15,6 +15,7 @@ trait Common
         'tumblr'                => 4096,
         'googleBusinessProfile' => 750,
         'instagram'             => 2200,
+        'bluesky'               => 300,
     ];
 
     /**

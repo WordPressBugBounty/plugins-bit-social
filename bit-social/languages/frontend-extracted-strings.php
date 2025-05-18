@@ -175,7 +175,17 @@ return [
 
     'Total %s accounts found' => __('Total %s accounts found', 'bit-social'),
 
+    'Connect Custom %s App' => __('Connect Custom %s App', 'bit-social'),
+
+    '%s' => __('%s', 'bit-social'),
+
+    'Connect %s' => __('Connect %s', 'bit-social'),
+
     'Custom App' => __('Custom App', 'bit-social'),
+
+    'Login' => __('Login', 'bit-social'),
+
+    'Back' => __('Back', 'bit-social'),
 
     'Saved' => __('Saved', 'bit-social'),
 
@@ -192,10 +202,6 @@ return [
     'Click me!' => __('Click me!', 'bit-social'),
 
     'Connect' => __('Connect', 'bit-social'),
-
-    'Back' => __('Back', 'bit-social'),
-
-    'Connect Custom %s App' => __('Connect Custom %s App', 'bit-social'),
 
     'Homepage URI' => __('Homepage URI', 'bit-social'),
 
@@ -216,6 +222,10 @@ return [
     'Connected Apps' => __('Connected Apps', 'bit-social'),
 
     'No App Found' => __('No App Found', 'bit-social'),
+
+    'Username or Email' => __('Username or Email', 'bit-social'),
+
+    'Password' => __('Password', 'bit-social'),
 
     'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'bit-social'),
 
@@ -357,7 +367,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Improvements' => __('Improvements', 'bit-social'),
+    'Integration' => __('Integration', 'bit-social'),
 
     'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
 
@@ -639,13 +649,13 @@ return [
 
     'Add Image' => __('Add Image', 'bit-social'),
 
+    'Make comment' => __('Make comment', 'bit-social'),
+
     'Add a button (optional)' => __('Add a button (optional)', 'bit-social'),
 
     'Select Button' => __('Select Button', 'bit-social'),
 
     'Link for your button*' => __('Link for your button*', 'bit-social'),
-
-    'Make comment' => __('Make comment', 'bit-social'),
 
     'Enable to selected image shared' => __('Enable to selected image shared', 'bit-social'),
 
@@ -699,7 +709,7 @@ return [
 
     'All Images' => __('All Images', 'bit-social'),
 
-    'Discord Template Settings' => __('Discord Template Settings', 'bit-social'),
+    'Bluesky Template Settings' => __('Bluesky Template Settings', 'bit-social'),
 
     'Custom message settings.' => __('Custom message settings.', 'bit-social'),
 
@@ -709,7 +719,11 @@ return [
 
     'Posting type' => __('Posting type', 'bit-social'),
 
+    'Your comment' => __('Your comment', 'bit-social'),
+
     'Trim Message' => __('Trim Message', 'bit-social'),
+
+    'Discord Template Settings' => __('Discord Template Settings', 'bit-social'),
 
     'Facebook Template Settings' => __('Facebook Template Settings', 'bit-social'),
 
@@ -726,8 +740,6 @@ return [
     'Instagram Template Settings' => __('Instagram Template Settings', 'bit-social'),
 
     'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'bit-social'),
-
-    'Your comment' => __('Your comment', 'bit-social'),
 
     'Linkedin Template Settings' => __('Linkedin Template Settings', 'bit-social'),
 

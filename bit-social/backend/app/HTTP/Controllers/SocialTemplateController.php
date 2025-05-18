@@ -53,6 +53,12 @@ class SocialTemplateController
             'comment'     => '',
             'trimMessage' => true
         ],
+        'bluesky' => [
+            'postingType' => 'onlyMessage',
+            'content'     => '{post_title}',
+            'comment'     => '',
+            'trimMessage' => true
+        ],
 
         'tiktok' => [
             'allowComment' => true,
