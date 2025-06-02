@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun May 18 2025 10:01:45 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Mon Jun 02 2025 11:05:10 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,6 +196,7 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
 msgid "Improvement"
 msgstr ""
 
@@ -333,7 +334,7 @@ msgstr ""
 msgid "Show Smart Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/YoutubeLink.tsx:37
+#: frontend/src/components/utilities/YoutubeLink.tsx:39
 msgid "Tutorial"
 msgstr ""
 
@@ -834,10 +835,6 @@ msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:87
 msgid "Click Here"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
-msgid "Integration"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
@@ -1933,31 +1930,23 @@ msgstr ""
 msgid "Post link"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:18
-msgid "See less"
-msgstr ""
-
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:18
-msgid "See more"
-msgstr ""
-
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:37
 msgid "Page name"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:43
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
 msgid "Just Now"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:72
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:60
 msgid "Like"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:77
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:65
 msgid "Comment"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:70
 msgid "Share"
 msgstr ""
 

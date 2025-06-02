@@ -367,8 +367,6 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Integration' => __('Integration', 'bit-social'),
-
     'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
@@ -746,10 +744,6 @@ return [
     'Pinterest Template Settings' => __('Pinterest Template Settings', 'bit-social'),
 
     'Post link' => __('Post link', 'bit-social'),
-
-    'See less' => __('See less', 'bit-social'),
-
-    'See more' => __('See more', 'bit-social'),
 
     'Page name' => __('Page name', 'bit-social'),
 
