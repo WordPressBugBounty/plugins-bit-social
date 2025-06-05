@@ -5,7 +5,7 @@ Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
 Tested up to: 6.7.1
 Requires PHP: 7.4
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -196,6 +196,11 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 
 
 == Changelog ==
+
+= v1.3.7 (June 05, 2025) =
+
+* Improvement:
+    * Bluesky: Improved handling of Bluesky API responses for external URL embeds by falling back to the original URL when some links return empty responses.
 
 = v1.3.6 (June 02, 2025) =
 
