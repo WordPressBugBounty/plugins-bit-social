@@ -3,9 +3,9 @@
 Contributors: bitpressadmin,shimulckbt,khoaiz,shuvomohajan,tanvirchy,arif25897,mazharul78,akaioum
 Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.3.7
+Stable tag: 1.3.8
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -65,12 +65,12 @@ https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 * [Instagram Documentation](https://bit-social.com/documentation/accounts/connect-your-instagram-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=m44aFan4Nr4&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=26)
 * [TikTok Documentation](https://bit-social.com/documentation/accounts/connect-your-tiktok-account-with-bit-social/) - [Watch Video](https://www.youtube.com/watch?v=5w5c0kY2tno)
 * [Bluesky Documentation](https://bit-social.com/documentation/accounts/connect-your-bluesky-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=2ftNPVnAISI)
+* [Line Documentation](https://bit-social.com/documentation/accounts/connect-your-line-account-with-bit-social/)
 
 == Upcoming Platforms: ==
 
-* Line
 * Telegram
-
+* Threads
 ==
 Bit Social - The Best Scheduling WP Plugin! by **- Lari**
 
@@ -196,6 +196,11 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 
 
 == Changelog ==
+
+= v1.3.8 (June 30, 2025) =
+
+* Integration:
+    * Line : Send text messages, images, and clickable links directly to LINE groups and individual users — perfect for engaging your audience in real time!
 
 = v1.3.7 (June 05, 2025) =
 

@@ -110,7 +110,7 @@ class SideBarMenu
             'Support' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
-                'name'       => 'Support',
+                'name'       => 'License & Support',
                 'capability' => 'manage_options',
                 'slug'       => Config::SLUG . '#/support',
             ],

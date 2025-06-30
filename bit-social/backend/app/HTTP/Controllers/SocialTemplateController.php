@@ -59,7 +59,11 @@ class SocialTemplateController
             'comment'     => '',
             'trimMessage' => true
         ],
-
+        'line' => [
+            'postingType' => 'onlyMessage',
+            'content'     => '{post_title}',
+            'trimMessage' => true
+        ],
         'tiktok' => [
             'allowComment' => true,
             'content'      => '{post_title}',

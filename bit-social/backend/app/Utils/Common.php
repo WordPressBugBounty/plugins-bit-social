@@ -16,6 +16,7 @@ trait Common
         'googleBusinessProfile' => 750,
         'instagram'             => 2200,
         'bluesky'               => 300,
+        'line'                  => 5000,
     ];
 
     /**

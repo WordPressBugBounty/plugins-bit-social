@@ -223,6 +223,24 @@ return [
 
     'No App Found' => __('No App Found', 'bit-social'),
 
+    'Type' => __('Type', 'bit-social'),
+
+    'Group' => __('Group', 'bit-social'),
+
+    'User' => __('User', 'bit-social'),
+
+    'Enter the ID of the target recipient. Use a %s Id value returned in a' => __('Enter the ID of the target recipient. Use a %s Id value returned in a', 'bit-social'),
+
+    'webhook event object' => __('webhook event object', 'bit-social'),
+
+    '%s Id' => __('%s Id', 'bit-social'),
+
+    'To get token, Visit' => __('To get token, Visit', 'bit-social'),
+
+    'developer console' => __('developer console', 'bit-social'),
+
+    'Token' => __('Token', 'bit-social'),
+
     'Username or Email' => __('Username or Email', 'bit-social'),
 
     'Password' => __('Password', 'bit-social'),
@@ -738,6 +756,10 @@ return [
     'Instagram Template Settings' => __('Instagram Template Settings', 'bit-social'),
 
     'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'bit-social'),
+
+    'Line Template Settings' => __('Line Template Settings', 'bit-social'),
+
+    'Line restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Line restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
     'Linkedin Template Settings' => __('Linkedin Template Settings', 'bit-social'),
 
