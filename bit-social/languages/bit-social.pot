@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bit Social 1.3.8\n"
+"Project-Id-Version: Bit Social 1.3.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bit-social\n"
 "Last-Translator: Bit Apps <developer@bitapps.pro>\n"
 "Language-Team: Bit Apps <support@bitapps.pro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-30T09:12:19+00:00\n"
+"POT-Creation-Date: 2025-07-03T09:31:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -44,6 +44,7 @@ msgid "Every "
 msgstr ""
 
 #: backend/app/Views/PluginPageActions.php:19
+#: backend/app/Views/SideBarMenu.php:106
 #: languages/frontend-extracted-strings.php:390
 msgid "Settings"
 msgstr ""
@@ -55,6 +56,49 @@ msgstr ""
 
 #: backend/app/Views/SideBarMenu.php:39
 msgid "Bit Social - Your social of automation's"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:50
+msgid "Home"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:57
+#: languages/frontend-extracted-strings.php:146
+msgid "Accounts"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:64
+#: languages/frontend-extracted-strings.php:356
+msgid "WP Auto Post"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:71
+#: languages/frontend-extracted-strings.php:358
+msgid "WP Post Schedules"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:78
+#: languages/frontend-extracted-strings.php:134
+msgid "Share Now"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:85
+#: languages/frontend-extracted-strings.php:360
+msgid "Calendar"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:92
+#: languages/frontend-extracted-strings.php:334
+msgid "Templates"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:99
+#: languages/frontend-extracted-strings.php:362
+msgid "Logs"
+msgstr ""
+
+#: backend/app/Views/SideBarMenu.php:113
+msgid "License & Support"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:4
@@ -310,10 +354,6 @@ msgstr ""
 msgid "To set it up, click on the <b>\"Create Schedule\"</b> button and follow the next step!"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:134
-msgid "Share Now"
-msgstr ""
-
 #: languages/frontend-extracted-strings.php:136
 msgid "You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times."
 msgstr ""
@@ -332,10 +372,6 @@ msgstr ""
 
 #: languages/frontend-extracted-strings.php:144
 msgid "Tutorial"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:146
-msgid "Accounts"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:148
@@ -717,10 +753,6 @@ msgstr ""
 msgid "Post templates"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:334
-msgid "Templates"
-msgstr ""
-
 #: languages/frontend-extracted-strings.php:336
 msgid "Add schedule"
 msgstr ""
@@ -760,22 +792,6 @@ msgstr ""
 
 #: languages/frontend-extracted-strings.php:354
 msgid "Go The Home"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:356
-msgid "WP Auto Post"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:358
-msgid "WP Post Schedules"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:360
-msgid "Calendar"
-msgstr ""
-
-#: languages/frontend-extracted-strings.php:362
-msgid "Logs"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:364

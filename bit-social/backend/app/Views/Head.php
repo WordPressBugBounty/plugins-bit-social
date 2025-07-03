@@ -80,8 +80,8 @@ class Head
             ]
         );
 
-        if (get_locale() !== 'en_US' && file_exists(Config::get('BASEDIR') . '/languages/generatedString.php')) {
-            include_once Config::get('BASEDIR') . '/languages/generatedString.php';
+        if (get_locale() !== 'en_US' && file_exists(Config::get('ROOT_DIR') . '/languages/frontend-extracted-strings.php')) {
+            $i18nStrings = include Config::get('ROOT_DIR') . '/languages/frontend-extracted-strings.php';
             $frontendVars['translations'] = $i18nStrings;
         }
 
