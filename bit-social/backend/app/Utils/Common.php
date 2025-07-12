@@ -50,7 +50,7 @@ trait Common
         return wp_clear_scheduled_hook($actionHook, [['schedule_id' => $id]]);
     }
 
-    public function replacePostContent($id, $template)
+    public function replacePostContent($postId, $template)
     {
         $featureImage = '';
         $link = '';
@@ -65,7 +65,7 @@ trait Common
         }
 
         $smartTag = new SmartTag();
-        $post = get_post($id);
+        $post = get_post($postId);
 
         if (!$post) {
             return '';
@@ -120,8 +120,8 @@ trait Common
             }
         }
 
-        return [
-            'title'        => get_the_title($id),
+        $formattedPostData = [
+            'title'        => $post->post_title,
             'content'      => $content,
             'featureImage' => $featureImage,
             'link'         => $link,
@@ -130,6 +130,8 @@ trait Common
             'button'       => $button,
             'comment'      => $comment
         ];
+
+        return apply_filters(Config::withPrefix('post_data'), $formattedPostData, $postId);
     }
 
     public function replaceTagValue($text, $post)

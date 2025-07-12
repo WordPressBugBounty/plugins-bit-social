@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Jul 03 2025 09:31:51 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sat Jul 12 2025 10:09:20 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,7 +196,6 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
 msgid "Improvement"
 msgstr ""
 
@@ -872,6 +871,10 @@ msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/Changelog.tsx:87
 msgid "Click Here"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
+msgid "Features"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16

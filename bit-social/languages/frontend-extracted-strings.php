@@ -385,6 +385,8 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
+    'Features' => __('Features', 'bit-social'),
+
     'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
