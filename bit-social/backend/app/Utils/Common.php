@@ -13,10 +13,11 @@ trait Common
         'pinterest'             => 497,
         'discord'               => 2000,
         'tumblr'                => 4096,
-        'googleBusinessProfile' => 750,
+        'googleBusinessProfile' => 1500,
         'instagram'             => 2200,
         'bluesky'               => 300,
         'line'                  => 5000,
+        'telegram'              => 1024
     ];
 
     /**

@@ -143,6 +143,10 @@ return [
 
     'Tutorial' => __('Tutorial', 'bit-social'),
 
+    'Select Image' => __('Select Image', 'bit-social'),
+
+    'Media' => __('Media', 'bit-social'),
+
     'Accounts' => __('Accounts', 'bit-social'),
 
     'Groups' => __('Groups', 'bit-social'),
@@ -244,6 +248,8 @@ return [
     'Username or Email' => __('Username or Email', 'bit-social'),
 
     'Password' => __('Password', 'bit-social'),
+
+    'Bot Token' => __('Bot Token', 'bit-social'),
 
     'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'bit-social'),
 
@@ -483,8 +489,6 @@ return [
 
     'Customize post message' => __('Customize post message', 'bit-social'),
 
-    'Media' => __('Media', 'bit-social'),
-
     'First comment' => __('First comment', 'bit-social'),
 
     'Post Link' => __('Post Link', 'bit-social'),
@@ -679,6 +683,8 @@ return [
 
     'Add a link' => __('Add a link', 'bit-social'),
 
+    'Telegram Media' => __('Telegram Media', 'bit-social'),
+
     'Description' => __('Description', 'bit-social'),
 
     'Share more about your video here' => __('Share more about your video here', 'bit-social'),
@@ -782,6 +788,10 @@ return [
     'Preview (Coming Soon)' => __('Preview (Coming Soon)', 'bit-social'),
 
     'Coming Soon' => __('Coming Soon', 'bit-social'),
+
+    'Telegram Template Settings' => __('Telegram Template Settings', 'bit-social'),
+
+    'Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
     'Only Message' => __('Only Message', 'bit-social'),
 
