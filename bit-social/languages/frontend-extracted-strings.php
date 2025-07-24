@@ -385,13 +385,23 @@ return [
 
     '2. Which software did you previously used for these features?' => __('2. Which software did you previously used for these features?', 'bit-social'),
 
+    'Opt-In For Plugin Improvement' => __('Opt-In For Plugin Improvement', 'bit-social'),
+
+    'Accept and continue to help improve the plugin with usage data. You can skip or change your preference anytime.' => __('Accept and continue to help improve the plugin with usage data. You can skip or change your preference anytime.', 'bit-social'),
+
+    'Terms and conditions' => __('Terms and conditions', 'bit-social'),
+
+    'Skip' => __('Skip', 'bit-social'),
+
+    'Accept and Continue' => __('Accept and Continue', 'bit-social'),
+
     'What\'s New?' => __('What\'s New?', 'bit-social'),
 
     'For More Details' => __('For More Details', 'bit-social'),
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Features' => __('Features', 'bit-social'),
+    'Improvements' => __('Improvements', 'bit-social'),
 
     'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
 
