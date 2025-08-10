@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Jul 24 2025 06:22:09 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sun Aug 10 2025 09:55:40 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -902,25 +902,25 @@ msgstr ""
 msgid "2. Which software did you previously used for these features?"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:33
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:49
 msgid "Opt-In For Plugin Improvement"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:36
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:52
 msgid ""
 "Accept and continue to help improve the plugin with usage data. You can "
 "skip or change your preference anytime."
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:45
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:61
 msgid "Terms and conditions"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:52
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:68
 msgid "Skip"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:56
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:72
 msgid "Accept and Continue"
 msgstr ""
 
@@ -937,10 +937,10 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
-msgid "Improvements"
+msgid "Fixed"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
 msgid "Upcoming Integrations"
 msgstr ""
 
