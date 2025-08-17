@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun Aug 10 2025 09:55:40 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sun Aug 17 2025 08:45:35 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -351,6 +351,7 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:74
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:79
 #: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:74
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:93
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:53
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:109
 #: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:72
@@ -937,11 +938,7 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
-msgid "Fixed"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
-msgid "Upcoming Integrations"
+msgid "Integration"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -1162,6 +1159,7 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:66
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:72
 #: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:66
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:69
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:101
 #: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:65
 #: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:65
@@ -1187,6 +1185,19 @@ msgstr ""
 msgid "Share the post link on Pinterest"
 msgstr ""
 
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:77
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:64
+msgid "Topic"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:85
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:110
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:77
+msgid "First reply"
+msgstr ""
+
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:116
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:138
 msgid "Add video"
@@ -1202,6 +1213,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:152
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:111
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:152
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:142
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:148
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:152
@@ -1603,6 +1615,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:110
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:102
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:68
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:87
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:106
 msgid "Post"
@@ -1617,6 +1630,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:115
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:73
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:92
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:110
 msgid "Write your custom post"
@@ -1629,6 +1643,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:113
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:89
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:127
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:28
@@ -1641,6 +1656,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:135
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:93
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:135
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:135
 msgid "https://example.com"
@@ -1655,6 +1671,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:148
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:141
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:107
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:148
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:148
 msgid "Add Image"
@@ -1689,6 +1706,24 @@ msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:33
 msgid "Telegram Media"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:81
+msgid "Threads Media"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:99
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:64
+msgid "Add a topic"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:104
+msgid "e.g. #example"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:115
+msgid "Write your first reply"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:119
@@ -1840,10 +1875,12 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:51
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:34
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:38
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:33
 msgid "Custom message settings."
@@ -1864,10 +1901,12 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:51
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:34
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:38
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:33
 msgid "Custom Message"
@@ -1888,10 +1927,12 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:66
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:66
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:66
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:65
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:46
 msgid "Post styling and type setup."
@@ -1912,10 +1953,12 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:66
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:66
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:66
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:65
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:46
 msgid "Posting type"
@@ -1943,10 +1986,12 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:87
 #: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:100
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:87
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:113
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:168
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:81
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:80
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:98
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:62
 msgid "Trim Message"
@@ -2067,6 +2112,23 @@ msgid ""
 "shared; if not, the limit prevents the post from being shared"
 msgstr ""
 
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:48
+msgid "threads Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:77
+msgid "Your reply"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:108
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:93
+msgid ""
+"Threads restricts the length of a post to %1$d characters. If you enable "
+"this option, the first %1$d characters of your personalized message will be "
+"shared; if not, the limit prevents the post from being shared"
+msgstr ""
+
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:43
 msgid "Only Message"
 msgstr ""
@@ -2123,6 +2185,10 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:47
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:29
 msgid "X (Twitter) Template Settings"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:33
+msgid "Threads Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/ui/TemplateDocLink.tsx:10

@@ -401,9 +401,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Fixed' => __('Fixed', 'bit-social'),
-
-    'Upcoming Integrations' => __('Upcoming Integrations', 'bit-social'),
+    'Integration' => __('Integration', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
@@ -504,6 +502,10 @@ return [
     'Post Link' => __('Post Link', 'bit-social'),
 
     'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'bit-social'),
+
+    'Topic' => __('Topic', 'bit-social'),
+
+    'First reply' => __('First reply', 'bit-social'),
 
     'Add video' => __('Add video', 'bit-social'),
 
@@ -695,6 +697,14 @@ return [
 
     'Telegram Media' => __('Telegram Media', 'bit-social'),
 
+    'Threads Media' => __('Threads Media', 'bit-social'),
+
+    'Add a topic' => __('Add a topic', 'bit-social'),
+
+    'e.g. #example' => __('e.g. #example', 'bit-social'),
+
+    'Write your first reply' => __('Write your first reply', 'bit-social'),
+
     'Description' => __('Description', 'bit-social'),
 
     'Share more about your video here' => __('Share more about your video here', 'bit-social'),
@@ -803,6 +813,12 @@ return [
 
     'Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
+    'threads Template Settings' => __('threads Template Settings', 'bit-social'),
+
+    'Your reply' => __('Your reply', 'bit-social'),
+
+    'Threads restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Threads restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
+
     'Only Message' => __('Only Message', 'bit-social'),
 
     'PUBLIC TO EVERYONE' => __('PUBLIC TO EVERYONE', 'bit-social'),
@@ -828,6 +844,8 @@ return [
     'Tumblr Template Settings' => __('Tumblr Template Settings', 'bit-social'),
 
     'X (Twitter) Template Settings' => __('X (Twitter) Template Settings', 'bit-social'),
+
+    'Threads Template Settings' => __('Threads Template Settings', 'bit-social'),
 
     'You can setup %s post settings below.' => __('You can setup %s post settings below.', 'bit-social'),
 

@@ -47,6 +47,13 @@ class SocialTemplateController
             'button'      => 'none',
             'trimMessage' => true
         ],
+        'threads' => [
+            'postingType' => 'onlyMessage',
+            'content'     => '{post_title}',
+            'comment'     => '',
+            'topic'       => '',
+            'trimMessage' => true
+        ],
         'instagram' => [
             'postingType' => 'isFeaturedImage',
             'content'     => '{post_title}',
