@@ -401,7 +401,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Integration' => __('Integration', 'bit-social'),
+    'Upcoming feature' => __('Upcoming feature', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 

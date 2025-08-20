@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Sun Aug 17 2025 08:45:35 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Wed Aug 20 2025 06:39:19 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,6 +196,7 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
 msgid "Improvement"
 msgstr ""
 
@@ -333,7 +334,7 @@ msgstr ""
 msgid "Show Smart Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/YoutubeLink.tsx:41
+#: frontend/src/components/utilities/YoutubeLink.tsx:42
 msgid "Tutorial"
 msgstr ""
 
@@ -937,8 +938,8 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
-msgid "Integration"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
+msgid "Upcoming feature"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26

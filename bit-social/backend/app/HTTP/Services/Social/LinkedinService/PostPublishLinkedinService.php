@@ -29,6 +29,10 @@ class PostPublishLinkedinService implements SocialInterface
 
     private $postUrl = 'https://www.linkedin.com/feed/update';
 
+    private $authError = [];
+
+    private $linkCardError = [];
+
     public function __construct()
     {
         $this->httpHandler = new HttpClient();
@@ -52,6 +56,7 @@ class PostPublishLinkedinService implements SocialInterface
         $account_name = $account_detail->account_name;
 
         $access_token = Hash::decrypt($account_detail->access_token);
+
         $expires_in = $account_detail->expires_in;
         $refresh_token = Hash::decrypt($account_detail->refresh_token);
         $refresh_token_expires_in = $account_detail->refresh_token_expires_in;
@@ -59,14 +64,10 @@ class PostPublishLinkedinService implements SocialInterface
         $client_id = Hash::decrypt($account_detail->client_id);
         $client_secret = Hash::decrypt($account_detail->client_secret);
 
-        $tokenUpdateData = $this->refreshHandler->tokenExpiryCheck($client_id, $client_secret, $access_token, $expires_in, $refresh_token, $refresh_token_expires_in);
-
-        if ($tokenUpdateData->access_token !== $access_token) {
-            $account_detail->access_token = Hash::encrypt($tokenUpdateData->access_token);
-            $account_detail->expires_in = $tokenUpdateData->expires_in;
-            $account_detail->refresh_token = Hash::encrypt($tokenUpdateData->refresh_token);
-            $account_detail->refresh_token_expires_in = $tokenUpdateData->refresh_token_expires_in;
-            $this->refreshHandler->saveRefreshedToken($account_detail);
+        if ((int) $expires_in < time()) {
+            ((int) $refresh_token_expires_in > time())
+                ? $access_token = $this->refreshHandler->tokenExpiryCheck($client_id, $client_secret, $refresh_token, $account_id)
+                : $this->authError[] = 'Your LinkedIn connection has expired. Please reconnect your account to continue.';
         }
 
         if ($scheduleType === Schedule::scheduleType['DIRECT_SHARE']) {
@@ -161,30 +162,31 @@ class PostPublishLinkedinService implements SocialInterface
         $postPublishUrl = $this->baseUrl . '/v2/posts';
         $header = Helper::publishHeader($access_token);
 
-        $commonDataParams = Helper::commonParams($ownerUrn, $post_content);
+        $params = Helper::commonParams($ownerUrn, $post_content);
 
-        if (!empty($feature_image)) {
-            $feature_image = $this->uploadImage($access_token, $ownerUrn, $feature_image, []);
-        }
-        $linkData = [
-            'content' => [
-                'article' => [
-                    'source'    => $post_link,
-                    'thumbnail' => $feature_image ? $feature_image : '',
-                    'title'     => $post_id ? get_the_title($post_id) : '',
-                ]
-            ],
-        ];
+        if (wp_http_validate_url($post_link)) {
+            $linkData = $this->getLinkDetails($post_link, $ownerUrn, $access_token, $post_id, $feature_image);
 
-        if (empty($linkData['content']['article']['thumbnail'])) {
-            unset($linkData['content']['article']['thumbnail']);
+            $linkData = [
+                'content' => [
+                    'article' => $linkData
+                ],
+            ];
+            $params = array_merge($params, $linkData);
+        } else {
+            $this->linkCardError[] = 'The URL you entered is not valid.';
         }
 
-        $data = array_merge($commonDataParams, $linkData);
-
-        $this->httpHandler->request($postPublishUrl, 'POST', json_encode($data), $header, null);
+        $response = $this->httpHandler->request($postPublishUrl, 'POST', json_encode($params), $header, null);
 
         $responseHeader = $this->httpHandler->getResponseHeaders();
+
+        if (property_exists($response, 'errorDetails')) {
+            return [
+                'status'  => 0,
+                'message' => json_encode($response->errorDetails)
+            ];
+        }
 
         if (isset($responseHeader['x-restli-id'])) {
             return [
@@ -192,11 +194,6 @@ class PostPublishLinkedinService implements SocialInterface
                 'message' => $responseHeader['x-restli-id']
             ];
         }
-
-        return [
-            'status'  => 0,
-            'message' => 'Link are not send, please try again'
-        ];
     }
 
     public function uploadImage($access_token, $ownerUrn, $feature_image, $allImages)
@@ -373,6 +370,39 @@ class PostPublishLinkedinService implements SocialInterface
         }
     }
 
+    public function getLinkDetails($link, $ownerUrn, $accessToken, $postId = null, $featureImage = null)
+    {
+        $html = $this->httpHandler->request($link, 'GET', []);
+        $ogTags = ['og:title', 'og:description', 'og:image', 'og:url'];
+        $meta = [];
+
+        if ($postId) {
+            $meta['og:title'] = get_the_title($postId);
+            $meta['og:image'] = $featureImage;
+        } else {
+            foreach ($ogTags as $tag) {
+                if (preg_match('/<meta\s+property=["\']' . preg_quote($tag, '/') . '["\']\s+content=["\'](.*?)["\']\s*\/?>/i', $html, $matches)) {
+                    $meta[$tag] = $matches[1];
+                } else {
+                    $meta[$tag] = null;
+                }
+            }
+        }
+        $linkData['source'] = $link;
+        $linkData['title'] = $meta['og:title'] ? html_entity_decode($meta['og:title'], ENT_QUOTES | ENT_HTML5, 'UTF-8') : '';
+
+        if (!empty($meta['og:image'])) {
+            $thumbnail = $this->uploadImage($accessToken, $ownerUrn, $meta['og:image'], []);
+            $linkData['thumbnail'] = $thumbnail;
+        }
+
+        if (!empty($meta['og:description'])) {
+            $linkData['description'] = $meta['og:description'];
+        }
+
+        return $linkData;
+    }
+
     private function logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId)
     {
         $responseData = [
@@ -387,6 +417,14 @@ class PostPublishLinkedinService implements SocialInterface
             'platform' => 'linkedin',
             'status'   => $postPublishResponse['status'] ?? 0
         ];
+
+        if (\count($this->authError)) {
+            $responseData['details']['authError'] = $this->authError;
+        }
+
+        if (\count($this->linkCardError)) {
+            $responseData['details']['linkCardError'] = $this->linkCardError;
+        }
 
         if ($retry) {
             $this->logUpdate($responseData, $logId);

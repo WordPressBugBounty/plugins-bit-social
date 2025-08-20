@@ -6,7 +6,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Utils\Common;
-use stdClass;
+use BitApps\Social\Utils\Hash;
 
 class LinkedinRefreshTokenService
 {
@@ -20,32 +20,22 @@ class LinkedinRefreshTokenService
 
     private $refreshTokenUrl;
 
+    private $accountId;
+
     public function __construct()
     {
         $this->httpHandler = new HttpClient();
         $this->refreshTokenUrl = $this->baseUrl . $this->version . '/accessToken';
     }
 
-    public function tokenExpiryCheck($client_id, $client_secret, $access_token, $expires_in, $refresh_token, $refresh_token_expires_in)
+    public function tokenExpiryCheck($client_id, $client_secret, $refresh_token, $account_id)
     {
-        if (!$access_token && !$refresh_token) {
-            return false;
-        }
+        $this->accountId = $account_id;
 
-        if ((\intval($expires_in)) < time()) {
-            return $this->refreshToken($client_id, $client_secret, $access_token, $refresh_token);
-        }
-
-        $data = new stdClass();
-        $data->access_token = $access_token;
-        $data->expires_in = $expires_in;
-        $data->refresh_token = $refresh_token;
-        $data->refresh_token_expires_in = $refresh_token_expires_in;
-
-        return $data;
+        return $this->refreshAccessToken($client_id, $client_secret, $refresh_token);
     }
 
-    public function refreshToken($client_id, $client_secret, $access_token, $refresh_token)
+    public function refreshAccessToken($client_id, $client_secret, $refresh_token)
     {
         $headers = [
             'Content-Type' => 'application/x-www-form-urlencoded',
@@ -60,26 +50,22 @@ class LinkedinRefreshTokenService
 
         $tokenResponse = $this->httpHandler->request($this->refreshTokenUrl, 'POST', $params, $headers);
 
-        if (!property_exists($tokenResponse, 'access_token')) {
-            return (object) ['status' => 'error', 'message' => 'Refresh token request failed!'];
-        }
+        $this->saveRefreshedToken($tokenResponse);
 
-        $data = new stdClass();
-        $data->access_token = $tokenResponse->access_token;
-        $data->expires_in = time() + $tokenResponse->expires_in;
-        $data->refresh_token = $tokenResponse->refresh_token;
-        $data->refresh_token_expires_in = time() + $tokenResponse->refresh_token_expires_in;
-
-        return $data;
+        return $tokenResponse->access_token;
     }
 
-    public function saveRefreshedToken($account_detail)
+    public function saveRefreshedToken($tokenResponse)
     {
-        $accountId = $account_detail->account_id;
-        if (empty($accountId)) {
+        if (empty($this->accountId)) {
             return;
         }
-        $account = Account::findOne(['account_id' => $accountId]);
-        $account->update(['details' => $account_detail]);
+        $account = Account::findOne(['account_id' => $this->accountId]);
+        $details = $account->details;
+        $details->access_token = Hash::encrypt($tokenResponse->access_token);
+        $details->expires_in = time() + $tokenResponse->expires_in;
+        $details->refresh_token = Hash::encrypt($tokenResponse->refresh_token);
+        $details->refresh_token_expires_in = time() + $tokenResponse->refresh_token_expires_in;
+        $account->update(['details' => $details])->save();
     }
 }
