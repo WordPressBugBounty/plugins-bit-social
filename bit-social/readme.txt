@@ -5,7 +5,7 @@ Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
 Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -196,6 +196,10 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.5.2 (August 20, 2025) =
+* Fixed:
+   * Plugin loading order to avoid conflicts between Free and Pro versions.
 
 = v1.5.1 (August 20, 2025) =
 * Improvement:
