@@ -5,7 +5,7 @@ Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
 Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -66,7 +66,7 @@ https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 * [TikTok Documentation](https://bit-social.com/documentation/accounts/connect-your-tiktok-account-with-bit-social/) - [Watch Video](https://www.youtube.com/watch?v=5w5c0kY2tno)
 * [Bluesky Documentation](https://bit-social.com/documentation/accounts/connect-your-bluesky-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=2ftNPVnAISI)
 * [Line Documentation](https://bit-social.com/documentation/accounts/connect-your-line-account-with-bit-social/) - [Watch Video](https://youtu.be/V_FyW_pK7ec?si=bk3t0Xk-PmNNeeVH)
-* [Telegram Documentation](https://bit-social.com/documentation/accounts/connect-your-telegram-account-with-bit-social/)
+* [Telegram Documentation](https://bit-social.com/documentation/accounts/connect-your-telegram-account-with-bit-social/) - [Watch Video](https://youtu.be/4kSH3sJXwYc?si=GACxOKhrcyuP7suR)
 * [Threads Documentation](https://bit-social.com/documentation/accounts/connect-your-threads-account-with-bit-social/) - [Watch Video](https://youtu.be/VZUxncswKfw?si=y1YkjxWAin4iHETN)
 
 == Upcoming feature: ==
@@ -196,6 +196,9 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 9. Post Scheduling Progress
 
 == Changelog ==
+= v1.5.4 (August 28, 2025) =
+* Fixed:
+   * Old schedules now sync correctly when a new platform is added, ensuring all templates stay updated across platforms
 
 = v1.5.3 (August 21, 2025) =
 * Feature:

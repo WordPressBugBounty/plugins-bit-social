@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Aug 21 2025 09:42:53 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Aug 28 2025 09:14:04 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -342,20 +342,20 @@ msgid "Select Image"
 msgstr ""
 
 #: frontend/src/hooks/useWpMediaPicker.ts:20
-#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:77
-#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:77
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:81
-#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:71
-#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:77
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:81
-#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:74
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:79
-#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:74
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:93
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:53
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:109
-#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:72
-#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:72
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:89
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:90
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:97
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:83
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:90
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:94
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:84
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:92
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:88
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:106
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:54
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:119
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:85
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:85
 #: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:76
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:76
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:83
@@ -938,7 +938,7 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-msgid "Feature"
+msgid "Fixed"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
@@ -1154,24 +1154,24 @@ msgstr ""
 msgid "Year"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:70
-#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:70
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:65
-#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:64
-#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:70
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:65
-#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:66
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:72
-#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:66
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:69
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:101
-#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:65
-#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:65
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:82
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:83
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:81
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:76
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:83
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:78
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:76
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:85
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:80
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:82
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:111
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:78
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:78
 msgid "Customize post message"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:73
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:73
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:89
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:86
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:132
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:119
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:61
@@ -1181,33 +1181,33 @@ msgstr ""
 msgid "First comment"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:96
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:109
 msgid "Post Link"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:104
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:117
 msgid "Share the post link on Pinterest"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:77
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:79
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:64
 msgid "Topic"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:85
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:98
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:110
 #: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:77
 msgid "First reply"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:116
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:126
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:138
 msgid "Add video"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:120
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:130
 #: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:150
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:151
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:174
@@ -1224,49 +1224,49 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:127
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:137
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:149
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:104
 msgid "Privacy settings"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:131
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:141
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:153
 msgid "Public to everyone"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:132
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:142
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:154
 msgid "Mutual follow friends"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:133
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:143
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:155
 msgid "Follower of creator"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:134
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:156
 msgid "Self only"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:139
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:149
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
 msgid "Others"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:146
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:156
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:169
 msgid "Allow Comment"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:154
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:164
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:177
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:139
 msgid "Allow Duet"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:162
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:172
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:185
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:153
 msgid "Allow Stitch"
