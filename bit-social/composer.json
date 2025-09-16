@@ -9,7 +9,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "BitApps\\Social\\CLI\\": "./cli"
+      "BitApps\\Social\\CLI\\": "./cli",
+      "BitApps\\Social\\Fixers\\": "./custom-fixers"
     }
   },
   "scripts": {
@@ -47,8 +48,8 @@
     "bitapps/wp-telemetry": "^0.0.9",
     "bitapps/wp-validator": "^1.0.4",
     "bitapps/wp-database": "1.5",
-    "bitapps/wp-kit": "1.5",
-    "typisttech/imposter-plugin": "*"
+    "typisttech/imposter-plugin": "*",
+    "bitapps/wp-kit": "^2.1"
   },
   "extra": {
     "imposter": {

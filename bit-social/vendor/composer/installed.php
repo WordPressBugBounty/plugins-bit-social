@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bitapps/social',
-        'pretty_version' => '1.5.4',
-        'version' => '1.5.4.0',
-        'reference' => '652ad392ab9f6651cac75cdf5517a5d357898426',
+        'pretty_version' => '1.5.5',
+        'version' => '1.5.5.0',
+        'reference' => '59725e2ce0a94e5357cbd31023f05fb56a9a82ae',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bitapps/social' => array(
-            'pretty_version' => '1.5.4',
-            'version' => '1.5.4.0',
-            'reference' => '652ad392ab9f6651cac75cdf5517a5d357898426',
+            'pretty_version' => '1.5.5',
+            'version' => '1.5.5.0',
+            'reference' => '59725e2ce0a94e5357cbd31023f05fb56a9a82ae',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'bitapps/wp-kit' => array(
-            'pretty_version' => '1.5',
-            'version' => '1.5.0.0',
-            'reference' => 'f222cf1c7fbb575e1195b5680dba658452f7c85c',
+            'pretty_version' => '2.1',
+            'version' => '2.1.0.0',
+            'reference' => '3e49d25e047530a2a43c08af3a8fc821feaa7ae8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bitapps/wp-kit',
             'aliases' => array(),

@@ -4,7 +4,7 @@ namespace BitApps\Social\Utils;
 
 trait PostInfo
 {
-    public function getFeaturedImageUrl($postId)
+    public static function getFeaturedImageUrl($postId)
     {
         if (has_post_thumbnail($postId)) {
             return get_the_post_thumbnail_url($postId, 'full');
@@ -22,6 +22,28 @@ trait PostInfo
 
     public static function getAllImages($postId)
     {
+        $postType = get_post_type($postId);
+        if ($postType === 'product') {
+            $product = wc_get_product($postId);
+
+            $attachmentIds = $product->get_gallery_image_ids();
+            $featuredImageId = $product->get_image_id();
+
+            if ($featuredImageId) {
+                array_unshift($attachmentIds, (int) $featuredImageId);
+            }
+
+            $allImagesUrl = [];
+            foreach ($attachmentIds as $attachmentId) {
+                $imageUrl = wp_get_attachment_url($attachmentId);
+                if ($imageUrl) {
+                    $allImagesUrl[] = $imageUrl;
+                }
+            }
+
+            return $allImagesUrl;
+        }
+
         $post = get_post($postId);
         $post_content = $post->post_content;
 
@@ -31,27 +53,16 @@ trait PostInfo
 
         preg_match_all($pattern, $post_content, $matches);
 
-        return $matches[1];
+        $allImagesUrl = $matches[1];
+
+        $featuredImageUrl = self::getFeaturedImageUrl($postId);
+
+        if ($featuredImageUrl) {
+            array_unshift($allImagesUrl, $featuredImageUrl);
+        }
+
+        return $allImagesUrl;
     }
-
-    // public function getAllImages($postId)
-    // {
-    //     $allImagesUrl = [];
-    //     $featuredImageUrl = $this->getFeaturedImageUrl($postId);
-
-    //     $allImages = get_attached_media('image', $postId);
-
-    //     foreach ($allImages as $image) {
-    //         $imageUrl = $image->guid;
-    //         if ($imageUrl != $featuredImageUrl) {
-    //             if (! \in_array($imageUrl, $allImagesUrl)) {
-    //                 $allImagesUrl[] = $imageUrl;
-    //             }
-    //         }
-    //     }
-
-    //     return $allImagesUrl;
-    // }
 
     public function getVideo($post_id)
     {

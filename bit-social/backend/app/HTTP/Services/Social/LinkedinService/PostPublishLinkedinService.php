@@ -106,7 +106,7 @@ class PostPublishLinkedinService implements SocialInterface
     public function linkedinPostPublish($post_data, $account_detail, $access_token, $post_id, $scheduleType)
     {
         $ownerUrn = $account_detail->urn;
-        $post_content = $post_data['content'] ?? null;
+        $post_content = $post_data['content'] ? $this->escapeSpecialCharacters($post_data['content']) : null;
         $feature_image = $post_data['featureImage'] ?? null;
         $allImages = $post_data['allImages'] ?? null;
         $post_link = $post_data['link'] ?? null;
@@ -141,7 +141,7 @@ class PostPublishLinkedinService implements SocialInterface
 
         $data = Helper::commonParams($ownerUrn, $post_content);
 
-        $requestBody = $this->httpHandler->request($postPublishUrl, 'POST', json_encode($data), $header, null);
+        $requestBody = $this->httpHandler->request($postPublishUrl, 'POST', wp_json_encode($data), $header, null);
         $responseHeader = $this->httpHandler->getResponseHeaders();
 
         if (isset($responseHeader['x-restli-id'])) {
@@ -177,14 +177,14 @@ class PostPublishLinkedinService implements SocialInterface
             $this->linkCardError[] = 'The URL you entered is not valid.';
         }
 
-        $response = $this->httpHandler->request($postPublishUrl, 'POST', json_encode($params), $header, null);
+        $response = $this->httpHandler->request($postPublishUrl, 'POST', wp_json_encode($params), $header, null);
 
         $responseHeader = $this->httpHandler->getResponseHeaders();
 
         if (property_exists($response, 'errorDetails')) {
             return [
                 'status'  => 0,
-                'message' => json_encode($response->errorDetails)
+                'message' => wp_json_encode($response->errorDetails)
             ];
         }
 
@@ -199,7 +199,7 @@ class PostPublishLinkedinService implements SocialInterface
     public function uploadImage($access_token, $ownerUrn, $feature_image, $allImages)
     {
         $initializeImageUrl = $this->baseUrl . '/v2/images?action=initializeUpload';
-        $params = json_encode([
+        $params = wp_json_encode([
             'initializeUploadRequest' => [
                 'owner' => $ownerUrn,
             ]
@@ -217,7 +217,7 @@ class PostPublishLinkedinService implements SocialInterface
         $dataContent['content'] = Helper::makeImageContent($allImageUrns);
 
         $postData = array_merge($commonDataParams, $dataContent);
-        $params = json_encode($postData);
+        $params = wp_json_encode($postData);
 
         $commonHeader = Helper::publishHeader($accessToken);
         $header = array_merge($commonHeader, ['Content-Length' => \strlen($params)]);
@@ -245,7 +245,7 @@ class PostPublishLinkedinService implements SocialInterface
 
         $fileContent = Helper::getContents($video_url);
 
-        $initData = json_encode([
+        $initData = wp_json_encode([
             'initializeUploadRequest' => [
                 'owner'           => $ownerUrn,
                 'fileSizeBytes'   => \strlen($fileContent),
@@ -317,7 +317,7 @@ class PostPublishLinkedinService implements SocialInterface
                 'LinkedIn-Version'          => static::LINKEDIN_VERSION
             ];
 
-            $finalVideoBody = json_encode($final);
+            $finalVideoBody = wp_json_encode($final);
 
             $finalUploadVideoRes = $this->httpHandler->request($finalUploadVideo, 'POST', $finalVideoBody, $finalUploadVideoHeader);
             if (empty($finalUploadVideoRes)) {
@@ -344,7 +344,7 @@ class PostPublishLinkedinService implements SocialInterface
         ];
 
         $commonDataParams = Helper::commonParams($ownerUrn, $post_content);
-        $finalVideoData = json_encode(array_merge($commonDataParams, $videoContentParams));
+        $finalVideoData = wp_json_encode(array_merge($commonDataParams, $videoContentParams));
 
         $sendVideoHeaders = array_merge(Helper::publishHeader($access_token), ['LinkedIn-Version' => static::LINKEDIN_VERSION]);
 

@@ -202,4 +202,15 @@ trait Common
 
         return $content;
     }
+
+    /**
+     * Escape characters that could break Markdown/Telegram formatting.
+     */
+    protected function escapeSpecialCharacters(string $text): string
+    {
+        $search = ['\\', '|', '{', '}', '(', ')', '<', '>', '#', '*', '_', '~', '[', ']'];
+        $replace = ['\\\\', '\|', '\{', '\}', '\(', '\)', '\<', '\>', '\#', '\*', '\_', '\~', '\[', '\]'];
+
+        return str_replace($search, $replace, $text);
+    }
 }
