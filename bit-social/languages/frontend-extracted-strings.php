@@ -139,6 +139,12 @@ return [
 
     'Doc Link' => __('Doc Link', 'bit-social'),
 
+    'Advance Tags' => __('Advance Tags', 'bit-social'),
+
+    'Post Tags' => __('Post Tags', 'bit-social'),
+
+    'Product Tags' => __('Product Tags', 'bit-social'),
+
     'Show Smart Tags' => __('Show Smart Tags', 'bit-social'),
 
     'Tutorial' => __('Tutorial', 'bit-social'),
@@ -400,6 +406,8 @@ return [
     'For More Details' => __('For More Details', 'bit-social'),
 
     'Click Here' => __('Click Here', 'bit-social'),
+
+    'Features' => __('Features', 'bit-social'),
 
     'Upcoming feature' => __('Upcoming feature', 'bit-social'),
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Tue Sep 16 2025 09:40:11 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Mon Sep 22 2025 11:38:49 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,7 +196,7 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
 msgid "Improvement"
 msgstr ""
 
@@ -330,7 +330,19 @@ msgstr ""
 msgid "Doc Link"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:70
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:76
+msgid "Advance Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:77
+msgid "Post Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:80
+msgid "Product Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:96
 msgid "Show Smart Tags"
 msgstr ""
 
@@ -938,7 +950,11 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
+msgid "Features"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:20
 msgid "Upcoming feature"
 msgstr ""
 

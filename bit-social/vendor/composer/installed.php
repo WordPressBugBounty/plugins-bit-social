@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bitapps/social',
-        'pretty_version' => '1.5.5',
-        'version' => '1.5.5.0',
-        'reference' => '59725e2ce0a94e5357cbd31023f05fb56a9a82ae',
+        'pretty_version' => '1.6.0',
+        'version' => '1.6.0.0',
+        'reference' => '74e7a9b6b35e405e30be78adc4aae564172e8659',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bitapps/social' => array(
-            'pretty_version' => '1.5.5',
-            'version' => '1.5.5.0',
-            'reference' => '59725e2ce0a94e5357cbd31023f05fb56a9a82ae',
+            'pretty_version' => '1.6.0',
+            'version' => '1.6.0.0',
+            'reference' => '74e7a9b6b35e405e30be78adc4aae564172e8659',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
