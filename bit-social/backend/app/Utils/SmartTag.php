@@ -41,6 +41,7 @@ class SmartTag
             'productImageUrl'         => ['key' => 'product_image_url', 'label' => 'Product image url', 'description' => 'WC Product image url', 'type' => 'pro'],
             'productTags'             => ['key' => 'product_tags', 'label' => 'Product tags', 'description' => 'WC Product tags', 'type' => 'pro'],
             'productLink'             => ['key' => 'product_link', 'label' => 'Product link', 'description' => 'WC Product link', 'type' => 'pro'],
+            'productSku'              => ['key' => 'product_sku', 'label' => 'Product SKU', 'description' => 'WC Product SKU', 'type' => 'pro'],
         ],
         'advance' => [
 

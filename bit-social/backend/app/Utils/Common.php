@@ -192,8 +192,12 @@ trait Common
 
     public function clipText($platform, $content, $link)
     {
+        // Ensure $content is always a string
+        $content = $content ?? '';
+
         $backSlashNCount = substr_count($content, "\n");
         $textLength = \strlen($content) - $backSlashNCount;
+
         $maxLength = $this->platformLimitations[$platform] ?? $textLength;
 
         if ($textLength > $maxLength) {
