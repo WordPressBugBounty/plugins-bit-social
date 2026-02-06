@@ -8,8 +8,9 @@ use BitApps\Social\Deps\BitApps\WPDatabase\Model;
 class Account extends Model
 {
     public const accountType = [
-        'DEFAULT' => 1,
-        'CUSTOM'  => 2,
+        'DEFAULT'     => 1,
+        'CUSTOM'      => 2,
+        'AI_PLATFORM' => 3,
     ];
 
     public const ACCOUNT_STATUS = [

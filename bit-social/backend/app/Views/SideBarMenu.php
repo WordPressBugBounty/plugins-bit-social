@@ -58,6 +58,13 @@ class SideBarMenu
                 'capability' => 'manage_options',
                 'slug'       => Config::SLUG . '#/accounts',
             ],
+            'AI Prompts' => [
+                'parent'     => Config::SLUG,
+                'type'       => 'submenu',
+                'name'       => __('AI Prompts'),
+                'capability' => 'manage_options',
+                'slug'       => Config::SLUG . '#/ai-prompts',
+            ],
             'Auto Post' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
@@ -114,6 +121,7 @@ class SideBarMenu
                 'capability' => 'manage_options',
                 'slug'       => Config::SLUG . '#/support',
             ],
+
         ];
     }
 
@@ -142,4 +150,64 @@ class SideBarMenu
             }
         }
     }
+
+    public function addOfferMenuItem()
+    {
+        if (Config::isProActivated()) {
+            return;
+        }
+
+        add_submenu_page(
+            Config::SLUG,
+            'BFCM 62% OFF',
+            'BFCM 62% OFF',
+            'manage_options',
+            esc_url('https://bit-social.com/special-discount/')
+        );
+    }
+
+    public function addOfferButtonStyle()
+    {
+        global $submenu;
+
+        if (!isset($submenu[Config::SLUG]) || Config::isProActivated()) {
+            return;
+        }
+
+        $count = \count($submenu[Config::SLUG]);
+        $submenu[Config::SLUG][$count - 1][] = 'bit-social-offer-button';
+        ?>
+<style>
+    @keyframes pulseUpgrade {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(104, 23, 255, .2);
+        }
+
+        50% {
+            transform: scale(1.08);
+            box-shadow: 0 0 14px rgba(104, 23, 255, .5);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(104, 23, 255, .2);
+        }
+    }
+
+    .bit-social-offer-button a {
+        background-color: #6817FF !important;
+        color: #fff !important;
+        border-radius: 20px !important;
+        padding: 6px 12px !important;
+        font-weight: 600 !important;
+        margin: 0 6px !important;
+        display: inline-block;
+        animation: pulseUpgrade 1.3s ease-in-out infinite;
+    }
+</style>
+<?php
+
+    }
 }
+?>

@@ -7,6 +7,7 @@ trait WpPost
     public function getPosts($filter)
     {
         $filter['numberposts'] = -1;
+        $filter['lang'] = '';
         $posts = get_posts($filter);
 
         return array_map(function ($post) {

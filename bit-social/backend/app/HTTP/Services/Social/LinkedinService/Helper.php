@@ -69,39 +69,24 @@ class Helper
         return $companies;
     }
 
-    public static function imageUpload($initializeImageUrl, $params, $initializeHeader, $feature_image, $allImages, $access_token, $httpHandler)
+    public static function imageUpload($initializeImageUrl, $params, $initializeHeader, $media, $access_token, $httpHandler)
     {
-        if (!empty($allImages) && \is_array($allImages)) {
-            foreach ($allImages as $image) {
-                $response = $httpHandler->request($initializeImageUrl, 'POST', $params, $initializeHeader);
-
-                $upload_url = $response->value->uploadUrl;
-                $imageUrn = $response->value->image;
-
-                $parameters = self::getLocalImagePath($image);
-
-                $uploadHeader = self::uploadHeader($access_token, $parameters);
-
-                $imageUploadResponse = $httpHandler->request($upload_url, 'PUT', $parameters, $uploadHeader);
-
-                $allImageUrns[] = $imageUrn;
-            }
-
-            return $allImageUrns;
-        } elseif (!empty($feature_image)) {
+        foreach ($media as $image) {
             $response = $httpHandler->request($initializeImageUrl, 'POST', $params, $initializeHeader);
 
             $upload_url = $response->value->uploadUrl;
             $imageUrn = $response->value->image;
 
-            $parameters = self::getLocalImagePath($feature_image);
+            $parameters = self::getLocalImagePath($image);
 
             $uploadHeader = self::uploadHeader($access_token, $parameters);
 
-            $httpHandler->request($upload_url, 'PUT', $parameters, $uploadHeader);
+            $imageUploadResponse = $httpHandler->request($upload_url, 'PUT', $parameters, $uploadHeader);
 
-            return $imageUrn;
+            $allImageUrns[] = $imageUrn;
         }
+
+        return $allImageUrns;
     }
 
     public static function getLocalImagePath($image)

@@ -10,6 +10,8 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Model\Group;
 use BitApps\Social\Model\Schedule;
+use BitApps\Social\Utils\Hash;
+use Exception;
 
 class AccountController
 {
@@ -42,6 +44,12 @@ class AccountController
         if (!isset($accountModel)) {
             $accountModel = new Account();
         }
+
+        // ✅ Only include DEFAULT and CUSTOM account types
+        $accountModel->whereIn('account_type', [
+            Account::accountType['DEFAULT'],
+            Account::accountType['CUSTOM'],
+        ]);
 
         $allPageAndGroup = $accountModel->get(['id', 'account_id', 'details', 'platform', 'account_type', 'status']);
 
@@ -199,8 +207,10 @@ class AccountController
 
     public function activeAccounts()
     {
-        $activeAccounts = Account::where('status', Account::ACCOUNT_STATUS['active'])
-            ->get(['id', 'details', 'platform', 'account_type', 'status']);
+        $activeAccounts = Account::where('status', Account::ACCOUNT_STATUS['active'])->whereIn('account_type', [
+            Account::accountType['DEFAULT'],
+            Account::accountType['CUSTOM'],
+        ])->get(['id', 'details', 'platform', 'account_type', 'status']);
 
         return Response::success($activeAccounts);
     }
@@ -218,5 +228,60 @@ class AccountController
         }
 
         return Response::error(['data' => null,  'message' => 'Data not found']);
+    }
+
+    public function getAIPlatformAccounts()
+    {
+        $accounts = Account::where('account_type', Account::accountType['AI_PLATFORM'])
+            ->get(['id,platform', 'details']);
+
+        if (empty($accounts)) {
+            return [];
+        }
+
+        $aiPlatformAccounts = [];
+
+        foreach ($accounts as $account) {
+            try {
+                $accountDetails = $account->details;
+
+                $decryptedKey = Hash::decrypt($accountDetails->key);
+            } catch (Exception $e) {
+                $decryptedKey = null;
+            }
+
+            $maskedKey = $decryptedKey ? $this->maskKey($decryptedKey) : null;
+
+            $aiPlatformAccounts[] = [
+                'id'       => $account->id,
+                'platform' => $account->platform,
+                'key'      => $maskedKey,
+            ];
+        }
+
+        return $aiPlatformAccounts;
+    }
+
+    private function maskKey(string $key): string
+    {
+        $length = \strlen($key);
+
+        if ($length <= 6) {
+            // If key too short, just pad to 16 with '*'
+            return str_pad($key, 16, '*');
+        }
+
+        $start = substr($key, 0, 6);
+        $end = substr($key, -4);
+
+        // Fill the middle with '*' so total length = 16
+        $maskedLength = 16 - (\strlen($start) + \strlen($end));
+        if ($maskedLength < 0) {
+            $maskedLength = 0;
+        }
+
+        $maskedMiddle = str_repeat('*', $maskedLength);
+
+        return $start . $maskedMiddle . $end;
     }
 }

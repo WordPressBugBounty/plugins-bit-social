@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Mon Sep 29 2025 08:39:05 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Mon Feb 02 2026 11:41:08 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -196,7 +196,6 @@ msgid "Review Now"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/Imporvement.tsx:22
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
 msgid "Improvement"
 msgstr ""
 
@@ -232,7 +231,7 @@ msgid "Advance Schedule Feature on Pro!"
 msgstr ""
 
 #: frontend/src/components/AdvanceSchedule.tsx:36
-#: frontend/src/components/BuyPro.tsx:72
+#: frontend/src/components/BuyPro.tsx:73
 #: frontend/src/components/utilities/ProWrapper.tsx:23
 msgid "Buy Pro"
 msgstr ""
@@ -306,7 +305,7 @@ msgid ""
 msgstr ""
 
 #: frontend/src/components/Note.tsx:66
-#: frontend/src/pages/Layout/ui/Header/Header.tsx:17
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:18
 #: frontend/src/pages/ShareNow/ShareNow.tsx:41
 msgid "Share Now"
 msgstr ""
@@ -330,20 +329,34 @@ msgstr ""
 msgid "Doc Link"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:76
+#: frontend/src/components/utilities/ImagePromptNameSelect/ImagePromptNameSelect.pro.tsx:41
+msgid "Select a prompt"
+msgstr ""
+
+#: frontend/src/components/utilities/ImagePromptNameSelect/ImagePromptNameSelect.pro.tsx:47
+#: frontend/src/components/utilities/MessageBox/PromptTags.pro.tsx:43
+msgid "Create new prompt"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:102
 msgid "Advance Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:77
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:103
 msgid "Post Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:80
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:106
 msgid "Product Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:96
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:125
 msgid "Show Smart Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/MessageBox/PromptTags.pro.tsx:57
+#: frontend/src/components/utilities/MessageBox/PromptTags.tsx:22
+msgid "Prompt Tags"
 msgstr ""
 
 #: frontend/src/components/utilities/YoutubeLink.tsx:42
@@ -351,34 +364,35 @@ msgid "Tutorial"
 msgstr ""
 
 #: frontend/src/hooks/useWpMediaPicker.ts:15
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:73
 msgid "Select Image"
 msgstr ""
 
 #: frontend/src/hooks/useWpMediaPicker.ts:20
-#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:89
-#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:90
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:97
-#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:83
-#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:90
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:94
-#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:84
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:92
-#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:88
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:106
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:148
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:149
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:156
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:142
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:154
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:152
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:144
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:132
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:147
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:165
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:54
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:119
-#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:85
-#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:85
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:117
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:117
 #: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:76
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:76
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:83
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:74
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:91
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:78
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:59
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:73
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:59
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:129
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:147
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:72
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:74
@@ -472,6 +486,8 @@ msgid "Connect Custom %s App"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:26
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:58
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:97
 msgid "%s"
 msgstr ""
 
@@ -504,6 +520,7 @@ msgid "Save"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:58
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:57
 msgid "No"
 msgstr ""
 
@@ -512,6 +529,8 @@ msgid "Are you sure to delete this app?"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:61
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:137
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:208
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:236
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:333
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:253
@@ -519,6 +538,7 @@ msgid "Yes, Delete"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:64
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:63
 msgid "Delete the app"
 msgstr ""
 
@@ -528,6 +548,8 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/ConnectButton.tsx:69
 #: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:22
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:74
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:80
 msgid "Connect"
 msgstr ""
 
@@ -574,6 +596,8 @@ msgid "No App Found"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:44
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:127
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:106
 msgid "Type"
 msgstr ""
 
@@ -660,8 +684,8 @@ msgstr ""
 #: frontend/src/pages/Accounts/internals/Platforms/ui/ProfileList.tsx:36
 #: frontend/src/pages/AutoPost/ui/AccountTree.tsx:62
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:45
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:90
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:137
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:94
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:141
 msgid "All"
 msgstr ""
 
@@ -727,6 +751,286 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:133
 msgid "No Groups found!"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.free.tsx:22
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:227
+msgid "How to use AI Prompts?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.pro.tsx:16
+msgid "Platforms"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.pro.tsx:27
+msgid "Prompts"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:64
+msgid "Prompt updated successfully!"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:64
+msgid "Prompt created successfully!"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:70
+msgid "Operation failed"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:80
+msgid "Failed to update prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:80
+msgid "Failed to create prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:86
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:103
+msgid "Text"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:87
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:103
+msgid "Image"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:110
+msgid "Edit Prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:110
+msgid "Create New Prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:115
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:95
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:164
+#: frontend/src/pages/Schedules/internals/Settings.tsx:93
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:112
+#: frontend/src/pages/ShareNow/ShareBox.tsx:334
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:169
+msgid "Title"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:117
+msgid "Please enter prompt title"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:121
+msgid "Enter prompt title"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:129
+msgid "Please select template type"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:134
+msgid "Select template type"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:140
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:112
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:156
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:48
+#: frontend/src/pages/Logs/Logs.tsx:41
+msgid "Platform"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:142
+msgid "Please select AI platform"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:147
+msgid "Select your AI platform"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:155
+msgid "Please enter a prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:157
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:127
+msgid "Prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:168
+msgid "Fallback Content"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:89
+msgid "ID"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:117
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:144
+msgid "Model"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:135
+msgid "Are you sure you want to delete this prompt config?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:140
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:103
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:239
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:256
+msgid "Delete?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:148
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:260
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:278
+msgid "Action"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:196
+msgid "Search prompts"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:204
+msgid "Selected"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:204
+msgid "items"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:206
+msgid "Are you sure to delete these prompt configs?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:211
+msgid "Delete Prompt Configs"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:235
+#: frontend/src/pages/Logs/Logs.tsx:273
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:363
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:368
+msgid "Refresh"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:239
+msgid "Create Prompt"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:267
+msgid "No prompt configs found!"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:146
+msgid "Please select a model"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:151
+msgid "Select your model"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:157
+msgid "Temperature"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:174
+msgid ""
+"Temperature controls how creative or predictable the AI’s response is: "
+"lower = predictable, higher = creative. For GPT-5 models, temperature is "
+"set to 1.0 by default."
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:182
+msgid "Image Size"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:183
+msgid "Please select an image size"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:188
+msgid "Select image size"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:196
+msgid "Quality"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:197
+msgid "Please select quality"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:202
+msgid "Standard"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:203
+msgid "HD"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:205
+msgid "Select quality"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:209
+msgid "HD quality generates more detailed images but may take longer to process."
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:217
+msgid "Style"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:218
+msgid "Please select style"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:223
+msgid "Vivid"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:224
+msgid "Natural"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:226
+msgid "Select style"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:230
+msgid ""
+"Vivid style produces brighter colors, while Natural style offers more "
+"realistic tones."
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:50
+msgid "Connect your key"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:58
+msgid "Are you sure to delete connection?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:60
+msgid "Yes, Disconnect"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:66
+msgid "Disconnect"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:98
+msgid "Api Key"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:104
+msgid "Enter your api key"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:108
+msgid "You can find your API key in"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:111
+msgid "settings"
 msgstr ""
 
 #: frontend/src/pages/AutoPost/data/usePostDelayTypes.tsx:19
@@ -818,7 +1122,7 @@ msgid "Post templates"
 msgstr ""
 
 #: frontend/src/pages/AutoPost/ui/TemplateBox.tsx:19
-#: frontend/src/pages/Layout/ui/Header/Header.tsx:19
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:20
 msgid "Templates"
 msgstr ""
 
@@ -863,18 +1167,22 @@ msgid "Go The Home"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:15
-msgid "WP Auto Post"
+msgid "AI Prompts"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:16
+msgid "WP Auto Post"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:17
 msgid "WP Post Schedules"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/Header.tsx:18
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:19
 msgid "Calendar"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/Header.tsx:20
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:21
 msgid "Logs"
 msgstr ""
 
@@ -950,12 +1258,8 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-msgid "Features"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:20
-msgid "Upcoming feature"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
+msgid "Fixed"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -998,53 +1302,51 @@ msgstr ""
 msgid "Instagram"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:110
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:81
+msgid "Threads"
+msgstr ""
+
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:114
 msgid "Filter"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:116
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:120
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:166
 msgid "Reset"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:121
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:125
 msgid "Logs filter"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:125
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:129
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:33
 #: frontend/src/pages/Logs/Logs.tsx:35
 msgid "Date"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:132
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:136
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:38
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:225
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:242
 msgid "Status"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:138
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:142
 #: frontend/src/pages/Logs/Logs.tsx:64
 msgid "Success"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:139
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:143
 #: frontend/src/pages/Logs/Logs.tsx:66
 msgid "Error"
 msgstr ""
 
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:144
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:148
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:43
 #: frontend/src/pages/Logs/Logs.tsx:52
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:176
 msgid "Schedule"
-msgstr ""
-
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:152
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:48
-#: frontend/src/pages/Logs/Logs.tsx:41
-msgid "Platform"
 msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:30
@@ -1111,12 +1413,6 @@ msgstr ""
 msgid "Visit our documentation"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:273
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:363
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:368
-msgid "Refresh"
-msgstr ""
-
 #: frontend/src/pages/root/data/useAnalytics.tsx:22
 msgid "Active Account"
 msgstr ""
@@ -1167,50 +1463,132 @@ msgstr ""
 msgid "Year"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:82
-#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:83
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:81
-#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:76
-#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:83
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:78
-#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:76
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:85
-#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:80
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:82
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:93
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:180
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:93
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:181
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:89
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:188
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:87
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:174
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:97
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:186
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:88
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:184
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:90
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:176
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:89
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:179
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:89
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:197
+msgid "Select Images"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:105
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:105
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:101
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:99
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:109
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:100
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:102
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:101
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:101
+msgid "Select Custom Images"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:141
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:142
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:140
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:135
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:147
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:136
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:136
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:125
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:139
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:141
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:111
-#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:78
-#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:78
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:110
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:110
 msgid "Customize post message"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:89
-#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:86
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:167
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:168
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:175
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:161
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:173
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:171
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:163
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:151
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:166
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:184
+#: frontend/src/pages/Schedules/internals/Platforms/ProTumblrScheduleTemplate .tsx:136
+#: frontend/src/pages/Schedules/internals/Platforms/ProTwitterScheduleTemplate .tsx:136
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:133
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:134
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:109
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:108
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:99
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:90
+msgid "Prompt Name"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/FacebookScheduleTemplate.tsx:177
+#: frontend/src/pages/Schedules/internals/Platforms/LinkedinScheduleTemplate.tsx:178
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:185
+#: frontend/src/pages/Schedules/internals/Platforms/ProDiscordScheduleTemplate.tsx:171
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:183
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:181
+#: frontend/src/pages/Schedules/internals/Platforms/ProLineScheduleTemplate.tsx:173
+#: frontend/src/pages/Schedules/internals/Platforms/ProTelegramScheduleTemplate.tsx:176
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:194
+msgid "Custom Images"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProBlueskyScheduleTemplate.tsx:148
+#: frontend/src/pages/Schedules/internals/Platforms/ProInstagramScheduleTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:132
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:119
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:61
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:76
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:79
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:94
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:105
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:121
 msgid "First comment"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:109
-msgid "Post Link"
+#: frontend/src/pages/Schedules/internals/Platforms/ProGoogleBusinessProfileScheduleTemplate .tsx:226
+#: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:123
+msgid "Add a button"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:117
+msgid "Customize post title"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:159
+msgid "Post Link"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProPinterestScheduleTemplate .tsx:167
 msgid "Share the post link on Pinterest"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:90
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:79
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:149
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:105
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:64
 msgid "Topic"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:98
+#: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:157
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:110
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:118
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:77
 msgid "First reply"
 msgstr ""
@@ -1225,10 +1603,10 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:151
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:174
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:148
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:175
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:133
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:160
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:152
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:145
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:163
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:111
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:152
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:142
@@ -1240,6 +1618,7 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:137
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:149
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:104
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:87
 msgid "Privacy settings"
 msgstr ""
 
@@ -1276,12 +1655,14 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:164
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:177
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:139
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:119
 msgid "Allow Duet"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:172
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:185
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:153
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:133
 msgid "Allow Stitch"
 msgstr ""
 
@@ -1384,21 +1765,8 @@ msgstr ""
 msgid "Are you sure you want to delete this schedule?"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:103
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:239
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:256
-msgid "Delete?"
-msgstr ""
-
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:105
 msgid "Delete"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:164
-#: frontend/src/pages/Schedules/internals/Settings.tsx:93
-#: frontend/src/pages/ShareNow/ShareBox.tsx:334
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:169
-msgid "Title"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:170
@@ -1442,11 +1810,6 @@ msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:253
 msgid "Re-schedule"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:260
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:278
-msgid "Action"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:321
@@ -1627,10 +1990,10 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:109
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:120
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:107
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:126
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:84
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:110
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:102
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:120
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:68
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:87
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:107
@@ -1642,10 +2005,10 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:114
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:125
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:112
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:131
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:89
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:115
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:107
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:125
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:73
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:92
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:112
@@ -1658,7 +2021,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:153
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:127
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:131
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:113
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:89
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:131
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:127
@@ -1683,10 +2046,10 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/LinkedinShareNowTemplate.tsx:147
 #: frontend/src/pages/ShareNow/internals/platforms/ProBlueskyShareNowTemplate.tsx:170
 #: frontend/src/pages/ShareNow/internals/platforms/ProDiscordShareNowTemplate.tsx:144
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:171
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:129
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:156
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:148
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:141
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:159
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:148
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:144
@@ -1699,25 +2062,29 @@ msgstr ""
 msgid "Make comment"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:137
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:95
 msgid "Add a button (optional)"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:141
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:99
 msgid "Select Button"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:150
+#: frontend/src/pages/ShareNow/internals/platforms/ProGoogleBusinessProfileShareNowTemplate.tsx:108
 msgid "Link for your button*"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProInstagramShareNowTemplate.tsx:137
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:122
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:140
 #: frontend/src/pages/ShareNow/internals/platforms/ShareNowPostTypeCheckBox.tsx:34
 msgid "Enable to selected image shared"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:117
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:116
+msgid "Add a title"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:135
 msgid "Add a link"
 msgstr ""
 
@@ -1730,7 +2097,7 @@ msgid "Threads Media"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:99
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:105
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:64
 msgid "Add a topic"
 msgstr ""
@@ -1824,80 +2191,90 @@ msgid ""
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:13
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:53
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:62
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:27
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:54
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:63
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:61
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:26
 msgid "Only custom message"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:14
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:54
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:55
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:63
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:27
 msgid "Link card"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:15
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:55
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:64
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:28
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:26
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:56
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:65
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:26
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:53
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:42
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:42
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:62
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:51
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:51
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:32
 msgid "Feature image"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:17
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:59
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:68
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:30
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:28
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:60
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:69
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:28
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:55
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:44
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:44
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:64
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:53
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:53
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:29
 msgid "Product Image"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:21
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:68
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:77
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:78
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:34
 msgid "All Images"
 msgstr ""
 
+#: frontend/src/pages/SocialTemplates/helpers/optionsHelper.ts:25
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:86
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:87
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:67
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:57
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:57
+msgid "Prompt Image"
+msgstr ""
+
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:30
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:57
 msgid "Bluesky Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:34
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:34
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:86
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:104
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:42
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:34
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:88
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:105
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:42
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:69
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:59
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:61
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:51
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:34
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:38
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:33
 msgid "Custom message settings."
@@ -1905,25 +2282,26 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:34
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:34
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:86
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:104
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:52
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:42
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:34
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:88
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:105
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:42
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:69
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:59
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:59
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:69
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:61
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:76
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:52
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:51
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:61
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:34
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:38
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:59
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:47
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:33
 msgid "Custom Message"
@@ -1931,25 +2309,26 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:48
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:47
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:98
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:116
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:65
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:56
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:48
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:100
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:117
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:55
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:65
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:82
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:73
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:66
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:83
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:75
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:65
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:64
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:48
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:46
 msgid "Post styling and type setup."
@@ -1957,25 +2336,26 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:48
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:47
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:98
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:116
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:65
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:56
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:48
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:100
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:117
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:55
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:65
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:82
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:73
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:72
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:66
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:66
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:83
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:75
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:90
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:65
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:64
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:48
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:52
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:73
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:60
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:46
 msgid "Posting type"
@@ -1983,108 +2363,129 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:61
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:76
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:79
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:94
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:105
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:121
 msgid "Your comment"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:77
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:63
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:114
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:149
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:96
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:92
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:69
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:116
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:150
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:71
-#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:95
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:81
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:113
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:110
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:87
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:100
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:87
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:113
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:121
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:107
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:140
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:137
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:113
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:139
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:113
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:139
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:168
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:81
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:80
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:107
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:106
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:69
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:98
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:145
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:76
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:62
 msgid "Trim Message"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:30
-#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:57
 msgid "Discord Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:100
 msgid "Facebook Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:127
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:132
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:133
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:90
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:108
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:107
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:98
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:91
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:90
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:89
+msgid "Select an AI prompt for image generation."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:162
 msgid "Preview"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:48
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:65
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:75
 msgid "Google Business Profile Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:79
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:96
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:123
 msgid "Select a post link button."
-msgstr ""
-
-#: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:79
-#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:96
-msgid "Add a button"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:31
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:31
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:47
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:47
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:56
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:56
 msgid "All images"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:38
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:55
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:65
 msgid "Instagram Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:68
-#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:86
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:96
 msgid ""
 "Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px "
 "resolution (recommended 1080px), and under 8MB."
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:30
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:57
 msgid "Line Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:64
-#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:108
 msgid ""
 "Line restricts the length of a post to %1$d characters. If you enable this "
 "option, the first %1$d characters of your personalized message will be "
 "shared; if not, the limit prevents the post from being shared"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:84
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:101
 msgid "Linkedin Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:38
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:55
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:65
 msgid "Pinterest Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:81
-#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:86
+#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:80
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:111
+msgid "Custom post title."
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:80
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:111
+msgid "Post Title"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:94
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:125
 msgid "Post link"
 msgstr ""
 
@@ -2116,12 +2517,12 @@ msgstr ""
 msgid "Coming Soon"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:57
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:30
 msgid "Telegram Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:82
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:108
 #: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:64
 msgid ""
 "Telegram restricts the length of a post to %1$d characters. If you enable "
@@ -2129,16 +2530,16 @@ msgid ""
 "shared; if not, the limit prevents the post from being shared"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:57
 msgid "threads Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:92
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:118
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:77
 msgid "Your reply"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:108
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:134
 #: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:93
 msgid ""
 "Threads restricts the length of a post to %1$d characters. If you enable "
@@ -2147,59 +2548,70 @@ msgid ""
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:43
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:27
 msgid "Only Message"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:50
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:34
 msgid "PUBLIC TO EVERYONE"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:54
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:38
 msgid "MUTUAL FOLLOW FRIENDS"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:58
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:42
 msgid "FOLLOWER OF CREATOR"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:62
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:46
 msgid "SELF ONLY"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:72
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:55
 msgid "Tiktok Template Settings"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:104
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:87
 msgid "Who can see your post"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:119
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:102
 msgid ""
 "Turn this on to let viewers share feedback or engage with your post through "
 "comments."
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:122
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:105
 msgid "Allow comments"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:136
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:116
 msgid ""
 "Enable this to let others create side-by-side reaction or collaboration "
 "videos with your post"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:150
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:130
 msgid "Allow others to clip up to 5 seconds of your post for their own content"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:48
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:57
 #: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:43
 msgid "Tumblr Template Settings"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:47
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:56
 #: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:29
 msgid "X (Twitter) Template Settings"
 msgstr ""

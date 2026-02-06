@@ -139,6 +139,10 @@ return [
 
     'Doc Link' => __('Doc Link', 'bit-social'),
 
+    'Select a prompt' => __('Select a prompt', 'bit-social'),
+
+    'Create new prompt' => __('Create new prompt', 'bit-social'),
+
     'Advance Tags' => __('Advance Tags', 'bit-social'),
 
     'Post Tags' => __('Post Tags', 'bit-social'),
@@ -146,6 +150,8 @@ return [
     'Product Tags' => __('Product Tags', 'bit-social'),
 
     'Show Smart Tags' => __('Show Smart Tags', 'bit-social'),
+
+    'Prompt Tags' => __('Prompt Tags', 'bit-social'),
 
     'Tutorial' => __('Tutorial', 'bit-social'),
 
@@ -305,6 +311,132 @@ return [
 
     'No Groups found!' => __('No Groups found!', 'bit-social'),
 
+    'How to use AI Prompts?' => __('How to use AI Prompts?', 'bit-social'),
+
+    'Platforms' => __('Platforms', 'bit-social'),
+
+    'Prompts' => __('Prompts', 'bit-social'),
+
+    'Prompt updated successfully!' => __('Prompt updated successfully!', 'bit-social'),
+
+    'Prompt created successfully!' => __('Prompt created successfully!', 'bit-social'),
+
+    'Operation failed' => __('Operation failed', 'bit-social'),
+
+    'Failed to update prompt' => __('Failed to update prompt', 'bit-social'),
+
+    'Failed to create prompt' => __('Failed to create prompt', 'bit-social'),
+
+    'Text' => __('Text', 'bit-social'),
+
+    'Image' => __('Image', 'bit-social'),
+
+    'Edit Prompt' => __('Edit Prompt', 'bit-social'),
+
+    'Create New Prompt' => __('Create New Prompt', 'bit-social'),
+
+    'Title' => __('Title', 'bit-social'),
+
+    'Please enter prompt title' => __('Please enter prompt title', 'bit-social'),
+
+    'Enter prompt title' => __('Enter prompt title', 'bit-social'),
+
+    'Please select template type' => __('Please select template type', 'bit-social'),
+
+    'Select template type' => __('Select template type', 'bit-social'),
+
+    'Platform' => __('Platform', 'bit-social'),
+
+    'Please select AI platform' => __('Please select AI platform', 'bit-social'),
+
+    'Select your AI platform' => __('Select your AI platform', 'bit-social'),
+
+    'Please enter a prompt' => __('Please enter a prompt', 'bit-social'),
+
+    'Prompt' => __('Prompt', 'bit-social'),
+
+    'Fallback Content' => __('Fallback Content', 'bit-social'),
+
+    'ID' => __('ID', 'bit-social'),
+
+    'Model' => __('Model', 'bit-social'),
+
+    'Are you sure you want to delete this prompt config?' => __('Are you sure you want to delete this prompt config?', 'bit-social'),
+
+    'Delete?' => __('Delete?', 'bit-social'),
+
+    'Action' => __('Action', 'bit-social'),
+
+    'Search prompts' => __('Search prompts', 'bit-social'),
+
+    'Selected' => __('Selected', 'bit-social'),
+
+    'items' => __('items', 'bit-social'),
+
+    'Are you sure to delete these prompt configs?' => __('Are you sure to delete these prompt configs?', 'bit-social'),
+
+    'Delete Prompt Configs' => __('Delete Prompt Configs', 'bit-social'),
+
+    'Refresh' => __('Refresh', 'bit-social'),
+
+    'Create Prompt' => __('Create Prompt', 'bit-social'),
+
+    'No prompt configs found!' => __('No prompt configs found!', 'bit-social'),
+
+    'Please select a model' => __('Please select a model', 'bit-social'),
+
+    'Select your model' => __('Select your model', 'bit-social'),
+
+    'Temperature' => __('Temperature', 'bit-social'),
+
+    'Temperature controls how creative or predictable the AI’s response is: lower = predictable, higher = creative. For GPT-5 models, temperature is set to 1.0 by default.' => __('Temperature controls how creative or predictable the AI’s response is: lower = predictable, higher = creative. For GPT-5 models, temperature is set to 1.0 by default.', 'bit-social'),
+
+    'Image Size' => __('Image Size', 'bit-social'),
+
+    'Please select an image size' => __('Please select an image size', 'bit-social'),
+
+    'Select image size' => __('Select image size', 'bit-social'),
+
+    'Quality' => __('Quality', 'bit-social'),
+
+    'Please select quality' => __('Please select quality', 'bit-social'),
+
+    'Standard' => __('Standard', 'bit-social'),
+
+    'HD' => __('HD', 'bit-social'),
+
+    'Select quality' => __('Select quality', 'bit-social'),
+
+    'HD quality generates more detailed images but may take longer to process.' => __('HD quality generates more detailed images but may take longer to process.', 'bit-social'),
+
+    'Style' => __('Style', 'bit-social'),
+
+    'Please select style' => __('Please select style', 'bit-social'),
+
+    'Vivid' => __('Vivid', 'bit-social'),
+
+    'Natural' => __('Natural', 'bit-social'),
+
+    'Select style' => __('Select style', 'bit-social'),
+
+    'Vivid style produces brighter colors, while Natural style offers more realistic tones.' => __('Vivid style produces brighter colors, while Natural style offers more realistic tones.', 'bit-social'),
+
+    'Connect your key' => __('Connect your key', 'bit-social'),
+
+    'Are you sure to delete connection?' => __('Are you sure to delete connection?', 'bit-social'),
+
+    'Yes, Disconnect' => __('Yes, Disconnect', 'bit-social'),
+
+    'Disconnect' => __('Disconnect', 'bit-social'),
+
+    'Api Key' => __('Api Key', 'bit-social'),
+
+    'Enter your api key' => __('Enter your api key', 'bit-social'),
+
+    'You can find your API key in' => __('You can find your API key in', 'bit-social'),
+
+    'settings' => __('settings', 'bit-social'),
+
     'immediately' => __('immediately', 'bit-social'),
 
     'Select All' => __('Select All', 'bit-social'),
@@ -365,6 +497,8 @@ return [
 
     'Go The Home' => __('Go The Home', 'bit-social'),
 
+    'AI Prompts' => __('AI Prompts', 'bit-social'),
+
     'WP Auto Post' => __('WP Auto Post', 'bit-social'),
 
     'WP Post Schedules' => __('WP Post Schedules', 'bit-social'),
@@ -407,9 +541,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Features' => __('Features', 'bit-social'),
-
-    'Upcoming feature' => __('Upcoming feature', 'bit-social'),
+    'Fixed' => __('Fixed', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
@@ -431,6 +563,8 @@ return [
 
     'Instagram' => __('Instagram', 'bit-social'),
 
+    'Threads' => __('Threads', 'bit-social'),
+
     'Filter' => __('Filter', 'bit-social'),
 
     'Reset' => __('Reset', 'bit-social'),
@@ -446,8 +580,6 @@ return [
     'Error' => __('Error', 'bit-social'),
 
     'Schedule' => __('Schedule', 'bit-social'),
-
-    'Platform' => __('Platform', 'bit-social'),
 
     'Filter:' => __('Filter:', 'bit-social'),
 
@@ -477,8 +609,6 @@ return [
 
     'Visit our documentation' => __('Visit our documentation', 'bit-social'),
 
-    'Refresh' => __('Refresh', 'bit-social'),
-
     'Active Account' => __('Active Account', 'bit-social'),
 
     'Published Post' => __('Published Post', 'bit-social'),
@@ -503,9 +633,21 @@ return [
 
     'Year' => __('Year', 'bit-social'),
 
+    'Select Images' => __('Select Images', 'bit-social'),
+
+    'Select Custom Images' => __('Select Custom Images', 'bit-social'),
+
     'Customize post message' => __('Customize post message', 'bit-social'),
 
+    'Prompt Name' => __('Prompt Name', 'bit-social'),
+
+    'Custom Images' => __('Custom Images', 'bit-social'),
+
     'First comment' => __('First comment', 'bit-social'),
+
+    'Add a button' => __('Add a button', 'bit-social'),
+
+    'Customize post title' => __('Customize post title', 'bit-social'),
 
     'Post Link' => __('Post Link', 'bit-social'),
 
@@ -585,11 +727,7 @@ return [
 
     'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'bit-social'),
 
-    'Delete?' => __('Delete?', 'bit-social'),
-
     'Delete' => __('Delete', 'bit-social'),
-
-    'Title' => __('Title', 'bit-social'),
 
     'Created At' => __('Created At', 'bit-social'),
 
@@ -608,8 +746,6 @@ return [
     'Paused' => __('Paused', 'bit-social'),
 
     'Re-schedule' => __('Re-schedule', 'bit-social'),
-
-    'Action' => __('Action', 'bit-social'),
 
     'Search schedule' => __('Search schedule', 'bit-social'),
 
@@ -701,6 +837,8 @@ return [
 
     'Enable to selected image shared' => __('Enable to selected image shared', 'bit-social'),
 
+    'Add a title' => __('Add a title', 'bit-social'),
+
     'Add a link' => __('Add a link', 'bit-social'),
 
     'Telegram Media' => __('Telegram Media', 'bit-social'),
@@ -761,6 +899,8 @@ return [
 
     'All Images' => __('All Images', 'bit-social'),
 
+    'Prompt Image' => __('Prompt Image', 'bit-social'),
+
     'Bluesky Template Settings' => __('Bluesky Template Settings', 'bit-social'),
 
     'Custom message settings.' => __('Custom message settings.', 'bit-social'),
@@ -779,13 +919,13 @@ return [
 
     'Facebook Template Settings' => __('Facebook Template Settings', 'bit-social'),
 
+    'Select an AI prompt for image generation.' => __('Select an AI prompt for image generation.', 'bit-social'),
+
     'Preview' => __('Preview', 'bit-social'),
 
     'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'bit-social'),
 
     'Select a post link button.' => __('Select a post link button.', 'bit-social'),
-
-    'Add a button' => __('Add a button', 'bit-social'),
 
     'All images' => __('All images', 'bit-social'),
 
@@ -800,6 +940,10 @@ return [
     'Linkedin Template Settings' => __('Linkedin Template Settings', 'bit-social'),
 
     'Pinterest Template Settings' => __('Pinterest Template Settings', 'bit-social'),
+
+    'Custom post title.' => __('Custom post title.', 'bit-social'),
+
+    'Post Title' => __('Post Title', 'bit-social'),
 
     'Post link' => __('Post link', 'bit-social'),
 

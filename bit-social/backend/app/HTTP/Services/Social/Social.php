@@ -15,6 +15,6 @@ class Social implements SocialInterface
 
     public function publishPost($data)
     {
-        $this->socialNetwork->publishPost($data);
+        return $this->socialNetwork->publishPost($data);
     }
 }

@@ -53,6 +53,8 @@ class WpPostController
             $all_terms = get_terms([
                 'taxonomy'   => array_values($taxonomyData),
                 'hide_empty' => false,
+                'lang'       => '',
+
             ]);
 
             // Organize terms by taxonomy label if terms are found

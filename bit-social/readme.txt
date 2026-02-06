@@ -3,9 +3,9 @@
 Contributors: bitpressadmin,shimulckbt,khoaiz,shuvomohajan,tanvirchy,arif25897,mazharul78,akaioum
 Tags: auto post, auto publish, schedule calendar, social media automation
 Requires at least: 5.1
-Tested up to: 6.8.1
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.7.0
+Stable tag: 1.12.1
 License: GPLv2 or later
 
 Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
@@ -46,7 +46,7 @@ https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 
 
 
- 🚀 [Documentation](https://bit-social.com/documentation/) |  🚀 [Premium](https://bit-social.com/#pricing) |  🚀 [Support](https://bit-social.com/contact/) |  🚀 [Facebook Community](https://www.facebook.com/groups/bitapps) |  🚀 [YouTube Channel](https://www.youtube.com/@bit-apps)
+ 🚀 [Documentation](https://bit-social.com/documentation/) |  🚀 [Premium](https://bit-social.com/pricing/) |  🚀 [Support](https://bit-social.com/contact/) |  🚀 [Facebook Community](https://www.facebook.com/groups/bitapps) |  🚀 [YouTube Channel](https://www.youtube.com/@bit-apps)
 
 ## 🔥 Social Media Platforms 🔥
 
@@ -69,10 +69,7 @@ https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 * [Telegram Documentation](https://bit-social.com/documentation/accounts/connect-your-telegram-account-with-bit-social/) - [Watch Video](https://youtu.be/4kSH3sJXwYc?si=GACxOKhrcyuP7suR)
 * [Threads Documentation](https://bit-social.com/documentation/accounts/connect-your-threads-account-with-bit-social/) - [Watch Video](https://youtu.be/VZUxncswKfw?si=y1YkjxWAin4iHETN)
 
-== Upcoming feature: ==
 
-* AI integration
-==
 Bit Social - The Best Scheduling WP Plugin! by **- Lari**
 
 https://youtu.be/Tb5KAEmP16c?si=K8QMkM3S0bTWQDV1
@@ -86,6 +83,7 @@ This plugin acts as a bridge between social media platforms and Wordpress post. 
 
 ## Key Features:
 
+* [AI Prompts](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media/ai-prompt-in-bit-social/)
 * [Wp Auto Post](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media/)
 * [WP Post Schedule](https://bit-social.com/documentation/schedule-wordpress-posts-on-social-media/)
 * [Share Now](https://bit-social.com/documentation/instantly-share-posts-on-social-media-platforms/)
@@ -196,6 +194,71 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.12.1 (February 02, 2026) =
+   *Fixed:
+      *Few minor bug fixes & improvements
+
+= v1.12.0 (January 23, 2026) =
+* Features:
+   * Pinterest: Users can now set a custom title directly from the Pinterest template settings for better control and personalization.
+   * Tumblr: Tumblr templates now support HTML URLs, allowing more flexible and dynamic content rendering.
+
+= v1.11.0 (January 19, 2026) =
+* Features:
+   * Added an “Add a Button” select option in the WP Post schedule template for Google Business Profile, allowing users to choose CTA buttons
+
+= v1.10.0 (January 12, 2026) =
+* Features:
+
+    *  AI Prompts enable dynamic control over WordPress post content and images using reusable prompt templates.
+         * Supports Smart Tags to inject WordPress post data into prompts at runtime
+         * Text prompts generate captions, descriptions, or rewritten content
+         * Image prompts generate AI images based on post title, content, or custom instructions
+         * Prompts execute during scheduling or publishing
+         * Includes model, temperature, and fallback configuration
+
+         This allows automated, consistent, and customizable AI-generated content across posts and platforms.
+
+   * WP Schedule – Custom Image Selection
+
+         * WordPress post schedules now support custom image selection.
+         * Choose specific images instead of default featured images
+         * Better control over post visuals per schedule
+         * Useful for platform-specific image optimization
+
+
+= v1.9.0 (December 17, 2025) =
+* Improvement:
+   * Smart Tag Cursor Support: Smart tag values are now inserted at the current cursor position instead of the end of the text box.
+   * Post Filter Multi-Language Support: Post filtering now supports multi-language posts, categories, and tags.
+
+* Fixed:
+   * Thread Content Length Fix: Thread content is now properly trimmed to the maximum allowed length.
+
+= v1.8.1 (November 27, 2025) =
+* Few minor bug fixes & improvements.
+
+= v1.8.0 (November 24, 2025) =
+* Features:
+    * Hook: Action Hooks for Social Media Publishing. A total of 14 new action hooks have been added to enhance extensibility and automation in Bit Social.
+
+    * Each social media platform now has its own publish hook (bit_social_{platform}_post_publish) that fires after a post is published and returns post details (content, media, link, comment) and response details (account_name, account_id, post_url, status).
+    
+    * bit_social_all_platforms_post_publish fires once after publishing across all selected platforms and returns all combined platform post data.
+
+= v1.7.3 (November 15, 2025) =
+* Fixed:
+    * SQL join error in the debug log when the group was empty.
+
+= v1.7.2 (November 10, 2025) =
+* Fixed:
+    * Create Schedule: Posts are now published in a random order without duplicates, instead of following a fixed sequence.
+    
+= v1.7.1 (October 29, 2025) =
+* Fixed:
+    * WP Auto Post: Issue with auto-posting old draft posts after publishing has been resolved.
+    
 = v1.7.0 (September 29, 2025) =
 * Features:
     * Smart tag: A new tag {product_sku} has been added, allowing you to dynamically display the SKU of your product.

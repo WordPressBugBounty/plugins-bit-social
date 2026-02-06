@@ -3,6 +3,8 @@
 namespace BitApps\Social\HTTP\Services\Social\LinkedinService;
 
 use AllowDynamicProperties;
+use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\HTTP\Services\Interfaces\SocialInterface;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
@@ -32,6 +34,8 @@ class PostPublishLinkedinService implements SocialInterface
     private $authError = [];
 
     private $linkCardError = [];
+
+    private $linkedinData = [];
 
     public function __construct()
     {
@@ -76,7 +80,7 @@ class PostPublishLinkedinService implements SocialInterface
             }, $template->media);
 
             $post_data['content'] = $template->content ?? null;
-            $post_data['images'] = $templateMedia ?? null;
+            $post_data['media'] = $templateMedia ?? null;
             $post_data['link'] = $template->link ?? null;
 
             $template->isFeaturedImage = false;
@@ -94,37 +98,35 @@ class PostPublishLinkedinService implements SocialInterface
             $post_data = $this->replacePostContent($postId, $template);
         }
 
-        $postPublishResponse = $this->linkedinPostPublish($post_data, $account_detail, $access_token, $postId, $scheduleType);
+        $this->linkedinData['post'] = $this->normalizePostData($post_data, true);
 
-        if (\array_key_exists('keepLogs', $data) && !$data['keepLogs']) {
-            return;
-        }
+        $postPublishResponse = $this->linkedinPostPublish($post_data, $account_detail, $access_token, $postId);
 
-        $this->logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId);
+        $this->linkedinData['response'] = $postPublishResponse;
+
+        Hooks::doAction(Config::withPrefix('linkedin_post_publish'), $this->normalizePostData($post_data), $this->linkedinData['response']);
+
+        $this->logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId, $data);
+
+        return $this->linkedinData;
     }
 
-    public function linkedinPostPublish($post_data, $account_detail, $access_token, $post_id, $scheduleType)
+    public function linkedinPostPublish($post_data, $account_detail, $access_token, $post_id)
     {
         $ownerUrn = $account_detail->urn;
         $post_content = $post_data['content'] ? $this->escapeSpecialCharacters($post_data['content']) : null;
-        $feature_image = $post_data['featureImage'] ?? null;
-        $allImages = $post_data['allImages'] ?? null;
+        $media = $post_data['media'] ?? null;
         $post_link = $post_data['link'] ?? null;
         $video_url = $post_data['video'] ?? null;
 
-        if ($scheduleType === Schedule::scheduleType['DIRECT_SHARE']) {
-            $feature_image = $post_data['images'][0] ?? null;
-            $allImages = $post_data['images'] ?? null;
-        }
-
-        if (!empty($post_content) && empty($feature_image) && empty($post_link) && empty($allImages) && empty($video_url)) {
+        if (!empty($post_content) && empty($media) && empty($post_link) && empty($video_url)) {
             return $this->textPublish($ownerUrn, $post_content, $access_token);
         } elseif (!empty($post_content) && !empty($post_link)) {
             $feature_image = wp_get_attachment_url(get_post_thumbnail_id($post_id));
 
             return $this->linkCardPublish($ownerUrn, $post_content, $access_token, $post_link, $feature_image, $post_id);
-        } elseif (!empty($feature_image) || !empty($allImages)) {
-            $allImageUrns = $this->uploadImage($access_token, $ownerUrn, $feature_image, $allImages);
+        } elseif (!empty($media)) {
+            $allImageUrns = $this->uploadImage($access_token, $ownerUrn, $media);
 
             return $this->linkedinPhotoPost($access_token, $ownerUrn, $allImageUrns, $post_content);
         } elseif (!empty($video_url)) {
@@ -196,7 +198,7 @@ class PostPublishLinkedinService implements SocialInterface
         }
     }
 
-    public function uploadImage($access_token, $ownerUrn, $feature_image, $allImages)
+    public function uploadImage($access_token, $ownerUrn, $media)
     {
         $initializeImageUrl = $this->baseUrl . '/v2/images?action=initializeUpload';
         $params = wp_json_encode([
@@ -206,7 +208,7 @@ class PostPublishLinkedinService implements SocialInterface
         ]);
         $initializeHeader = Helper::initializeHeader($access_token);
 
-        return Helper::imageUpload($initializeImageUrl, $params, $initializeHeader, $feature_image, $allImages, $access_token, $this->httpHandler);
+        return Helper::imageUpload($initializeImageUrl, $params, $initializeHeader, $media, $access_token, $this->httpHandler);
     }
 
     public function linkedinPhotoPost($accessToken, $ownerUrn, $allImageUrns, $post_content)
@@ -392,8 +394,8 @@ class PostPublishLinkedinService implements SocialInterface
         $linkData['title'] = $meta['og:title'] ? html_entity_decode($meta['og:title'], ENT_QUOTES | ENT_HTML5, 'UTF-8') : '';
 
         if (!empty($meta['og:image'])) {
-            $thumbnail = $this->uploadImage($accessToken, $ownerUrn, $meta['og:image'], []);
-            $linkData['thumbnail'] = $thumbnail;
+            $thumbnail = $this->uploadImage($accessToken, $ownerUrn, [$meta['og:image']]);
+            $linkData['thumbnail'] = $thumbnail[0];
         }
 
         if (!empty($meta['og:description'])) {
@@ -403,7 +405,7 @@ class PostPublishLinkedinService implements SocialInterface
         return $linkData;
     }
 
-    private function logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId)
+    private function logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId, $data)
     {
         $responseData = [
             'schedule_id' => $schedule_id,
@@ -426,12 +428,24 @@ class PostPublishLinkedinService implements SocialInterface
             $responseData['details']['linkCardError'] = $this->linkCardError;
         }
 
+        $hookResponse = [
+            'account_id'   => $account_id,
+            'account_name' => $account_name,
+            'post_url'     => $responseData['details']['post_url'],
+            'status'       => $responseData['status'],
+        ];
+
+        $this->linkedinData['platform'] = 'linkedin';
+        $this->linkedinData['response'] = $hookResponse;
+
         if ($retry) {
             $this->logUpdate($responseData, $logId);
 
             return;
         }
 
-        $this->logCreate($responseData);
+        if (!(\array_key_exists('keepLogs', $data) && $data['keepLogs'] === false)) {
+            $this->logCreate($responseData);
+        }
     }
 }

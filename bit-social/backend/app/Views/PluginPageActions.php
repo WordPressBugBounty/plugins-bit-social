@@ -23,6 +23,11 @@ class PluginPageActions
                 'title' => __('Support', Config::SLUG),
                 'url'   => Config::get('ADMIN_URL') . 'admin.php?page=' . Config::SLUG . '#/support',
             ],
+            // 'offer' => [
+            //     'title' => __('BFCM 62% OFF', Config::SLUG),
+            //     'url'   => 'https://bit-social.com/special-discount/',
+            //     'style' => 'font-weight: bold; color: #6817FF;',
+            // ],
         ];
     }
 
@@ -37,8 +42,14 @@ class PluginPageActions
     {
         $linksToAdd = $this->getActionLinks();
 
-        foreach ($linksToAdd as $link) {
-            $links[] = '<a href="' . $link['url'] . '">' . $link['title'] . '</a>';
+        foreach ($linksToAdd as $key => $link) {
+            // Ignore "offer" only when Pro is active
+            if (Config::isProActivated() && $key === 'offer') {
+                continue;
+            }
+
+            $style = !empty($link['style']) ? ' style="' . esc_attr($link['style']) . '"' : '';
+            $links[] = '<a href="' . esc_url($link['url']) . '"' . $style . '>' . esc_html($link['title']) . '</a>';
         }
 
         return $links;

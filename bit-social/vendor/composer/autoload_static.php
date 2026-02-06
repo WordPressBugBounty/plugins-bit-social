@@ -7,12 +7,12 @@ namespace Composer\Autoload;
 class ComposerStaticInit94fad14304c326076e289dbd3a0b0f65
 {
     public static $prefixLengthsPsr4 = array (
-        'T' => 
+        'T' =>
         array (
             'TypistTech\\Imposter\\Plugin\\' => 27,
             'TypistTech\\Imposter\\' => 20,
         ),
-        'B' => 
+        'B' =>
         array (
             'BitApps\\WPValidator\\' => 20,
             'BitApps\\WPTelemetry\\' => 20,
@@ -23,31 +23,31 @@ class ComposerStaticInit94fad14304c326076e289dbd3a0b0f65
     );
 
     public static $prefixDirsPsr4 = array (
-        'TypistTech\\Imposter\\Plugin\\' => 
+        'TypistTech\\Imposter\\Plugin\\' =>
         array (
             0 => __DIR__ . '/..' . '/typisttech/imposter-plugin/src',
         ),
-        'TypistTech\\Imposter\\' => 
+        'TypistTech\\Imposter\\' =>
         array (
             0 => __DIR__ . '/..' . '/typisttech/imposter/src',
         ),
-        'BitApps\\WPValidator\\' => 
+        'BitApps\\WPValidator\\' =>
         array (
             0 => __DIR__ . '/..' . '/bitapps/wp-validator/src',
         ),
-        'BitApps\\WPTelemetry\\' => 
+        'BitApps\\WPTelemetry\\' =>
         array (
             0 => __DIR__ . '/..' . '/bitapps/wp-telemetry/src',
         ),
-        'BitApps\\WPKit\\' => 
+        'BitApps\\WPKit\\' =>
         array (
             0 => __DIR__ . '/..' . '/bitapps/wp-kit/src',
         ),
-        'BitApps\\WPDatabase\\' => 
+        'BitApps\\WPDatabase\\' =>
         array (
             0 => __DIR__ . '/..' . '/bitapps/wp-database/src',
         ),
-        'BitApps\\Social\\' => 
+        'BitApps\\Social\\' =>
         array (
             0 => __DIR__ . '/../..' . '/backend/app',
         ),

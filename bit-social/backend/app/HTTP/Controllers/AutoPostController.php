@@ -4,6 +4,7 @@ namespace BitApps\Social\HTTP\Controllers;
 
 use BitApps\Social\Config;
 use BitApps\Social\Deps\BitApps\WPKit\Helpers\Arr;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
@@ -135,14 +136,17 @@ class AutoPostController
         }
 
         $isSleep = false;
+        $publishPostData = [];
 
         foreach ($accounts as $account) {
             $isPlatFormExists = $this->isPlatFormExists($account->id);
 
             $platform = new Social(new $isPlatFormExists['class']());
 
-            if (isset($templates[$isPlatFormExists['platform']])) {
-                $template = $templates[$isPlatFormExists['platform']];
+            $platformName = $isPlatFormExists['platform'];
+
+            if (isset($templates[$platformName])) {
+                $template = $templates[$platformName];
 
                 preg_match('/custom_field_\[([^\]]+)\]/', $template['content'] ?? '', $matches);
 
@@ -158,9 +162,11 @@ class AutoPostController
                     'keepLogs'        => $autoPostSettings['keepLogs']
                 ];
 
-                $platform->publishPost($data);
+                $publishPostData[] = $platform->publishPost($data);
             }
         }
+
+        Hooks::doAction(Config::withPrefix('all_platforms_post_publish'), $publishPostData);
     }
 
     public function groupsAccountIds($groupIds)

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bitapps/social',
-        'pretty_version' => '1.7.0',
-        'version' => '1.7.0.0',
-        'reference' => '1ebc7ec88b2cecab959f769b20dfb3fe952b38eb',
+        'pretty_version' => '1.12.1',
+        'version' => '1.12.1.0',
+        'reference' => '267b9c97c7038502c7581791e1aec18a075fb06a',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bitapps/social' => array(
-            'pretty_version' => '1.7.0',
-            'version' => '1.7.0.0',
-            'reference' => '1ebc7ec88b2cecab959f769b20dfb3fe952b38eb',
+            'pretty_version' => '1.12.1',
+            'version' => '1.12.1.0',
+            'reference' => '267b9c97c7038502c7581791e1aec18a075fb06a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'bitapps/wp-kit' => array(
-            'pretty_version' => '2.1',
-            'version' => '2.1.0.0',
-            'reference' => '3e49d25e047530a2a43c08af3a8fc821feaa7ae8',
+            'pretty_version' => '2.2',
+            'version' => '2.2.0.0',
+            'reference' => '6052fcfd1b94ccb452d2cb4ecfd93e63617503e3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bitapps/wp-kit',
             'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'bitapps/wp-validator' => array(
-            'pretty_version' => '1.2.1',
-            'version' => '1.2.1.0',
-            'reference' => '294d6a7c35436419060dc067f58a9c5a0d72b37e',
+            'pretty_version' => '1.2.2',
+            'version' => '1.2.2.0',
+            'reference' => '856b3685c6e6673af4e3f7fea5083500ce011b99',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bitapps/wp-validator',
             'aliases' => array(),

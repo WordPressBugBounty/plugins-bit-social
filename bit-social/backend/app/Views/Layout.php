@@ -14,6 +14,8 @@ class Layout
     {
         Hooks::addAction('in_admin_header', [$this, 'removeAdminNotices']);
         Hooks::addAction('admin_menu', [new SideBarMenu(), 'addMenu']);
+        // Hooks::addAction('admin_menu', [new SideBarMenu(), 'addOfferMenuItem']);
+        // Hooks::addAction('admin_head', [new SideBarMenu(), 'addOfferButtonStyle']);
         Hooks::addAction('admin_enqueue_scripts', [new Head(), 'addHeadScripts'], 0);
         Hooks::addFilter('style_loader_tag', [$this, 'linkTagFilter'], 0, 3);
         Hooks::addFilter('script_loader_tag', [$this, 'scriptTagFilter'], 0, 3);

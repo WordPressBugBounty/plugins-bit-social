@@ -17,7 +17,8 @@ trait Common
         'instagram'             => 2200,
         'bluesky'               => 300,
         'line'                  => 5000,
-        'telegram'              => 1024
+        'telegram'              => 1024,
+        'threads'               => 500,
     ];
 
     /**
@@ -53,11 +54,9 @@ trait Common
 
     public function replacePostContent($postId, $template)
     {
-        $featureImage = '';
         $link = '';
-        $allImages = '';
-        $video = '';
-        $button = $template->button ?? '';
+        $media = [];
+        $video = [];
 
         if (!property_exists($template, 'trimMessage')) {
             $templateOptions = Config::getOption('templates_settings');
@@ -80,29 +79,27 @@ trait Common
             'isProductImage'  => SmartTag::tag('productImageUrl'),
             'isLinkCard'      => SmartTag::tag('postLink'),
             'isAllImages'     => 'all_images',
+            'isVideo'         => 'video',
+            'isPromptImage'   => null,
+            'isCustomImage'   => null
         ];
-
-        // Variable initialization to ensure there's no conflict
-        $featureImage = null;
-        $link = null;
-        $allImages = null;
 
         if (property_exists($template, 'trimMessage') && $template->trimMessage) {
             $content = $this->clipText($template->platform, $content, $link);
             $comment = $this->clipText($template->platform, $comment, '');
         }
 
-        // Handle properties and assign values without overwriting
+        // Handle properties and assign values - consolidate images into media array, video separate
         foreach ($propertyTagMap as $property => $smartTagValue) {
             if ((property_exists($template, $property) && $template->{$property})
                 || (property_exists($template, 'postingType') && $template->postingType === $property)) {
                 switch ($property) {
                     case 'isFeaturedImage':
-                        $featureImage = $smartTag->getSmartTagValue($smartTagValue, $post);
-
-                        break;
                     case 'isProductImage':
-                        $featureImage = $smartTag->getSmartTagValue($smartTagValue, $post);
+                        $mediaValue = $smartTag->getSmartTagValue($smartTagValue, $post);
+                        if (!empty($mediaValue)) {
+                            $media[] = $mediaValue;
+                        }
 
                         break;
                     case 'isLinkCard':
@@ -111,25 +108,60 @@ trait Common
                         break;
                     case 'isAllImages':
                         $allImages = $smartTag->getSmartTagValue($smartTagValue, $post);
+                        if (!empty($allImages)) {
+                            $media = array_merge($media, \is_array($allImages) ? $allImages : [$allImages]);
+                        }
 
                         break;
                     case 'isVideo':
-                        $video = $smartTag->getSmartTagValue($smartTagValue, $post);
+                        $videoValue = $smartTag->getSmartTagValue($smartTagValue, $post);
+                        if (!empty($videoValue)) {
+                            $video = \is_array($videoValue) ? $videoValue : [$videoValue];
+                        }
+
+                        break;
+                    case 'isPromptImage':
+                        // Get promptImage value from template and resolve it using getSmartTagValue
+                        if (property_exists($template, 'promptImage') && !empty($template->promptImage)) {
+                            $promptImageTag = $template->promptImage;
+                            $promptImageValue = $smartTag->getSmartTagValue($promptImageTag, $post);
+
+                            if (!empty($promptImageValue)) {
+                                // If it's a valid URL, add it to media array
+                                if (filter_var($promptImageValue, FILTER_VALIDATE_URL)) {
+                                    $media[] = $promptImageValue;
+                                }
+                            }
+                        }
+
+                        break;
+                    case 'isCustomImage':
+                        // Get customImages array from template (array of URLs)
+                        if (property_exists($template, 'customImages') && !empty($template->customImages)) {
+                            $customImages = $template->customImages;
+                            if (\is_array($customImages)) {
+                                foreach ($customImages as $customImageUrl) {
+                                    if (!empty($customImageUrl) && filter_var($customImageUrl, FILTER_VALIDATE_URL)) {
+                                        $media[] = $customImageUrl;
+                                    }
+                                }
+                            }
+                        }
 
                         break;
                 }
             }
         }
 
+        // Remove empty and duplicate values from media array
+        $media = array_values(array_filter(array_unique($media)));
+
         $formattedPostData = [
-            'title'        => $post->post_title,
-            'content'      => $content,
-            'featureImage' => $featureImage,
-            'link'         => $link,
-            'allImages'    => $allImages,
-            'video'        => $video,
-            'button'       => $button,
-            'comment'      => $comment
+            'content' => $content,
+            'media'   => $media,
+            'video'   => $video,
+            'link'    => $link,
+            'comment' => $comment
         ];
 
         return apply_filters(Config::withPrefix('post_data'), $formattedPostData, $postId);
@@ -137,7 +169,8 @@ trait Common
 
     public function replaceTagValue($text, $post)
     {
-        $pattern = '/{([^}]*)}/';
+        $pattern = '/\{((?:[^{}]++|(?R))*)\}/';
+
         $smartTag = new SmartTag();
 
         preg_match_all($pattern, $text, $matches);
@@ -205,6 +238,60 @@ trait Common
         }
 
         return $content;
+    }
+
+    public function normalizePostData(array $data, bool $createOthers = false): array
+    {
+        // Remove media-related keys from allowed list (so they are not returned)
+        $allowedKeys = ['content', 'media', 'link', 'comment'];
+
+        $result = [
+            'content' => $data['content'] ?? '',
+            'media'   => [],
+            'link'    => $data['link'] ?? '',
+            'comment' => $data['comment'] ?? '',
+        ];
+
+        // Merge media
+        if (!empty($data['media'])) {
+            $result['media'] = \is_array($data['media']) ? $data['media'] : [$data['media']];
+        }
+
+        if (!empty($data['featureImage'])) {
+            $result['media'][] = $data['featureImage'];
+        }
+
+        if (!empty($data['allImages'])) {
+            $result['media'] = array_merge(
+                $result['media'],
+                \is_array($data['allImages']) ? $data['allImages'] : [$data['allImages']]
+            );
+        }
+
+        if (!empty($data['video'])) {
+            $result['media'][] = $data['video'];
+        }
+
+        // Remove empty / duplicate values
+        $result['media'] = array_values(array_filter(array_unique($result['media'])));
+
+        // Process other data
+        foreach ($data as $key => $value) {
+            if (!\in_array($key, $allowedKeys, true)
+                && !\in_array($key, ['featureImage', 'allImages', 'video'], true)) {
+                if ($createOthers) {
+                    $result['others'][$key] = $value;
+                } else {
+                    $result[$key] = $value;
+                }
+            }
+        }
+
+        if ($createOthers && !isset($result['others'])) {
+            $result['others'] = [];
+        }
+
+        return $result;
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace BitApps\Social\HTTP\Services\Social\FacebookService;
 
 use AllowDynamicProperties;
+use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\HTTP\Services\Interfaces\SocialInterface;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
@@ -26,6 +28,8 @@ class PostPublishFacebookService implements SocialInterface
     private $postBaseUrl = 'https://fb.com';
 
     private $version = 'v19.0';
+
+    private $facebookData = [];
 
     public function __construct()
     {
@@ -60,7 +64,7 @@ class PostPublishFacebookService implements SocialInterface
             }, $template->media);
 
             $post_data['content'] = $template->content ?? null;
-            $post_data['images'] = $templateMedia ?? null;
+            $post_data['media'] = $templateMedia ?? null;
             $post_data['link'] = $template->link ?? null;
 
             $template->isFeaturedImage = false;
@@ -77,12 +81,14 @@ class PostPublishFacebookService implements SocialInterface
             $post_data = $this->replacePostContent($post['ID'], $template);
         }
 
-        $result = $this->facebookPostPublish($post_data, $scheduleType, $account_id, $tokenUpdateData->access_token);
+        $this->facebookData['post'] = $this->normalizePostData($post_data, true);
 
-        $publishPostResponse = $result['response'];
-        $publishPostImageError = $result['imageErrors'];
+        $response = $this->facebookPostPublish($post_data, $account_id, $tokenUpdateData->access_token);
 
-        $responseData = [
+        $publishPostResponse = $response['response'];
+        $publishPostImageError = $response['imageErrors'];
+
+        $logData = [
             'schedule_id' => $schedule_id,
             'details'     => [
                 'account_id'   => $account_id,
@@ -95,30 +101,38 @@ class PostPublishFacebookService implements SocialInterface
         ];
 
         if ($publishPostImageError) {
-            $responseData['details']['imagePostError'] = $publishPostImageError;
+            $logData['details']['imagePostError'] = $publishPostImageError;
         }
 
-        if (isset($publishPostResponse->id)) {
-            $responseData['status'] = 1;
-        } else {
-            $responseData['status'] = 0;
-        }
+        $logData['status'] = $publishPostResponse->id ? 1 : 0;
+
+        $hookResponse = [
+            'account_id'   => $account_id,
+            'account_name' => $account_name,
+            'post_url'     => $logData['details']['post_url'],
+            'status'       => $logData['status'] ?? '',
+        ];
+
+        $this->facebookData['platform'] = 'facebook';
+
+        $this->facebookData['response'] = $hookResponse;
+
+        Hooks::doAction(Config::withPrefix('facebook_post_publish'), $this->normalizePostData($post_data), $hookResponse);
 
         if (\array_key_exists('retry', $data) && $data['retry'] === true) {
-            $this->logUpdate($responseData, $data['log_id']);
+            $this->logUpdate($logData, $data['log_id']);
 
-            return;
-        }
-        if ($responseData['status'] === 1) {
-            $this->logCreate($responseData);
-
-            return;
+            return $this->facebookData;
         }
 
-        $this->logCreate($responseData);
+        if (!(\array_key_exists('keepLogs', $data) && $data['keepLogs'] === false)) {
+            $this->logCreate($logData);
+        }
+
+        return $this->facebookData;
     }
 
-    public function publishPostGroup($post_data, $scheduleType, $accountId, $accessToken, $featuredImage)
+    public function publishPostGroup($post_data, $accountId, $accessToken, $featuredImage)
     {
         $end_point = 'feed';
         $featuredUrlMapped = !empty($post_data['featureImage']);
@@ -151,16 +165,11 @@ class PostPublishFacebookService implements SocialInterface
         return $this->httpHandler->request($publishInFeedUrlWithParams, 'POST', []);
     }
 
-    public function facebookPostPublish($post_data, $scheduleType, $account_id, $accessToken)
+    public function facebookPostPublish($post_data, $account_id, $accessToken)
     {
-        $featuredImage = $post_data['featureImage'] ?? null;
         $linkedCard = $post_data['link'];
-        $allImages = $post_data['allImages'] ?? null;
+        $media = $post_data['media'] ?? null;
         $imageErrors = [];
-
-        if ($scheduleType === Schedule::scheduleType['DIRECT_SHARE']) {
-            $featuredImage = $post_data['images'];
-        }
 
         $end_point = 'feed';
         $params = [
@@ -170,14 +179,8 @@ class PostPublishFacebookService implements SocialInterface
         ];
 
         // photo must be available or live on internet not in local machine
-        if ($featuredImage) {
-            $mediaResponse = $this->mediaUpload($featuredImage, $account_id, $accessToken);
-            $params['attached_media'] = $mediaResponse['imageIds'];
-            $imageErrors = $mediaResponse['errors'];
-        }
-
-        if ($allImages) {
-            $mediaResponse = $this->mediaUpload($allImages, $account_id, $accessToken);
+        if (!empty($media)) {
+            $mediaResponse = $this->mediaUpload($media, $account_id, $accessToken);
             $params['attached_media'] = $mediaResponse['imageIds'];
             $imageErrors = $mediaResponse['errors'];
         }

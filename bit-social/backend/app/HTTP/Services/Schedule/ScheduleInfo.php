@@ -33,7 +33,7 @@ class ScheduleInfo
 
     public $publishedPostIds;
 
-    public $postIdUpated = false;
+    public $postIdUpdated = false;
 
     public function __construct($schedule)
     {
@@ -155,8 +155,10 @@ class ScheduleInfo
     {
         $publishedPostIds = $this->publishedPostIds();
         $settings = $this->settings();
+        $randomly = 2;
+        $randomWithoutDuplicate = 1;
 
-        if (!empty($settings['post_publish_order']) && (int) $settings['post_publish_order'] === 2) {
+        if (!empty($settings['post_publish_order']) && (int) $settings['post_publish_order'] === $randomly) {
             return $posts[array_rand($posts)];
         }
 
@@ -164,10 +166,14 @@ class ScheduleInfo
             return !\in_array($post['id'], $publishedPostIds);
         });
 
-        $this->postIdUpated = true;
+        $this->postIdUpdated = true;
 
         if (empty($posts)) {
             return false;
+        }
+
+        if (!empty($settings['post_publish_order']) && (int) $settings['post_publish_order'] === $randomWithoutDuplicate) {
+            return $posts[array_rand($posts)];
         }
 
         return array_shift($posts);
@@ -175,7 +181,7 @@ class ScheduleInfo
 
     public function postIdUpdate($post)
     {
-        if ($this->postIdUpated) {
+        if ($this->postIdUpdated) {
             $this->publishedPostIds[] = $post['id'];
             $postIds = implode(',', $this->publishedPostIds);
             $this->schedule->update(['published_post_ids' => $postIds]);
