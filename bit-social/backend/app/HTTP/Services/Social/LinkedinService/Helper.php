@@ -165,73 +165,46 @@ class Helper
     {
         $method = strtoupper($method);
 
-        $c = curl_init();
-
-        $user_agents = [
-            'Mozilla/5.0 (Linux; Android 5.0.2; Andromax C46B2G Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/60.0.0.16.76;]'
-        ];
-
-        $useragent = $user_agents[array_rand($user_agents)];
-
-        if ($method === 'GET' && ! empty($data) && \is_array($data)) {
-            $url .= (strpos($url, '?') !== false ? '&' : '?') . http_build_query($data);
-        }
-
-        $opts = [
-            CURLOPT_URL            => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_MAXREDIRS      => 2
+        $args = [
+            'method'      => $method,
+            'sslverify'   => false,
+            'redirection' => 2,
+            'headers'     => \is_array($headers) ? $headers : [],
         ];
 
         if ($sendUserAgent) {
-            $opts[CURLOPT_USERAGENT] = $useragent;
+            $args['user-agent'] = 'Mozilla/5.0 (Linux; Android 5.0.2; Andromax C46B2G Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/60.0.0.16.76;]';
         }
 
-        if (! empty($proxy)) {
-            $opts[CURLOPT_PROXY] = $proxy;
-        }
-
-        if ($method === 'POST') {
-            $opts[CURLOPT_POST] = true;
-            $opts[CURLOPT_POSTFIELDS] = $postDataHBQ ? http_build_query($data) : $data;
-        } else {
-            if ($method === 'DELETE') {
-                $opts[CURLOPT_CUSTOMREQUEST] = 'DELETE';
-                $opts[CURLOPT_POST] = true;
-                $opts[CURLOPT_POSTFIELDS] = http_build_query($data);
+        if (!empty($proxy)) {
+            $parsedProxy = wp_parse_url($proxy);
+            if (!empty($parsedProxy['host'])) {
+                $args['proxy'] = $parsedProxy['host'];
+                if (!empty($parsedProxy['port'])) {
+                    $args['proxy'] .= ':' . $parsedProxy['port'];
+                }
             }
         }
 
-        if (\is_array($headers) && ! empty($headers)) {
-            $headers_arr = [];
-            foreach ($headers as $k => $v) {
-                $headers_arr[] = $k . ': ' . $v;
-            }
-
-            $opts[CURLOPT_HTTPHEADER] = $headers_arr;
+        if ($method === 'GET' && !empty($data) && \is_array($data)) {
+            $url .= (strpos($url, '?') !== false ? '&' : '?') . http_build_query($data);
+        } elseif ($method === 'POST') {
+            $args['body'] = $postDataHBQ ? http_build_query($data) : $data;
+        } elseif ($method === 'DELETE') {
+            $args['body'] = http_build_query($data);
         }
 
-        curl_setopt_array($c, $opts);
+        $response = wp_remote_request($url, $args);
 
-        $result = curl_exec($c);
-
-        $cError = curl_error($c);
-
-        if ($cError) {
-            return json_encode([
+        if (is_wp_error($response)) {
+            return wp_json_encode([
                 'error' => [
-                    'message' => htmlspecialchars($cError)
-                ]
+                    'message' => esc_html($response->get_error_message()),
+                ],
             ]);
         }
 
-        curl_close($c);
-
-        unset($c);
-
-        return $result;
+        return wp_remote_retrieve_body($response);
     }
 
     public static function getFileType($file)

@@ -71,13 +71,13 @@ final class CommonController
 
     private function isInvalidUrl($url)
     {
-        $parsedUrl = parse_url($url);
+        $parsedUrl = wp_parse_url($url);
 
         if ($parsedUrl === false || !\in_array($parsedUrl['scheme'], ['http', 'https'], true)) {
             return 'Only HTTP and HTTPS URLs are allowed.';
         }
 
-        if (isset($parsedUrl['host']) && $parsedUrl['host'] === $_SERVER['HTTP_HOST']) {
+        if (isset($parsedUrl['host'], $_SERVER['HTTP_HOST']) && $parsedUrl['host'] === sanitize_text_field(wp_unslash($_SERVER['HTTP_HOST']))) {
             return 'Self request is not allowed.';
         }
 

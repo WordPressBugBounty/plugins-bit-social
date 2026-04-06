@@ -64,7 +64,7 @@ class HookProvider
         if (
             RequestType::is(RequestType::AJAX)
             && is_readable($this->_pluginBackend . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php')
-            && current_user_can('administrator')
+            && current_user_can('manage_options')
         ) {
             $router = new Router(RequestType::AJAX, Config::VAR_PREFIX, '');
             $router->setMiddlewares(Plugin::instance()->middlewares());

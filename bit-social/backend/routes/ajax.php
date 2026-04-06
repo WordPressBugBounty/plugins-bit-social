@@ -62,8 +62,6 @@ Route::noAuth()->group(
         Route::post('custom-app/{customApp}/destroy', [CustomAppController::class, 'destroy']);
 
         Route::get('smart-tags', [ScheduleController::class, 'getSmartTags']);
-
-        Route::post('upload-files', [ShareNowController::class, 'uploadFile']);
         Route::get('all-media', [ShareNowController::class, 'getAllMedia']);
         Route::post('share-now', [ShareNowController::class, 'store']);
         Route::get('share-now/{page}/{limit}', [ShareNowController::class, 'index']);

@@ -77,7 +77,7 @@ class CustomSchedule
             $delay = strtotime($schedule['started_at']) - $wpTimeStamp;
             $scheduleRunTime = $scheduleRunTime + $delay;
         } elseif (!$wpNextPostTimeStamp) {
-            $delay = $settings['post_interval_value'] * self::DELAY_UNITS[$settings['post_interval_type']];
+            $delay = self::getDelayInSeconds($settings['post_interval_value'], $settings['post_interval_type'], $scheduleRunTime);
             $scheduleRunTime = $scheduleRunTime + $delay;
         }
 
@@ -96,9 +96,10 @@ class CustomSchedule
 
                 if (!empty($settings['post_interval_value']) && !empty($settings['post_interval_type'])) {
                     $scheduleName = Config::VAR_PREFIX . 'every_' . $settings['post_interval_value'] . '_' . $settings['post_interval_type'];
-                    $displayName = esc_html__('Every ' . $settings['post_interval_value'] . ' ' . $settings['post_interval_type'] . ' (Bit Social) ', 'bit-social');
+                    // translators: 1: interval value, 2: interval type (e.g. minute, hour, day)
+                    $displayName = \sprintf(esc_html__('Every %1$s %2$s (Bit Social)', 'bit-social'), $settings['post_interval_value'], $settings['post_interval_type']);
                     $schedules[$scheduleName] = [
-                        'interval' => $settings['post_interval_value'] * self::DELAY_UNITS[$settings['post_interval_type']],
+                        'interval' => self::getDelayInSeconds($settings['post_interval_value'], $settings['post_interval_type']),
                         'display'  => $displayName,
                     ];
                 }
@@ -106,6 +107,18 @@ class CustomSchedule
         }
 
         return $schedules;
+    }
+
+    public static function getDelayInSeconds($value, $unit, $fromTimestamp = null)
+    {
+        if ($unit === 'month' || $unit === 'year') {
+            $from = $fromTimestamp ?? time();
+            $future = strtotime("+{$value} {$unit}", $from);
+
+            return $future - $from;
+        }
+
+        return $value * self::DELAY_UNITS[$unit];
     }
 
     private function setScheduleConfig($config)

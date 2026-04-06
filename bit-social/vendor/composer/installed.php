@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bitapps/social',
-        'pretty_version' => '1.12.1',
-        'version' => '1.12.1.0',
-        'reference' => '267b9c97c7038502c7581791e1aec18a075fb06a',
+        'pretty_version' => '1.13.5',
+        'version' => '1.13.5.0',
+        'reference' => 'a25b3166b881d51b6b3b9e7fee09d2b3a5052513',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bitapps/social' => array(
-            'pretty_version' => '1.12.1',
-            'version' => '1.12.1.0',
-            'reference' => '267b9c97c7038502c7581791e1aec18a075fb06a',
+            'pretty_version' => '1.13.5',
+            'version' => '1.13.5.0',
+            'reference' => 'a25b3166b881d51b6b3b9e7fee09d2b3a5052513',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'bitapps/wp-validator' => array(
-            'pretty_version' => '1.2.2',
-            'version' => '1.2.2.0',
-            'reference' => '856b3685c6e6673af4e3f7fea5083500ce011b99',
+            'pretty_version' => '1.2.3',
+            'version' => '1.2.3.0',
+            'reference' => '43a6f68414f5c580122f136cda45624e9fcaf837',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bitapps/wp-validator',
             'aliases' => array(),

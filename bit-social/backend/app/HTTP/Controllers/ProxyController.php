@@ -54,7 +54,7 @@ final class ProxyController
      */
     private function isInvalidURL($url)
     {
-        $parsedUrl = parse_url($url);
+        $parsedUrl = wp_parse_url($url);
 
         if ($parsedUrl === false || !\in_array($parsedUrl['scheme'], ['http', 'https'], true)) {
             return 'Only HTTP and HTTPS URLs are allowed.';

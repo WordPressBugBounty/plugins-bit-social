@@ -32,7 +32,7 @@ class ScheduleController
                 $hookArgument['schedule_id'] = $schedule->id;
 
                 $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
-                $exactDateTime = get_date_from_gmt(date('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
+                $exactDateTime = get_date_from_gmt(gmdate('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
                 $nextPostTimeStamp = strtotime($exactDateTime);
 
                 $currentTimestamp = current_time('timestamp');
@@ -285,7 +285,7 @@ class ScheduleController
                 $hookArgument['schedule_id'] = $schedule->id;
 
                 $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
-                $exactDateTime = get_date_from_gmt(date('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
+                $exactDateTime = get_date_from_gmt(gmdate('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
                 $nextPostTimeStamp = strtotime($exactDateTime);
 
                 $currentTimestamp = current_time('timestamp');

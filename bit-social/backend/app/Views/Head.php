@@ -24,18 +24,22 @@ class Head
         $slug = Config::SLUG;
         $codeName = Config::get('BUILD_CODE_NAME');
 
-        // loading google fonts
+        // phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Preconnect links don't load versioned resources.
         wp_enqueue_style('googleapis-PRECONNECT', 'https://fonts.googleapis.com');
         wp_enqueue_style('gstatic-PRECONNECT-CROSSORIGIN', 'https://fonts.gstatic.com');
+        // phpcs:enable WordPress.WP.EnqueuedResourceParameters.MissingVersion
         wp_enqueue_style('font', self::FONT_URL, [], $version);
 
         if (Config::getEnv('DEV')) {
+            // phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion, WordPress.WP.EnqueuedResourceParameters.NotInFooter -- Dev scripts served by Vite; version and footer placement are irrelevant.
             wp_enqueue_script($slug . '-vite-client-helper-MODULE', Config::getENV('DEV_URL') . '/src/config/devHotModule.js', [], null);
             wp_enqueue_script($slug . '-vite-client-MODULE', Config::getENV('DEV_URL') . '/@vite/client', [], null);
             wp_enqueue_script($slug . '-index-MODULE', Config::getENV('DEV_URL') . '/src/main.tsx', [], null);
+            // phpcs:enable WordPress.WP.EnqueuedResourceParameters.MissingVersion, WordPress.WP.EnqueuedResourceParameters.NotInFooter
             // wp_enqueue_style('load-id', 'http://wpdev.co/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&amp;load%5Bchunk_1%5D=,site-icon,l10n,buttons,media-views,wp-auth-check&amp;ver=6.6.2', [], null);
         } else {
-            wp_enqueue_script($slug . '-index-MODULE', Config::get('ASSET_URI') . "/main-{$codeName}.js", [], ''); // WARNING: Do not add version in production, it may cause unexpected behavior.
+            // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion, WordPress.WP.EnqueuedResourceParameters.NotInFooter -- Version is embedded in the filename via $codeName for cache busting.
+            wp_enqueue_script($slug . '-index-MODULE', Config::get('ASSET_URI') . "/main-{$codeName}.js", [], null);
             wp_enqueue_style($slug . '-styles', Config::get('ASSET_URI') . "/main-{$slug}-ba-assets-{$codeName}.css", null, $version, 'screen');
         }
 
@@ -54,6 +58,7 @@ class Head
     public static function createConfigVariable()
     {
         $frontendVars = apply_filters(
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook name is prefixed via Config::withPrefix().
             Config::withPrefix('localized_script'),
             [
                 'nonce'            => wp_create_nonce(Config::withPrefix('nonce')),

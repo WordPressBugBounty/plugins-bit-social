@@ -53,6 +53,7 @@ class LinkedinOAuth2Service
         $companies = null;
 
         if (class_exists(ProConfig::class) && is_plugin_active(ProConfig::get('BASENAME'))) {
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook name is prefixed via ProConfig::VAR_PREFIX constant.
             $companies = apply_filters(ProConfig::VAR_PREFIX . 'get_linkedin_company_page', $this->apiBaseUrl, $this->version, $access_token);
         }
 

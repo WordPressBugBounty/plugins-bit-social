@@ -21,7 +21,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.12.1';
+    public const VERSION = '1.13.5';
 
     public const DB_VERSION = '1.1.0';
 
@@ -85,10 +85,11 @@ class Config
                 ];
 
             case 'DEV_URL':
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- $_ENV is server-controlled, not user input.
                 return isset($_ENV['DEV_URL']) ? $_ENV['DEV_URL'] : null;
 
             case 'ROOT_URI':
-                return set_url_scheme(plugins_url('', self::get('MAIN_FILE')), parse_url(home_url())['scheme']);
+                return set_url_scheme(plugins_url('', self::get('MAIN_FILE')), wp_parse_url(home_url())['scheme']);
 
             case 'ASSET_URI':
                 if (self::isProActivated()) {
@@ -102,10 +103,14 @@ class Config
                     return '';
                 }
                 if (self::isProActivated()) {
-                    return file_get_contents(ProConfig::get('ROOT_DIR') . self::ASSETS_FOLDER . '/build-code-name.txt');
+                    $proBuildCodeNameFile = ProConfig::get('ROOT_DIR') . self::ASSETS_FOLDER . '/build-code-name.txt';
+
+                    return file_exists($proBuildCodeNameFile) ? trim((string) file_get_contents($proBuildCodeNameFile)) : '';
                 }
 
-                return file_get_contents(self::get('ROOT_DIR') . self::ASSETS_FOLDER . '/build-code-name.txt');
+                $freeBuildCodeNameFile = self::get('ROOT_DIR') . self::ASSETS_FOLDER . '/build-code-name.txt';
+
+                return file_exists($freeBuildCodeNameFile) ? trim((string) file_get_contents($freeBuildCodeNameFile)) : '';
 
             case 'WP_DB_PREFIX':
                 global $wpdb;
@@ -209,6 +214,7 @@ class Config
 
     public static function getEnv($keyName)
     {
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- $_ENV is server-controlled, not user input.
         return isset($_ENV[Config::VAR_PREFIX . $keyName]) ? $_ENV[Config::VAR_PREFIX . $keyName] : false;
     }
 }

@@ -37,7 +37,7 @@ class RedirectController
             return Response::error('Invalid Site URL');
         }
 
-        if (wp_redirect($mySiteUrl . '&' . http_build_query($params), 302)) {
+        if (wp_safe_redirect($mySiteUrl . '&' . http_build_query($params), 302)) {
             exit;
         }
     }

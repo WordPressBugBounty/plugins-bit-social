@@ -1,165 +1,318 @@
-=== Bit Social- Advanced Social Media Schedule & Auto Poster Plugin for WordPress ===
+=== Bit Social – Social Media Auto Poster and Scheduler ===
 
 Contributors: bitpressadmin,shimulckbt,khoaiz,shuvomohajan,tanvirchy,arif25897,mazharul78,akaioum
-Tags: auto post, auto publish, schedule calendar, social media automation
+Tags: auto post, cross posting, auto share, social media automation, social media scheduler
 Requires at least: 5.1
-Tested up to: 6.9
+Tested up to: 6.9.1
 Requires PHP: 7.4
-Stable tag: 1.12.1
+Stable tag: 1.13.5
 License: GPLv2 or later
 
-Auto Post, auto publish & schedule WordPress posts to Facebook, LinkedIn, Twitter, Google Business, Pinterest and other with Bit Social.
+Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
 
 == Description ==
 
-Bit Social is an Advanced Social Media Scheduling and Auto Posting plugin for WordPress, making it the top alternative to Buffer and Publer.
+= Social Media Auto Posting and Scheduling Plugin for WordPress. =
 
-How To Auto Post + Schedule WordPress Posts On All Social Media Platforms At Once by **- Bjorn**
+Bit Social is a **social media automation plugin for WordPress** that helps you automatically **post to social media**, schedule posts, generate captions, summaries, and images with AI, and manage your **social media accounts** directly from your WordPress dashboard.
+
+Bit Social connects your WordPress website with 13 major **social media networks**. Once your **account** is connected, the plugin can **auto post, schedule posts**, or **share posts automatically** when your content is published.
 
 https://youtu.be/FUU-EcK2jTw?si=QnxdcYww9I3wwgxK
 
-Bit Social, the ultimate Auto Post plugin for WordPress that simplifies social media management by automatically sharing your WordPress posts on multiple social media and social sharing platforms, including **Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest**.
+With Bit Social, you can auto post to social media networks like **Facebook, Twitter (X), Instagram, Pinterest, LinkedIn, Tumblr, Google Business Profile, Telegram, and more** without switching platforms. This makes it easier to maintain a consistent online presence and automate content promotion.
 
- With Bit Social, you can **schedule posts, auto publish & auto share** for each platform, saving time and ensuring a consistent online presence. With a minimum click auto-post, schedule, and recycle your blog content from WordPress posts. Whether it's a new post or recycling old content, Bit Social integrates with all the social sharing platforms for sharing on Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest!
-
-
-📢︎ **Join our Facebook community [Bit Social](https://www.facebook.com/groups/bitapps) & get updates on our plugins.**
-
-###Features:
-
-*  **WP Auto Post**: Automatic posting from WordPress to social media platforms when a WP post is published!
-* **Schedule Post**: Schedule WordPress published post on your preferable time!
-* **Share Now**: Share and schedule your custom post instantly on popular social media platforms!
-* **Supports social platforms**: Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest
-* **Calendar**: Editorial calendar for post scheduling and management
-* **Recycle old posts**: to keep your content fresh!
-
-
-With its robust automation and scheduling features, Bit Social ensures that your content reaches your audience without any complexity.
-
-
-The Simple Trick to Auto-Post on Social Media Using WordPress by **- Janek Tuttar**
+Bit Social is designed for bloggers, marketers, businesses, and WooCommerce store owners who want a simple social media automation solution. Whether you want to schedule posts, auto post, or re-share old posts, Bit Social helps you automate your social publishing workflow.
 
 https://youtu.be/UTl0kArQV4Q?si=jyrc_Nr-L2pcuplR
 
-== Automate and Schedule WordPress Posts with Bit Social - The Ultimate WordPress Auto-Poster ==
+Instead of copying content manually, Bit Social lets you share posts automatically, build a social media scheduling workflow, and maintain a consistent posting strategy.
+
+This **social auto poster plugin** is beginner friendly but powerful enough for professional marketers.
+
+### Key Capabilities of Bit Social
+
+Bit Social provides a complete set of tools for automating and managing social media promotion. With Bit Social, you can:
+
+* Automatically publish posts to 13 social platforms
+* Build structured social media scheduling workflows
+* Maintain consistent posting using a powerful scheduler
+* Schedule posts for optimal engagement times
+* Share posts automatically across connected platforms
+* Promote WooCommerce products automatically
+* Generate captions and images using AI tools
+* Organize campaigns using a built-in social Calendar
+* Re-share older content to keep your social feeds active
+* Manage multiple social accounts from one WordPress dashboard
+* Share any post type, including pages, media, or any CPT
+* Track publishing activity with logs to monitor shared posts
+* Add first comments automatically on Instagram, Threads, and Bluesky
+
+These capabilities make Bit Social a practical automation tool for content creators who want to increase visibility without spending hours managing social media manually.
 
 
+**Useful Links**
+🚀[Try Full Version Demo](https://towp.io/) | 🚀[Documentation](https://bit-social.com/documentation) | 🚀[Video Tutorials](https://www.youtube.com/playlist?list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK) | 🚀[Support](https://tawk.to/chat/60eac4b6d6e7610a49aab375/1faah0r3e) | 🚀[Facebook Group](https://www.facebook.com/groups/3308027439209387) | 🚀[Upgrade to Pro](https://bit-social.com/) | 
 
- 🚀 [Documentation](https://bit-social.com/documentation/) |  🚀 [Premium](https://bit-social.com/pricing/) |  🚀 [Support](https://bit-social.com/contact/) |  🚀 [Facebook Community](https://www.facebook.com/groups/bitapps) |  🚀 [YouTube Channel](https://www.youtube.com/@bit-apps)
+Join our [Bit Apps Community](https://www.facebook.com/groups/bitapps) for the latest plugin updates.
 
-## 🔥 Social Media Platforms 🔥
+View the full source code on [GitHub](https://github.com/Bit-Apps-Pro/bit-social-lite).
 
-== Free Platform: ==
+### Core Features
 
-* [Facebook Documentation](https://bit-social.com/docs/accounts/connect-your-facebook-account-with-bit-social/) - [Watch Video](https://www.youtube.com/watch?v=V7-DqQ4dJg4&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=11)
-* [LinkedIn Documentation](https://bit-social.com/docs/accounts/schedule-auto-publish-wordpress-posts-to-linkedin/) - [Watch Video](https://www.youtube.com/watch?v=e7sTXvswQgE&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=4)
+= WP Auto Post =
 
-== Pro Platforms: ==
+When the [WP Auto Post](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media) feature is enabled, every time you publish a WordPress article the plugin can automatically distribute it to your connected accounts. Instead of manually copying links and writing messages for each platform, Bit Social automates the entire process.
 
-* [Tumblr Documentation](https://bit-social.com/docs/bit-social/accounts/schedule-auto-publish-wordpress-posts-to-tumblr/) - [Watch Video](https://www.youtube.com/watch?v=WfxpNBBAjRQ&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=10)
-* [Google Business Profile Documentation](https://bit-social.com/docs/accounts/connect-your-google-business-profile-with-bit-social/) - [Watch Video](https://www.youtube.com/watch?v=o3Hf2v4HsVs&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=6)
-* [Discord Documentation](https://bit-social.com/docs/accounts/connect-your-discord-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=q85NrjFQ33Y&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=7)
-* [Twitter Documentation](https://bit-social.com/docs/bit-social/accounts/schedule-auto-publish-wordpress-posts-to-twitter/) - [Watch Video](https://www.youtube.com/watch?v=nI1oYZ91jto&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=8)
-* [Pinterest Documentation](https://bit-social.com/documentation/accounts/connect-your-pinterest-account-with-bit-social/)
-* [Instagram Documentation](https://bit-social.com/documentation/accounts/connect-your-instagram-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=m44aFan4Nr4&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=26)
-* [TikTok Documentation](https://bit-social.com/documentation/accounts/connect-your-tiktok-account-with-bit-social/) - [Watch Video](https://www.youtube.com/watch?v=5w5c0kY2tno)
-* [Bluesky Documentation](https://bit-social.com/documentation/accounts/connect-your-bluesky-account-with-bit-social/) -[Watch Video](https://www.youtube.com/watch?v=2ftNPVnAISI)
-* [Line Documentation](https://bit-social.com/documentation/accounts/connect-your-line-account-with-bit-social/) - [Watch Video](https://youtu.be/V_FyW_pK7ec?si=bk3t0Xk-PmNNeeVH)
-* [Telegram Documentation](https://bit-social.com/documentation/accounts/connect-your-telegram-account-with-bit-social/) - [Watch Video](https://youtu.be/4kSH3sJXwYc?si=GACxOKhrcyuP7suR)
-* [Threads Documentation](https://bit-social.com/documentation/accounts/connect-your-threads-account-with-bit-social/) - [Watch Video](https://youtu.be/VZUxncswKfw?si=y1YkjxWAin4iHETN)
+https://youtu.be/3ZsAF1AtmxU?si=1KydeS4LUUa9mGxq
+
+= WP Post Schedule: WordPress Social Media Scheduler =
+
+Bit Social works like a flexible WordPress social media scheduler that allows you to plan your publishing strategy. Instead of posting manually every day, you can schedule posts and let the plugin publish them at the best time.
+**Scheduler Capabilities**
+
+* Schedule posts for future publishing
+* Plan long-term social media campaigns
+* Maintain consistent posting across platforms
+* Schedule WooCommerce products
+* Build recurring publishing schedules
+
+The [WP Post Scheduler](https://bit-social.com/documentation/schedule-wordpress-posts-on-social-media) also supports custom publishing times, platform-specific schedules, and flexible automation rules. This makes it suitable for marketers who want predictable publishing schedules without manual posting.
+
+= Share Now: Instantly Share Post to Social Media =
+
+The [Share Now](https://bit-social.com/documentation/instantly-share-posts-on-social-media-platforms) feature allows you to instantly publish updates across your social accounts. Instead of creating a full blog post, you can write a quick message and publish it immediately.
+
+** Share Now is useful for: **
+
+* Announcements
+* Campaign updates
+* Marketing promotions
+* Product launches
+* Quick alerts
+
+This feature helps businesses quickly communicate updates without needing to create full content pieces.
+
+https://youtu.be/qfF8OEu5RAI?si=wz_3cQ6nYJhSAvaG
+
+= Social Media Calendar (Pro) =
+
+Bit Social includes a built-in [Calendar](https://bit-social.com/documentation/calendar) that helps you visualize your entire publishing plan.
+
+**With the Calendar, you can:**
+
+* View all scheduled posts in one place
+* Adjust publishing times easily
+* Manage posts across multiple platforms
+* Edit scheduled posts quickly
+* Organize marketing campaigns
+
+The calendar view helps teams coordinate content and maintain a steady publishing rhythm. For businesses and marketers, this feature makes it easier to plan campaigns and ensure content is distributed consistently.
+
+= Auto Share Posts and Re-Share Old Posts =
+
+Bit Social can automatically share posts whenever they are published. You can also re-share older posts to keep valuable content visible and active.
+
+**Benefits include:**
+
+* Automatic distribution of new posts
+* Renewed visibility for evergreen content
+* Increased traffic from social platforms
+* Consistent posting activity
+* Longer lifespan for blog content
+
+Re-sharing older posts is particularly helpful for blogs that publish evergreen content such as tutorials, guides, and resources.
+
+= Auto Post WooCommerce Product to Social Media (Pro) =
+
+Bit Social allows you to **automatically share WooCommerce products on social media**. When a product is published in your store, the plugin can post it to your connected social media platforms.
+
+This helps store owners promote **new products, sales, and store updates** without manually sharing every product. By automatically publishing WooCommerce product posts to social media, you can increase product visibility and drive more traffic to your store.
+
+= Smart Tags and Custom Templates =
+Bit Social lets you customize social media posts using **Smart Tags and [templates](https://bit-social.com/documentation/templates)**. These tags automatically pull data from your WordPress posts or WooCommerce products and insert it into your social media messages.
+
+* **Advanced Tags**: Create **hashtags from post tags, product tags, or categories**, and map **custom fields** to include additional data from custom post types.
+* **Post Tags**: Insert WordPress post data such as **post title, link, content, author, categories, tags, and featured image**.
+* **Product Tags**: Insert WooCommerce product data like **product name, description, price, stock, dimensions, product image, and product link**.
+
+Templates allow you to control how posts appear on Facebook, Twitter (X), Instagram, Pinterest, LinkedIn, and Tumblr.
+
+= AI Prompts: AI-Powered Social Media Content (Pro) =
+
+[AI Prompt](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media/ai-prompt-in-bit-social/) in Bit Social integrates AI tools to simplify content creation. Using the **ChatGPT** model, including **DALL·E**, the plugin can generate captions, summaries, hashtags, and images automatically.
+
+**AI Features**
+
+* Caption generation using ChatGPT
+* Automated summaries for posts
+* Hashtag suggestions
+* AI image generation using DALL·E
+
+You can create prompt templates that generate captions directly from your WordPress content. When a post is published or scheduled, Bit Social sends the prompt to ChatGPT and publishes the generated content across connected social media platforms.
+
+This helps maintain engaging social media posts without writing everything manually.
+
+= Multiple Account Support =
+
+Bit Social supports 13 social media platforms, making it useful for agencies and businesses managing multiple brands.
+
+With this feature, you can:
+
+* Manage multiple brands
+* Publish across different platforms
+* Share posts across multiple accounts
+
+Accounts can also be grouped to simplify publishing workflows.
+
+= Scheduling and Automation Controls =
+
+Bit Social includes advanced scheduling controls that allow you to fine-tune how posts are distributed. Automation settings include:
+
+* Advanced scheduling rules
+* Platform delays
+* Posting intervals
+*  Automation workflows
+
+These features help create natural posting patterns and give you full control over your social media strategy.
+
+= First Comment Automation (Pro) =
+
+Bit Social lets you **automatically add a first comment** after a post is published. You can use it to include **hashtags, links, or extra text** without adding them to the main caption.
+
+This feature works on **Instagram, Threads, and Bluesky**.
+
+= External Cron Support (Pro) =
+
+Bit Social includes **[External Cron](https://bit-social.com/documentation/setting/setup-cron-jobs/#external-cron) support** to improve the reliability of scheduled posts and social media automation. With External Cron enabled, scheduled tasks run independently of website traffic, ensuring your posts are published on time across connected social media platforms.
+
+This feature helps maintain a consistent posting schedule and ensures your social media automation continues to run smoothly.
+
+### Supported Social Media Platforms
+
+Bit Social supports **13 popular social media platforms** and is available in both Free and Pro versions. The free version provides the essential features needed to start automating social media sharing, while the Pro version unlocks advanced scheduling, additional platforms, and AI-powered automation.
+
+= Bit Social Free =
+The free version supports two platforms:
+
+* [Facebook](https://bit-social.com/docs/accounts/connect-your-facebook-account-with-bit-social/) | [Watch Video](https://www.youtube.com/watch?v=V7-DqQ4dJg4&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=11)
+* [LinkedIn (Profile)](https://bit-social.com/docs/accounts/schedule-auto-publish-wordpress-posts-to-linkedin) | [Watch Video](https://www.youtube.com/watch?v=e7sTXvswQgE&list=PL7c6CDwwm-ALFAjnM5ZPuId8qcGqPBDvK&index=4)
+
+This allows users to begin automating social sharing without requiring complex configuration.
+
+= Bit Social Pro =
+
+The Pro version unlocks full platform support, including:
+
+* [Linkedin (Page)](https://bit-social.com/documentation/accounts/connect-your-linkedin-account-with-bit-social/)
+* [Instagram](https://bit-social.com/documentation/accounts/connect-your-instagram-account-with-bit-social/)
+* [Google Business Profile](https://bit-social.com/docs/accounts/connect-your-google-business-profile-with-bit-social/)
+* [Twitter (X)](https://bit-social.com/docs/bit-social/accounts/schedule-auto-publish-wordpress-posts-to-twitter/)
+* [Tumblr](https://bit-social.com/docs/bit-social/accounts/schedule-auto-publish-wordpress-posts-to-tumblr/) 
+* [Pinterest](https://bit-social.com/documentation/accounts/connect-your-pinterest-account-with-bit-social/)
+* [TikTok](https://bit-social.com/documentation/accounts/connect-your-tiktok-account-with-bit-social/)
+* [Bluesky](https://bit-social.com/documentation/accounts/connect-your-bluesky-account-with-bit-social/)
+* [Discord](https://bit-social.com/docs/accounts/connect-your-discord-account-with-bit-social/)
+* [Line](https://bit-social.com/documentation/accounts/connect-your-line-account-with-bit-social/)
+* [Telegram](https://bit-social.com/documentation/accounts/connect-your-telegram-account-with-bit-social/)
+* [Threads](https://bit-social.com/documentation/accounts/connect-your-threads-account-with-bit-social/)
 
 
-Bit Social - The Best Scheduling WP Plugin! by **- Lari**
+This expanded platform support allows businesses and creators to distribute content across a much wider audience.
 
-https://youtu.be/Tb5KAEmP16c?si=K8QMkM3S0bTWQDV1
+### Feature Comparison
 
+= Features Included in Both Free and Pro =
 
-## ♻︎ How does this plugin work?
+These core features are available in both versions of Bit Social:
 
-This plugin acts as a bridge between social media platforms and Wordpress post. First, user need to create a schedule for platform and it will share wp post automatically according to schedule time and date. User can share wp post to multiple platform at a time as well as set sleep time for each platform.
+* Connect unlimited social media accounts
+* Unlimited auto posting
+* Unlimited scheduling
+* Filter posts by category, tag, and ID
+* Filter posts by publish time
+* Share custom messages
+* Auto share posts
+* Share Now feature
+* Activity logs for monitoring post status
+* Filter hook (bit_social_post_data) for developers
 
+These features allow users to automate their social publishing workflow without limitations on the number of posts or accounts.
 
+= Free Features =
 
-## Key Features:
+The free version includes:
 
-* [AI Prompts](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media/ai-prompt-in-bit-social/)
-* [Wp Auto Post](https://bit-social.com/documentation/auto-publish-wordpress-posts-on-social-media/)
-* [WP Post Schedule](https://bit-social.com/documentation/schedule-wordpress-posts-on-social-media/)
-* [Share Now](https://bit-social.com/documentation/instantly-share-posts-on-social-media-platforms/)
-* [Calendar](https://bit-social.com/documentation/calendar/)
-* [Template](https://bit-social.com/documentation/templates/)
-* [Log](https://bit-social.com/documentation/log/)
-* [External Cron](https://bit-social.com/documentation/setting/setup-cron-jobs/#external-cron)
-* Field Mapping & Custom value
-* Sleep time
-* Wp post filter
-* Create Platform group
-* WooCommerce product post
-==
-Free Plugin To Schedule and Auto Share WordPress Post To Social Media by **- Prashaant Mittal**
+* Templates for Facebook and LinkedIn
+* 11 smart tags for dynamic content
+* Auto share media using the featured image or link card
+* Essential scheduling features
 
-https://youtu.be/JAiwhGPi3-Y?si=zm1LzNCLiO7W6TBH
+This feature set is suitable for bloggers and smaller websites that want a simple automation setup.
 
+= Pro Features =
+The Pro version expands functionality significantly and includes:
 
-== WP Auto Post: Share wordpress post automatically when it published ==
+* Group multiple social media accounts
+* Advanced scheduling tools
+* Templates for all supported platforms
+* Auto share media, including product images and galleries
+* Auto share WooCommerce products
+* Auto share pages, and custom post types
+* Full smart tag library
+* Advanced Calendar view
+* Advanced Cron settings
+* Auto share custom post types
+* Delay controls for platform publishing
+* LinkedIn page support
+* AI prompts for content generation with ChatGPT (OpenAI)
+* DALL·E powered image generation
 
-https://youtu.be/3ZsAF1AtmxU?si=h7ZcJWDC7vjnzCMw
+These features allow businesses to build advanced social automation workflows and manage more complex campaigns.
 
-== Share Now: Share your custom post on multiple social platform instantly ==
-
-https://youtu.be/qfF8OEu5RAI?si=a5XT5UVf-rHeeYjL
-
-== Some use cases below for more understanding about this plugin ==
-
-* User want to share Wp post on Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest. User can create schedule for each platform and it will share wp post automatically according to schedule time and date.
-
-* User want to share post and schedule post one date to another date and filter wp post by date and it will share only those post which is created between selected date.
-
-* User can delay post sharing time for each platform such as Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest by setting sleep time.
-
-### CRON :
-In Bit Social, the Cron feature automates the scheduling and posting of your social media content. By setting up Cron jobs, you ensure that your posts are published at the designated times without manual intervention. This feature helps maintain a consistent online presence by regularly updating your social media accounts with scheduled posts, saving you time and effort in managing your social media strategy.
-
-https://youtu.be/qpjllpDtjhQ?si=6DgS3MfACxxTeViP
-
-
-### Key Benefits of Plugin :
-
-* Time Saving: User can share wp post on Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest platform at a time. It will save user time.
-
-* Easy to use: User can create schedule for each platform and it will share wp post automatically according to schedule time and date.
-
-* No coding required: It is really simple and easy to use and zero code plugin exit on wordpress.
+Bit Social provides a complete **Social Media Auto Poster and Scheduler for WordPress**, allowing you to automate publishing, manage scheduling, promote WooCommerce products, and streamline your entire social media workflow from a single dashboard.
 
 
-Overview of other products we are offering :
+### Explore Our Other Products :
 
-[**Bit Form**](https://wordpress.org/plugins/bit-form/): One of our bestselling product. Bit Form is an amazing drag & drop form builder that allows you to create custom forms to interact with your visitors. It gives you the freedom to create any form you want, with no coding required.
+* [Bit Form](https://bit-form.com/): A beginner-friendly WordPress form builder that lets you create multi-step and conversational forms with a smart drag-and-drop builder. Build, customize, and convert with the lightning-fast form solution
+* [Bit Integrations](https://bit-integrations.com/): A no-code WordPress automation plugin that lets you connect 320+ apps and services to automate your workflows in minutes. It connects your forms, CRMs, LMS, and eCommerce tools all inside WordPress.
+* [Bit Assist](https://bitassist.co/): Connect all your customer support channels with a single button. Integrate Floating Chat Widget, WhatsApp, Email, SMS, Telegram, Messenger, and more with Bit Assist.
+* [Bit Flows](https://bit-flows.com/): Bit Flows is a powerful WordPress automation plugin that lets you create unlimited multi-step workflows. It also includes an AI agent and advanced tools like Router, Repeater, Iterator, and a JSON parser.
+* [Bit File Manager](https://bitapps.pro/bit-smtp/): Bit File Manager is a WordPress plugin for easy file management. Upload, organize, and control from your WordPress dashboard.
+* [Bit SMTP](https://bitapps.pro/bit-smtp/): Ensures reliable email delivery by integrating SMTP services into WordPress, preventing email issues.
 
-[**Bit Integrations**](https://wordpress.org/plugins/bit-integrations/):  Automate 230+ platforms and Contact form 7, Elementor Form, WooCommerce, Google Sheet, wpforms, Forminator, BuddyBoss, LearnDash, Hubspot, Mail poet, MailChimp, Webhook, ACF, Zapier, Fluent CRM, Forms, CRM, LMS, Membership & many more.
+### External Services
 
-[**Bit Assist**](https://wordpress.org/plugins/bit-assist/): Connect with your visitor using their favorite Facebook Messenger, WhatsApp, Tawk to, Telegram, Viber, Slack, etc. You can also use custom form, custom link, and many more facilities to interact with all your users.
+**LinkedIn API** (`api.linkedin.com`, `linkedin.com`)
 
-[**Bit File Manager**](https://wordpress.org/plugins/file-manager/): Most robust and powerful file manager plugin for WordPress. You can upload, delete, copy, move, rename, archive, and extract files with the file manager plugin. You don’t need to worry about FTP anymore. It is really simple and easy to use. 100% free file manager for WordPress
+* **What it does**: Connects a LinkedIn account and publishes posts to LinkedIn from WordPress.
+* **What data is sent**: Access tokens, account identifiers, and post payload data (text, links, media URLs, and metadata required by LinkedIn endpoints).
+* When data is sent: When an administrator connects/reconnects a LinkedIn account and when a post is published or scheduled to LinkedIn.
+* **Why is it required**: LinkedIn publishing and account authorization cannot work without LinkedIn APIs.
+* **[Terms of Service](https://www.linkedin.com/legal/user-agreement)**
+* **[Privacy Policy](https://www.linkedin.com/legal/privacy-policy)**
 
-[**Bit SMTP**](https://wordpress.org/plugins/bit-smtp/): The ultimate goal of Bit SMTP plugin to make your email deliverability more easy as well as secure.
+**Facebook Graph API** (`graph.facebook.com`)
 
-[**Webhook.is**](https://webhook.is/): Test your incoming and outgoing [**webhook**](https://webhook.is/difference-between-webhook-and-api) free.
+* **What it does**: Connects Facebook Pages/Profiles and publishes scheduled or instant posts to Facebook.
+* **What data is sent**: Access tokens, page/account IDs, and post content data (message text, links, image/video URLs, and publish parameters).
+* **When data is sent**: During Facebook account authorization and each time a Facebook post is published from the plugin.
+* **Why is it required**: Facebook posting and page/account synchronization depend on Facebook Graph API endpoints.
+* **[Terms of Service](https://www.facebook.com/terms.php)**
+* **[Privacy Policy](https://www.facebook.com/privacy/policy/)**
 
-[**Towp.io**](https://towp.io/): typically refers to testing or experimenting with a WordPress site. This can involve checking plugins, themes, or functionalities in a development or staging environment before deploying changes to a live site.
+**BitApps Auth Server** (`auth-apps.bitapps.pro`)
 
-loudspeaker **We are open for freelance work/custom development. [Connect](https://bitapps.pro/contact) with us for further information.**
+* **What it does**: Handles the plugin’s account/authentication exchange for supported social integrations.
+* **What data is sent**: Site URL/domain, integration state parameters, redirect/auth callback data, and temporary authorization credentials needed to complete account connection.
+* **When data is sent**: Only when an administrator starts or completes a social account connection flow from plugin settings.
+* **Why is it required**: The plugin uses this service as the authorization broker to complete secure OAuth/app connection flows.
+* **[Terms of Service](https://bitapps.pro/terms-of-service/)**
+* **[Privacy Policy](https://bitapps.pro/privacy-policy/)**
 
-## FAQ
+### Why Is My Post Not Publishing Properly?
 
-= What is Bit Social? =
-Bit Social is a WordPress plugin that helps you to share your WordPress post on social media platform automatically. You can set schedule for each social media.
-
-= In which platforms I can share post?=
-Bit Social share wp post on Facebook, Twitter, LinkedIn, Google Business Profile, Tumblr, Discord & Pinterest automatically according to schedule time and date.
-
-= Why my post is not publishing properly? =
 When publishing your WordPress posts to social media platforms with Bit Social, various issues can cause failures. Understanding these problems can help you fix them. This section explains common reasons why publishing WordPress posts might fail and offers solutions to ensure your content is shared successfully.
 
 Here are some possible reasons why publishing or scheduling your posts might fail.
@@ -171,10 +324,31 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 [Why your post publishing might fail using Bit-Social](https://bit-social.com/documentation/other/why-your-post-publishing-might-fail-using-bit-social/)
 
 
+## FAQ
 
+= How can I automatically share WordPress posts to social media? =
+Bit Social allows you to automatically share WordPress posts to connected social media platforms. Once your accounts are connected, the plugin can publish posts when they are published or scheduled, helping you promote content without manual sharing.
+
+=How do I schedule WordPress posts to social media?=
+Bit Social includes a built-in social media scheduler that lets you plan and schedule posts in advance. You can choose publishing times and automatically publish content to your connected social media accounts.
+
+= Can I auto post WooCommerce products to social media? =
+Yes. Bit Social supports WooCommerce product sharing. When a product is published or updated, the plugin can automatically share it to your connected social media platforms.
+
+= Can I connect multiple social media accounts? =
+Yes. You can connect multiple accounts for each platform and share posts across them. This is helpful for agencies or businesses managing multiple brands.
+
+=Can I schedule posts for different platforms at different times? =
+Yes. Bit Social allows you to set **different schedule times for each platform**. This helps you optimize posting times based on where your audience is most active.
+=Can I re-share old WordPress posts? =
+Yes. Bit Social allows you to re-share old posts. This helps promote evergreen content and keeps your social media accounts active.
+
+=Does Bit Social work if my website has low traffic?=
+Yes. Bit Social supports External Cron, which helps scheduled posts run even when your website has low traffic.
+=How do I install Bit Social?=
+Go to **Plugins** → **Add New** in your WordPress dashboard and search for **Bit Social**. Click **Install** and then **Activate** the plugin. After activation, connect your social accounts to start sharing posts.
 
 == Installation ==
-
 1. Download the plugin.
 2. From the WordPress Admin Panel, click on Plugins => Add New.
 3. Click on Upload, so you can directly upload your plugin zip file.
@@ -195,9 +369,53 @@ Here are some possible reasons why publishing or scheduling your posts might fai
 
 == Changelog ==
 
+
+= v1.13.5 (April 02, 2026) =
+* Others:
+   * Updated dependencies to the latest version.
+
+= v1.13.4 (March 30, 2026) =
+   * Improvements:
+      * Smart tag: {post_categories} and {post_tags} now return plain text. Enhanced {hashtags_[post_categories]} to generate clean camelCase hashtags like #postCategories.
+
+= v1.13.3 (March 14, 2026) =
+   * Improvements:
+      * Enhanced scheduling performance to handle large numbers of posts more reliably.
+      * Improved Specific ID selection to work correctly when selecting a larger number of posts.
+      * Ensured the scheduling system maintains correct sequential publishing order during processing.
+
+= v1.13.2 (March 10, 2026) =
+   * Improvements:
+      * Threads: Added a media readiness check before publishing and improved error handling for failed or expired media containers.
+
+= v1.13.1 (February 25, 2026) =
+   * Security:
+      * Hardened AJAX auto-post flow with strict nonce, capability, and post ID validation.
+   * Compliance:
+      * Added external services and build/source-code documentation for WordPress.org review.
+
+= v1.13.0 (February 18, 2026) =
+   * Features:
+      * WP scheduled posts: Added a new post order option starts from the oldest posts and continues to the latest (including upcoming posts).
+      * Added a new Smart Tag: {post_date} for inserting the post publish date.
+   * Improvements:
+      * Improved hashtag formatting:
+         * Previous: #new #year
+         * Now: #newYear
+      * Trimmed Threads topic text to 50 characters to prevent posting errors.
+   * Fixed:
+      * Few minor bug fixes & improvements
+
+= v1.13.1 (February 25, 2026) =
+   * Security:
+      * Hardened AJAX auto-post flow with strict nonce, capability, and post ID validation.
+      * Improved upload handling and input sanitization for safer media processing.
+   * Compliance:
+      * Added external services and build/source-code documentation for WordPress.org review.
+
 = v1.12.1 (February 02, 2026) =
-   *Fixed:
-      *Few minor bug fixes & improvements
+   * Fixed:
+      * Few minor bug fixes & improvements
 
 = v1.12.0 (January 23, 2026) =
 * Features:

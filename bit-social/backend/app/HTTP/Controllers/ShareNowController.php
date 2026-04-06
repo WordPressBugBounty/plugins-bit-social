@@ -39,7 +39,7 @@ class ShareNowController
 
             if ($nextPostTimeStamp) {
                 $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
-                $exactDateTime = get_date_from_gmt(date('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
+                $exactDateTime = get_date_from_gmt(gmdate('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
                 $nextPostTimeStamp = strtotime($exactDateTime);
 
                 $currentTimestamp = current_time('timestamp');
@@ -53,13 +53,14 @@ class ShareNowController
 
         if (!empty($missedScheduleIds)) {
             global $wpdb;
-            $table = Config::get('WP_DB_PREFIX') . Config::VAR_PREFIX . 'schedules';
+            $table = $wpdb->prefix . Config::VAR_PREFIX . 'schedules';
             $missedStatus = Schedule::status['MISSED'];
 
             $placeholders = implode(',', array_fill(0, \count($missedScheduleIds), '%d'));
-            $query = "UPDATE {$table} SET status = %d WHERE id IN ({$placeholders})";
 
-            $response = $wpdb->query($wpdb->prepare($query, $missedStatus, ...$missedScheduleIds));
+            // phpcs:disable WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders, PluginCheck.Security.DirectDB -- Bulk UPDATE on custom table; placeholder count is dynamic.
+            $response = $wpdb->query($wpdb->prepare("UPDATE {$table} SET status = %d WHERE id IN ({$placeholders})", $missedStatus, ...$missedScheduleIds));
+            // phpcs:enable WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders, PluginCheck.Security.DirectDB
 
             if ($response) {
                 $this->removeScheduleHook($missedScheduleIds);
@@ -178,50 +179,6 @@ class ShareNowController
         return Response::success($message);
     }
 
-    public function uploadFile(Request $request)
-    {
-        $requestFiles = $request->files();
-
-        if ($requestFiles) {
-            $files = [];
-            $fileArray = $requestFiles['file'];
-
-            foreach ($fileArray['name'] as $index => $name) {
-                $files[] = [
-                    'name'     => $name,
-                    'type'     => $fileArray['type'][$index],
-                    'tmp_name' => $fileArray['tmp_name'][$index],
-                    'error'    => $fileArray['error'][$index],
-                    'size'     => $fileArray['size'][$index]
-                ];
-            }
-
-            foreach ($files as $file) {
-                $upload_dir = wp_upload_dir();
-                $uuid = wp_generate_uuid4();
-                $file_name = $file['name'];
-                $filename_without_ext = pathinfo($file_name, PATHINFO_FILENAME);
-                $file_path = $upload_dir['path'] . '/' . $uuid . '-' . $file_name;
-
-                // Move the uploaded file to the destination directory
-                if (move_uploaded_file($file['tmp_name'], $file_path)) {
-                    // Create an attachment post
-                    $attachmentData = [
-                        'post_mime_type' => $file['type'],
-                        'post_title'     => sanitize_file_name($filename_without_ext),
-                        'post_content'   => '',
-                        'post_status'    => 'inherit'
-                    ];
-                    $attachment_id = wp_insert_attachment($attachmentData, $file_path);
-                    $attachment_data = wp_generate_attachment_metadata($attachment_id, $file_path);
-                    wp_update_attachment_metadata($attachment_id, $attachment_data);
-                }
-            }
-        }
-
-        return Response::success([]);
-    }
-
     public function getAllMedia()
     {
         $media = [];
@@ -294,7 +251,7 @@ class ShareNowController
         // When share now start date undefined
 
         if (empty($schedule['started_at'])) {
-            $schedule->update(['started_at' => date('Y-m-d H:i:s', $wpTimeStamp)])->save();
+            $schedule->update(['started_at' => gmdate('Y-m-d H:i:s', $wpTimeStamp)])->save();
         }
 
         return wp_schedule_single_event($scheduleRunTime, $actionHook, [$hookArgument]);

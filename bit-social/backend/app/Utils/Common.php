@@ -164,6 +164,7 @@ trait Common
             'comment' => $comment
         ];
 
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook name is prefixed via Config::withPrefix().
         return apply_filters(Config::withPrefix('post_data'), $formattedPostData, $postId);
     }
 

@@ -16,11 +16,11 @@ class PluginPageActions
     {
         return [
             'settings' => [
-                'title' => __('Settings', Config::SLUG),
+                'title' => __('Settings', 'bit-social'),
                 'url'   => Config::get('ADMIN_URL') . 'admin.php?page=' . Config::SLUG . '#/settings',
             ],
             'support' => [
-                'title' => __('Support', Config::SLUG),
+                'title' => __('Support', 'bit-social'),
                 'url'   => Config::get('ADMIN_URL') . 'admin.php?page=' . Config::SLUG . '#/support',
             ],
             // 'offer' => [

@@ -24,6 +24,7 @@ class SmartTag
             'postExcerpt'      => ['key' => 'post_excerpt', 'label' => 'Post Full Excerpt', 'description' => 'Post excerpt', 'type' => 'free'],
             'postExcerpt40'    => ['key' => 'post_excerpt_short_40', 'label' => 'Post Excerpt Short 40', 'description' => 'default first 40 characters, You can set the number whatever you want', 'type' => 'pro'],
             'postLink'         => ['key' => 'post_link', 'label' => 'Post Link', 'description' => 'Post link', 'type' => 'free'],
+            'postDate'         => ['key' => 'post_date', 'label' => 'Post Date', 'description' => 'Post date', 'type' => 'free'],
         ],
         'product' => [
             'productName'             => ['key' => 'product_name', 'label' => 'Product Name', 'description' => 'WC Product name', 'type' => 'pro'],
@@ -110,7 +111,7 @@ class SmartTag
 
             case 'post_content_short_40':
 
-                $value = strip_tags($post->post_content);
+                $value = wp_strip_all_tags($post->post_content);
                 $value = $this->getContentShort($value, 40);
 
                 break;
@@ -136,6 +137,10 @@ class SmartTag
                 break;
             case 'post_link':
                 $value = get_permalink($post->ID);
+
+                break;
+            case 'post_date':
+                $value = get_the_date('', $post->ID);
 
                 break;
             case 'all_images':
@@ -164,13 +169,14 @@ class SmartTag
         }
 
         if (class_exists(ProConfig::class) && empty($value)) {
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook name is prefixed via ProConfig::VAR_PREFIX constant.
             return apply_filters(ProConfig::VAR_PREFIX . 'smart_tags', $key, $post->ID);
         }
 
         return $value;
     }
 
-    private function getPostTerms($postId, $taxonomyFieldName)
+    public function getPostTerms($postId, $taxonomyFieldName, $hashtag = false)
     {
         $postType = get_post_type($postId);
 
@@ -189,6 +195,21 @@ class SmartTag
         }
 
         $postTerms = wp_get_post_terms($postId, $taxonomyFieldName, ['fields' => 'names']);
+
+        if (is_wp_error($postTerms) || empty($postTerms)) {
+            return '';
+        }
+
+        if ($hashtag) {
+            $postTerms = array_map(function ($term) {
+                $term = strtolower($term);
+                $term = ucwords($term);
+
+                $term = str_replace(' ', '', $term);
+
+                return lcfirst($term);
+            }, $postTerms);
+        }
 
         return implode(' ', $postTerms);
     }

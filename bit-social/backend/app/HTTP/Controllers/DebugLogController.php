@@ -42,14 +42,25 @@ final class DebugLogController
 
     public function readLargeFile()
     {
-        $handle = fopen($this->logFilePath, 'r');
+        global $wp_filesystem;
 
-        try {
-            while ($line = fgets($handle)) {
+        if (empty($wp_filesystem)) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
+
+        $contents = $wp_filesystem->get_contents($this->logFilePath);
+
+        if ($contents === false) {
+            return;
+        }
+
+        $lines = explode("\n", $contents);
+
+        foreach ($lines as $line) {
+            if ($line !== '') {
                 yield $line;
             }
-        } finally {
-            fclose($handle);
         }
     }
 
@@ -93,12 +104,18 @@ final class DebugLogController
     public function clear()
     {
         if (file_exists($this->logFilePath)) {
-            $open = fopen($this->logFilePath, 'r+');
+            global $wp_filesystem;
 
-            if (!$open) {
-                $msg = 'Could not open file!';
+            if (empty($wp_filesystem)) {
+                require_once ABSPATH . 'wp-admin/includes/file.php';
+                WP_Filesystem();
+            }
+
+            $result = $wp_filesystem->put_contents($this->logFilePath, '');
+
+            if (!$result) {
+                $msg = 'Could not clear file!';
             } else {
-                file_put_contents($this->logFilePath, '');
                 $msg = 'Log cleared';
             }
         } else {
@@ -134,7 +151,7 @@ final class DebugLogController
             $errorType = $this->extractErrorType($line);
 
             return [
-                'date'        => date('d/m/y', strtotime($parts[0])),
+                'date'        => gmdate('d/m/y', strtotime($parts[0])),
                 'time'        => human_time_diff($time, current_time('U')) . ' ago',
                 'timezone'    => $parts[2],
                 'details'     => $info,

@@ -45,7 +45,7 @@ class FacebookOAuth2Service implements AuthServiceInterface
     public function urlParamEncode($url)
     {
         // Parse the URL to get the query string
-        $queryString = parse_url($url, PHP_URL_QUERY);
+        $queryString = wp_parse_url($url, PHP_URL_QUERY);
 
         // Separate the query string into key-value pairs
         parse_str($queryString, $params);

@@ -6,7 +6,7 @@ class Body
 {
     public function render()
     {
-        echo <<<HTML
+        ?>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="bit-apps-root">
   <div
@@ -40,6 +40,6 @@ class Body
     <p></p>
   </div>
 </div>
-HTML;
+        <?php
     }
 }

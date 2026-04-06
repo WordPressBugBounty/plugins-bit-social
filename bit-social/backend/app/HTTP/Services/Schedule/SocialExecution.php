@@ -24,7 +24,7 @@ final class SocialExecution
 
     public function isSleep($settings)
     {
-        $currentDay = date('D');
+        $currentDay = gmdate('D');
         $sleepTime = isset($settings['sleep_days']) ? $settings['sleep_days'] : [];
 
         if (\in_array($currentDay, $sleepTime)) {
@@ -88,15 +88,29 @@ final class SocialExecution
 
         if ($this->schedule->scheduleType === Schedule::scheduleType['SCHEDULE_SHARE']) {
             $filterArgument = $this->schedule->postFilterArgument();
-            $postPublishOrders = $this->schedule->settings()['post_publish_order'] ?? null;
-            $posts = $this->getPosts($filterArgument);
-            $post = $this->schedule->orderPosts($posts);
-            $orderTypeRandomly = '2';
-            $this->schedule->postIdUpdate($post);
+            $postPublishOrders = (int) $this->schedule->settings()['post_publish_order'] ?? null;
+            $post = $this->getPost($filterArgument);
+            $orderTypeRandomly = 2;
+            $orderTypeLatest = 5;
 
-            $isAllPostPublished = $this->schedule->isAllPostPublished($posts);
+            if (!empty($post['id'])) {
+                $this->schedule->postIdUpdate($post);
+            }
+            $filterArgument = $this->schedule->postFilterArgument();
+            $nextPost = $this->getPost($filterArgument);
+            $isNextPost = !empty($nextPost['id']);
 
-            if ($postPublishOrders !== $orderTypeRandomly && $isAllPostPublished) {
+            $specificPostIds = $this->schedule->postFilters()['specific_postIds'] ?? [];
+            $postPublishIds = $this->schedule->publishedPostIds();
+
+            $isOrderTypeRandomly = $postPublishOrders === $orderTypeRandomly;
+            $isOrderTypeLatest = $postPublishOrders === $orderTypeLatest;
+
+            $isSpecificPostIdsAllPosted = !empty($specificPostIds) && empty(array_diff($specificPostIds, $postPublishIds));
+
+            $shouldCompleteSchedule = !$isNextPost && !$isOrderTypeRandomly && !$isOrderTypeLatest || $isSpecificPostIdsAllPosted && !$isOrderTypeRandomly;
+
+            if ($shouldCompleteSchedule) {
                 $status = $this->schedule->scheduleComplete();
 
                 if ($status) {
@@ -106,6 +120,10 @@ final class SocialExecution
 
             if ($postPublishOrders) {
                 $this->schedule->nextPostUpdate();
+            }
+
+            if (!$post) {
+                return;
             }
         }
 
@@ -139,6 +157,11 @@ final class SocialExecution
             $platformName = $isPlatFormExists['platform'];
 
             $platform = new Social(new $isPlatFormExists['class']());
+
+            if (!$isPlatFormExists) {
+                continue;
+            }
+
             if (isset($templates[$platformName])) {
                 $template = $templates[$platformName];
 

@@ -92,8 +92,8 @@ class AutoPostController
         $args = [
             'timeout'   => 0.1,
             'blocking'  => false,
-            'cookies'   => $_COOKIE,
-            'sslverify' => apply_filters('https_local_ssl_verify', false),
+            'cookies'   => $this->sanitizeRequestCookies(),
+            'sslverify' => apply_filters('https_local_ssl_verify', false), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- This is a WordPress core filter.
         ];
 
         $queryArgs = [
@@ -108,8 +108,45 @@ class AutoPostController
 
     public function executeSocialPost($postId = null)
     {
-        if (isset($_REQUEST['post_id'])) {
-            $postId = sanitize_text_field($_REQUEST['post_id']);
+        $isAjaxRequest = wp_doing_ajax();
+
+        if ($isAjaxRequest) {
+            check_ajax_referer(Config::withPrefix('nonce'));
+
+            if (!current_user_can('edit_posts')) {
+                wp_send_json_error(['message' => 'Insufficient permission.'], 403);
+            }
+        }
+
+        if (null === $postId && $isAjaxRequest) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce is validated at the start of this method.
+            $postId = isset($_POST['post_id']) ? absint(wp_unslash($_POST['post_id'])) : 0;
+        }
+
+        $postId = absint($postId);
+
+        if (0 === $postId) {
+            if ($isAjaxRequest) {
+                wp_send_json_error(['message' => 'Invalid post ID.'], 400);
+            }
+
+            return;
+        }
+
+        if ($isAjaxRequest && !current_user_can('edit_post', $postId)) {
+            if ($isAjaxRequest) {
+                wp_send_json_error(['message' => 'You are not allowed to access this post.'], 403);
+            }
+
+            return;
+        }
+
+        if (!get_post($postId)) {
+            if ($isAjaxRequest) {
+                wp_send_json_error(['message' => 'Post not found.'], 404);
+            }
+
+            return;
         }
 
         $templates = (array) (new SocialTemplateController())->getSocialTemplates();
@@ -124,6 +161,7 @@ class AutoPostController
         }
 
         $allAccountIds = array_unique([...$accountIds, ...$groupAccountIds]);
+        $accounts = [];
 
         if (!empty($allAccountIds)) {
             $accounts = Account::whereIn('id', $allAccountIds)
@@ -140,6 +178,10 @@ class AutoPostController
 
         foreach ($accounts as $account) {
             $isPlatFormExists = $this->isPlatFormExists($account->id);
+
+            if (!$isPlatFormExists) {
+                continue;
+            }
 
             $platform = new Social(new $isPlatFormExists['class']());
 
@@ -167,6 +209,10 @@ class AutoPostController
         }
 
         Hooks::doAction(Config::withPrefix('all_platforms_post_publish'), $publishPostData);
+
+        if ($isAjaxRequest) {
+            wp_send_json_success($publishPostData);
+        }
     }
 
     public function groupsAccountIds($groupIds)
@@ -196,5 +242,21 @@ class AutoPostController
         }
 
         return $diff;
+    }
+
+    private function sanitizeRequestCookies(): array
+    {
+        $cookies = [];
+
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Cookies are only proxied to preserve the current authenticated AJAX session.
+        foreach ((array) $_COOKIE as $cookieKey => $cookieValue) {
+            if (!\is_scalar($cookieValue)) {
+                continue;
+            }
+
+            $cookies[sanitize_key((string) $cookieKey)] = sanitize_text_field(wp_unslash((string) $cookieValue));
+        }
+
+        return $cookies;
     }
 }

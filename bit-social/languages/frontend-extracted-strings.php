@@ -1,4 +1,9 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 /* THIS IS A GENERATED FILE. DO NOT EDIT DIRECTLY. */
 return [
     'Changelog' => __('Changelog', 'bit-social'),
@@ -49,6 +54,7 @@ return [
 
     'Your license is invalid' => __('Your license is invalid', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'Plugin Update Required (%s)' => __('Plugin Update Required (%s)', 'bit-social'),
 
     'Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.' => __('Please update both Free and Pro plugins to the latest version. Keeping them the same is crucial to avoid potential issues.', 'bit-social'),
@@ -77,6 +83,7 @@ return [
 
     'Write a review' => __('Write a review', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'of your experience with %s, and we\'ll send you a' => __('of your experience with %s, and we\'ll send you a', 'bit-social'),
 
     '$10 Cash back' => __('$10 Cash back', 'bit-social'),
@@ -187,14 +194,16 @@ return [
 
     'If you need to add another Google account, simply log out of or switch Google accounts first.' => __('If you need to add another Google account, simply log out of or switch Google accounts first.', 'bit-social'),
 
-    'If you need to add another %s  account, simply log out of or switch %s accounts first.' => __('If you need to add another %s  account, simply log out of or switch %s accounts first.', 'bit-social'),
+    /* translators: 1: placeholder value, 2: placeholder value */
+    'If you need to add another %1$s  account, simply log out of or switch %2$s accounts first.' => __('If you need to add another %1$s  account, simply log out of or switch %2$s accounts first.', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'Total %s accounts found' => __('Total %s accounts found', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'Connect Custom %s App' => __('Connect Custom %s App', 'bit-social'),
 
-    '%s' => __('%s', 'bit-social'),
-
+    /* translators: %s: placeholder value */
     'Connect %s' => __('Connect %s', 'bit-social'),
 
     'Custom App' => __('Custom App', 'bit-social'),
@@ -245,10 +254,12 @@ return [
 
     'User' => __('User', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'Enter the ID of the target recipient. Use a %s Id value returned in a' => __('Enter the ID of the target recipient. Use a %s Id value returned in a', 'bit-social'),
 
     'webhook event object' => __('webhook event object', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     '%s Id' => __('%s Id', 'bit-social'),
 
     'To get token, Visit' => __('To get token, Visit', 'bit-social'),
@@ -493,6 +504,7 @@ return [
 
     '404 - Not Found' => __('404 - Not Found', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'Redirecting Home in %s second' => __('Redirecting Home in %s second', 'bit-social'),
 
     'Go The Home' => __('Go The Home', 'bit-social'),
@@ -506,24 +518,6 @@ return [
     'Calendar' => __('Calendar', 'bit-social'),
 
     'Logs' => __('Logs', 'bit-social'),
-
-    'Get $10 Cashback' => __('Get $10 Cashback', 'bit-social'),
-
-    'Thank you for using Bit Social' => __('Thank you for using Bit Social', 'bit-social'),
-
-    'Give us a review on WordPress by clicking the' => __('Give us a review on WordPress by clicking the', 'bit-social'),
-
-    'Review us' => __('Review us', 'bit-social'),
-
-    'button and send an email with the review link to' => __('button and send an email with the review link to', 'bit-social'),
-
-    'We will honour you with <b> $10 cashback</b> for your time & effort.' => __('We will honour you with <b> $10 cashback</b> for your time & effort.', 'bit-social'),
-
-    'Suggestions on how you may write the review:' => __('Suggestions on how you may write the review:', 'bit-social'),
-
-    '1. What features do you like most in Bit Social?' => __('1. What features do you like most in Bit Social?', 'bit-social'),
-
-    '2. Which software did you previously used for these features?' => __('2. Which software did you previously used for these features?', 'bit-social'),
 
     'Opt-In For Plugin Improvement' => __('Opt-In For Plugin Improvement', 'bit-social'),
 
@@ -541,7 +535,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Fixed' => __('Fixed', 'bit-social'),
+    'Others' => __('Others', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
@@ -671,8 +665,6 @@ return [
 
     'Self only' => __('Self only', 'bit-social'),
 
-    'Others' => __('Others', 'bit-social'),
-
     'Allow Comment' => __('Allow Comment', 'bit-social'),
 
     'Allow Duet' => __('Allow Duet', 'bit-social'),
@@ -773,7 +765,8 @@ return [
 
     'Start date & time' => __('Start date & time', 'bit-social'),
 
-    'Local time: %s ; Time Zone: (%s)' => __('Local time: %s ; Time Zone: (%s)', 'bit-social'),
+    /* translators: 1: placeholder value, 2: placeholder value */
+    'Local time: %1$s ; Time Zone: (%2$s)' => __('Local time: %1$s ; Time Zone: (%2$s)', 'bit-social'),
 
     'Post interval' => __('Post interval', 'bit-social'),
 
@@ -781,11 +774,23 @@ return [
 
     'Order posts by' => __('Order posts by', 'bit-social'),
 
+    'Random order. Each post is used only once.' => __('Random order. Each post is used only once.', 'bit-social'),
+
     'Randomly without duplicates' => __('Randomly without duplicates', 'bit-social'),
+
+    'Random order. Posts may repeat.' => __('Random order. Posts may repeat.', 'bit-social'),
 
     'Randomly' => __('Randomly', 'bit-social'),
 
+    'Starts from earliest posts and moves forward.' => __('Starts from earliest posts and moves forward.', 'bit-social'),
+
     'Start from the oldest to new posts' => __('Start from the oldest to new posts', 'bit-social'),
+
+    'Publishes from past posts toward newly added / future posts.' => __('Publishes from past posts toward newly added / future posts.', 'bit-social'),
+
+    'Starts from the oldest posts and continues to the latest (including upcoming posts)' => __('Starts from the oldest posts and continues to the latest (including upcoming posts)', 'bit-social'),
+
+    'Starts from the most recently added posts (based on schedule start date), then goes back to older ones.' => __('Starts from the most recently added posts (based on schedule start date), then goes back to older ones.', 'bit-social'),
 
     'Start from the latest to old posts' => __('Start from the latest to old posts', 'bit-social'),
 
@@ -935,6 +940,7 @@ return [
 
     'Line Template Settings' => __('Line Template Settings', 'bit-social'),
 
+    /* translators: 1: placeholder value */
     'Line restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Line restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
     'Linkedin Template Settings' => __('Linkedin Template Settings', 'bit-social'),
@@ -963,12 +969,14 @@ return [
 
     'Telegram Template Settings' => __('Telegram Template Settings', 'bit-social'),
 
+    /* translators: 1: placeholder value */
     'Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
     'threads Template Settings' => __('threads Template Settings', 'bit-social'),
 
     'Your reply' => __('Your reply', 'bit-social'),
 
+    /* translators: 1: placeholder value */
     'Threads restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared' => __('Threads restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared', 'bit-social'),
 
     'Only Message' => __('Only Message', 'bit-social'),
@@ -999,6 +1007,7 @@ return [
 
     'Threads Template Settings' => __('Threads Template Settings', 'bit-social'),
 
+    /* translators: %s: placeholder value */
     'You can setup %s post settings below.' => __('You can setup %s post settings below.', 'bit-social'),
 
     'Doc here.' => __('Doc here.', 'bit-social')

@@ -1,10 +1,14 @@
 <?php
 
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Plugin Name: Bit Social
  * Plugin URI:  https://bitapps.pro/bit-social
  * Description: Blog to Social Media Auto Post Scheduler and Publisher
- * Version:     1.12.1
+ * Version:     1.13.5
  * Author:      Bit Social Auto Poster & Scheduler - by Bit Apps
  * Author URI:  https://bitapps.pro
  * Text Domain: bit-social

@@ -10,6 +10,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedClassFound -- Migration class loaded dynamically by the migration system; BS prefix denotes Bit Social.
 final class BSLogsMigration extends Migration
 {
     public function up()

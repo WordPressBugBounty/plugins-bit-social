@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Mon Feb 02 2026 11:41:08 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Apr 02 2026 10:10:24 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -407,7 +407,7 @@ msgstr ""
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
 #: frontend/src/pages/root/DefaultDashboard.tsx:28
 #: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
-#: frontend/src/pages/ShareNow/ShareBox.tsx:314
+#: frontend/src/pages/ShareNow/ShareBox.tsx:320
 msgid "Accounts"
 msgstr ""
 
@@ -473,11 +473,11 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:21
 msgid ""
-"If you need to add another %s  account, simply log out of or switch %s "
+"If you need to add another %1$s  account, simply log out of or switch %2$s "
 "accounts first."
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:34
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:36
 msgid "Total %s accounts found"
 msgstr ""
 
@@ -486,11 +486,6 @@ msgid "Connect Custom %s App"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:26
-#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:58
-#: frontend/src/pages/AiHub/ui/PlatformConnecModal.tsx:97
-msgid "%s"
-msgstr ""
-
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:27
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:108
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:65
@@ -809,7 +804,7 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:164
 #: frontend/src/pages/Schedules/internals/Settings.tsx:93
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:112
-#: frontend/src/pages/ShareNow/ShareBox.tsx:334
+#: frontend/src/pages/ShareNow/ShareBox.tsx:340
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:169
 msgid "Title"
 msgstr ""
@@ -1186,44 +1181,6 @@ msgstr ""
 msgid "Logs"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:28
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:59
-msgid "Get $10 Cashback"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:61
-msgid "Thank you for using Bit Social"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:68
-msgid "Give us a review on WordPress by clicking the"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:74
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:100
-msgid "Review us"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:76
-msgid "button and send an email with the review link to"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:80
-msgid "We will honour you with <b> $10 cashback</b> for your time & effort."
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:85
-msgid "Suggestions on how you may write the review:"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:88
-msgid "1. What features do you like most in Bit Social?"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Cashback/Cashback.tsx:90
-msgid "2. Which software did you previously used for these features?"
-msgstr ""
-
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/AnalyticsOption.tsx:49
 msgid "Opt-In For Plugin Improvement"
 msgstr ""
@@ -1258,8 +1215,10 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:9
-msgid "Fixed"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:27
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:149
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
+msgid "Others"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -1408,7 +1367,7 @@ msgid "Delete Logs"
 msgstr ""
 
 #: frontend/src/pages/Logs/Logs.tsx:264
-#: frontend/src/pages/Schedules/internals/Settings.tsx:151
+#: frontend/src/pages/Schedules/internals/Settings.tsx:148
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:247
 msgid "Visit our documentation"
 msgstr ""
@@ -1642,11 +1601,6 @@ msgstr ""
 msgid "Self only"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:149
-#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
-msgid "Others"
-msgstr ""
-
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:156
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:169
 msgid "Allow Comment"
@@ -1868,59 +1822,87 @@ msgstr ""
 msgid "Enter a name"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:103
+#: frontend/src/pages/Schedules/internals/Settings.tsx:102
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:180
 msgid "Start date & time"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:109
+#: frontend/src/pages/Schedules/internals/Settings.tsx:108
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:192
-msgid "Local time: %s ; Time Zone: (%s)"
+msgid "Local time: %1$s ; Time Zone: (%2$s)"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:117
+#: frontend/src/pages/Schedules/internals/Settings.tsx:115
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:212
 msgid "Post interval"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:142
+#: frontend/src/pages/Schedules/internals/Settings.tsx:139
 msgid ""
 "If your start time has passed, updating the interval will set your next "
 "post to local time plus the new interval! For example, current time 06:00 "
 "PM, updated Post interval: 2 hours. Next post will be at 08:00 PM."
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:160
+#: frontend/src/pages/Schedules/internals/Settings.tsx:157
 msgid "Order posts by"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:163
+msgid "Random order. Each post is used only once."
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Settings.tsx:164
 msgid "Randomly without duplicates"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:165
+#: frontend/src/pages/Schedules/internals/Settings.tsx:170
+msgid "Random order. Posts may repeat."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:170
 msgid "Randomly"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:166
-msgid "Start from the oldest to new posts"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/Settings.tsx:167
-msgid "Start from the latest to old posts"
+#: frontend/src/pages/Schedules/internals/Settings.tsx:175
+msgid "Starts from earliest posts and moves forward."
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Settings.tsx:176
+msgid "Start from the oldest to new posts"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:183
+msgid "Publishes from past posts toward newly added / future posts."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:184
+msgid ""
+"Starts from the oldest posts and continues to the latest (including "
+"upcoming posts)"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:194
+msgid ""
+"Starts from the most recently added posts (based on schedule start date), "
+"then goes back to older ones."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:198
+msgid "Start from the latest to old posts"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Settings.tsx:210
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:255
 msgid "Set a sleep timer"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:194
+#: frontend/src/pages/Schedules/internals/Settings.tsx:227
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:270
 msgid "Set sleep days"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/Settings.tsx:200
+#: frontend/src/pages/Schedules/internals/Settings.tsx:233
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:277
 msgid "Select sleep days"
 msgstr ""
@@ -1995,6 +1977,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:110
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:120
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:68
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:10
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:87
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:106
@@ -2010,6 +1993,7 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:115
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:125
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:73
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:13
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:92
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:110
@@ -2122,19 +2106,19 @@ msgstr ""
 msgid "Enable to the link shared as a card"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:338
+#: frontend/src/pages/ShareNow/ShareBox.tsx:344
 msgid "Untitled Share Now"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:358
+#: frontend/src/pages/ShareNow/ShareBox.tsx:364
 msgid "Something went wrong!"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:383
+#: frontend/src/pages/ShareNow/ShareBox.tsx:389
 msgid "Edit Schedule"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareBox.tsx:383
+#: frontend/src/pages/ShareNow/ShareBox.tsx:389
 msgid "Setup Schedule"
 msgstr ""
 
