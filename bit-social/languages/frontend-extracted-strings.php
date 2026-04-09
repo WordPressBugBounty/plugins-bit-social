@@ -535,7 +535,7 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Others' => __('Others', 'bit-social'),
+    'Improvements' => __('Improvements', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
@@ -664,6 +664,8 @@ return [
     'Follower of creator' => __('Follower of creator', 'bit-social'),
 
     'Self only' => __('Self only', 'bit-social'),
+
+    'Others' => __('Others', 'bit-social'),
 
     'Allow Comment' => __('Allow Comment', 'bit-social'),
 

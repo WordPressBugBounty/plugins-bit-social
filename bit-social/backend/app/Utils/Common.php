@@ -170,19 +170,14 @@ trait Common
 
     public function replaceTagValue($text, $post)
     {
-        $pattern = '/\{((?:[^{}]++|(?R))*)\}/';
-
         $smartTag = new SmartTag();
 
-        preg_match_all($pattern, $text, $matches);
-
-        if (empty($matches[1])) {
-            return $text;
-        }
-
-        $tags = $matches[1];
-
-        foreach ($tags as $tag) {
+        // Innermost `{...}` first: nested tags like `{prompt_49_[{post_title} ...]}` must not
+        // have inner `{post_title}` replaced while the outer placeholder still uses that key in $text.
+        $maxIterations = 1000;
+        while ($maxIterations-- > 0 && preg_match('/\{([^{}]*)\}/', $text, $matches)) {
+            $before = $text;
+            $tag = $matches[1];
             $value = $smartTag->getSmartTagValue($tag, $post);
 
             // Remove placeholder if no value
@@ -190,8 +185,11 @@ trait Common
                 $text = str_replace('{' . $tag . '} ', '', $text);
             }
 
-            // Replace text tags with the smart tag values
             $text = str_replace('{' . $tag . '}', $value, $text);
+
+            if ($text === $before) {
+                break;
+            }
         }
 
         return html_entity_decode($text, ENT_QUOTES);

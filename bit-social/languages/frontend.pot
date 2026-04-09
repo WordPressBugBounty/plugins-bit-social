@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu Apr 02 2026 10:10:24 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Apr 09 2026 08:14:27 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -1215,10 +1215,8 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:27
-#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:149
-#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
-msgid "Others"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
+msgid "Improvements"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -1599,6 +1597,11 @@ msgstr ""
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:144
 #: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:156
 msgid "Self only"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:149
+#: frontend/src/pages/ShareNow/internals/platforms/ProTiktokShareNowTemplate.tsx:162
+msgid "Others"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/Platforms/ProTiktokScheduleTemplate.tsx:156
