@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'bitapps/social',
-        'pretty_version' => '1.13.6',
-        'version' => '1.13.6.0',
-        'reference' => 'b7f39e288e5b1f95782411a2ec75964da513bbda',
+        'pretty_version' => '1.13.7',
+        'version' => '1.13.7.0',
+        'reference' => '643cf5368865a71573a764632e8334408a94a47d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'bitapps/social' => array(
-            'pretty_version' => '1.13.6',
-            'version' => '1.13.6.0',
-            'reference' => 'b7f39e288e5b1f95782411a2ec75964da513bbda',
+            'pretty_version' => '1.13.7',
+            'version' => '1.13.7.0',
+            'reference' => '643cf5368865a71573a764632e8334408a94a47d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -34,15 +34,6 @@
             'reference' => '6052fcfd1b94ccb452d2cb4ecfd93e63617503e3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../bitapps/wp-kit',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'bitapps/wp-telemetry' => array(
-            'pretty_version' => 'v0.0.9',
-            'version' => '0.0.9.0',
-            'reference' => '6d9f5577396fe5e0ee96a7c9f05838d9f47e8721',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../bitapps/wp-telemetry',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

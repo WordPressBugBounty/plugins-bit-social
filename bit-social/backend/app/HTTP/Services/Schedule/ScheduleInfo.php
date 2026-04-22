@@ -138,7 +138,7 @@ class ScheduleInfo
         }
 
         if ((int) $settings['post_publish_order'] !== $randomly && empty($postFilters['specific_postIds']) && !empty($publishedPostIds)) {
-            $filter['exclude'] = $publishedPostIds;
+            $filter['exclude'] = $publishedPostIds; // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude -- Uses the VIP-preferred `post__not_in` param for WP_Query.
         }
 
         if ((int) $settings['post_publish_order'] !== $randomly && !empty($postFilters['specific_postIds'])) {

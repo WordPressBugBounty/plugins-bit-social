@@ -12,9 +12,6 @@ use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\RequestType;
 use BitApps\Social\Deps\BitApps\WPKit\Migration\MigrationHelper;
 use BitApps\Social\Deps\BitApps\WPKit\Utils\Capabilities;
-use BitApps\Social\Deps\BitApps\WPTelemetry\Telemetry\Telemetry;
-use BitApps\Social\Deps\BitApps\WPTelemetry\Telemetry\TelemetryConfig;
-use BitApps\Social\HTTP\Controllers\BitSocialAnalyticsController;
 use BitApps\Social\HTTP\Middleware\NonceCheckerMiddleware;
 use BitApps\Social\HTTP\Services\Schedule\CustomSchedule;
 use BitApps\Social\Model\Schedule;
@@ -22,9 +19,11 @@ use BitApps\Social\Providers\HookProvider;
 use BitApps\Social\Providers\InstallerProvider;
 use BitApps\Social\Views\Layout;
 use BitApps\Social\Views\PluginPageActions;
+use BitApps\SocialPro\Config as ProConfig;
 
 final class Plugin
 {
+    public const MAX_FREE_TELEMETRY_VERSION = '1.13.7';
     /**
      * Initialize the Plugin with hooks.
      */
@@ -45,10 +44,6 @@ final class Plugin
         $this->registerInstaller();
 
         Hooks::addAction('plugins_loaded', [$this, 'loaded']);
-
-        Hooks::addFilter(Config::withPrefix('telemetry_additional_data'), [new BitSocialAnalyticsController(), 'filterTrackingData']);
-
-        $this->initWPTelemetry();
     }
 
     public function registerInstaller()
@@ -65,24 +60,9 @@ final class Plugin
         Hooks::doAction(Config::withPrefix('loaded'));
         Hooks::addAction('init', [$this, 'registerProviders'], 11);
         Hooks::addFilter('plugin_action_links_' . Config::get('BASENAME'), [new PluginPageActions(), 'renderActionLinks']);
+        $this->cleanupLegacyTrackingOption();
         $this->maybeMigrateDB();
         $this->customScheduleInit();
-    }
-
-    public function initWPTelemetry()
-    {
-        TelemetryConfig::setSlug(Config::SLUG);
-        TelemetryConfig::setTitle(Config::TITLE);
-        TelemetryConfig::setVersion(Config::VERSION);
-        TelemetryConfig::setPrefix(Config::VAR_PREFIX);
-
-        TelemetryConfig::setServerBaseUrl('https://wp-api.bitapps.pro/public/');
-
-        TelemetryConfig::setTermsUrl('https://bitapps.pro/terms-of-service/');
-        TelemetryConfig::setPolicyUrl('https://bitapps.pro/refund-policy/');
-
-        Telemetry::report()->init();
-        Telemetry::feedback()->init();
     }
 
     public function customScheduleInit()
@@ -168,5 +148,33 @@ final class Plugin
         static::$_instance = new static();
 
         return true;
+    }
+
+    private function cleanupLegacyTrackingOption()
+    {
+        if (!version_compare(Config::getOption('version'), self::MAX_FREE_TELEMETRY_VERSION, '<')) {
+            return;
+        }
+
+        if (class_exists(ProConfig::class)) {
+            return;
+        }
+
+        $trackingOptionKeys = [
+            'allow_tracking',
+            'tracking_notice_dismissed',
+            'tracking_skipped',
+            'tracking_opt_in',
+        ];
+
+        foreach ($trackingOptionKeys as $optionKey) {
+            // Use null as default so falsy values are still treated as existing options.
+            $optionValue = Config::getOption($optionKey, null);
+            if ($optionValue === null) {
+                continue;
+            }
+
+            delete_option(Config::withPrefix($optionKey));
+        }
     }
 }

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf5d769d241501de985396853969dbb0f
+class ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c
 {
     public static $prefixLengthsPsr4 = array (
         'T' =>
@@ -15,7 +15,6 @@ class ComposerStaticInitf5d769d241501de985396853969dbb0f
         'B' =>
         array (
             'BitApps\\WPValidator\\' => 20,
-            'BitApps\\WPTelemetry\\' => 20,
             'BitApps\\WPKit\\' => 14,
             'BitApps\\WPDatabase\\' => 19,
             'BitApps\\Social\\' => 15,
@@ -34,10 +33,6 @@ class ComposerStaticInitf5d769d241501de985396853969dbb0f
         'BitApps\\WPValidator\\' =>
         array (
             0 => __DIR__ . '/..' . '/bitapps/wp-validator/src',
-        ),
-        'BitApps\\WPTelemetry\\' =>
-        array (
-            0 => __DIR__ . '/..' . '/bitapps/wp-telemetry/src',
         ),
         'BitApps\\WPKit\\' =>
         array (
@@ -87,11 +82,6 @@ class ComposerStaticInitf5d769d241501de985396853969dbb0f
         'BitApps\\Social\\Deps\\BitApps\\WPKit\\Shortcode\\Shortcode' => __DIR__ . '/..' . '/bitapps/wp-kit/src/Shortcode/Shortcode.php',
         'BitApps\\Social\\Deps\\BitApps\\WPKit\\Shortcode\\ShortcodeWrapper' => __DIR__ . '/..' . '/bitapps/wp-kit/src/Shortcode/ShortcodeWrapper.php',
         'BitApps\\Social\\Deps\\BitApps\\WPKit\\Utils\\Capabilities' => __DIR__ . '/..' . '/bitapps/wp-kit/src/Utils/Capabilities.php',
-        'BitApps\\Social\\Deps\\BitApps\\WPTelemetry\\Telemetry\\Feedback\\Feedback' => __DIR__ . '/..' . '/bitapps/wp-telemetry/src/Telemetry/Feedback/Feedback.php',
-        'BitApps\\Social\\Deps\\BitApps\\WPTelemetry\\Telemetry\\Report\\Report' => __DIR__ . '/..' . '/bitapps/wp-telemetry/src/Telemetry/Report/Report.php',
-        'BitApps\\Social\\Deps\\BitApps\\WPTelemetry\\Telemetry\\Report\\ReportInfo' => __DIR__ . '/..' . '/bitapps/wp-telemetry/src/Telemetry/Report/ReportInfo.php',
-        'BitApps\\Social\\Deps\\BitApps\\WPTelemetry\\Telemetry\\Telemetry' => __DIR__ . '/..' . '/bitapps/wp-telemetry/src/Telemetry/Telemetry.php',
-        'BitApps\\Social\\Deps\\BitApps\\WPTelemetry\\Telemetry\\TelemetryConfig' => __DIR__ . '/..' . '/bitapps/wp-telemetry/src/Telemetry/TelemetryConfig.php',
         'BitApps\\Social\\Deps\\BitApps\\WPValidator\\ErrorBag' => __DIR__ . '/..' . '/bitapps/wp-validator/src/ErrorBag.php',
         'BitApps\\Social\\Deps\\BitApps\\WPValidator\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/bitapps/wp-validator/src/Exception/InvalidArgumentException.php',
         'BitApps\\Social\\Deps\\BitApps\\WPValidator\\Exception\\MethodNotFoundException' => __DIR__ . '/..' . '/bitapps/wp-validator/src/Exception/MethodNotFoundException.php',
@@ -134,13 +124,11 @@ class ComposerStaticInitf5d769d241501de985396853969dbb0f
         'BitApps\\Social\\HTTP\\Controllers\\AnalyticsController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/AnalyticsController.php',
         'BitApps\\Social\\HTTP\\Controllers\\AuthController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/AuthController.php',
         'BitApps\\Social\\HTTP\\Controllers\\AutoPostController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/AutoPostController.php',
-        'BitApps\\Social\\HTTP\\Controllers\\BitSocialAnalyticsController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/BitSocialAnalyticsController.php',
         'BitApps\\Social\\HTTP\\Controllers\\ChangelogController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/ChangelogController.php',
         'BitApps\\Social\\HTTP\\Controllers\\CommonController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/CommonController.php',
         'BitApps\\Social\\HTTP\\Controllers\\CustomAppController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/CustomAppController.php',
         'BitApps\\Social\\HTTP\\Controllers\\DebugLogController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/DebugLogController.php',
         'BitApps\\Social\\HTTP\\Controllers\\LogController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/LogController.php',
-        'BitApps\\Social\\HTTP\\Controllers\\PluginImprovementController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/PluginImprovementController.php',
         'BitApps\\Social\\HTTP\\Controllers\\ProxyController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/ProxyController.php',
         'BitApps\\Social\\HTTP\\Controllers\\RedirectController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/RedirectController.php',
         'BitApps\\Social\\HTTP\\Controllers\\RetryController' => __DIR__ . '/../..' . '/backend/app/HTTP/Controllers/RetryController.php',
@@ -219,9 +207,9 @@ class ComposerStaticInitf5d769d241501de985396853969dbb0f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf5d769d241501de985396853969dbb0f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf5d769d241501de985396853969dbb0f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf5d769d241501de985396853969dbb0f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c::$classMap;
 
         }, null, ClassLoader::class);
     }

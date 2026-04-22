@@ -8,7 +8,6 @@ use BitApps\Social\HTTP\Controllers\AutoPostController;
 use BitApps\Social\HTTP\Controllers\ChangelogController;
 use BitApps\Social\HTTP\Controllers\CustomAppController;
 use BitApps\Social\HTTP\Controllers\LogController;
-use BitApps\Social\HTTP\Controllers\PluginImprovementController;
 use BitApps\Social\HTTP\Controllers\ProxyController;
 use BitApps\Social\HTTP\Controllers\RetryController;
 use BitApps\Social\HTTP\Controllers\ScheduleController;
@@ -77,9 +76,6 @@ Route::noAuth()->group(
 
         Route::get('analytics', [AnalyticsController::class, 'index']);
         Route::get('user-info', [UserInfoController::class, 'index']);
-
-        Route::get('plugin-improvement', [PluginImprovementController::class, 'getData']);
-        Route::post('plugin-improvement', [PluginImprovementController::class, 'createOrUpdate']);
 
         Route::get('all-settings', [SettingsController::class, 'getAllSettings']);
         Route::post('settings/update', [SettingsController::class, 'updateSettings']);

@@ -45,7 +45,6 @@
     }
   },
   "require": {
-    "bitapps/wp-telemetry": "^0.0.9",
     "bitapps/wp-validator": "1.2.3",
     "bitapps/wp-database": "1.5",
     "typisttech/imposter-plugin": "*",
