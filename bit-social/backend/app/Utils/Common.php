@@ -156,6 +156,10 @@ trait Common
         // Remove empty and duplicate values from media array
         $media = array_values(array_filter(array_unique($media)));
 
+        if (property_exists($template, 'platform') && !empty($template->platform)) {
+            $media = $this->normalizeMediaForPlatform($media, $template->platform);
+        }
+
         $formattedPostData = [
             'content' => $content,
             'media'   => $media,
@@ -291,6 +295,134 @@ trait Common
         }
 
         return $result;
+    }
+
+    /**
+     * Normalize image media URLs for platform compatibility.
+     *
+     * - Converts WebP to JPEG for platforms that do not accept WebP.
+     * - Resizes overly large images to reduce API rejections.
+     */
+    protected function normalizeMediaForPlatform($media, $platform)
+    {
+        if (empty($media)) {
+            return [];
+        }
+
+        $mediaItems = \is_array($media) ? $media : [$media];
+        $normalizedMedia = [];
+
+        foreach ($mediaItems as $mediaUrl) {
+            if (!\is_string($mediaUrl) || empty($mediaUrl)) {
+                continue;
+            }
+
+            $normalizedMedia[] = $this->normalizeSingleImageForPlatform($mediaUrl, (string) $platform);
+        }
+
+        return array_values(array_filter(array_unique($normalizedMedia)));
+    }
+
+    protected function normalizeSingleImageForPlatform(string $mediaUrl, string $platform): string
+    {
+        if (!wp_http_validate_url($mediaUrl)) {
+            return $mediaUrl;
+        }
+
+        $attachmentId = attachment_url_to_postid($mediaUrl);
+        if (empty($attachmentId)) {
+            return $mediaUrl;
+        }
+
+        $filePath = get_attached_file($attachmentId);
+        if (empty($filePath) || !file_exists($filePath)) {
+            return $mediaUrl;
+        }
+
+        $editor = wp_get_image_editor($filePath);
+        if (is_wp_error($editor)) {
+            return $mediaUrl;
+        }
+
+        $imageSize = $editor->get_size();
+        if (empty($imageSize['width']) || empty($imageSize['height'])) {
+            return $mediaUrl;
+        }
+
+        [$maxWidth, $maxHeight] = $this->getMaxDimensionsForPlatform($platform);
+        $mimeType = wp_get_image_mime($filePath);
+        $targetMimeType = $this->getTargetMimeTypeForPlatform($mimeType, $platform);
+        $targetExtension = $this->mimeTypeToExtension($targetMimeType);
+
+        $currentExtension = strtolower((string) pathinfo($filePath, PATHINFO_EXTENSION));
+        $requiresResize = $imageSize['width'] > $maxWidth || $imageSize['height'] > $maxHeight;
+        $requiresFormatChange = !empty($targetExtension) && $currentExtension !== $targetExtension;
+
+        if (!$requiresResize && !$requiresFormatChange) {
+            return $mediaUrl;
+        }
+
+        $uploadDir = wp_get_upload_dir();
+        if (empty($uploadDir['basedir']) || empty($uploadDir['baseurl'])) {
+            return $mediaUrl;
+        }
+
+        $pathInfo = pathinfo($filePath);
+        $targetPath = $pathInfo['dirname']
+            . DIRECTORY_SEPARATOR
+            . $pathInfo['filename']
+            . '-bit-social-'
+            . sanitize_key($platform)
+            . '-' . $maxWidth . 'x' . $maxHeight
+            . '.' . $targetExtension;
+
+        if (!file_exists($targetPath)) {
+            if ($requiresResize) {
+                $editor->resize($maxWidth, $maxHeight, false);
+            }
+
+            $saveResult = $editor->save($targetPath, $targetMimeType);
+            if (is_wp_error($saveResult) || empty($saveResult['path']) || !file_exists($saveResult['path'])) {
+                return $mediaUrl;
+            }
+
+            $targetPath = $saveResult['path'];
+        }
+
+        return str_replace($uploadDir['basedir'], $uploadDir['baseurl'], $targetPath);
+    }
+
+    protected function getMaxDimensionsForPlatform(string $platform): array
+    {
+        $limits = [
+            'facebook'              => [2000, 2000],
+            'googleBusinessProfile' => [1200, 1200],
+        ];
+
+        return $limits[$platform] ?? [2000, 2000];
+    }
+
+    protected function getTargetMimeTypeForPlatform($mimeType, string $platform): string
+    {
+        $webpRestrictedPlatforms = ['facebook', 'googleBusinessProfile'];
+        if (\in_array($platform, $webpRestrictedPlatforms, true) && $mimeType === 'image/webp') {
+            return 'image/jpeg';
+        }
+
+        return $mimeType ?: 'image/jpeg';
+    }
+
+    protected function mimeTypeToExtension(string $mimeType): string
+    {
+        $extensionMap = [
+            'image/jpeg' => 'jpg',
+            'image/jpg'  => 'jpg',
+            'image/png'  => 'png',
+            'image/gif'  => 'gif',
+            'image/webp' => 'webp',
+        ];
+
+        return $extensionMap[$mimeType] ?? 'jpg';
     }
 
     /**

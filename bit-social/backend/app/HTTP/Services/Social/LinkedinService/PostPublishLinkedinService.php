@@ -98,6 +98,10 @@ class PostPublishLinkedinService implements SocialInterface
             $post_data = $this->replacePostContent($postId, $template);
         }
 
+        if (!empty($post_data['media'])) {
+            $post_data['media'] = $this->normalizeMediaForPlatform($post_data['media'], 'linkedin');
+        }
+
         $this->linkedinData['post'] = $this->normalizePostData($post_data, true);
 
         $postPublishResponse = $this->linkedinPostPublish($post_data, $account_detail, $access_token, $postId);

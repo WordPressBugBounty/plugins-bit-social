@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 6.9.4
 Requires PHP: 7.4
-Stable tag: 1.13.7
+Stable tag: 1.13.9
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -369,6 +369,11 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 
 == Changelog ==
 
+
+= v1.13.9 (April 29, 2026) =
+* Fixed:
+   * Google Business Profile: Resolved an issue where accounts were not found when retrying post publishing.
+   * Images: Normalized social post images by converting unsupported formats (e.g. WebP → JPEG) and resizing oversized media for Facebook, LinkedIn, and Google Business Profile.
 
 = v1.13.7 (April 22, 2026) =
 * others:

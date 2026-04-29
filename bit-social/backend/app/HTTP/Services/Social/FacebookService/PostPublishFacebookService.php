@@ -81,6 +81,10 @@ class PostPublishFacebookService implements SocialInterface
             $post_data = $this->replacePostContent($post['ID'], $template);
         }
 
+        if (!empty($post_data['media'])) {
+            $post_data['media'] = $this->normalizeMediaForPlatform($post_data['media'], 'facebook');
+        }
+
         $this->facebookData['post'] = $this->normalizePostData($post_data, true);
 
         $response = $this->facebookPostPublish($post_data, $account_id, $tokenUpdateData->access_token);
