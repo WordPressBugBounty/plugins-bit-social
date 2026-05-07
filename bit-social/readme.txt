@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 6.9.4
 Requires PHP: 7.4
-Stable tag: 1.13.9
+Stable tag: 1.13.10
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -369,6 +369,11 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 
 == Changelog ==
 
+
+= v1.13.10 (May 7, 2026) =
+* Fixed:
+   * Pinterest: Added fallback to wp_remote_get when file_get_contents is blocked by Cloudflare or WAF, preventing image upload failures on restricted server environments.
+   * PHP compatibility: Removed trait constants to support PHP versions below 8.2.
 
 = v1.13.9 (April 29, 2026) =
 * Fixed:

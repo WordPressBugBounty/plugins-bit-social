@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Apr 29 2026 08:43:29 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu May 07 2026 10:20:15 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -1216,6 +1216,7 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
 msgid "Fixed"
 msgstr ""
 
