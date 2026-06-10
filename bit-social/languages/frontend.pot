@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Thu May 07 2026 10:20:15 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Wed Jun 10 2026 08:48:28 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -511,6 +511,7 @@ msgid "Saved"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:56
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:146
 msgid "Save"
 msgstr ""
 
@@ -653,6 +654,8 @@ msgid "Disable"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:41
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:48
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:61
 msgid "Enable"
 msgstr ""
 
@@ -1216,7 +1219,11 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
+msgid "Features"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:24
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:36
 msgid "Fixed"
 msgstr ""
 
@@ -1970,6 +1977,154 @@ msgstr ""
 #: frontend/src/pages/Settings/FreeCronSettings.free.tsx:84
 #: frontend/src/pages/Settings/ProCronSettings.pro.tsx:96
 msgid "Enable External Cron"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:17
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:139
+msgid "Email Notifications"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:19
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:150
+msgid ""
+"Get notified by email when a post fails to publish, and receive scheduled "
+"reports of your successes and failures."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:27
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:180
+msgid "Enable email notifications"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:34
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:191
+msgid "Comma separated email addresses that should receive notifications."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:36
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:193
+msgid "Recipients"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:43
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:210
+msgid ""
+"Receive an email every time a scheduled post fails to publish on a social "
+"platform."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:45
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:214
+msgid "Email on failure"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:55
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:232
+msgid "Receive a scheduled summary email with both success and error reports."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:57
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:234
+msgid "Digest report"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:65
+msgid "Send every"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:70
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:261
+msgid "Day(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:71
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:262
+msgid "Week(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:72
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:263
+msgid "Month(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:71
+msgid "Please check the form and try again."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:72
+msgid "Failed to save settings"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:78
+msgid "Your notification settings have been updated."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:79
+msgid "Settings saved"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:88
+msgid "Digest report sent"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:93
+msgid "Could not send digest report"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:105
+msgid "Enable the digest report and save before sending."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:107
+msgid "Save your changes before sending."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:124
+msgid "Enable email notifications first."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:128
+msgid "Turn on the digest report to set how often it is sent."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:134
+msgid "Last sent:"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:134
+msgid "Never"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:163
+msgid "Activate Bit SMTP"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:163
+msgid "Install Bit SMTP"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:168
+msgid ""
+"No SMTP service was detected. By default WordPress emails are often blocked "
+"or marked as spam, so failure alerts and digest reports may not be "
+"delivered. We recommend Bit SMTP — our free WordPress SMTP plugin — to send "
+"emails reliably."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:171
+msgid "SMTP is not set up"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:284
+msgid "Check now"
+msgstr ""
+
+#: frontend/src/pages/Settings/SettingsWrapper.tsx:10
+msgid "Cron"
+msgstr ""
+
+#: frontend/src/pages/Settings/SettingsWrapper.tsx:11
+msgid "Notifications"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/FacebookShareNowTemplate.tsx:108

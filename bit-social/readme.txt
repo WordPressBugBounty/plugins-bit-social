@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 6.9.4
 Requires PHP: 7.4
-Stable tag: 1.13.10
+Stable tag: 1.14.0
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -369,6 +369,12 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 
 == Changelog ==
 
+= v1.14.0 (June 10, 2026) =
+* Features:
+   * Email Notifications (Pro): Receive email alerts when posts fail to publish, along with digest reports that summarize your publishing activity.
+   * Digest Reports (Pro): Get a consolidated summary of your publishing activity, with a manual "Check now" trigger to run the report on demand.
+   * Notification emails now surface every post-failure error and include Share Now titles for clearer, more complete reporting.
+   * Improved the notification settings UI with helpful tooltips and inline notifications.
 
 = v1.13.10 (May 7, 2026) =
 * Fixed:

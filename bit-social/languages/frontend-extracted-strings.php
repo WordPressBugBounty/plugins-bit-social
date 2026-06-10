@@ -535,6 +535,8 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
+    'Features' => __('Features', 'bit-social'),
+
     'Fixed' => __('Fixed', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
@@ -823,6 +825,70 @@ return [
     'External Cron' => __('External Cron', 'bit-social'),
 
     'Enable External Cron' => __('Enable External Cron', 'bit-social'),
+
+    'Email Notifications' => __('Email Notifications', 'bit-social'),
+
+    'Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.' => __('Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.', 'bit-social'),
+
+    'Enable email notifications' => __('Enable email notifications', 'bit-social'),
+
+    'Comma separated email addresses that should receive notifications.' => __('Comma separated email addresses that should receive notifications.', 'bit-social'),
+
+    'Recipients' => __('Recipients', 'bit-social'),
+
+    'Receive an email every time a scheduled post fails to publish on a social platform.' => __('Receive an email every time a scheduled post fails to publish on a social platform.', 'bit-social'),
+
+    'Email on failure' => __('Email on failure', 'bit-social'),
+
+    'Receive a scheduled summary email with both success and error reports.' => __('Receive a scheduled summary email with both success and error reports.', 'bit-social'),
+
+    'Digest report' => __('Digest report', 'bit-social'),
+
+    'Send every' => __('Send every', 'bit-social'),
+
+    'Day(s)' => __('Day(s)', 'bit-social'),
+
+    'Week(s)' => __('Week(s)', 'bit-social'),
+
+    'Month(s)' => __('Month(s)', 'bit-social'),
+
+    'Please check the form and try again.' => __('Please check the form and try again.', 'bit-social'),
+
+    'Failed to save settings' => __('Failed to save settings', 'bit-social'),
+
+    'Your notification settings have been updated.' => __('Your notification settings have been updated.', 'bit-social'),
+
+    'Settings saved' => __('Settings saved', 'bit-social'),
+
+    'Digest report sent' => __('Digest report sent', 'bit-social'),
+
+    'Could not send digest report' => __('Could not send digest report', 'bit-social'),
+
+    'Enable the digest report and save before sending.' => __('Enable the digest report and save before sending.', 'bit-social'),
+
+    'Save your changes before sending.' => __('Save your changes before sending.', 'bit-social'),
+
+    'Enable email notifications first.' => __('Enable email notifications first.', 'bit-social'),
+
+    'Turn on the digest report to set how often it is sent.' => __('Turn on the digest report to set how often it is sent.', 'bit-social'),
+
+    'Last sent:' => __('Last sent:', 'bit-social'),
+
+    'Never' => __('Never', 'bit-social'),
+
+    'Activate Bit SMTP' => __('Activate Bit SMTP', 'bit-social'),
+
+    'Install Bit SMTP' => __('Install Bit SMTP', 'bit-social'),
+
+    'No SMTP service was detected. By default WordPress emails are often blocked or marked as spam, so failure alerts and digest reports may not be delivered. We recommend Bit SMTP — our free WordPress SMTP plugin — to send emails reliably.' => __('No SMTP service was detected. By default WordPress emails are often blocked or marked as spam, so failure alerts and digest reports may not be delivered. We recommend Bit SMTP — our free WordPress SMTP plugin — to send emails reliably.', 'bit-social'),
+
+    'SMTP is not set up' => __('SMTP is not set up', 'bit-social'),
+
+    'Check now' => __('Check now', 'bit-social'),
+
+    'Cron' => __('Cron', 'bit-social'),
+
+    'Notifications' => __('Notifications', 'bit-social'),
 
     'Post' => __('Post', 'bit-social'),
 
