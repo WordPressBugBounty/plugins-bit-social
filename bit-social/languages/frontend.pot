@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Jun 10 2026 08:48:28 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Sun Jun 14 2026 10:14:27 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -512,6 +512,9 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:56
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:146
+#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:18
 msgid "Save"
 msgstr ""
 
@@ -1219,11 +1222,13 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:28
 msgid "Features"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:24
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:36
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:42
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:54
 msgid "Fixed"
 msgstr ""
 
@@ -2538,6 +2543,33 @@ msgstr ""
 msgid "Trim Message"
 msgstr ""
 
+#: frontend/src/pages/SocialTemplates/internals/BlueskySettings.tsx:87
+#: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:162
+#: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:107
+#: frontend/src/pages/SocialTemplates/internals/InstagramSettings.tsx:102
+#: frontend/src/pages/SocialTemplates/internals/LineSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/LinkedinSettings.tsx:163
+#: frontend/src/pages/SocialTemplates/internals/PinterestSettings.tsx:103
+#: frontend/src/pages/SocialTemplates/internals/ProBlueskySettings.tsx:134
+#: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:121
+#: frontend/src/pages/SocialTemplates/internals/ProGoogleBusinessProfileSettings.tsx:154
+#: frontend/src/pages/SocialTemplates/internals/ProInstagramSettings.tsx:150
+#: frontend/src/pages/SocialTemplates/internals/ProLineSettings.tsx:126
+#: frontend/src/pages/SocialTemplates/internals/ProPinterestSettings.tsx:152
+#: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:126
+#: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:152
+#: frontend/src/pages/SocialTemplates/internals/ProTiktokSettings.tsx:181
+#: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:121
+#: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:120
+#: frontend/src/pages/SocialTemplates/internals/TelegramSettings.tsx:79
+#: frontend/src/pages/SocialTemplates/internals/ThreadsSettings.tsx:108
+#: frontend/src/pages/SocialTemplates/internals/TiktokSettings.tsx:155
+#: frontend/src/pages/SocialTemplates/internals/TumblrSettings.tsx:87
+#: frontend/src/pages/SocialTemplates/internals/TwitterSettings.tsx:73
+msgid "Preview"
+msgstr ""
+
 #: frontend/src/pages/SocialTemplates/internals/DiscordSettings.tsx:30
 #: frontend/src/pages/SocialTemplates/internals/ProDiscordSettings.tsx:57
 msgid "Discord Template Settings"
@@ -2560,10 +2592,6 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/ProTumblrSettings.tsx:90
 #: frontend/src/pages/SocialTemplates/internals/ProTwitterSettings.tsx:89
 msgid "Select an AI prompt for image generation."
-msgstr ""
-
-#: frontend/src/pages/SocialTemplates/internals/FacebookSettings.tsx:162
-msgid "Preview"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/GoogleBusinessProfileSettings.tsx:48
@@ -2632,24 +2660,125 @@ msgstr ""
 msgid "Post link"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:37
-msgid "Page name"
+#: frontend/src/pages/SocialTemplates/internals/preview/BlueskyPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/DiscordPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/TumblrPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:16
+msgid "Reply"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
-msgid "Just Now"
+#: frontend/src/pages/SocialTemplates/internals/preview/BlueskyPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:32
+#: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:17
+msgid "Repost"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:60
+#: frontend/src/pages/SocialTemplates/internals/preview/BlueskyPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:74
+#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/LinePreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:30
+#: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/TumblrPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:18
 msgid "Like"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:65
+#: frontend/src/pages/SocialTemplates/internals/preview/BlueskyPreview.tsx:21
+msgid "@handle.bsky.social"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/DiscordPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:16
+#: frontend/src/pages/SocialTemplates/internals/preview/TelegramPreview.tsx:17
+msgid "React"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/DiscordPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/TelegramPreview.tsx:19
+msgid "Forward"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:54
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:68
+msgid "Profile name"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:43
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:62
+msgid "Just Now"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:81
+#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/LinePreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:31
+#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/TelegramPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:17
+#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:17
 msgid "Comment"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:70
+#: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:88
+#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/LinePreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:18
+#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/TumblrPreview.tsx:19
 msgid "Share"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/GoogleBusinessProfilePreview.tsx:19
+msgid "Call"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/GoogleBusinessProfilePreview.tsx:20
+msgid "Website"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/GoogleBusinessProfilePreview.tsx:21
+msgid "Directions"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:90
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:97
+msgid "hide"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:90
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:97
+msgid "…see more"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:19
+msgid ""
+"Start writing and your post will appear here..\n"
+"You can add images, links, #hashtags and emojis 😎"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:33
+#: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:19
+msgid "Send"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:71
+msgid "Your headline"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:75
+msgid "Now"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:129
+msgid "John Doe and 169 others"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:134
+msgid "4 comments • 1 repost"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/PreviewDummy.tsx:10
@@ -2658,6 +2787,22 @@ msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/PreviewDummy.tsx:30
 msgid "Coming Soon"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/TelegramPreview.tsx:16
+msgid "Views"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/TumblrPreview.tsx:16
+msgid "Reblog"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:19
+msgid "Bookmark"
+msgstr ""
+
+#: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:22
+msgid "@username"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/ProTelegramSettings.tsx:57

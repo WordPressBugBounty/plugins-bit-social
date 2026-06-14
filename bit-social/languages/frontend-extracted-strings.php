@@ -988,13 +988,13 @@ return [
 
     'Trim Message' => __('Trim Message', 'bit-social'),
 
+    'Preview' => __('Preview', 'bit-social'),
+
     'Discord Template Settings' => __('Discord Template Settings', 'bit-social'),
 
     'Facebook Template Settings' => __('Facebook Template Settings', 'bit-social'),
 
     'Select an AI prompt for image generation.' => __('Select an AI prompt for image generation.', 'bit-social'),
-
-    'Preview' => __('Preview', 'bit-social'),
 
     'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'bit-social'),
 
@@ -1021,19 +1021,61 @@ return [
 
     'Post link' => __('Post link', 'bit-social'),
 
-    'Page name' => __('Page name', 'bit-social'),
+    'Reply' => __('Reply', 'bit-social'),
 
-    'Just Now' => __('Just Now', 'bit-social'),
+    'Repost' => __('Repost', 'bit-social'),
 
     'Like' => __('Like', 'bit-social'),
+
+    '@handle.bsky.social' => __('@handle.bsky.social', 'bit-social'),
+
+    'React' => __('React', 'bit-social'),
+
+    'Forward' => __('Forward', 'bit-social'),
+
+    'Profile name' => __('Profile name', 'bit-social'),
+
+    'Just Now' => __('Just Now', 'bit-social'),
 
     'Comment' => __('Comment', 'bit-social'),
 
     'Share' => __('Share', 'bit-social'),
 
+    'Call' => __('Call', 'bit-social'),
+
+    'Website' => __('Website', 'bit-social'),
+
+    'Directions' => __('Directions', 'bit-social'),
+
+    'hide' => __('hide', 'bit-social'),
+
+    '…see more' => __('…see more', 'bit-social'),
+
+    'Start writing and your post will appear here..
+You can add images, links, #hashtags and emojis 😎' => __('Start writing and your post will appear here..
+You can add images, links, #hashtags and emojis 😎', 'bit-social'),
+
+    'Send' => __('Send', 'bit-social'),
+
+    'Your headline' => __('Your headline', 'bit-social'),
+
+    'Now' => __('Now', 'bit-social'),
+
+    'John Doe and 169 others' => __('John Doe and 169 others', 'bit-social'),
+
+    '4 comments • 1 repost' => __('4 comments • 1 repost', 'bit-social'),
+
     'Preview (Coming Soon)' => __('Preview (Coming Soon)', 'bit-social'),
 
     'Coming Soon' => __('Coming Soon', 'bit-social'),
+
+    'Views' => __('Views', 'bit-social'),
+
+    'Reblog' => __('Reblog', 'bit-social'),
+
+    'Bookmark' => __('Bookmark', 'bit-social'),
+
+    '@username' => __('@username', 'bit-social'),
 
     'Telegram Template Settings' => __('Telegram Template Settings', 'bit-social'),
 

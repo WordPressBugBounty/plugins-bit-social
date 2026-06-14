@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bit Social 1.14.0\n"
+"Project-Id-Version: Bit Social 1.15.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bit-social\n"
 "Last-Translator: Bit Apps <developer@bitapps.pro>\n"
 "Language-Team: Bit Apps <support@bitapps.pro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-10T08:48:28+00:00\n"
+"POT-Creation-Date: 2026-06-14T10:14:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -2054,19 +2054,19 @@ msgid "Trim Message"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:991
-msgid "Discord Template Settings"
+msgid "Preview"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:993
-msgid "Facebook Template Settings"
+msgid "Discord Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:995
-msgid "Select an AI prompt for image generation."
+msgid "Facebook Template Settings"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:997
-msgid "Preview"
+msgid "Select an AI prompt for image generation."
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:999
@@ -2120,11 +2120,11 @@ msgid "Post link"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1024
-msgid "Page name"
+msgid "Reply"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1026
-msgid "Just Now"
+msgid "Repost"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1028
@@ -2132,108 +2132,190 @@ msgid "Like"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1030
-msgid "Comment"
+msgid "@handle.bsky.social"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1032
-msgid "Share"
+msgid "React"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1034
-msgid "Preview (Coming Soon)"
+msgid "Forward"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1036
-msgid "Coming Soon"
+msgid "Profile name"
 msgstr ""
 
 #: languages/frontend-extracted-strings.php:1038
+msgid "Just Now"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1040
+msgid "Comment"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1042
+msgid "Share"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1044
+msgid "Call"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1046
+msgid "Website"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1048
+msgid "Directions"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1050
+msgid "hide"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1052
+msgid "…see more"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1055
+msgid ""
+"Start writing and your post will appear here..\n"
+"You can add images, links, #hashtags and emojis 😎"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1058
+msgid "Send"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1060
+msgid "Your headline"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1062
+msgid "Now"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1064
+msgid "John Doe and 169 others"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1066
+msgid "4 comments • 1 repost"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1068
+msgid "Preview (Coming Soon)"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1070
+msgid "Coming Soon"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1072
+msgid "Views"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1074
+msgid "Reblog"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1076
+msgid "Bookmark"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1078
+msgid "@username"
+msgstr ""
+
+#: languages/frontend-extracted-strings.php:1080
 msgid "Telegram Template Settings"
 msgstr ""
 
 #. translators: 1: placeholder value
-#: languages/frontend-extracted-strings.php:1041
+#: languages/frontend-extracted-strings.php:1083
 #, php-format
 msgid "Telegram restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1043
+#: languages/frontend-extracted-strings.php:1085
 msgid "threads Template Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1045
+#: languages/frontend-extracted-strings.php:1087
 msgid "Your reply"
 msgstr ""
 
 #. translators: 1: placeholder value
-#: languages/frontend-extracted-strings.php:1048
+#: languages/frontend-extracted-strings.php:1090
 #, php-format
 msgid "Threads restricts the length of a post to %1$d characters. If you enable this option, the first %1$d characters of your personalized message will be shared; if not, the limit prevents the post from being shared"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1050
+#: languages/frontend-extracted-strings.php:1092
 msgid "Only Message"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1052
+#: languages/frontend-extracted-strings.php:1094
 msgid "PUBLIC TO EVERYONE"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1054
+#: languages/frontend-extracted-strings.php:1096
 msgid "MUTUAL FOLLOW FRIENDS"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1056
+#: languages/frontend-extracted-strings.php:1098
 msgid "FOLLOWER OF CREATOR"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1058
+#: languages/frontend-extracted-strings.php:1100
 msgid "SELF ONLY"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1060
+#: languages/frontend-extracted-strings.php:1102
 msgid "Tiktok Template Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1062
+#: languages/frontend-extracted-strings.php:1104
 msgid "Who can see your post"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1064
+#: languages/frontend-extracted-strings.php:1106
 msgid "Turn this on to let viewers share feedback or engage with your post through comments."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1066
+#: languages/frontend-extracted-strings.php:1108
 msgid "Allow comments"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1068
+#: languages/frontend-extracted-strings.php:1110
 msgid "Enable this to let others create side-by-side reaction or collaboration videos with your post"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1070
+#: languages/frontend-extracted-strings.php:1112
 msgid "Allow others to clip up to 5 seconds of your post for their own content"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1072
+#: languages/frontend-extracted-strings.php:1114
 msgid "Tumblr Template Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1074
+#: languages/frontend-extracted-strings.php:1116
 msgid "X (Twitter) Template Settings"
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1076
+#: languages/frontend-extracted-strings.php:1118
 msgid "Threads Template Settings"
 msgstr ""
 
 #. translators: %s: placeholder value
-#: languages/frontend-extracted-strings.php:1079
+#: languages/frontend-extracted-strings.php:1121
 #, php-format
 msgid "You can setup %s post settings below."
 msgstr ""
 
-#: languages/frontend-extracted-strings.php:1081
+#: languages/frontend-extracted-strings.php:1123
 msgid "Doc here."
 msgstr ""
 
