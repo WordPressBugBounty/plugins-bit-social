@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.15.1
+Stable tag: 1.15.2
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,14 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.15.2 (June 24, 2026) =
+* Features:
+   * X (Twitter): Added OAuth 2.0 support for media uploads — images and videos can now be attached to posts published via the OAuth 2.0 API.
+* Fixed:
+   * X (Twitter): Fixed OAuth 2.0 authorization URL to use the x.com host instead of the old twitter.com endpoint.
+   * X (Twitter): Relabeled API version options to OAuth 1.0 and OAuth 2.0 for clarity.
+   * X (Twitter): Hardened media upload retry logic in the OAuth 2.0 path to handle edge-case upload failures.
 
 = v1.15.1 (June 21, 2026) =
 * Fixed:
