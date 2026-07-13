@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Jun 24 2026 08:25:32 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Mon Jul 13 2026 08:34:56 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -403,7 +403,7 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/Accounts.tsx:78
 #: frontend/src/pages/AutoPost/ui/AccountTree.tsx:131
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:177
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:178
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
 #: frontend/src/pages/root/DefaultDashboard.tsx:28
 #: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
@@ -528,8 +528,8 @@ msgid "Are you sure to delete this app?"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:61
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:137
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:208
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:158
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:229
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:236
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:333
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:253
@@ -582,7 +582,7 @@ msgid "App Secret or Client Secret"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnection.tsx:223
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:67
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:69
 msgid "Add"
 msgstr ""
 
@@ -596,7 +596,7 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:44
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:127
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:106
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:127
 msgid "Type"
 msgstr ""
 
@@ -710,12 +710,12 @@ msgstr ""
 msgid "You can find more about it here"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:61
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:71
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:63
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:73
 msgid "Add to group"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:109
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:124
 msgid "No accounts found!"
 msgstr ""
 
@@ -741,21 +741,41 @@ msgid "New group"
 msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:72
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:60
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:95
 msgid "Yes, Remove"
 msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:75
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:63
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:98
 msgid "Remove account from this group?"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:133
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:60
+msgid "Click to hide accounts"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:60
+msgid "Click to show accounts"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:84
+msgid "accounts"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:84
+msgid "account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:88
+msgid "No accounts yet"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:170
 msgid "No Groups found!"
 msgstr ""
 
 #: frontend/src/pages/AiHub/AiHub.free.tsx:22
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:227
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:248
 msgid "How to use AI Prompts?"
 msgstr ""
 
@@ -788,12 +808,12 @@ msgid "Failed to create prompt"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:86
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:103
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:124
 msgid "Text"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:87
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:103
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:124
 msgid "Image"
 msgstr ""
 
@@ -806,7 +826,7 @@ msgid "Create New Prompt"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:115
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:95
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:116
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:164
 #: frontend/src/pages/Schedules/internals/Settings.tsx:93
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:112
@@ -832,7 +852,7 @@ msgid "Select template type"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:140
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:112
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:133
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:156
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:48
 #: frontend/src/pages/Logs/Logs.tsx:41
@@ -852,7 +872,7 @@ msgid "Please enter a prompt"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:157
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:127
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:148
 msgid "Prompt"
 msgstr ""
 
@@ -860,146 +880,172 @@ msgstr ""
 msgid "Fallback Content"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:89
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:110
 msgid "ID"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:117
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:144
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:138
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:128
 msgid "Model"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:135
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:156
 msgid "Are you sure you want to delete this prompt config?"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:140
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:161
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:103
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:239
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:256
 msgid "Delete?"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:148
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:169
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:260
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:278
 msgid "Action"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:196
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:217
 msgid "Search prompts"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:204
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:225
 msgid "Selected"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:204
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:225
 msgid "items"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:206
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:227
 msgid "Are you sure to delete these prompt configs?"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:211
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:232
 msgid "Delete Prompt Configs"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:235
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:256
 #: frontend/src/pages/Logs/Logs.tsx:273
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:363
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:368
 msgid "Refresh"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:239
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:260
 msgid "Create Prompt"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:267
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:288
 msgid "No prompt configs found!"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:146
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:81
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:185
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:217
+msgid "Auto"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:130
 msgid "Please select a model"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:151
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:135
 msgid "Select your model"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:157
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:141
 msgid "Temperature"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:174
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:158
 msgid ""
 "Temperature controls how creative or predictable the AI’s response is: "
 "lower = predictable, higher = creative. For GPT-5 models, temperature is "
 "set to 1.0 by default."
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:182
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:166
 msgid "Image Size"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:183
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:167
 msgid "Please select an image size"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:188
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:172
 msgid "Select image size"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:196
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:179
 msgid "Quality"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:197
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:180
 msgid "Please select quality"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:202
-msgid "Standard"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:186
+msgid "Low"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:203
-msgid "HD"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:187
+msgid "Medium"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:205
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:188
+msgid "High"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:190
 msgid "Select quality"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:209
-msgid "HD quality generates more detailed images but may take longer to process."
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:194
+msgid ""
+"Higher quality generates more detailed images but may take longer to "
+"process."
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:217
-msgid "Style"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:199
+msgid "Output Format"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:207
+msgid "Select output format"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:213
+msgid "Background"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:218
-msgid "Please select style"
+msgid "Opaque"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:223
-msgid "Vivid"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:219
+msgid "Transparent"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:224
-msgid "Natural"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:221
+msgid "Select background"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:226
-msgid "Select style"
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:225
+msgid "Transparent background requires PNG or WebP format."
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:230
-msgid ""
-"Vivid style produces brighter colors, while Natural style offers more "
-"realistic tones."
+msgid "Keep image in media library"
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:237
+msgid "Image will be auto-deleted 5 minutes after posting."
+msgstr ""
+
+#: frontend/src/pages/AiHub/ui/OpenAiForm.tsx:238
+msgid "Image will be kept in the media library after posting."
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/PlatformCard.tsx:50
@@ -1042,79 +1088,79 @@ msgstr ""
 msgid "Select All"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:160
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:161
 msgid "Immediately"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:165
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:166
 msgid "Delay"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:198
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:199
 msgid "Auto Post Settings"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:200
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:201
 msgid "All auto post related settings here."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:208
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:209
 #: frontend/src/pages/Settings/FreeCronSettings.free.tsx:32
 #: frontend/src/pages/Settings/ProCronSettings.pro.tsx:49
 msgid "Doc here"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:216
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:217
 msgid ""
 "When you publish a new wordpress post, the plugin shares the post on all "
 "active social accounts automatically."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:219
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:220
 msgid "Share posts automatically"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:232
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:324
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:234
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:328
 msgid "You have to create and select account first to enable this option!"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:240
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:243
 msgid ""
 "Automatically share specific post types, like blogs or products, to your "
 "social accounts when published."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:243
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:246
 msgid "Share posts type"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:253
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:256
 msgid "Post Type: Post"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:261
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:264
 msgid "Share posts default type <b>Post</b>"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:269
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:272
 msgid ""
 "Optimize your sharing strategy with flexible timing options: use the "
 "dropdown menu to select when your posts will be shared after publishing"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:272
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:275
 msgid "Share post delay"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:309
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:312
 msgid ""
 "If you don't want to keep the shared post logs, you need to disable the "
 "option. Disabling the option prevents you view your insights and you might "
 "encounter duplicate posts when you use the schedule module."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:312
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:315
 msgid "Enable auto post log"
 msgstr ""
 
@@ -1222,17 +1268,22 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:40
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:58
-msgid "Features"
+msgid "Improvements"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:29
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:47
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:72
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:84
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:17
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:37
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:50
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:68
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:93
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:105
 msgid "Fixed"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:31
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:61
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:79
+msgid "Features"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26

@@ -204,7 +204,11 @@ class AutoPostController
                     'keepLogs'        => $autoPostSettings['keepLogs']
                 ];
 
-                $publishPostData[] = $platform->publishPost($data);
+                try {
+                    $publishPostData[] = $platform->publishPost($data);
+                } catch (\Throwable $e) {
+                    $publishPostData[] = ['status' => 'error', 'message' => $e->getMessage()];
+                }
             }
         }
 

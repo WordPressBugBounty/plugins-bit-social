@@ -320,6 +320,16 @@ return [
 
     'Remove account from this group?' => __('Remove account from this group?', 'bit-social'),
 
+    'Click to hide accounts' => __('Click to hide accounts', 'bit-social'),
+
+    'Click to show accounts' => __('Click to show accounts', 'bit-social'),
+
+    'accounts' => __('accounts', 'bit-social'),
+
+    'account' => __('account', 'bit-social'),
+
+    'No accounts yet' => __('No accounts yet', 'bit-social'),
+
     'No Groups found!' => __('No Groups found!', 'bit-social'),
 
     'How to use AI Prompts?' => __('How to use AI Prompts?', 'bit-social'),
@@ -394,6 +404,8 @@ return [
 
     'No prompt configs found!' => __('No prompt configs found!', 'bit-social'),
 
+    'Auto' => __('Auto', 'bit-social'),
+
     'Please select a model' => __('Please select a model', 'bit-social'),
 
     'Select your model' => __('Select your model', 'bit-social'),
@@ -412,25 +424,35 @@ return [
 
     'Please select quality' => __('Please select quality', 'bit-social'),
 
-    'Standard' => __('Standard', 'bit-social'),
+    'Low' => __('Low', 'bit-social'),
 
-    'HD' => __('HD', 'bit-social'),
+    'Medium' => __('Medium', 'bit-social'),
+
+    'High' => __('High', 'bit-social'),
 
     'Select quality' => __('Select quality', 'bit-social'),
 
-    'HD quality generates more detailed images but may take longer to process.' => __('HD quality generates more detailed images but may take longer to process.', 'bit-social'),
+    'Higher quality generates more detailed images but may take longer to process.' => __('Higher quality generates more detailed images but may take longer to process.', 'bit-social'),
 
-    'Style' => __('Style', 'bit-social'),
+    'Output Format' => __('Output Format', 'bit-social'),
 
-    'Please select style' => __('Please select style', 'bit-social'),
+    'Select output format' => __('Select output format', 'bit-social'),
 
-    'Vivid' => __('Vivid', 'bit-social'),
+    'Background' => __('Background', 'bit-social'),
 
-    'Natural' => __('Natural', 'bit-social'),
+    'Opaque' => __('Opaque', 'bit-social'),
 
-    'Select style' => __('Select style', 'bit-social'),
+    'Transparent' => __('Transparent', 'bit-social'),
 
-    'Vivid style produces brighter colors, while Natural style offers more realistic tones.' => __('Vivid style produces brighter colors, while Natural style offers more realistic tones.', 'bit-social'),
+    'Select background' => __('Select background', 'bit-social'),
+
+    'Transparent background requires PNG or WebP format.' => __('Transparent background requires PNG or WebP format.', 'bit-social'),
+
+    'Keep image in media library' => __('Keep image in media library', 'bit-social'),
+
+    'Image will be auto-deleted 5 minutes after posting.' => __('Image will be auto-deleted 5 minutes after posting.', 'bit-social'),
+
+    'Image will be kept in the media library after posting.' => __('Image will be kept in the media library after posting.', 'bit-social'),
 
     'Connect your key' => __('Connect your key', 'bit-social'),
 
@@ -535,9 +557,11 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Features' => __('Features', 'bit-social'),
+    'Improvements' => __('Improvements', 'bit-social'),
 
     'Fixed' => __('Fixed', 'bit-social'),
+
+    'Features' => __('Features', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 

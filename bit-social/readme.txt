@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.15.2
+Stable tag: 1.15.3
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,16 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.15.3 (July 13, 2026) =
+* Improvements:
+   * OpenAI: Migrated AI image generation from DALL·E to the new gpt-image-1 model.
+   * Account Groups: Improved group management UI and modal interaction.
+* Fixed:
+   * OpenAI: Clean up orphaned media files when a generated image fails to save.
+   * Auto Post: Include group accounts when selecting accounts to auto-post to, so group-based selections publish correctly.
+   * Auto Post: Isolate per-platform publishing failures so one failed network no longer blocks the rest.
+   * TikTok: Show clear error messages when a post is missing a video or the video file can't be read.
 
 = v1.15.2 (June 24, 2026) =
 * Features:
