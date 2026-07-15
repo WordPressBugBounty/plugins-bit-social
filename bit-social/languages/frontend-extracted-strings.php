@@ -557,11 +557,11 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Improvements' => __('Improvements', 'bit-social'),
+    'Features' => __('Features', 'bit-social'),
 
     'Fixed' => __('Fixed', 'bit-social'),
 
-    'Features' => __('Features', 'bit-social'),
+    'Improvements' => __('Improvements', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
