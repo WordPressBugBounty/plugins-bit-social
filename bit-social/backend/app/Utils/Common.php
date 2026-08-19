@@ -3,7 +3,11 @@
 namespace BitApps\Social\Utils;
 
 use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
+use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\HTTP\Controllers\AccountController;
+use BitApps\Social\Model\Schedule;
+use finfo;
 
 trait Common
 {
@@ -20,6 +24,58 @@ trait Common
         'telegram'              => 1024,
         'threads'               => 500,
     ];
+
+    /**
+     * Whether the current user may publish through every account referenced
+     * by a share-now/schedule request ({accountIds: [], groupIds: []}). Pro
+     * hooks the filter to enforce per-account role permissions server-side —
+     * the pickers already hide restricted accounts, but the save endpoints
+     * must not trust the submitted ids. Free allows everything.
+     *
+     * @param mixed $accountsConfig
+     *
+     * @return bool
+     */
+    public function canUseRequestedAccounts($accountsConfig)
+    {
+        return (bool) Hooks::applyFilter(Config::withPrefix('can_use_accounts'), true, $accountsConfig);
+    }
+
+    public function accountsNotPermittedResponse()
+    {
+        return Response::error(__('You are not permitted to publish through one or more of the selected accounts.', 'bit-social'));
+    }
+
+    /**
+     * Whether the current user may manage (delete / pause / enable) every given
+     * schedule or share-now item — i.e. their role may use all the accounts each
+     * item posts through. Mirrors the create/update gate: pro's can_use_accounts
+     * filter enforces per-account permissions, while free and admins pass. An
+     * item that references no restricted account stays manageable by anyone with
+     * plugin access.
+     *
+     * @param mixed $scheduleIds
+     *
+     * @return bool
+     */
+    public function canManageSchedules($scheduleIds)
+    {
+        if (empty($scheduleIds)) {
+            return true;
+        }
+
+        $schedules = Schedule::whereIn('id', (array) $scheduleIds)->get(['id', 'config']);
+
+        foreach ((array) $schedules as $schedule) {
+            $accountsConfig = $schedule->config['accounts'] ?? [];
+
+            if (!$this->canUseRequestedAccounts($accountsConfig)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     /**
      * @param int|array $scheduleIdentifier
@@ -302,6 +358,9 @@ trait Common
      *
      * - Converts WebP to JPEG for platforms that do not accept WebP.
      * - Resizes overly large images to reduce API rejections.
+     *
+     * @param mixed $media
+     * @param mixed $platform
      */
     protected function normalizeMediaForPlatform($media, $platform)
     {
@@ -423,6 +482,46 @@ trait Common
         ];
 
         return $extensionMap[$mimeType] ?? 'jpg';
+    }
+
+    /**
+     * Resolves a media MIME type from its raw bytes.
+     *
+     * fileinfo is optional in PHP and disabled on a number of shared hosts, so
+     * this falls back to the core image reader and finally to the file name.
+     *
+     * @param string $fileContent raw file bytes
+     * @param string $fileName    used for the extension based fallback
+     *
+     * @return string empty when the type cannot be resolved
+     */
+    protected function detectMimeType($fileContent, $fileName = '')
+    {
+        if (!empty($fileContent) && class_exists('finfo')) {
+            $mimeType = (new finfo(FILEINFO_MIME_TYPE))->buffer($fileContent);
+
+            if (!empty($mimeType)) {
+                return $mimeType;
+            }
+        }
+
+        if (!empty($fileContent)) {
+            $imageInfo = @getimagesizefromstring($fileContent);
+
+            if (!empty($imageInfo['mime'])) {
+                return $imageInfo['mime'];
+            }
+        }
+
+        if (!empty($fileName)) {
+            $fileType = wp_check_filetype($fileName);
+
+            if (!empty($fileType['type'])) {
+                return $fileType['type'];
+            }
+        }
+
+        return '';
     }
 
     /**

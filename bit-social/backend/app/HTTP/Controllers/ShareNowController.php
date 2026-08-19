@@ -7,6 +7,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\Model\Schedule;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\Creator;
 
 class ShareNowController
 {
@@ -22,6 +23,8 @@ class ShareNowController
         $missedScheduleIds = [];
 
         foreach ($shareNowData['data'] as $data) {
+            Creator::attachToSchedule($data);
+
             $actionHook = Config::VAR_PREFIX . $data->id . '_cron_exec';
             $hookArgument['schedule_id'] = $data->id;
             $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
@@ -78,6 +81,9 @@ class ShareNowController
                 'settings'  => $request->settings,
                 'accounts'  => $request->accounts,
                 'templates' => $request->templates,
+                // Records who created this share-now item for the Logs page.
+                // update() preserves the original creator below.
+                'created_by' => get_current_user_id(),
             ],
             'schedule_type' => Schedule::scheduleType['DIRECT_SHARE'],
             'status'        => (isset($request->isDraft) && $request->isDraft) ? Schedule::status['DRAFT'] : Schedule::status['ACTIVE'],
@@ -87,6 +93,10 @@ class ShareNowController
 
     public function store(Request $request)
     {
+        if (!$this->canUseRequestedAccounts($request->accounts)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         $settings = $request->settings;
         $request->settings = $settings; // NOTE: This swapping and value assigning process should be improved
 
@@ -117,6 +127,10 @@ class ShareNowController
 
     public function update(Request $request)
     {
+        if (!$this->canUseRequestedAccounts($request->accounts)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         $settings = $request->settings;
         $request->settings = $settings; // NOTE: This swapping and value assigning process should be improved
 
@@ -131,6 +145,11 @@ class ShareNowController
         if (!$schedule) {
             return Response::error('Something went wrong! Schedule could not be found!');
         }
+
+        // Preserve the original creator across edits (shareNowData() set it to
+        // the current user).
+        $existingConfig = \is_string($schedule->config) ? json_decode($schedule->config, true) : (array) $schedule->config;
+        $shareNowData['config']['created_by'] = $existingConfig['created_by'] ?? $shareNowData['config']['created_by'];
 
         $startedAt = $shareNowData['config']['settings']['started_at'] ?? null;
 
@@ -225,6 +244,12 @@ class ShareNowController
 
     public function destroy(Request $request)
     {
+        // Block deleting share-now items that post through accounts the current
+        // user isn't permitted on (per-account gate; admins/free pass).
+        if (!$this->canManageSchedules($request->shareNowIds)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         Schedule::whereIn('id', $request->shareNowIds)->delete();
 
         $this->removeScheduleHook($request->shareNowIds);

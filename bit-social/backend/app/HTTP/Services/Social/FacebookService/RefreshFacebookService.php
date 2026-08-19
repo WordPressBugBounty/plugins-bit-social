@@ -3,14 +3,15 @@
 namespace BitApps\Social\HTTP\Services\Social\FacebookService;
 
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
-use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
 use BitApps\Social\Model\Account;
-use BitApps\Social\Utils\Common;
 use stdClass;
 
 class RefreshFacebookService
 {
-    use Common, LoggerTrait;
+    /**
+     * Long lived user tokens last 60 days; renew them with a margin.
+     */
+    private const USER_TOKEN_LIFETIME = 50 * 24 * 60 * 60;
 
     private $httpHandler;
 
@@ -34,29 +35,25 @@ class RefreshFacebookService
         $this->refreshTokenUrl = $this->baseUrl . $this->version . '/oauth/access_token?';
     }
 
-    public function tokenExpiryCheck($accessToken, $generates_on)
+    public function tokenExpiryCheck($accessToken, $generates_on, $accountType = '')
     {
         if (!$accessToken && !$generates_on) {
             return false;
         }
-        // token expires after 50 days
-        $TIME_50_DAYS = 50 * 24 * 60 * 60;
-        if ((\intval($generates_on) + $TIME_50_DAYS) < time()) {
+
+        if ($this->needsRefresh($generates_on, $accountType)) {
             $refreshToken = $this->refreshToken($accessToken);
-            if (\is_object($refreshToken) && !property_exists($refreshToken, 'access_token')) {
+
+            // refreshToken() returns false when the app credentials or the
+            // exchange call fail, so the object check has to come first.
+            if (!\is_object($refreshToken) || !property_exists($refreshToken, 'access_token')) {
                 return false;
             }
-            $data = new stdClass();
-            $data->access_token = $refreshToken->access_token;
-            $data->generates_on = $refreshToken->generates_on;
 
-            return $data;
+            return $this->tokenData($refreshToken->access_token, $refreshToken->generates_on);
         }
-        $data = new stdClass();
-        $data->access_token = $accessToken;
-        $data->generates_on = $generates_on;
 
-        return $data;
+        return $this->tokenData($accessToken, $generates_on);
     }
 
     public function refreshToken($accessToken)
@@ -88,11 +85,8 @@ class RefreshFacebookService
         if (!property_exists($apiResponse, 'access_token')) {
             return false;
         }
-        $data = new stdClass();
-        $data->access_token = $apiResponse->access_token;
-        $data->generates_on = time();
 
-        return $data;
+        return $this->tokenData($apiResponse->access_token, time());
     }
 
     public function saveRefreshedToken($account_detail)
@@ -102,6 +96,43 @@ class RefreshFacebookService
             return;
         }
         $account = Account::findOne(['account_id' => $accountId]);
-        $account->update(['details' => $account_detail]);
+        $account->update(['details' => $account_detail])->save();
+    }
+
+    /**
+     * The shape callers expect back from a token check or refresh.
+     *
+     * @param string $accessToken
+     * @param int    $generatesOn
+     *
+     * @return stdClass
+     */
+    private function tokenData($accessToken, $generatesOn)
+    {
+        $data = new stdClass();
+        $data->access_token = $accessToken;
+        $data->generates_on = $generatesOn;
+
+        return $data;
+    }
+
+    /**
+     * Page tokens are issued by /me/accounts against a long lived user token
+     * and do not expire. Passing one to the fb_exchange_token grant returns a
+     * user token, which Facebook then rejects when publishing to the page, so
+     * pages are never refreshed.
+     *
+     * @param int    $generates_on
+     * @param string $accountType  'page' or 'group'
+     *
+     * @return bool
+     */
+    private function needsRefresh($generates_on, $accountType)
+    {
+        if ($accountType === 'page') {
+            return false;
+        }
+
+        return (\intval($generates_on) + self::USER_TOKEN_LIFETIME) < time();
     }
 }

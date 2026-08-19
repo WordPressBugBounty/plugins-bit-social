@@ -8,6 +8,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\HTTP\Requests\ScheduleStoreRequest;
 use BitApps\Social\Model\Schedule;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\Creator;
 use BitApps\Social\Utils\SmartTag;
 use DateTime;
 
@@ -23,6 +24,8 @@ class ScheduleController
             ->paginate($page, $limit);
 
         foreach ($schedules['data'] as $schedule) {
+            Creator::attachToSchedule($schedule);
+
             $actionHook = Config::VAR_PREFIX . $schedule->id . '_cron_exec';
             $hookArgument['schedule_id'] = $schedule->id;
             $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
@@ -60,6 +63,10 @@ class ScheduleController
             ->desc()
             ->paginate($validatedData->page, $validatedData->limit);
 
+        foreach ($schedules['data'] as $schedule) {
+            Creator::attachToSchedule($schedule);
+        }
+
         return Response::success($schedules);
     }
 
@@ -74,6 +81,10 @@ class ScheduleController
 
     public function store(ScheduleStoreRequest $request)
     {
+        if (!$this->canUseRequestedAccounts($request->accounts)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         $scheduleData = [
             'name'   => $request->settings['name'],
             'config' => [
@@ -81,6 +92,9 @@ class ScheduleController
                 'post_filters' => $request->post_filters,
                 'accounts'     => $request->accounts,
                 'templates'    => $request->templates,
+                // Records who created this schedule so the Logs page can show
+                // the responsible user/role. Preserved on update() below.
+                'created_by' => get_current_user_id(),
             ],
             'schedule_type' => Schedule::scheduleType['SCHEDULE_SHARE'],
             'status'        => Schedule::status['ACTIVE'],
@@ -103,6 +117,12 @@ class ScheduleController
 
     public function update(ScheduleStoreRequest $request, Schedule $schedule)
     {
+        if (!$this->canUseRequestedAccounts($request->accounts)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
+        $existingConfig = \is_string($schedule->config) ? json_decode($schedule->config, true) : (array) $schedule->config;
+
         $scheduleData = [
             'name'   => $request->settings['name'],
             'config' => [
@@ -110,6 +130,9 @@ class ScheduleController
                 'post_filters' => $request->post_filters,
                 'accounts'     => $request->accounts,
                 'templates'    => $request->templates,
+                // Keep the original creator; only fall back to the current user
+                // for schedules created before attribution existed.
+                'created_by' => $existingConfig['created_by'] ?? get_current_user_id(),
             ],
             'started_at' => $request->settings['started_at'],
         ];
@@ -156,6 +179,12 @@ class ScheduleController
 
     public function updateStatus(Request $request, Schedule $schedule)
     {
+        // Only manage a schedule whose accounts the current user may use —
+        // same per-account gate as creating it (admins/free pass).
+        if (!$this->canManageSchedules([$schedule->id])) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         $validatedData = (object) $request->validate([
             'status' => ['required', 'integer'],
         ]);
@@ -204,6 +233,12 @@ class ScheduleController
 
     public function destroy(Request $request)
     {
+        // Block deleting schedules that post through accounts the current user
+        // isn't permitted on (per-account gate; admins/free pass).
+        if (!$this->canManageSchedules($request->scheduleIds)) {
+            return $this->accountsNotPermittedResponse();
+        }
+
         Schedule::whereIn('id', $request->scheduleIds)->delete();
 
         $this->removeScheduleHook($request->scheduleIds);

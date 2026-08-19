@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Jul 15 2026 11:54:24 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Wed Aug 19 2026 06:33:20 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -90,11 +90,11 @@ msgstr ""
 msgid "Your license is invalid, try reactivate"
 msgstr ""
 
-#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:17
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:23
 msgid "Manage license"
 msgstr ""
 
-#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:21
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:27
 msgid ""
 "Please update your license to ensure you receive the latest security "
 "updates and bug fixes. \n"
@@ -105,7 +105,7 @@ msgid ""
 "server."
 msgstr ""
 
-#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:26
+#: frontend/_plugin-commons/components/LicenseInvalidAlert.pro.tsx:32
 msgid "Your license is invalid"
 msgstr ""
 
@@ -146,10 +146,16 @@ msgid "is up to date"
 msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:11
+msgid ""
+"WordPress CRM to manage contacts, leads, deals, and invoices and run your "
+"whole sales pipeline right from your WordPress dashboard."
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:22
 msgid "Zapier Alternative in WordPress Unlimited Task."
 msgstr ""
 
-#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:20
+#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:31
 msgid ""
 "An social media management plugin for WordPress, that allows you to share "
 "your post to different social media platform, schedule post, manage social "
@@ -242,6 +248,10 @@ msgstr ""
 
 #: frontend/src/components/BuyPro.tsx:43
 msgid "Bit Social Pro"
+msgstr ""
+
+#: frontend/src/components/CreatedByCell.tsx:33
+msgid "Unknown"
 msgstr ""
 
 #: frontend/src/components/CronWarning.tsx:21
@@ -401,7 +411,13 @@ msgstr ""
 msgid "Media"
 msgstr ""
 
-#: frontend/src/pages/Accounts/Accounts.tsx:78
+#: frontend/src/pages/Accounts/Account.tsx:43
+msgid ""
+"No accounts are available for your role. Ask an administrator to give your "
+"role access to an account."
+msgstr ""
+
+#: frontend/src/pages/Accounts/Accounts.tsx:83
 #: frontend/src/pages/AutoPost/ui/AccountTree.tsx:131
 #: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:178
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
@@ -411,38 +427,59 @@ msgstr ""
 msgid "Accounts"
 msgstr ""
 
-#: frontend/src/pages/Accounts/Accounts.tsx:84
+#: frontend/src/pages/Accounts/Accounts.tsx:89
 #: frontend/src/pages/AutoPost/ui/AccountTree.tsx:69
 #: frontend/src/pages/AutoPost/ui/accountTreeHelper.tsx:144
 #: frontend/src/pages/AutoPost/ui/ProGroupTree.pro.tsx:88
 msgid "Groups"
 msgstr ""
 
-#: frontend/src/pages/Accounts/Accounts.tsx:99
+#: frontend/src/pages/Accounts/Accounts.tsx:103
 msgid "Search accounts"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:162
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:129
+msgid "Reconnecting account…"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:146
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:168
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:200
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:208
+msgid "Account reconnect failed"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:164
+msgid ""
+"The connected account does not match this account. Please sign in with the "
+"same account and try again."
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:205
+msgid "Account reconnected successfully"
+msgstr ""
+
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:301
 msgid "Profile"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:179
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:318
 msgid "Page"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:188
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:327
 msgid "Linkedin Page feature on pro"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:210
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:349
 msgid "Board Not Found"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:210
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:349
 msgid "Account Not Found"
 msgstr ""
 
-#: frontend/src/pages/Accounts/AccountSaveModal.tsx:216
+#: frontend/src/pages/Accounts/AccountSaveModal.tsx:355
 msgid "Account connect failed"
 msgstr ""
 
@@ -450,15 +487,194 @@ msgstr ""
 msgid "Manage"
 msgstr ""
 
-#: frontend/src/pages/Accounts/ConnectAccount.tsx:44
-#: frontend/src/pages/Accounts/ConnectAccount.tsx:48
-#: frontend/src/pages/Accounts/ConnectAccount.tsx:65
-#: frontend/src/pages/Accounts/ConnectAccount.tsx:75
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:57
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:61
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:78
+#: frontend/src/pages/Accounts/ConnectAccount.tsx:88
 msgid "Connect Account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:44
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:56
+msgid "This account also be deleted from related schedule!"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:48
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:60
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:83
+msgid "Yes, delete"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:53
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:62
+msgid "Are you sure?"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:64
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:140
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:133
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:156
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:48
+#: frontend/src/pages/Logs/Logs.tsx:58
+msgid "Platform"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:69
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:44
+#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:127
+#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:127
+msgid "Type"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:74
+msgid "Account ID"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:79
+msgid "Username"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:84
+msgid "Created"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:89
+msgid "Last updated"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:102
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:79
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:105
+msgid "Delete"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:17
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:16
+msgid "Administrator"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:18
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:17
+msgid "Editor"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:19
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:18
+msgid "Author"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:25
+msgid ""
+"Control which roles can publish through this account. Users without "
+"permission are skipped during auto-post and sharing."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:51
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:159
+msgid "Everyone with plugin access"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:55
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:156
+msgid "Any role allowed in Roles & Access can use this account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:84
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:167
+msgid "Only selected roles"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:88
+msgid "Restrict publishing to specific roles"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:105
+msgid "Failed to save permissions"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:111
+msgid "Roles allowed to use this account have been updated."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:112
+msgid "Permissions saved"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:148
+msgid ""
+"Control which roles can publish through this account. Selected roles do not "
+"need plugin access — their authored posts still run on auto-post through "
+"this account."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:164
+msgid "Restrict publishing to specific roles, even ones without plugin access"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:177
+msgid "Search roles…"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:185
+msgid "Admin roles are always included"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:194
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:49
+#: frontend/src/pages/Schedules/internals/CreateScheduleModal.tsx:149
+msgid "Cancel"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:196
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:56
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:146
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:116
+#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:18
+msgid "Save"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.tsx:24
+msgid "Only administrators can manage account permissions."
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:40
+msgid "Info"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:50
+msgid "Permission"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:69
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:221
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:225
+msgid "Active"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:69
+msgid "Disabled"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/ReconnectButton.free.tsx:16
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/ReconnectButton.pro.tsx:17
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:77
+msgid "Reconnect"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AccountEmpty.tsx:21
 msgid "Connect your social account first!"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountReconnectModal/AccountReconnectModal.pro.tsx:62
+msgid "Reconnect Account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountReconnectModal/AccountReconnectModal.pro.tsx:79
+msgid ""
+"Sign in with this same account — the connection is matched by its account "
+"ID."
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AccountSaveFooter.tsx:9
@@ -488,21 +704,21 @@ msgstr ""
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:26
 #: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:27
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:108
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:65
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/TelegramBotConnection.tsx:55
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:73
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/TelegramBotConnection.tsx:63
 msgid "Connect %s"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:104
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:110
 #: frontend/src/pages/Accounts/shared/AccountLoaderSkeleton/AccountWarning.tsx:27
 msgid "Custom App"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:110
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:116
 msgid "Login"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:145
+#: frontend/src/pages/Accounts/internals/AppConnectCard/AppConnectCard.tsx:151
 msgid "Back"
 msgstr ""
 
@@ -510,16 +726,8 @@ msgstr ""
 msgid "Saved"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:56
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:146
-#: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:19
-#: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:19
-#: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:18
-msgid "Save"
-msgstr ""
-
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:58
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:57
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:63
 msgid "No"
 msgstr ""
 
@@ -530,14 +738,14 @@ msgstr ""
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:61
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:158
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:229
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:236
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:333
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:253
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:246
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:345
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:265
 msgid "Yes, Delete"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AppCard.tsx:64
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:63
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:69
 msgid "Delete the app"
 msgstr ""
 
@@ -582,7 +790,7 @@ msgid "App Secret or Client Secret"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnection.tsx:223
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:69
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:105
 msgid "Add"
 msgstr ""
 
@@ -592,12 +800,6 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/CustomConnection.tsx:247
 msgid "No App Found"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:44
-#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:127
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:127
-msgid "Type"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LineTokenConnection.tsx:48
@@ -632,54 +834,51 @@ msgstr ""
 msgid "Token"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:38
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:46
 msgid "Username or Email"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:45
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/LoginConnection.tsx:53
 msgid "Password"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/TelegramBotConnection.tsx:39
+#: frontend/src/pages/Accounts/internals/AppConnectCard/ui/TelegramBotConnection.tsx:47
 msgid "Bot Token"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:37
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:74
+msgid "Details & permissions"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:74
+#: frontend/src/pages/Logs/Logs.tsx:159
+msgid "Details"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:112
 msgid "It will no longer be able to automatic posting, scheduling, and sharing"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:38
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:113
 msgid "Enable Automatic Posting, Scheduling, and Sharing"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:41
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:116
 msgid "Disable"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:41
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:116
 #: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:48
 #: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:61
 msgid "Enable"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:44
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:119
 msgid "disable"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:44
+#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:119
 msgid "enable"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:50
-msgid "This account also be deleted from related schedule!"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:52
-msgid "Yes, delete"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:55
-msgid "Are you sure?"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/Platforms/ui/ProfileList.tsx:36
@@ -710,68 +909,94 @@ msgstr ""
 msgid "You can find more about it here"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:63
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:73
-msgid "Add to group"
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:86
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:89
+msgid "Add accounts"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:124
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:109
+msgid "Add accounts to group"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/AddGroupModal.tsx:160
 msgid "No accounts found!"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:56
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:43
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:57
 msgid "Create Group"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:62
-#: frontend/src/pages/Schedules/internals/CreateScheduleModal.tsx:149
-msgid "Cancel"
-msgstr ""
-
-#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:65
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:52
 msgid "Create"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:73
-msgid "Name"
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:67
+msgid "Group name"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:88
-msgid "New group"
+#: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:85
+msgid "e.g. Marketing channels"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:72
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:95
+#: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:83
 msgid "Yes, Remove"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:75
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:98
+#: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:86
 msgid "Remove account from this group?"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:60
-msgid "Click to hide accounts"
+#: frontend/src/pages/Accounts/shared/Group/GroupAccountCard.tsx:98
+msgid "Remove from group"
 msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:60
-msgid "Click to show accounts"
+msgid "This group has no accounts yet."
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:84
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:68
+msgid "Rename group"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:81
+msgid "The accounts stay connected — only the group is removed."
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:86
+msgid "Delete this group?"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:97
+msgid "Delete group"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:141
 msgid "accounts"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:84
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:141
 msgid "account"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:88
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:146
 msgid "No accounts yet"
 msgstr ""
 
-#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:170
-msgid "No Groups found!"
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:169
+msgid "Group name cannot be empty"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:176
+msgid "A group named \"%s\" already exists"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:208
+msgid "No groups yet"
+msgstr ""
+
+#: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:210
+msgid "Create a group to publish to several accounts at once."
 msgstr ""
 
 #: frontend/src/pages/AiHub/AiHub.free.tsx:22
@@ -827,11 +1052,11 @@ msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:115
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:116
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:164
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:174
 #: frontend/src/pages/Schedules/internals/Settings.tsx:93
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/ShareBox.tsx:340
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:169
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:181
 msgid "Title"
 msgstr ""
 
@@ -849,14 +1074,6 @@ msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:134
 msgid "Select template type"
-msgstr ""
-
-#: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:140
-#: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:133
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:156
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:48
-#: frontend/src/pages/Logs/Logs.tsx:41
-msgid "Platform"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigModal.tsx:142
@@ -895,14 +1112,14 @@ msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:161
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:103
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:239
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:256
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:249
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:268
 msgid "Delete?"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:169
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:260
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:278
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:270
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:290
 msgid "Action"
 msgstr ""
 
@@ -927,9 +1144,9 @@ msgid "Delete Prompt Configs"
 msgstr ""
 
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:256
-#: frontend/src/pages/Logs/Logs.tsx:273
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:363
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:368
+#: frontend/src/pages/Logs/Logs.tsx:305
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:375
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:380
 msgid "Refresh"
 msgstr ""
 
@@ -1048,19 +1265,19 @@ msgstr ""
 msgid "Image will be kept in the media library after posting."
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:50
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:51
 msgid "Connect your key"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:58
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:64
 msgid "Are you sure to delete connection?"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:60
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:66
 msgid "Yes, Disconnect"
 msgstr ""
 
-#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:66
+#: frontend/src/pages/AiHub/ui/PlatformCard.tsx:72
 msgid "Disconnect"
 msgstr ""
 
@@ -1268,24 +1485,27 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:48
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:78
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:96
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:45
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:83
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:113
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:131
 msgid "Features"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:34
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:54
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:67
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:85
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:110
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:122
-msgid "Fixed"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:21
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:62
+msgid "Improvements"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:27
-msgid "Improvements"
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:28
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:51
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:69
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:89
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:102
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:120
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:145
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:157
+msgid "Fixed"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -1347,30 +1567,30 @@ msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:129
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:33
-#: frontend/src/pages/Logs/Logs.tsx:35
+#: frontend/src/pages/Logs/Logs.tsx:46
 msgid "Date"
 msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:136
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:38
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:225
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:242
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:235
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:254
 msgid "Status"
 msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:142
-#: frontend/src/pages/Logs/Logs.tsx:64
+#: frontend/src/pages/Logs/Logs.tsx:93
 msgid "Success"
 msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:143
-#: frontend/src/pages/Logs/Logs.tsx:66
+#: frontend/src/pages/Logs/Logs.tsx:95
 msgid "Error"
 msgstr ""
 
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:148
 #: frontend/src/pages/Logs/internals/FilterLogs/FilterTags.tsx:43
-#: frontend/src/pages/Logs/Logs.tsx:52
+#: frontend/src/pages/Logs/Logs.tsx:81
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:176
 msgid "Schedule"
 msgstr ""
@@ -1383,57 +1603,59 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:46
+#: frontend/src/pages/Logs/Logs.tsx:40
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:168
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:175
+msgid "Created by"
+msgstr ""
+
+#: frontend/src/pages/Logs/Logs.tsx:75
 msgid "Account"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:74
+#: frontend/src/pages/Logs/Logs.tsx:103
 msgid "Response"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:89
+#: frontend/src/pages/Logs/Logs.tsx:118
 msgid "Visit"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:98
-#: frontend/src/pages/Logs/Logs.tsx:100
+#: frontend/src/pages/Logs/Logs.tsx:127
+#: frontend/src/pages/Logs/Logs.tsx:129
 msgid "Retry"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:98
+#: frontend/src/pages/Logs/Logs.tsx:127
 msgid "Related schedule was deleted"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:105
+#: frontend/src/pages/Logs/Logs.tsx:134
 msgid "Actions"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:130
+#: frontend/src/pages/Logs/Logs.tsx:159
 msgid "Hide"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:130
-msgid "Details"
-msgstr ""
-
-#: frontend/src/pages/Logs/Logs.tsx:242
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:331
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:336
+#: frontend/src/pages/Logs/Logs.tsx:274
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:343
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:348
 msgid "Are you sure to delete this logs?"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:243
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:337
+#: frontend/src/pages/Logs/Logs.tsx:275
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:349
 msgid "Confirm"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:246
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:336
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:340
+#: frontend/src/pages/Logs/Logs.tsx:278
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:348
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:352
 msgid "Delete Logs"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:264
+#: frontend/src/pages/Logs/Logs.tsx:296
 #: frontend/src/pages/Schedules/internals/Settings.tsx:148
 #: frontend/src/pages/ShareNow/ShareNowScheduleModal.tsx:247
 msgid "Visit our documentation"
@@ -1781,77 +2003,68 @@ msgid "Next post"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:96
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:272
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:284
 msgid "Edit"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:99
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:234
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:251
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:244
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:263
 msgid "Are you sure you want to delete this schedule?"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:105
-msgid "Delete"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:170
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:175
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:180
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:187
 msgid "Created At"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:175
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:180
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:185
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:192
 msgid "Start Scheduled Post"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:186
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:192
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:196
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:204
 msgid "Interval"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:191
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:197
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:201
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:209
 msgid "Next Post"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:198
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:208
 msgid "In Progress"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:202
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:229
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:212
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:241
 msgid "Completed"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:211
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:213
-msgid "Active"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:212
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:218
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:222
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:230
 msgid "Paused"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:253
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:263
 msgid "Re-schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:321
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:333
 msgid "Search schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:354
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:366
 msgid "How to create schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:366
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:402
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:378
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:414
 msgid "Create Schedule"
 msgstr ""
 
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:399
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:411
 msgid "No schedule found!"
 msgstr ""
 
@@ -2108,11 +2321,39 @@ msgstr ""
 msgid "Month(s)"
 msgstr ""
 
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:19
+msgid "Contributor"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:24
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:106
+#: frontend/src/pages/Settings/settingsTabs.free.tsx:8
+#: frontend/src/pages/Settings/settingsTabs.pro.tsx:11
+msgid "Roles & Access"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:26
+msgid ""
+"Choose which WordPress roles can access Bit Social and trigger auto-post "
+"when publishing content. Administrators always have access."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:34
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:174
+msgid "Search and select the roles that can use Bit Social."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:36
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:176
+msgid "Allowed roles"
+msgstr ""
+
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:71
 msgid "Please check the form and try again."
 msgstr ""
 
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:72
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:45
 msgid "Failed to save settings"
 msgstr ""
 
@@ -2121,6 +2362,7 @@ msgid "Your notification settings have been updated."
 msgstr ""
 
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:79
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:52
 msgid "Settings saved"
 msgstr ""
 
@@ -2132,19 +2374,19 @@ msgstr ""
 msgid "Could not send digest report"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:105
-msgid "Enable the digest report and save before sending."
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:106
+msgid "Save your changes before sending."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:107
-msgid "Save your changes before sending."
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:108
+msgid "Enable the digest report and save before sending."
 msgstr ""
 
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:124
 msgid "Enable email notifications first."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:128
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:129
 msgid "Turn on the digest report to set how often it is sent."
 msgstr ""
 
@@ -2164,7 +2406,7 @@ msgstr ""
 msgid "Install Bit SMTP"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:168
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:167
 msgid ""
 "No SMTP service was detected. By default WordPress emails are often blocked "
 "or marked as spam, so failure alerts and digest reports may not be "
@@ -2172,7 +2414,7 @@ msgid ""
 "emails reliably."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:171
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:170
 msgid "SMTP is not set up"
 msgstr ""
 
@@ -2180,11 +2422,77 @@ msgstr ""
 msgid "Check now"
 msgstr ""
 
-#: frontend/src/pages/Settings/SettingsWrapper.tsx:10
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:12
+msgid "Open Bit Social and view the accounts they are permitted on"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:13
+msgid "Publish, schedule and share through those accounts"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:14
+msgid "Auto-post their own published content"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:15
+msgid "Create and manage account groups"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:16
+msgid "Create and use AI prompts"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:20
+msgid "Connect, reconnect or delete accounts"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:21
+msgid "Enable or disable an account"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:22
+msgid "Choose which roles may use each account"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:23
+msgid "Connect or disconnect AI platforms"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:51
+msgid "Roles allowed to access Bit Social have been updated."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:69
+msgid "Deselect all"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:69
+msgid "Select all"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:109
+msgid ""
+"Choose which WordPress roles can access Bit Social. Administrators always "
+"have full access."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:131
+msgid "Allowed roles can"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:155
+msgid "Only administrators can"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:185
+msgid "Search and select roles…"
+msgstr ""
+
+#: frontend/src/pages/Settings/SettingsWrapper.tsx:12
 msgid "Cron"
 msgstr ""
 
-#: frontend/src/pages/Settings/SettingsWrapper.tsx:11
+#: frontend/src/pages/Settings/SettingsWrapper.tsx:13
 msgid "Notifications"
 msgstr ""
 
@@ -2346,28 +2654,28 @@ msgstr ""
 msgid "Edit Share Now"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:232
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:244
 msgid "Draft"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:235
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:247
 msgid "Missed"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:265
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:277
 msgid "Re-post"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:358
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:370
 msgid "How to share a post instantly"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:372
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:402
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:384
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:414
 msgid "Share Post"
 msgstr ""
 
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:400
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:412
 msgid "No Share Post found!"
 msgstr ""
 

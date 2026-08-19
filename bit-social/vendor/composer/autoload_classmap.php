@@ -129,6 +129,7 @@ return array(
     'BitApps\\Social\\Providers\\InstallerProvider' => $baseDir . '/backend/app/Providers/InstallerProvider.php',
     'BitApps\\Social\\Providers\\ScheduleActionHook' => $baseDir . '/backend/app/Providers/ScheduleActionHook.php',
     'BitApps\\Social\\Utils\\Common' => $baseDir . '/backend/app/Utils/Common.php',
+    'BitApps\\Social\\Utils\\Creator' => $baseDir . '/backend/app/Utils/Creator.php',
     'BitApps\\Social\\Utils\\Hash' => $baseDir . '/backend/app/Utils/Hash.php',
     'BitApps\\Social\\Utils\\PostInfo' => $baseDir . '/backend/app/Utils/PostInfo.php',
     'BitApps\\Social\\Utils\\SmartTag' => $baseDir . '/backend/app/Utils/SmartTag.php',

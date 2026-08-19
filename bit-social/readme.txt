@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.16.0
+Stable tag: 1.17.0
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,17 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.17.0 (August 18, 2026) =
+* Features:
+   * Accounts: New account details modal showing account info along with when the account was connected and last updated.
+   * Logs: The Logs table now shows the platform logo and the account avatar for each entry.
+   * Logs, Schedules & Share Now: New “Created by” column showing who created each item, along with their role.
+* Improvements:
+   * Navigation: Moving between pages and tabs is now instant instead of rebuilding the page and refetching everything.
+* Fixed:
+   * Facebook: Pages stopped publishing roughly 50 days after being connected because page tokens were needlessly run through the token exchange; refreshed tokens are now also saved correctly.
+   * Accounts: The delete confirmation now shows which account is being removed and no longer appears behind the modal.
 
 = v1.16.0 (July 15, 2026) =
 * Features:

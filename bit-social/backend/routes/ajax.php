@@ -81,7 +81,3 @@ Route::noAuth()->group(
         Route::post('settings/update', [SettingsController::class, 'updateSettings']);
     }
 )->middleware('nonce:admin');
-
-Route::noAuth()->group(function (): void {
-    Route::post('auto-post-background-process', [AutoPostController::class, 'executeSocialPost']);
-})->middleware('nonce');

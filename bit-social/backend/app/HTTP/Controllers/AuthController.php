@@ -39,6 +39,13 @@ class AuthController
 
     public function aiAuthorize(Request $request)
     {
+        // Connecting an AI platform (storing its API key) is an admin task,
+        // matching account provisioning: a non-admin role granted plugin access
+        // uses the AI prompts but does not manage the platform connection.
+        if (!current_user_can('manage_options')) {
+            return Response::error(['message' => __('You are not permitted to connect AI platforms.', 'bit-social')])->httpStatus(403);
+        }
+
         $body = $request->all();
 
         $platform = $body['platform'];

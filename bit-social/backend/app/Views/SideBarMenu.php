@@ -29,6 +29,12 @@ class SideBarMenu
      */
     public function createMenu()
     {
+        // A menu entry takes a single capability, so resolve it for the user
+        // being rendered instead of OR-ing (see Config::userHasAccess): an
+        // administrator is matched on manage_options so a role capability that
+        // never got persisted can't hide the menu from them.
+        $cap = current_user_can('manage_options') ? 'manage_options' : Config::accessCapability();
+
         $icon = '<svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9403 1.3999C15.1093 1.3999 12.8145 3.66555 12.8145 6.46034C12.8145 9.25515 15.1093 11.5208 17.9403 11.5208C20.7713 11.5208 23.066 9.25515 23.066 6.46034C23.066 3.66555 20.7713 1.3999 17.9403 1.3999ZM7.91819 11.2447C13.2538 11.2447 17.5792 15.5149 17.5792 20.7825V28.5999H12.7738V20.7825C12.7738 20.2214 12.6762 19.6831 12.4969 19.1827L5.43836 26.1513L2.04042 22.7965L8.84736 16.0765C8.54661 16.019 8.23595 15.9888 7.91819 15.9888H0V11.2447H7.91819ZM28.0819 11.2447C22.7463 11.2447 18.4208 15.5149 18.4208 20.7825V28.5999H23.2262V20.7825C23.2262 20.3432 23.2861 19.9175 23.3983 19.5133L30.7819 26.8028L34.18 23.4481L26.7963 16.1586C27.2058 16.0479 27.637 15.9888 28.0819 15.9888H36V11.2447H28.0819Z" fill="#808285"/>
           </svg>';
@@ -38,7 +44,7 @@ class SideBarMenu
                 'type'       => 'menu',
                 'title'      => __("Bit Social - Your social of automation's", 'bit-social'),
                 'name'       => __('Bit Social', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG,
                 'callback'   => [new Body(), 'render'],
                 'icon'       => 'data:image/svg+xml;base64,' . base64_encode($icon),
@@ -48,77 +54,77 @@ class SideBarMenu
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Home', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/',
             ],
             'Accounts' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Accounts', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/accounts',
             ],
             'AI Prompts' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('AI Prompts', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/ai-prompts',
             ],
             'Auto Post' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('WP Auto Post', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/auto-post',
             ],
             'Schedules' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('WP Post Schedules', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/schedules',
             ],
             'Share Now' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Share Now', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/share-now',
             ],
             'Calendar' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Calendar', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/calendar',
             ],
             'Templates' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Templates', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/templates',
             ],
             'Logs' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Logs', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/logs',
             ],
             'Settings' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('Settings', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/settings',
             ],
             'Support' => [
                 'parent'     => Config::SLUG,
                 'type'       => 'submenu',
                 'name'       => __('License & Support', 'bit-social'),
-                'capability' => 'manage_options',
+                'capability' => $cap,
                 'slug'       => Config::SLUG . '#/support',
             ],
 

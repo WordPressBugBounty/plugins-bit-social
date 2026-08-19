@@ -81,6 +81,7 @@ class Head
                 'baseAuthStateURL' => Config::get('BASE_AUTH_STATE_URL'),
                 'wpCronStatus'     => Config::get('WP_CRON_STATUS'),
                 'loggedInUserName' => wp_get_current_user()->display_name,
+                'canManageAccess'  => current_user_can('manage_options') ? '1' : '0',
 
             ]
         );

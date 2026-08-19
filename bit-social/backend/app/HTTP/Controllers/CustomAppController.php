@@ -20,6 +20,10 @@ class CustomAppController
 
     public function store(Request $request)
     {
+        if ($denied = $this->requireAdmin()) {
+            return $denied;
+        }
+
         $validationRules = [
             'appKey'      => ['required', 'string'],
             'appSecret'   => ['required', 'string'],
@@ -79,6 +83,12 @@ class CustomAppController
 
     public function index(Request $request)
     {
+        // index returns decrypted app credentials, so it stays admin-only along
+        // with the create/delete mutations.
+        if ($denied = $this->requireAdmin()) {
+            return $denied;
+        }
+
         $platform = $request->platform;
 
         $customApps = CustomApp::where('platform', $platform)->get();
@@ -125,10 +135,29 @@ class CustomAppController
 
     public function destroy(CustomApp $customApp)
     {
+        if ($denied = $this->requireAdmin()) {
+            return $denied;
+        }
+
         if ($customApp->delete()) {
             return Response::success('Custom App deleted successfully!');
         }
 
         return Response::error('Custom App deletion failed!');
+    }
+
+    /**
+     * Custom apps hold OAuth credentials used only when connecting accounts,
+     * which is admin-only. Returns a 403 response for non-admins, or null to
+     * proceed.
+     *
+     * @return null|Response
+     */
+    private function requireAdmin()
+    {
+        if (!current_user_can('manage_options')) {
+            return Response::error(['message' => __('You are not permitted to manage custom apps.', 'bit-social')])->httpStatus(403);
+        }
+
     }
 }

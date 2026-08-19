@@ -61,10 +61,24 @@ class HookProvider
      */
     protected function loadAppHooks()
     {
+        // Internal, self-triggered routes (e.g. the async auto-post fallback). Auto-post
+        // itself is gated by Config::accessCapability() at the wp_after_insert_post hook,
+        // but these routes stay outside the capability-gated router below and re-validate
+        // the requester via nonce + post-level capability checks instead.
+        if (
+            RequestType::is(RequestType::AJAX)
+            && is_readable($this->_pluginBackend . 'routes' . DIRECTORY_SEPARATOR . 'ajax-internal.php')
+        ) {
+            $internalRouter = new Router(RequestType::AJAX, Config::VAR_PREFIX, '');
+            $internalRouter->setMiddlewares(Plugin::instance()->middlewares());
+            include $this->_pluginBackend . 'routes' . DIRECTORY_SEPARATOR . 'ajax-internal.php';
+            $internalRouter->register();
+        }
+
         if (
             RequestType::is(RequestType::AJAX)
             && is_readable($this->_pluginBackend . 'routes' . DIRECTORY_SEPARATOR . 'ajax.php')
-            && current_user_can('manage_options')
+            && Config::userHasAccess()
         ) {
             $router = new Router(RequestType::AJAX, Config::VAR_PREFIX, '');
             $router->setMiddlewares(Plugin::instance()->middlewares());

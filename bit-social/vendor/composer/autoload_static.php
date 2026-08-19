@@ -172,6 +172,7 @@ class ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c
         'BitApps\\Social\\Providers\\InstallerProvider' => __DIR__ . '/../..' . '/backend/app/Providers/InstallerProvider.php',
         'BitApps\\Social\\Providers\\ScheduleActionHook' => __DIR__ . '/../..' . '/backend/app/Providers/ScheduleActionHook.php',
         'BitApps\\Social\\Utils\\Common' => __DIR__ . '/../..' . '/backend/app/Utils/Common.php',
+        'BitApps\\Social\\Utils\\Creator' => __DIR__ . '/../..' . '/backend/app/Utils/Creator.php',
         'BitApps\\Social\\Utils\\Hash' => __DIR__ . '/../..' . '/backend/app/Utils/Hash.php',
         'BitApps\\Social\\Utils\\PostInfo' => __DIR__ . '/../..' . '/backend/app/Utils/PostInfo.php',
         'BitApps\\Social\\Utils\\SmartTag' => __DIR__ . '/../..' . '/backend/app/Utils/SmartTag.php',

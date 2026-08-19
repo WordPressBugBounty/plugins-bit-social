@@ -4,6 +4,7 @@ namespace BitApps\Social\HTTP\Controllers;
 
 use BitApps\Social\Config;
 use BitApps\Social\Deps\BitApps\WPKit\Helpers\Arr;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
@@ -51,22 +52,44 @@ class AccountController
             Account::accountType['CUSTOM'],
         ]);
 
-        $allPageAndGroup = $accountModel->get(['id', 'account_id', 'details', 'platform', 'account_type', 'status']);
+        $allPageAndGroup = $accountModel->get(['id', 'account_id', 'details', 'platform', 'account_type', 'status', 'created_at', 'updated_at']);
+
+        // Pro drops accounts the current user's role isn't permitted on (per-account
+        // permissions), so a restricted account is invisible to users who cannot
+        // publish through it — on the Accounts page and in every picker built from
+        // this list. Free leaves the list untouched.
+        $allPageAndGroup = Hooks::applyFilter(Config::withPrefix('accounts_list'), $allPageAndGroup);
 
         return Response::success($allPageAndGroup);
     }
 
     public function store(Request $request)
     {
+        // Connecting/adding an account is an admin task, matching the admin-only
+        // account-permission and roles management: a non-admin role granted
+        // plugin access operates content but does not provision new connections.
+        if (!current_user_can('manage_options')) {
+            return Response::error(['message' => __('You are not permitted to connect accounts.', 'bit-social')])->httpStatus(403);
+        }
+
         $accountData = $request->accountData;
 
-        $res = Account::insert($accountData);
+        // Upsert: reconnecting an existing account refreshes its tokens in
+        // place instead of creating a duplicate row (see Account::upsertConnected).
+        $res = Account::upsertConnected($accountData);
 
         return Response::SUCCESS(['account' => $res, 'message' => 'Account connect successfully']);
     }
 
     public function destroy(Account $account)
     {
+        // Managing a connection (connect, disconnect, reconnect, enable/disable)
+        // is an admin task, matching store(): a non-admin role granted plugin
+        // access publishes through accounts but never provisions or removes them.
+        if (!current_user_can('manage_options')) {
+            return Response::error(['message' => __('You are not permitted to delete accounts.', 'bit-social')])->httpStatus(403);
+        }
+
         $scheduleIds = $this->findScheduleByAccountId($account->id);
 
         if (!empty($scheduleIds)) {
@@ -88,13 +111,24 @@ class AccountController
             Config::updateOption('auto_post_settings', $autoPostSettings);
         }
 
+        $accountId = $account->id;
         $account->delete();
+
+        // Lets pro clean up per-account data (e.g. role permissions).
+        Hooks::doAction(Config::withPrefix('account_deleted'), $accountId);
 
         return Response::success('Accounts deleted');
     }
 
     public function updateStatus(Request $request, Account $account)
     {
+        // Enabling/disabling an account takes it out of auto-post, scheduling and
+        // sharing for everyone, so it is admin-only like the rest of connection
+        // management (see store/destroy).
+        if (!current_user_can('manage_options')) {
+            return Response::error(['message' => __('You are not permitted to change account status.', 'bit-social')])->httpStatus(403);
+        }
+
         $validatedData = (object) $request->validate([
             'status' => ['nullable', 'integer']
         ]);
@@ -211,6 +245,11 @@ class AccountController
             Account::accountType['DEFAULT'],
             Account::accountType['CUSTOM'],
         ])->get(['id', 'details', 'platform', 'account_type', 'status']);
+
+        // Pro drops accounts the current user's role isn't permitted on
+        // (per-account permissions), so restricted accounts never appear in
+        // the Share Now / Schedules / Auto Post pickers for that user.
+        $activeAccounts = Hooks::applyFilter(Config::withPrefix('active_accounts'), $activeAccounts);
 
         return Response::success($activeAccounts);
     }

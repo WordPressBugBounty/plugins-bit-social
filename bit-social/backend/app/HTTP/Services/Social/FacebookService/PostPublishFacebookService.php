@@ -51,11 +51,18 @@ class PostPublishFacebookService implements SocialInterface
         $accessToken = $account_detail->access_token;
         $generates_on = $account_detail->generates_on;
 
-        $tokenUpdateData = $this->refreshHandler->tokenExpiryCheck($accessToken, $generates_on);
-        if ($tokenUpdateData->access_token !== $accessToken) {
-            $account_detail->access_token = $tokenUpdateData->access_token;
-            $account_detail->generates_on = $tokenUpdateData->generates_on;
-            $this->refreshHandler->saveRefreshedToken($account_detail);
+        $tokenUpdateData = $this->refreshHandler->tokenExpiryCheck($accessToken, $generates_on, $account_detail->account_type ?? '');
+
+        // A failed refresh returns false; publish with the stored token rather
+        // than persisting an empty one over it.
+        if (\is_object($tokenUpdateData) && !empty($tokenUpdateData->access_token)) {
+            if ($tokenUpdateData->access_token !== $accessToken) {
+                $account_detail->access_token = $tokenUpdateData->access_token;
+                $account_detail->generates_on = $tokenUpdateData->generates_on;
+                $this->refreshHandler->saveRefreshedToken($account_detail);
+            }
+
+            $accessToken = $tokenUpdateData->access_token;
         }
 
         if ($scheduleType === Schedule::scheduleType['DIRECT_SHARE']) {
@@ -87,7 +94,7 @@ class PostPublishFacebookService implements SocialInterface
 
         $this->facebookData['post'] = $this->normalizePostData($post_data, true);
 
-        $response = $this->facebookPostPublish($post_data, $account_id, $tokenUpdateData->access_token);
+        $response = $this->facebookPostPublish($post_data, $account_id, $accessToken);
 
         $publishPostResponse = $response['response'];
         $publishPostImageError = $response['imageErrors'];

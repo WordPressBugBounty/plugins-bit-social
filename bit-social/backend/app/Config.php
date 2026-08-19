@@ -4,6 +4,7 @@
 
 namespace BitApps\Social;
 
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\SocialPro\Config as ProConfig;
 
 if (!\defined('ABSPATH')) {
@@ -21,7 +22,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.16.0';
+    public const VERSION = '1.17.0';
 
     public const DB_VERSION = '1.1.0';
 
@@ -147,6 +148,36 @@ class Config
     public static function withPrefix($option)
     {
         return self::VAR_PREFIX . $option;
+    }
+
+    /**
+     * Capability required to access the plugin (menu + AJAX routes).
+     * Pro filters this to a custom capability granted to admin-selected roles;
+     * free always resolves to 'manage_options'.
+     *
+     * @return string
+     */
+    public static function accessCapability()
+    {
+        return Hooks::applyFilter(self::withPrefix('access_capability'), 'manage_options');
+    }
+
+    /**
+     * Whether the current user may use the plugin.
+     *
+     * Always ORs in 'manage_options' rather than trusting the filtered
+     * capability alone: pro's custom capability is only ever added to *roles*,
+     * so an administrator whose manage_options comes from a per-user grant or
+     * from another plugin's user_has_cap filter would not hold it. Since the
+     * screen that manages access lives inside the plugin, losing it would be
+     * unrecoverable through the UI — and anyone with manage_options can edit
+     * every plugin option anyway, so the OR grants nothing new.
+     *
+     * @return bool
+     */
+    public static function userHasAccess()
+    {
+        return current_user_can('manage_options') || current_user_can(self::accessCapability());
     }
 
     /**

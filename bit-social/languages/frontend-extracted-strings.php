@@ -71,6 +71,8 @@ return [
 
     'is up to date' => __('is up to date', 'bit-social'),
 
+    'WordPress CRM to manage contacts, leads, deals, and invoices and run your whole sales pipeline right from your WordPress dashboard.' => __('WordPress CRM to manage contacts, leads, deals, and invoices and run your whole sales pipeline right from your WordPress dashboard.', 'bit-social'),
+
     'Zapier Alternative in WordPress Unlimited Task.' => __('Zapier Alternative in WordPress Unlimited Task.', 'bit-social'),
 
     'An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.' => __('An social media management plugin for WordPress, that allows you to share your post to different social media platform, schedule post, manage social media account and many more feature.', 'bit-social'),
@@ -115,6 +117,8 @@ return [
     'Advance Schedule' => __('Advance Schedule', 'bit-social'),
 
     'Bit Social Pro' => __('Bit Social Pro', 'bit-social'),
+
+    'Unknown' => __('Unknown', 'bit-social'),
 
     'Your <b>WP_CRON</b> are disabled' => __('Your <b>WP_CRON</b> are disabled', 'bit-social'),
 
@@ -166,11 +170,21 @@ return [
 
     'Media' => __('Media', 'bit-social'),
 
+    'No accounts are available for your role. Ask an administrator to give your role access to an account.' => __('No accounts are available for your role. Ask an administrator to give your role access to an account.', 'bit-social'),
+
     'Accounts' => __('Accounts', 'bit-social'),
 
     'Groups' => __('Groups', 'bit-social'),
 
     'Search accounts' => __('Search accounts', 'bit-social'),
+
+    'Reconnecting account…' => __('Reconnecting account…', 'bit-social'),
+
+    'Account reconnect failed' => __('Account reconnect failed', 'bit-social'),
+
+    'The connected account does not match this account. Please sign in with the same account and try again.' => __('The connected account does not match this account. Please sign in with the same account and try again.', 'bit-social'),
+
+    'Account reconnected successfully' => __('Account reconnected successfully', 'bit-social'),
 
     'Profile' => __('Profile', 'bit-social'),
 
@@ -188,7 +202,77 @@ return [
 
     'Connect Account' => __('Connect Account', 'bit-social'),
 
+    'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'bit-social'),
+
+    'Yes, delete' => __('Yes, delete', 'bit-social'),
+
+    'Are you sure?' => __('Are you sure?', 'bit-social'),
+
+    'Platform' => __('Platform', 'bit-social'),
+
+    'Type' => __('Type', 'bit-social'),
+
+    'Account ID' => __('Account ID', 'bit-social'),
+
+    'Username' => __('Username', 'bit-social'),
+
+    'Created' => __('Created', 'bit-social'),
+
+    'Last updated' => __('Last updated', 'bit-social'),
+
+    'Delete' => __('Delete', 'bit-social'),
+
+    'Administrator' => __('Administrator', 'bit-social'),
+
+    'Editor' => __('Editor', 'bit-social'),
+
+    'Author' => __('Author', 'bit-social'),
+
+    'Control which roles can publish through this account. Users without permission are skipped during auto-post and sharing.' => __('Control which roles can publish through this account. Users without permission are skipped during auto-post and sharing.', 'bit-social'),
+
+    'Everyone with plugin access' => __('Everyone with plugin access', 'bit-social'),
+
+    'Any role allowed in Roles & Access can use this account' => __('Any role allowed in Roles & Access can use this account', 'bit-social'),
+
+    'Only selected roles' => __('Only selected roles', 'bit-social'),
+
+    'Restrict publishing to specific roles' => __('Restrict publishing to specific roles', 'bit-social'),
+
+    'Failed to save permissions' => __('Failed to save permissions', 'bit-social'),
+
+    'Roles allowed to use this account have been updated.' => __('Roles allowed to use this account have been updated.', 'bit-social'),
+
+    'Permissions saved' => __('Permissions saved', 'bit-social'),
+
+    'Control which roles can publish through this account. Selected roles do not need plugin access — their authored posts still run on auto-post through this account.' => __('Control which roles can publish through this account. Selected roles do not need plugin access — their authored posts still run on auto-post through this account.', 'bit-social'),
+
+    'Restrict publishing to specific roles, even ones without plugin access' => __('Restrict publishing to specific roles, even ones without plugin access', 'bit-social'),
+
+    'Search roles…' => __('Search roles…', 'bit-social'),
+
+    'Admin roles are always included' => __('Admin roles are always included', 'bit-social'),
+
+    'Cancel' => __('Cancel', 'bit-social'),
+
+    'Save' => __('Save', 'bit-social'),
+
+    'Only administrators can manage account permissions.' => __('Only administrators can manage account permissions.', 'bit-social'),
+
+    'Info' => __('Info', 'bit-social'),
+
+    'Permission' => __('Permission', 'bit-social'),
+
+    'Active' => __('Active', 'bit-social'),
+
+    'Disabled' => __('Disabled', 'bit-social'),
+
+    'Reconnect' => __('Reconnect', 'bit-social'),
+
     'Connect your social account first!' => __('Connect your social account first!', 'bit-social'),
+
+    'Reconnect Account' => __('Reconnect Account', 'bit-social'),
+
+    'Sign in with this same account — the connection is matched by its account ID.' => __('Sign in with this same account — the connection is matched by its account ID.', 'bit-social'),
 
     'You can only add verified locations.' => __('You can only add verified locations.', 'bit-social'),
 
@@ -213,8 +297,6 @@ return [
     'Back' => __('Back', 'bit-social'),
 
     'Saved' => __('Saved', 'bit-social'),
-
-    'Save' => __('Save', 'bit-social'),
 
     'No' => __('No', 'bit-social'),
 
@@ -248,8 +330,6 @@ return [
 
     'No App Found' => __('No App Found', 'bit-social'),
 
-    'Type' => __('Type', 'bit-social'),
-
     'Group' => __('Group', 'bit-social'),
 
     'User' => __('User', 'bit-social'),
@@ -274,6 +354,10 @@ return [
 
     'Bot Token' => __('Bot Token', 'bit-social'),
 
+    'Details & permissions' => __('Details & permissions', 'bit-social'),
+
+    'Details' => __('Details', 'bit-social'),
+
     'It will no longer be able to automatic posting, scheduling, and sharing' => __('It will no longer be able to automatic posting, scheduling, and sharing', 'bit-social'),
 
     'Enable Automatic Posting, Scheduling, and Sharing' => __('Enable Automatic Posting, Scheduling, and Sharing', 'bit-social'),
@@ -286,12 +370,6 @@ return [
 
     'enable' => __('enable', 'bit-social'),
 
-    'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'bit-social'),
-
-    'Yes, delete' => __('Yes, delete', 'bit-social'),
-
-    'Are you sure?' => __('Are you sure?', 'bit-social'),
-
     'All' => __('All', 'bit-social'),
 
     'To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:' => __('To connect your social media accounts, click <b>"Connect Account"</b>  There are two methods available:', 'bit-social'),
@@ -302,27 +380,35 @@ return [
 
     'You can find more about it here' => __('You can find more about it here', 'bit-social'),
 
-    'Add to group' => __('Add to group', 'bit-social'),
+    'Add accounts' => __('Add accounts', 'bit-social'),
+
+    'Add accounts to group' => __('Add accounts to group', 'bit-social'),
 
     'No accounts found!' => __('No accounts found!', 'bit-social'),
 
     'Create Group' => __('Create Group', 'bit-social'),
 
-    'Cancel' => __('Cancel', 'bit-social'),
-
     'Create' => __('Create', 'bit-social'),
 
-    'Name' => __('Name', 'bit-social'),
+    'Group name' => __('Group name', 'bit-social'),
 
-    'New group' => __('New group', 'bit-social'),
+    'e.g. Marketing channels' => __('e.g. Marketing channels', 'bit-social'),
 
     'Yes, Remove' => __('Yes, Remove', 'bit-social'),
 
     'Remove account from this group?' => __('Remove account from this group?', 'bit-social'),
 
-    'Click to hide accounts' => __('Click to hide accounts', 'bit-social'),
+    'Remove from group' => __('Remove from group', 'bit-social'),
 
-    'Click to show accounts' => __('Click to show accounts', 'bit-social'),
+    'This group has no accounts yet.' => __('This group has no accounts yet.', 'bit-social'),
+
+    'Rename group' => __('Rename group', 'bit-social'),
+
+    'The accounts stay connected — only the group is removed.' => __('The accounts stay connected — only the group is removed.', 'bit-social'),
+
+    'Delete this group?' => __('Delete this group?', 'bit-social'),
+
+    'Delete group' => __('Delete group', 'bit-social'),
 
     'accounts' => __('accounts', 'bit-social'),
 
@@ -330,7 +416,14 @@ return [
 
     'No accounts yet' => __('No accounts yet', 'bit-social'),
 
-    'No Groups found!' => __('No Groups found!', 'bit-social'),
+    'Group name cannot be empty' => __('Group name cannot be empty', 'bit-social'),
+
+    /* translators: %s: placeholder value */
+    'A group named "%s" already exists' => __('A group named "%s" already exists', 'bit-social'),
+
+    'No groups yet' => __('No groups yet', 'bit-social'),
+
+    'Create a group to publish to several accounts at once.' => __('Create a group to publish to several accounts at once.', 'bit-social'),
 
     'How to use AI Prompts?' => __('How to use AI Prompts?', 'bit-social'),
 
@@ -365,8 +458,6 @@ return [
     'Please select template type' => __('Please select template type', 'bit-social'),
 
     'Select template type' => __('Select template type', 'bit-social'),
-
-    'Platform' => __('Platform', 'bit-social'),
 
     'Please select AI platform' => __('Please select AI platform', 'bit-social'),
 
@@ -559,9 +650,9 @@ return [
 
     'Features' => __('Features', 'bit-social'),
 
-    'Fixed' => __('Fixed', 'bit-social'),
-
     'Improvements' => __('Improvements', 'bit-social'),
+
+    'Fixed' => __('Fixed', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 
@@ -605,6 +696,8 @@ return [
 
     'to' => __('to', 'bit-social'),
 
+    'Created by' => __('Created by', 'bit-social'),
+
     'Account' => __('Account', 'bit-social'),
 
     'Response' => __('Response', 'bit-social'),
@@ -618,8 +711,6 @@ return [
     'Actions' => __('Actions', 'bit-social'),
 
     'Hide' => __('Hide', 'bit-social'),
-
-    'Details' => __('Details', 'bit-social'),
 
     'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'bit-social'),
 
@@ -747,8 +838,6 @@ return [
 
     'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'bit-social'),
 
-    'Delete' => __('Delete', 'bit-social'),
-
     'Created At' => __('Created At', 'bit-social'),
 
     'Start Scheduled Post' => __('Start Scheduled Post', 'bit-social'),
@@ -760,8 +849,6 @@ return [
     'In Progress' => __('In Progress', 'bit-social'),
 
     'Completed' => __('Completed', 'bit-social'),
-
-    'Active' => __('Active', 'bit-social'),
 
     'Paused' => __('Paused', 'bit-social'),
 
@@ -876,6 +963,16 @@ return [
 
     'Month(s)' => __('Month(s)', 'bit-social'),
 
+    'Contributor' => __('Contributor', 'bit-social'),
+
+    'Roles & Access' => __('Roles & Access', 'bit-social'),
+
+    'Choose which WordPress roles can access Bit Social and trigger auto-post when publishing content. Administrators always have access.' => __('Choose which WordPress roles can access Bit Social and trigger auto-post when publishing content. Administrators always have access.', 'bit-social'),
+
+    'Search and select the roles that can use Bit Social.' => __('Search and select the roles that can use Bit Social.', 'bit-social'),
+
+    'Allowed roles' => __('Allowed roles', 'bit-social'),
+
     'Please check the form and try again.' => __('Please check the form and try again.', 'bit-social'),
 
     'Failed to save settings' => __('Failed to save settings', 'bit-social'),
@@ -888,9 +985,9 @@ return [
 
     'Could not send digest report' => __('Could not send digest report', 'bit-social'),
 
-    'Enable the digest report and save before sending.' => __('Enable the digest report and save before sending.', 'bit-social'),
-
     'Save your changes before sending.' => __('Save your changes before sending.', 'bit-social'),
+
+    'Enable the digest report and save before sending.' => __('Enable the digest report and save before sending.', 'bit-social'),
 
     'Enable email notifications first.' => __('Enable email notifications first.', 'bit-social'),
 
@@ -909,6 +1006,38 @@ return [
     'SMTP is not set up' => __('SMTP is not set up', 'bit-social'),
 
     'Check now' => __('Check now', 'bit-social'),
+
+    'Open Bit Social and view the accounts they are permitted on' => __('Open Bit Social and view the accounts they are permitted on', 'bit-social'),
+
+    'Publish, schedule and share through those accounts' => __('Publish, schedule and share through those accounts', 'bit-social'),
+
+    'Auto-post their own published content' => __('Auto-post their own published content', 'bit-social'),
+
+    'Create and manage account groups' => __('Create and manage account groups', 'bit-social'),
+
+    'Create and use AI prompts' => __('Create and use AI prompts', 'bit-social'),
+
+    'Connect, reconnect or delete accounts' => __('Connect, reconnect or delete accounts', 'bit-social'),
+
+    'Enable or disable an account' => __('Enable or disable an account', 'bit-social'),
+
+    'Choose which roles may use each account' => __('Choose which roles may use each account', 'bit-social'),
+
+    'Connect or disconnect AI platforms' => __('Connect or disconnect AI platforms', 'bit-social'),
+
+    'Roles allowed to access Bit Social have been updated.' => __('Roles allowed to access Bit Social have been updated.', 'bit-social'),
+
+    'Deselect all' => __('Deselect all', 'bit-social'),
+
+    'Select all' => __('Select all', 'bit-social'),
+
+    'Choose which WordPress roles can access Bit Social. Administrators always have full access.' => __('Choose which WordPress roles can access Bit Social. Administrators always have full access.', 'bit-social'),
+
+    'Allowed roles can' => __('Allowed roles can', 'bit-social'),
+
+    'Only administrators can' => __('Only administrators can', 'bit-social'),
+
+    'Search and select roles…' => __('Search and select roles…', 'bit-social'),
 
     'Cron' => __('Cron', 'bit-social'),
 

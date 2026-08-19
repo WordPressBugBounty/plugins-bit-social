@@ -11,7 +11,6 @@ namespace BitApps\Social;
 use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\RequestType;
 use BitApps\Social\Deps\BitApps\WPKit\Migration\MigrationHelper;
-use BitApps\Social\Deps\BitApps\WPKit\Utils\Capabilities;
 use BitApps\Social\HTTP\Middleware\NonceCheckerMiddleware;
 use BitApps\Social\HTTP\Services\Schedule\CustomSchedule;
 use BitApps\Social\Model\Schedule;
@@ -111,7 +110,7 @@ final class Plugin
 
     public static function maybeMigrateDB()
     {
-        if (!Capabilities::check('manage_options')) {
+        if (!Config::userHasAccess()) {
             return;
         }
 

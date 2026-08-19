@@ -13,6 +13,8 @@ use BitApps\Social\Model\Account;
 use BitApps\Social\Utils\Common;
 use BitApps\SocialPro\HTTP\Services\AutoPost\AutoPostService;
 use BitApps\SocialPro\Model\GroupsAccount;
+use Throwable;
+use WP_Post;
 
 class AutoPostController
 {
@@ -78,6 +80,10 @@ class AutoPostController
         }
 
         if (!$autoPostSettings['isEnabled']) {
+            return;
+        }
+
+        if (!$this->publisherCanAutoPost($post)) {
             return;
         }
 
@@ -173,6 +179,18 @@ class AutoPostController
             return;
         }
 
+        // Pro filters out accounts the acting user's role isn't permitted on
+        // (per-account permissions). Free passes the list through unchanged.
+        $accounts = Hooks::applyFilter(
+            Config::withPrefix('autopost_accounts'),
+            $accounts,
+            $this->actingUserId($postId)
+        );
+
+        if (!\is_array($accounts)) {
+            return;
+        }
+
         $isSleep = false;
         $publishPostData = [];
 
@@ -206,7 +224,7 @@ class AutoPostController
 
                 try {
                     $publishPostData[] = $platform->publishPost($data);
-                } catch (\Throwable $e) {
+                } catch (Throwable $e) {
                     $publishPostData[] = ['status' => 'error', 'message' => $e->getMessage()];
                 }
             }
@@ -246,6 +264,60 @@ class AutoPostController
         }
 
         return $diff;
+    }
+
+    /**
+     * The user auto-post publishes on behalf of — mirrors publisherCanAutoPost:
+     * the logged-in publisher, or the post author when publishing runs with no
+     * logged-in user (WP-Cron for scheduled/delayed posts).
+     *
+     * @param int $postId
+     *
+     * @return int
+     */
+    private function actingUserId($postId)
+    {
+        if (is_user_logged_in()) {
+            return get_current_user_id();
+        }
+
+        $post = get_post($postId);
+
+        return $post ? absint($post->post_author) : 0;
+    }
+
+    /**
+     * Who may trigger auto-post sharing. Scheduled posts are published by
+     * WP-Cron with no logged-in user, so the post author is checked instead.
+     *
+     * Free defaults to 'edit_posts' — i.e. anyone who could publish the post —
+     * which preserves the pre-role-access behavior where every published post
+     * auto-posted. Pro filters the capability to its role-access cap so only
+     * roles granted access in Roles & Access trigger auto-post, and further
+     * loosens the gate (autopost_publisher_allowed) for publishers whose role
+     * is explicitly granted on an account's permissions.
+     *
+     * @param WP_Post $post
+     *
+     * @return bool
+     */
+    private function publisherCanAutoPost($post)
+    {
+        $userId = is_user_logged_in() ? get_current_user_id() : absint($post->post_author);
+
+        // No acting user at all — WP-CLI, feed importers and other programmatic
+        // publishers create posts with post_author 0. There is no role to check,
+        // and these posts auto-posted before this gate existed, so let the
+        // admin's site-level auto-post configuration stand.
+        if (!$userId) {
+            return true;
+        }
+
+        $capability = Hooks::applyFilter(Config::withPrefix('autopost_publisher_capability'), 'edit_posts');
+
+        $canPublish = user_can($userId, $capability);
+
+        return (bool) Hooks::applyFilter(Config::withPrefix('autopost_publisher_allowed'), $canPublish, $userId);
     }
 
     private function sanitizeRequestCookies(): array

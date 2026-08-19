@@ -40,6 +40,12 @@ class SettingsController
         return Response::success($allSettings);
     }
 
+    public function updateSettings(SettingsUpdateRequest $request)
+    {
+        // Update general settings
+        // $settings = $request->settings;
+    }
+
     /**
      * Last-sent timestamps for each notification type, formatted in the
      * site's date/time format and WordPress timezone.
@@ -90,11 +96,5 @@ class SettingsController
             'installUrl'       => admin_url('plugin-install.php?s=Bit+SMTP&tab=search&type=term'),
             'pluginsUrl'       => admin_url('plugins.php'),
         ];
-    }
-
-    public function updateSettings(SettingsUpdateRequest $request)
-    {
-        // Update general settings
-        // $settings = $request->settings;
     }
 }
