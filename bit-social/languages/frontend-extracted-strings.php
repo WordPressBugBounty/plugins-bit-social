@@ -648,11 +648,11 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
+    'Fixed' => __('Fixed', 'bit-social'),
+
     'Features' => __('Features', 'bit-social'),
 
     'Improvements' => __('Improvements', 'bit-social'),
-
-    'Fixed' => __('Fixed', 'bit-social'),
 
     'Settings' => __('Settings', 'bit-social'),
 

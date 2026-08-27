@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Wed Aug 19 2026 06:33:20 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Aug 27 2026 11:18:14 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -1485,27 +1485,28 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:45
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:83
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:113
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:131
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:40
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:63
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:81
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:101
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:114
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:132
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:157
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:169
+msgid "Fixed"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:22
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:57
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:95
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:125
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:143
 msgid "Features"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:21
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:62
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:33
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:74
 msgid "Improvements"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:28
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:51
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:69
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:89
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:102
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:120
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:145
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:157
-msgid "Fixed"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
@@ -3032,7 +3033,7 @@ msgid "Reply"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/BlueskyPreview.tsx:17
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:32
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:33
 #: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:18
 #: frontend/src/pages/SocialTemplates/internals/preview/TwitterPreview.tsx:17
 msgid "Repost"
@@ -3042,7 +3043,7 @@ msgstr ""
 #: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:74
 #: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:16
 #: frontend/src/pages/SocialTemplates/internals/preview/LinePreview.tsx:16
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:30
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:31
 #: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:16
 #: frontend/src/pages/SocialTemplates/internals/preview/TiktokPreview.tsx:16
 #: frontend/src/pages/SocialTemplates/internals/preview/TumblrPreview.tsx:18
@@ -3066,20 +3067,20 @@ msgid "Forward"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:40
-#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:54
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:68
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:55
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:69
 msgid "Profile name"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:43
-#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:62
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:63
 msgid "Just Now"
 msgstr ""
 
 #: frontend/src/pages/SocialTemplates/internals/preview/FacebookPreview.tsx:81
 #: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:17
 #: frontend/src/pages/SocialTemplates/internals/preview/LinePreview.tsx:17
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:31
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:32
 #: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:17
 #: frontend/src/pages/SocialTemplates/internals/preview/TelegramPreview.tsx:18
 #: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:17
@@ -3108,40 +3109,38 @@ msgstr ""
 msgid "Directions"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:90
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:97
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewMessage.tsx:56
 msgid "hide"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewCard.tsx:90
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:97
+#: frontend/src/pages/SocialTemplates/internals/preview/internals/PreviewMessage.tsx:56
 msgid "…see more"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:19
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:20
 msgid ""
 "Start writing and your post will appear here..\n"
 "You can add images, links, #hashtags and emojis 😎"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:33
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:34
 #: frontend/src/pages/SocialTemplates/internals/preview/ThreadsPreview.tsx:19
 msgid "Send"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:71
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:72
 msgid "Your headline"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:75
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:76
 msgid "Now"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:129
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:115
 msgid "John Doe and 169 others"
 msgstr ""
 
-#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:134
+#: frontend/src/pages/SocialTemplates/internals/preview/LinkedinPreview.tsx:120
 msgid "4 comments • 1 repost"
 msgstr ""
 
