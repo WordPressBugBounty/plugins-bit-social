@@ -41,9 +41,12 @@ Route::noAuth()->group(
         Route::post('schedule', [ScheduleController::class, 'store']);
         Route::post('schedule/{schedule}/update', [ScheduleController::class, 'update']);
         Route::post('schedule/{schedule}/update-status', [ScheduleController::class, 'updateStatus']);
+        Route::post('schedule/{schedule}/retry', [ScheduleController::class, 'retry']);
         Route::post('schedule/destroy', [ScheduleController::class, 'destroy']);
 
         Route::get('logs/{page}/{limit}', [LogController::class, 'index']);
+        Route::get('log-run/{runId}', [LogController::class, 'showRun']);
+        Route::post('log-run/{runId}/retry', [LogController::class, 'retryRun']);
         Route::post('logs/destroy/batch', [LogController::class, 'destroy']);
         Route::post('retry', [RetryController::class, 'retry']);
 

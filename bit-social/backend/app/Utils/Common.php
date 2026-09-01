@@ -116,7 +116,7 @@ trait Common
 
         if (!property_exists($template, 'trimMessage')) {
             $templateOptions = Config::getOption('templates_settings');
-            $trimMessage = $templateOptions[$template->platform]['trimMessage'];
+            $trimMessage = $templateOptions[$template->platform]['trimMessage'] ?? true;
             $template->trimMessage = $trimMessage;
         }
 

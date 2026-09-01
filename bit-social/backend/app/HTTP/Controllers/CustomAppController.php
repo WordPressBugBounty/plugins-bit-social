@@ -158,6 +158,5 @@ class CustomAppController
         if (!current_user_can('manage_options')) {
             return Response::error(['message' => __('You are not permitted to manage custom apps.', 'bit-social')])->httpStatus(403);
         }
-
     }
 }

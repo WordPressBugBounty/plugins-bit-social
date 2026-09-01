@@ -8,6 +8,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\ConnectError;
 use BitApps\SocialPro\Config as ProConfig;
 
 class LinkedinOAuth2Service
@@ -37,16 +38,29 @@ class LinkedinOAuth2Service
 
         $tokenInfo = $this->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
 
-        if (property_exists($tokenInfo, 'error') && $tokenInfo->error) {
-            return Response::error($tokenInfo->error);
+        if (is_wp_error($tokenInfo)) {
+            return Response::error(ConnectError::unreachable($tokenInfo, 'LinkedIn'));
         }
 
-        if (!\is_object($tokenInfo) && !isset($tokenInfo->access_token)) {
+        if (\is_object($tokenInfo) && property_exists($tokenInfo, 'error') && $tokenInfo->error) {
+            return Response::error(!empty($tokenInfo->error_description) ? $tokenInfo->error_description : $tokenInfo->error);
+        }
+
+        if (!\is_object($tokenInfo) || empty($tokenInfo->access_token)) {
             return (object) ['status' => 'error', 'message' => 'Access token is not valid, please authorize again!'];
         }
         $access_token = $tokenInfo->access_token;
 
         $userAccount = $this->getUserAccount($access_token);
+
+        if (empty($userAccount['account_id'])) {
+            return (object) ['status' => 'error', 'message' => 'Fetching the LinkedIn profile failed, please authorize again!'];
+        }
+
+        // Older versions keyed the row by the display name, which broke
+        // reconnect matching whenever the profile was renamed. Re-key any such
+        // row to the stable member id before the accounts are organized.
+        $this->migrateLegacyProfileAccountId($userAccount);
 
         $tokenDetail = Helper::organizeToken($client_id, $client_secret, $tokenInfo);
 
@@ -88,13 +102,62 @@ class LinkedinOAuth2Service
         $user_profile_url = 'https://api.linkedin.com/v2/userinfo?oauth2_access_token=' . $accessToken;
         $person = $this->httpHandler->request($user_profile_url, 'GET', null, $header);
 
+        if (!\is_object($person) || empty($person->sub)) {
+            return [];
+        }
+
         return [
             'account_type' => 'profile',
             'urn'          => "urn:li:person:{$person->sub}",
-            'account_id'   => $person->name,
-            'account_name' => $person->name,
+            // The stable member id, not the display name: names change and
+            // collide, which broke reconnect matching and token refresh lookups.
+            'account_id'   => $person->sub,
+            'account_name' => $person->name ?? $person->sub,
             'icon'         => isset($person->picture) ? $person->picture : '',
         ];
+    }
+
+    /**
+     * Re-keys profile rows stored under the LinkedIn display name (the
+     * account_id of connections made by older versions) to the member id,
+     * matching them by the urn kept in details. Keeps reconnects updating the
+     * existing row - and its schedules - instead of creating a duplicate.
+     *
+     * @param mixed $userAccount
+     */
+    public function migrateLegacyProfileAccountId($userAccount)
+    {
+        $legacyRows = Account::where('platform', 'linkedin')
+            ->where('details', 'like', '%"urn":"' . $userAccount['urn'] . '"%')
+            ->get(['id', 'account_id']);
+
+        if (!\is_array($legacyRows)) {
+            $legacyRows = empty($legacyRows) ? [] : [$legacyRows];
+        }
+
+        foreach ($legacyRows as $row) {
+            if ((string) $row->account_id === (string) $userAccount['account_id']) {
+                continue;
+            }
+
+            $account = Account::findOne(['id' => $row->id]);
+
+            if (!$account) {
+                continue;
+            }
+
+            $details = $account->details;
+
+            if (\is_object($details)) {
+                $details->account_id = $userAccount['account_id'];
+            }
+
+            $account->update([
+                'account_id' => $userAccount['account_id'],
+                'profile_id' => $userAccount['account_id'],
+                'details'    => $details,
+            ])->save();
+        }
     }
 
     public function accountOrganize($userAccount, $tokenDetail, $companies)

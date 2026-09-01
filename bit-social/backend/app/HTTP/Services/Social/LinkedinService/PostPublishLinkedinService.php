@@ -69,9 +69,19 @@ class PostPublishLinkedinService implements SocialInterface
         $client_secret = Hash::decrypt($account_detail->client_secret);
 
         if ((int) $expires_in < time()) {
-            ((int) $refresh_token_expires_in > time())
-                ? $access_token = $this->refreshHandler->tokenExpiryCheck($client_id, $client_secret, $refresh_token, $account_id)
-                : $this->authError[] = 'Your LinkedIn connection has expired. Please reconnect your account to continue.';
+            if ((int) $refresh_token_expires_in > time()) {
+                $refreshedToken = $this->refreshHandler->tokenExpiryCheck($client_id, $client_secret, $refresh_token, $account_id);
+
+                // A failed refresh returns false; keep the stored token for this
+                // attempt instead of sending an empty bearer token.
+                if ($refreshedToken) {
+                    $access_token = $refreshedToken;
+                } else {
+                    $this->authError[] = 'Your LinkedIn access token could not be refreshed. Please reconnect your account if publishing keeps failing.';
+                }
+            } else {
+                $this->authError[] = 'Your LinkedIn connection has expired. Please reconnect your account to continue.';
+            }
         }
 
         if ($scheduleType === Schedule::scheduleType['DIRECT_SHARE']) {

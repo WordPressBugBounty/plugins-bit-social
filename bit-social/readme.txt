@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.17.1
+Stable tag: 1.18.0
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -369,6 +369,37 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 
 == Changelog ==
 
+= v1.18.0 (September 1, 2026) =
+* Features:
+   * Logs: The Logs screen is rebuilt around publish runs — one line per run with its date, schedule, post, type and tally, expanding into a card per account with the status, the one line worth reading and the raw platform response behind a button.
+   * Logs: Added a search box and Type and Missed filters, and a schedule row now links straight to its own runs.
+   * Logs: Every missed post is now recorded and retryable — a slot lost to a late or dormant cron leaves the same trail as any other failure, and can be retried per account or for the whole run. The retry in progress is shown and the other retry buttons are held until it comes back.
+   * Schedules & Share Now: Rows expand to show where a schedule posts and what it posts — accounts, groups and post filters — without opening the edit modal.
+   * Settings → Cron: New Cron Status panel showing whether WP-Cron is working, when it last ran and when Bit Social's next event is due, with an Overdue warning.
+   * Accounts: An account whose token could not be renewed now says “Reconnect needed” on its card, with the reason and how long it has been failing, instead of looking healthy while every publish fails.
+   * Social Templates: Templates auto-save with an inline Saving / Saved / Unsaved status beside the platform heading, replacing a toast per keystroke.
+   * Share Now: Added a “See logs” button to each row, and row actions now keep a fixed column.
+   * Auto Post: A single-post row shows why it cannot be re-scheduled instead of leaving the action column empty.
+* Improvements:
+   * Cron catch-up: After downtime, overdue one-shot posts are re-queued five minutes apart instead of firing in one burst that trips platform rate limits and spam heuristics.
+   * Missed slots: A recurring schedule that loses a slot anchors the next one to the slot it lost, so an outage costs one slot instead of walking the whole timetable forward.
+   * Schedules, Share Now & Logs: The tables now fit the admin screen at every width instead of running off the right edge; dates read as a day with the time below it, and columns thin out on narrower screens.
+   * Stability: Screens are wrapped in error boundaries, so a single failure shows a recoverable message instead of a blank page.
+   * Updates: The log backfill this release needs runs in small batches in the background, so a site with a large log table is not held up by the first request after updating.
+* Fixed:
+   * Scheduling: A recurring schedule that fell behind dumped its whole backlog at once. Overdue runs are realigned instead.
+   * Scheduling: One-shot Auto Post and Share Now schedules could hang in “In Progress” forever. They are marked Missed, deactivating the plugin now really clears its scheduled events, and a Missed row shows a red status tag with a cron tooltip.
+   * Facebook: Every Meta Graph call is pinned to one current API version. Token renewal had been running against versions Meta no longer serves, so connections quietly aged out and posting stopped with nothing changed on the site.
+   * LinkedIn: Profiles are keyed by their stable member id instead of the display name, and a failed token refresh no longer overwrites the stored token.
+   * Accounts: A failed connection no longer leaves the account picker on “Fetching data, please wait…” forever, and the reason is shown in the modal instead of a toast that scrolls away.
+   * Accounts: A connection that fails at the network level now says the site's server could not reach the platform, rather than showing a raw cURL error.
+   * Accounts: The connect popup's handover back to the plugin was unreliable — a successful authorization could be dropped, and an abandoned attempt could be picked up by the next connect.
+   * Logs: An auto post to several accounts reads as one run rather than one event per account.
+   * Logs: The screen filled debug.log with a PHP deprecation every three seconds for as long as it was left open.
+   * Schedules: A delayed auto-post is attributed to the post's author instead of reading “Unknown”.
+   * Share Now: A run's log names its content “Custom written content” rather than “No post”.
+   * Social Templates: Malformed stored template data no longer crashes the template settings screen.
+
 = v1.17.1 (August 27, 2026) =
 * Fixed:
    * Templates: The LinkedIn template screen went blank on some setups when the custom message was left empty. Post previews now trim long text without breaking the page.
@@ -381,7 +412,7 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 * Improvements:
    * Navigation: Moving between pages and tabs is now instant instead of rebuilding the page and refetching everything.
 * Fixed:
-   * Facebook: Pages stopped publishing roughly 50 days after being connected because page tokens were needlessly run through the token exchange; refreshed tokens are now also saved correctly.
+   * Facebook: Pages stopped publishing roughly 50 days after being connected because page tokens were needlessly run through the token exchange; refreshed tokens are now also saved correctly. A page that has already stopped publishing needs to be reconnected once — the stored token cannot be repaired.
    * Accounts: The delete confirmation now shows which account is being removed and no longer appears behind the modal.
 
 = v1.16.0 (July 15, 2026) =

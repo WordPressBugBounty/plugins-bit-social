@@ -109,14 +109,29 @@ class SocialTemplateController
             $templateSettings = $this->defaultTemplateSettings;
         }
 
-        $keyDiff = array_diff_key($this->defaultTemplateSettings, $templateSettings);
-
-        if (\count($keyDiff) !== 0) {
-            $templateSettings = $templateSettings + $keyDiff;
-
-            Config::updateOption('templates_settings', $templateSettings);
+        if (!\is_array($templateSettings)) {
+            $templateSettings = [];
         }
 
-        return $templateSettings;
+        $normalized = $templateSettings;
+
+        foreach ($this->defaultTemplateSettings as $platform => $defaults) {
+            $stored = $normalized[$platform] ?? null;
+
+            // A platform added after the option was saved, or a corrupted entry
+            // (string / empty list), must still come back as a full settings map,
+            // otherwise the settings page crashes on render or on first edit.
+            if (!\is_array($stored) || array_values($stored) === $stored) {
+                $stored = [];
+            }
+
+            $normalized[$platform] = $stored + $defaults;
+        }
+
+        if ($normalized !== $templateSettings) {
+            Config::updateOption('templates_settings', $normalized);
+        }
+
+        return $normalized;
     }
 }

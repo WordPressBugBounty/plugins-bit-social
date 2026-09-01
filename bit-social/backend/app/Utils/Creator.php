@@ -54,7 +54,25 @@ class Creator
     {
         $config = \is_string($config) ? json_decode($config, true) : (array) $config;
 
-        return isset($config['created_by']) ? (int) $config['created_by'] : 0;
+        if (isset($config['created_by'])) {
+            return (int) $config['created_by'];
+        }
+
+        // Delayed auto-post rows carried no creator until AutoPostService started
+        // stamping one, and every one of them read "Unknown". They target a single
+        // post, and whoever published it is the answer — so read it back rather
+        // than leaving old rows blank forever.
+        $postIds = isset($config['post_filters']['specific_postIds'])
+            ? array_values((array) $config['post_filters']['specific_postIds'])
+            : [];
+
+        if (\count($postIds) !== 1) {
+            return 0;
+        }
+
+        $post = get_post((int) $postIds[0]);
+
+        return $post ? (int) $post->post_author : 0;
     }
 
     /**

@@ -3,13 +3,18 @@
 namespace BitApps\Social\HTTP\Controllers;
 
 use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\HTTP\Requests\ScheduleStoreRequest;
+use BitApps\Social\HTTP\Services\Schedule\ScheduleInfo;
 use BitApps\Social\Model\Schedule;
+use BitApps\Social\Providers\ScheduleActionHook;
 use BitApps\Social\Utils\Common;
 use BitApps\Social\Utils\Creator;
+use BitApps\Social\Utils\ScheduleSummary;
 use BitApps\Social\Utils\SmartTag;
+use BitApps\SocialPro\Config as ProConfig;
 use DateTime;
 
 class ScheduleController
@@ -25,6 +30,7 @@ class ScheduleController
 
         foreach ($schedules['data'] as $schedule) {
             Creator::attachToSchedule($schedule);
+            ScheduleSummary::attachToSchedule($schedule);
 
             $actionHook = Config::VAR_PREFIX . $schedule->id . '_cron_exec';
             $hookArgument['schedule_id'] = $schedule->id;
@@ -65,6 +71,7 @@ class ScheduleController
 
         foreach ($schedules['data'] as $schedule) {
             Creator::attachToSchedule($schedule);
+            ScheduleSummary::attachToSchedule($schedule);
         }
 
         return Response::success($schedules);
@@ -167,7 +174,7 @@ class ScheduleController
         $schedule->update($scheduleData);
 
         if ($schedule->save()) {
-            if ($schedule['status'] = Schedule::status['ACTIVE'] && !$areEqual) {
+            if ((int) $schedule['status'] === Schedule::status['ACTIVE'] && !$areEqual) {
                 $this->removeScheduleHook($schedule['id']);
             }
 
@@ -229,6 +236,76 @@ class ScheduleController
         }
 
         return Response::error('Schedule status update failed');
+    }
+
+    /**
+     * Publish a MISSED schedule now.
+     *
+     * A schedule only reaches MISSED because WP-Cron did not run in time, so the
+     * retry publishes inline instead of queueing another cron event — handing it
+     * back to the scheduler would strand it exactly the same way. Works for both
+     * Share Now rows and auto-post/scheduled-share rows.
+     */
+    public function retry(Schedule $schedule)
+    {
+        if ((int) $schedule->status !== Schedule::status['MISSED']) {
+            return Response::error('Only a missed post can be published again.');
+        }
+
+        // The free plugin refuses to publish a schedule created on an earlier
+        // day, so say that plainly here — otherwise publishPost() bails on it
+        // silently and the generic "nothing was published" message below would
+        // blame the post or the accounts for a licensing limit.
+        $info = new ScheduleInfo(['schedule_id' => $schedule->id]);
+
+        if ($info->config() && !$this->isProActive() && !$info->isCreatedToday()) {
+            return Response::error('The free plugin can only publish schedules created today. Upgrade to Pro to republish an older one.');
+        }
+
+        $wpNow = gmdate('Y-m-d H:i:s', current_time('timestamp'));
+
+        $revived = $schedule->update([
+            'status'            => Schedule::status['ACTIVE'],
+            'cron_status'       => Schedule::cronStatus['ACTIVE'],
+            'started_at'        => $wpNow,
+            'next_published_at' => $wpNow,
+            'ended_at'          => null,
+        ]);
+
+        if (!$revived->save()) {
+            return Response::error('Could not reopen the missed post.');
+        }
+
+        // publishPost() has several silent bail-outs (source post gone, accounts
+        // removed, sleep window). Watching the publish action is the only
+        // reliable signal that something actually went out — the row's end
+        // status alone does not distinguish "published" from "gave up".
+        $publishResults = null;
+        $publishHook = Config::withPrefix('all_platforms_post_publish');
+        $capture = static function ($results) use (&$publishResults) {
+            $publishResults = $results;
+        };
+
+        Hooks::addAction($publishHook, $capture);
+        ScheduleActionHook::execute(['schedule_id' => $schedule->id]);
+        Hooks::removeAction($publishHook, $capture);
+
+        if (empty($publishResults)) {
+            // Put it back to MISSED so it stays visible and retryable rather
+            // than hanging in ACTIVE ("In Progress") or looking completed.
+            $schedule->update([
+                'status'            => Schedule::status['MISSED'],
+                'cron_status'       => Schedule::cronStatus['INACTIVE'],
+                'ended_at'          => $wpNow,
+                'next_published_at' => null,
+            ])->save();
+
+            $this->removeScheduleHook($schedule->id);
+
+            return Response::error('Nothing was published — the post or its accounts may no longer exist. Check the logs.');
+        }
+
+        return Response::success('Post published. Check the logs for per-platform results.');
     }
 
     public function destroy(Request $request)
@@ -306,37 +383,39 @@ class ScheduleController
         return $this->getNextInterval($nextPostTime, $interval, $sleepTime, $sleepDays);
     }
 
+    /**
+     * Every schedule, with its next firing time where it still has one.
+     *
+     * A pending cron event used to be the price of admission — a schedule was
+     * only returned if wp_next_scheduled() knew about it — so a finished, paused
+     * or completed schedule vanished from this list entirely. That is most of
+     * them: it left the Logs screen's schedule filter offering one option out of
+     * nineteen, and the Calendar logging "schedule details not found" for any
+     * row it could not look up. Whether a schedule will fire again is a property
+     * to report, not a reason to omit it.
+     */
     public function allSchedule()
     {
         $schedules = Schedule::get(['id', 'name', 'config', 'schedule_type', 'started_at', 'next_published_at', 'status', 'created_at']);
 
+        $data = [];
+
         foreach ($schedules as $schedule) {
             $actionHook = Config::VAR_PREFIX . $schedule->id . '_cron_exec';
-            $hookArgument['schedule_id'] = $schedule->id;
+            $hookArgument = ['schedule_id' => $schedule->id];
             $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
 
             if ($nextPostTimeStamp) {
-                $actionHook = Config::VAR_PREFIX . $schedule->id . '_cron_exec';
-                $hookArgument['schedule_id'] = $schedule->id;
-
-                $nextPostTimeStamp = wp_next_scheduled($actionHook, [$hookArgument]);
                 $exactDateTime = get_date_from_gmt(gmdate('Y-m-d H:i:s', $nextPostTimeStamp), 'Y-m-d H:i:s');
-                $nextPostTimeStamp = strtotime($exactDateTime);
 
-                $currentTimestamp = current_time('timestamp');
-
-                $humanReadableTime = human_time_diff($currentTimestamp, $nextPostTimeStamp);
-
-                $schedule->human_readable_next_publish = 'in ' . $humanReadableTime;
+                $schedule->human_readable_next_publish = 'in ' . human_time_diff(current_time('timestamp'), strtotime($exactDateTime));
                 $schedule->next_published_at = $exactDateTime;
-
-                $schedules['data'][] = $schedule;
             }
+
+            $data[] = $schedule;
         }
 
-        $schedules = $schedules['data'] ?? [];
-
-        return Response::success($schedules);
+        return Response::success($data);
     }
 
     public function getSmartTags()
@@ -346,6 +425,17 @@ class ScheduleController
         }
 
         return Response::error('Smart tag error');
+    }
+
+    /**
+     * Whether the Pro add-on is active and licensed. Mirrors the gate
+     * SocialExecution applies before it enforces the free day limit.
+     *
+     * @return bool
+     */
+    private function isProActive()
+    {
+        return class_exists('BitApps\SocialPro\Config') && ProConfig::isPro();
     }
 
     private function getNextInterval($startDate, $interval, $sleepTime, $sleepDays)

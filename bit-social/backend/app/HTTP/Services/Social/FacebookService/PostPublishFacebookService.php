@@ -10,6 +10,7 @@ use BitApps\Social\HTTP\Services\Interfaces\SocialInterface;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
 use BitApps\Social\Model\Schedule;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\MetaGraph;
 
 #[AllowDynamicProperties]
 class PostPublishFacebookService implements SocialInterface
@@ -27,7 +28,7 @@ class PostPublishFacebookService implements SocialInterface
 
     private $postBaseUrl = 'https://fb.com';
 
-    private $version = 'v19.0';
+    private $version = MetaGraph::VERSION;
 
     private $facebookData = [];
 
@@ -244,7 +245,7 @@ class PostPublishFacebookService implements SocialInterface
         $params['url'] = $imageLink;
         $params['access_token'] = $accessToken;
         $params['published'] = 'false';
-        $publishPostUrl = $this->baseUrl . "{$accountId}/{$endPoint}?";
+        $publishPostUrl = $this->baseUrl . "{$this->version}/{$accountId}/{$endPoint}?";
         $publishPostUrlWithParams = $publishPostUrl . http_build_query($params);
 
         return $this->httpHandler->request($publishPostUrlWithParams, 'POST', []);

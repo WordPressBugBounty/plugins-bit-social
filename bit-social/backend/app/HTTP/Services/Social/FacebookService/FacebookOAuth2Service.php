@@ -9,6 +9,8 @@ use BitApps\Social\HTTP\Services\Interfaces\AuthServiceInterface;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\ConnectError;
+use BitApps\Social\Utils\MetaGraph;
 
 class FacebookOAuth2Service implements AuthServiceInterface
 {
@@ -18,7 +20,7 @@ class FacebookOAuth2Service implements AuthServiceInterface
 
     private $baseUrl = 'https://graph.facebook.com/';
 
-    private $version = 'v16.0';
+    private $version = MetaGraph::VERSION;
 
     // all urls
     private $shortAccessTokenUrl;
@@ -36,9 +38,11 @@ class FacebookOAuth2Service implements AuthServiceInterface
         $this->httpHandler = new HttpClient();
         $this->shortAccessTokenUrl = $this->baseUrl . $this->version . '/oauth/access_token?';
         $this->longTimeAccessTokenUrl = $this->baseUrl . $this->version . '/oauth/access_token?';
-        $this->userAccountInfoUrl = $this->baseUrl . 'me?';
-        $this->getAccountsUrl = $this->baseUrl . 'me/accounts?';
-        $this->getAllGroupUrl = $this->baseUrl . 'me/groups?';
+        // Version every call: an unversioned Graph URL is served by the
+        // oldest version Meta still supports, which drifts out from under us.
+        $this->userAccountInfoUrl = $this->baseUrl . $this->version . '/me?';
+        $this->getAccountsUrl = $this->baseUrl . $this->version . '/me/accounts?';
+        $this->getAllGroupUrl = $this->baseUrl . $this->version . '/me/groups?';
     }
 
     // TODO: encode only query params value. should  refactor
@@ -46,6 +50,12 @@ class FacebookOAuth2Service implements AuthServiceInterface
     {
         // Parse the URL to get the query string
         $queryString = wp_parse_url($url, PHP_URL_QUERY);
+
+        // A redirect URI on pretty permalinks has no query string at all, and
+        // parse_str() is deprecated on null as of PHP 8.1.
+        if (!\is_string($queryString) || $queryString === '') {
+            return $url;
+        }
 
         // Separate the query string into key-value pairs
         parse_str($queryString, $params);
@@ -87,6 +97,11 @@ class FacebookOAuth2Service implements AuthServiceInterface
 
         $shortAccessTokenResponse = $this->httpHandler->request($shortAccessTokenUrlWithParams, 'GET', []);
 
+        $shortAccessTokenError = $this->tokenError($shortAccessTokenResponse);
+        if ($shortAccessTokenError !== null) {
+            return $shortAccessTokenError;
+        }
+
         $longTimeAccessTokenParams = [
             'grant_type'        => 'fb_exchange_token',
             'client_id'         => $app_id,
@@ -98,6 +113,12 @@ class FacebookOAuth2Service implements AuthServiceInterface
         $longTimeAccessTokenUrlWithParams = $this->longTimeAccessTokenUrl . http_build_query($longTimeAccessTokenParams);
 
         $longTimeAccessTokenData = $this->httpHandler->request($longTimeAccessTokenUrlWithParams, 'GET', []);
+
+        $longTimeAccessTokenError = $this->tokenError($longTimeAccessTokenData);
+        if ($longTimeAccessTokenError !== null) {
+            return $longTimeAccessTokenError;
+        }
+
         $longTimeAccessToken = $longTimeAccessTokenData->access_token;
         $appsecret_proof = hash_hmac(
             'sha256',
@@ -106,10 +127,26 @@ class FacebookOAuth2Service implements AuthServiceInterface
         );
 
         $userInfoData = self::getUserInfo($longTimeAccessToken, $appsecret_proof);
+
+        if (is_wp_error($userInfoData) || !\is_object($userInfoData) || empty($userInfoData->id)) {
+            return (object) ['status' => 'error', 'message' => 'Fetching the Facebook profile failed, please authorize again!'];
+        }
+
         $accountsPages = $this->accountsPages($longTimeAccessToken, $appsecret_proof);
         $accountsGroups = $this->accountsGroups($longTimeAccessToken, $appsecret_proof);
 
-        $pageAndGroup = $this->organizePageAndGroup($accountsPages->data, $accountsGroups->data, $userInfoData, $longTimeAccessToken);
+        $pageAndGroup = $this->organizePageAndGroup(
+            $this->listOf($accountsPages),
+            $this->listOf($accountsGroups),
+            $userInfoData,
+            $longTimeAccessToken
+        );
+
+        // A profile that manages no pages and belongs to no groups has nothing
+        // to offer, and looking its ids up would run `IN ()`.
+        if (empty($pageAndGroup)) {
+            return (object) ['status' => 'error', 'message' => 'No Facebook page or group was found for this profile.'];
+        }
 
         if (\is_array($pageAndGroup)) {
             $allAccount = [];
@@ -192,7 +229,7 @@ class FacebookOAuth2Service implements AuthServiceInterface
             'access_token' => $accessToken
         ];
 
-        $pagePicUrl = $this->baseUrl . "{$accountId}?";
+        $pagePicUrl = $this->baseUrl . "{$this->version}/{$accountId}?";
         $pagePicUrlWithParams = $pagePicUrl . http_build_query($params);
 
         $response = $this->httpHandler->request($pagePicUrlWithParams, 'GET', []);
@@ -202,6 +239,9 @@ class FacebookOAuth2Service implements AuthServiceInterface
 
     public function organizePageAndGroup($accountsPages, $accountsGroups, $userInfoData, $longTimeAccessToken)
     {
+        $pages = [];
+        $groups = [];
+
         foreach ($accountsPages as $page) {
             $pages[] = [
                 'user_name'    => $userInfoData->name,
@@ -229,14 +269,50 @@ class FacebookOAuth2Service implements AuthServiceInterface
             ];
         }
 
-        if (!empty($pages) && !empty($groups)) {
-            $pageAndGroup = array_merge($pages, $groups);
-        } elseif (!empty($pages)) {
-            $pageAndGroup = $pages;
-        } elseif (!empty($groups)) {
-            $pageAndGroup = $groups;
+        return array_merge($pages, $groups);
+    }
+
+    /**
+     * Facebook answers a failed exchange with an `error` object, and an
+     * unreachable Graph with a WP_Error -- neither carries a token, and every
+     * step after this one assumes one is there.
+     *
+     * @param mixed $response
+     *
+     * @return null|object null when the response does carry a token
+     */
+    private function tokenError($response)
+    {
+        if (is_wp_error($response)) {
+            return (object) ['status' => 'error', 'message' => ConnectError::unreachable($response, 'Facebook')];
         }
 
-        return $pageAndGroup;
+        if (\is_object($response) && !empty($response->error)) {
+            $error = $response->error;
+            $message = \is_object($error) && !empty($error->message) ? $error->message : 'Authorization failed, please try again!';
+
+            return (object) ['status' => 'error', 'message' => $message];
+        }
+
+        if (!\is_object($response) || empty($response->access_token)) {
+            return (object) ['status' => 'error', 'message' => 'Facebook did not return an access token, please authorize again!'];
+        }
+    }
+
+    /**
+     * Graph list endpoints answer `{ data: [...] }`; anything else (an error
+     * object, a WP_Error) has no list to walk.
+     *
+     * @param mixed $response
+     *
+     * @return array
+     */
+    private function listOf($response)
+    {
+        if (!\is_object($response) || !isset($response->data) || !\is_array($response->data)) {
+            return [];
+        }
+
+        return $response->data;
     }
 }

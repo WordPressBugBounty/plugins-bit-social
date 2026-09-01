@@ -11,6 +11,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\HTTP\Services\Social\Social;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Utils\Common;
+use BitApps\Social\Utils\LogRun;
 use BitApps\SocialPro\HTTP\Services\AutoPost\AutoPostService;
 use BitApps\SocialPro\Model\GroupsAccount;
 use Throwable;
@@ -194,40 +195,51 @@ class AutoPostController
         $isSleep = false;
         $publishPostData = [];
 
-        foreach ($accounts as $account) {
-            $isPlatFormExists = $this->isPlatFormExists($account->id);
+        // One auto-post is one run. Without this every account logs under an id
+        // of its own — LogRun::current() mints one per write when nothing is
+        // open — and the Logs screen shows a five-account auto-post as five
+        // separate events. A scheduled run gets this from SocialExecution;
+        // auto-post publishes here instead and had no equivalent.
+        LogRun::start();
 
-            if (!$isPlatFormExists) {
-                continue;
-            }
+        try {
+            foreach ($accounts as $account) {
+                $isPlatFormExists = $this->isPlatFormExists($account->id);
 
-            $platform = new Social(new $isPlatFormExists['class']());
-
-            $platformName = $isPlatFormExists['platform'];
-
-            if (isset($templates[$platformName])) {
-                $template = $templates[$platformName];
-
-                preg_match('/custom_field_\[([^\]]+)\]/', $template['content'] ?? '', $matches);
-
-                if (!$isSleep && isset($matches[1])) {
-                    $isSleep = true;
-                    sleep(2); // Wait for the post meta values to be saved after the hook call
+                if (!$isPlatFormExists) {
+                    continue;
                 }
 
-                $data = [
-                    'post'            => (array) get_post($postId),
-                    'template'        => $template,
-                    'account_details' => $isPlatFormExists['details'],
-                    'keepLogs'        => $autoPostSettings['keepLogs']
-                ];
+                $platform = new Social(new $isPlatFormExists['class']());
 
-                try {
-                    $publishPostData[] = $platform->publishPost($data);
-                } catch (Throwable $e) {
-                    $publishPostData[] = ['status' => 'error', 'message' => $e->getMessage()];
+                $platformName = $isPlatFormExists['platform'];
+
+                if (isset($templates[$platformName])) {
+                    $template = $templates[$platformName];
+
+                    preg_match('/custom_field_\[([^\]]+)\]/', $template['content'] ?? '', $matches);
+
+                    if (!$isSleep && isset($matches[1])) {
+                        $isSleep = true;
+                        sleep(2); // Wait for the post meta values to be saved after the hook call
+                    }
+
+                    $data = [
+                        'post'            => (array) get_post($postId),
+                        'template'        => $template,
+                        'account_details' => $isPlatFormExists['details'],
+                        'keepLogs'        => $autoPostSettings['keepLogs']
+                    ];
+
+                    try {
+                        $publishPostData[] = $platform->publishPost($data);
+                    } catch (Throwable $e) {
+                        $publishPostData[] = ['status' => 'error', 'message' => $e->getMessage()];
+                    }
                 }
             }
+        } finally {
+            LogRun::end();
         }
 
         Hooks::doAction(Config::withPrefix('all_platforms_post_publish'), $publishPostData);
@@ -290,12 +302,17 @@ class AutoPostController
      * Who may trigger auto-post sharing. Scheduled posts are published by
      * WP-Cron with no logged-in user, so the post author is checked instead.
      *
-     * Free defaults to 'edit_posts' — i.e. anyone who could publish the post —
-     * which preserves the pre-role-access behavior where every published post
-     * auto-posted. Pro filters the capability to its role-access cap so only
-     * roles granted access in Roles & Access trigger auto-post, and further
-     * loosens the gate (autopost_publisher_allowed) for publishers whose role
-     * is explicitly granted on an account's permissions.
+     * Free applies no capability of its own. Auto-post is site-level
+     * configuration an administrator turned on, and before this gate existed
+     * every published post went out under it — including posts whose author
+     * holds no editing rights at all, which is ordinary for front-end
+     * submissions, imported content and authors who were later demoted.
+     * Gating those on 'edit_posts' would silently stop sharing them.
+     *
+     * Pro filters the capability to its role-access cap once an admin has
+     * configured Roles & Access, so only granted roles trigger auto-post, and
+     * further loosens the gate (autopost_publisher_allowed) for publishers whose
+     * role is explicitly granted on an account's permissions.
      *
      * @param WP_Post $post
      *
@@ -313,9 +330,9 @@ class AutoPostController
             return true;
         }
 
-        $capability = Hooks::applyFilter(Config::withPrefix('autopost_publisher_capability'), 'edit_posts');
+        $capability = (string) Hooks::applyFilter(Config::withPrefix('autopost_publisher_capability'), '');
 
-        $canPublish = user_can($userId, $capability);
+        $canPublish = $capability === '' || user_can($userId, $capability);
 
         return (bool) Hooks::applyFilter(Config::withPrefix('autopost_publisher_allowed'), $canPublish, $userId);
     }

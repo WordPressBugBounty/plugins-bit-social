@@ -33,6 +33,7 @@ class Schedule extends Model
         'schedule_type',
         'status',
         'started_at',
+        'ended_at',
         'last_published_at',
         'next_published_at',
         'cron_status',

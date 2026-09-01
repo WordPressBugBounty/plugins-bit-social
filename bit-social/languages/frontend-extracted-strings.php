@@ -120,6 +120,42 @@ return [
 
     'Unknown' => __('Unknown', 'bit-social'),
 
+    'Disabled' => __('Disabled', 'bit-social'),
+
+    'Not running' => __('Not running', 'bit-social'),
+
+    'Working' => __('Working', 'bit-social'),
+
+    'Healthy' => __('Healthy', 'bit-social'),
+
+    'Needs attention' => __('Needs attention', 'bit-social'),
+
+    'Built-in cron off' => __('Built-in cron off', 'bit-social'),
+
+    'Cron Status' => __('Cron Status', 'bit-social'),
+
+    'Live status of the cron that runs your scheduled and auto posts.' => __('Live status of the cron that runs your scheduled and auto posts.', 'bit-social'),
+
+    'WP-Cron' => __('WP-Cron', 'bit-social'),
+
+    'External Cron' => __('External Cron', 'bit-social'),
+
+    'Enabled' => __('Enabled', 'bit-social'),
+
+    'Not enabled' => __('Not enabled', 'bit-social'),
+
+    'Last cron run' => __('Last cron run', 'bit-social'),
+
+    'No cron run recorded yet' => __('No cron run recorded yet', 'bit-social'),
+
+    'Next scheduled run' => __('Next scheduled run', 'bit-social'),
+
+    'Overdue' => __('Overdue', 'bit-social'),
+
+    'None scheduled' => __('None scheduled', 'bit-social'),
+
+    'The next run is overdue — WP-Cron may have stalled. Set up a real server cron (below) so posts publish on time.' => __('The next run is overdue — WP-Cron may have stalled. Set up a real server cron (below) so posts publish on time.', 'bit-social'),
+
     'Your <b>WP_CRON</b> are disabled' => __('Your <b>WP_CRON</b> are disabled', 'bit-social'),
 
     'Cron Settings' => __('Cron Settings', 'bit-social'),
@@ -128,9 +164,45 @@ return [
 
     'Learn more' => __('Learn more', 'bit-social'),
 
+    'Not set' => __('Not set', 'bit-social'),
+
     'To get app credentials, Visit' => __('To get app credentials, Visit', 'bit-social'),
 
     'Developer' => __('Developer', 'bit-social'),
+
+    'Something went wrong' => __('Something went wrong', 'bit-social'),
+
+    'The plugin assets could not be loaded. This usually happens after an update — reloading the page should fix it.' => __('The plugin assets could not be loaded. This usually happens after an update — reloading the page should fix it.', 'bit-social'),
+
+    'An unexpected error occurred while rendering this screen. You can try again, reload the page, or go back to the dashboard.' => __('An unexpected error occurred while rendering this screen. You can try again, reload the page, or go back to the dashboard.', 'bit-social'),
+
+    'Reload Page' => __('Reload Page', 'bit-social'),
+
+    'Try Again' => __('Try Again', 'bit-social'),
+
+    'Go to Dashboard' => __('Go to Dashboard', 'bit-social'),
+
+    'Publish anyway' => __('Publish anyway', 'bit-social'),
+
+    'Mark as Missed' => __('Mark as Missed', 'bit-social'),
+
+    'after' => __('after', 'bit-social'),
+
+    'A post WP-Cron runs more than an hour late is marked Missed rather than published stale. Upgrade to publish late posts anyway, or to set how much lateness each kind is worth.' => __('A post WP-Cron runs more than an hour late is marked Missed rather than published stale. Upgrade to publish late posts anyway, or to set how much lateness each kind is worth.', 'bit-social'),
+
+    'Late post handling' => __('Late post handling', 'bit-social'),
+
+    'A delay here is about spacing, not an exact time — late is often still fine.' => __('A delay here is about spacing, not an exact time — late is often still fine.', 'bit-social'),
+
+    'Auto Post' => __('Auto Post', 'bit-social'),
+
+    'Hours' => __('Hours', 'bit-social'),
+
+    'You picked this time yourself, so publishing hours late is rarely wanted.' => __('You picked this time yourself, so publishing hours late is rarely wanted.', 'bit-social'),
+
+    'Share Now & Scheduled Share' => __('Share Now & Scheduled Share', 'bit-social'),
+
+    'A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.' => __('A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.', 'bit-social'),
 
     '<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.' => __('<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.', 'bit-social'),
 
@@ -147,6 +219,87 @@ return [
     'You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.' => __('You can instantly share and automatically schedule your written posts to be shared on your social media platforms. There you will find a save draft (to save your content for future), publish (to share instantly), and setup schedule option to ensure that the content you have written will be shared at your chosen times.', 'bit-social'),
 
     'To set it up, click on the <b>"Share Post"</b> button and follow the next step!' => __('To set it up, click on the <b>"Share Post"</b> button and follow the next step!', 'bit-social'),
+
+    'Minutes' => __('Minutes', 'bit-social'),
+
+    'Days' => __('Days', 'bit-social'),
+
+    'Amount' => __('Amount', 'bit-social'),
+
+    'Unit' => __('Unit', 'bit-social'),
+
+    'Published however late' => __('Published however late', 'bit-social'),
+
+    'Could not save. Please try again.' => __('Could not save. Please try again.', 'bit-social'),
+
+    'A delay here is about spacing, not an exact time — late is usually fine.' => __('A delay here is about spacing, not an exact time — late is usually fine.', 'bit-social'),
+
+    'You picked this time yourself, so publishing hours late is rarely wanted. A repeating schedule still waits one interval, or an hour, whichever is longer — below that a slow cron would mark every run Missed.' => __('You picked this time yourself, so publishing hours late is rarely wanted. A repeating schedule still waits one interval, or an hour, whichever is longer — below that a slow cron would mark every run Missed.', 'bit-social'),
+
+    'When WP-Cron runs late, decide whether a post still goes out or is marked Missed instead so stale content does not reach your audience.' => __('When WP-Cron runs late, decide whether a post still goes out or is marked Missed instead so stale content does not reach your audience.', 'bit-social'),
+
+    'Saved' => __('Saved', 'bit-social'),
+
+    'All images' => __('All images', 'bit-social'),
+
+    'Custom images' => __('Custom images', 'bit-social'),
+
+    'Featured image' => __('Featured image', 'bit-social'),
+
+    'Link card' => __('Link card', 'bit-social'),
+
+    'Product image' => __('Product image', 'bit-social'),
+
+    'AI image' => __('AI image', 'bit-social'),
+
+    'Video' => __('Video', 'bit-social'),
+
+    /* translators: %d: placeholder value */
+    '%d image(s)' => __('%d image(s)', 'bit-social'),
+
+    /* translators: %d: placeholder value */
+    '%d attachment(s)' => __('%d attachment(s)', 'bit-social'),
+
+    'Link' => __('Link', 'bit-social'),
+
+    'First comment' => __('First comment', 'bit-social'),
+
+    'Topic' => __('Topic', 'bit-social'),
+
+    'via' => __('via', 'bit-social'),
+
+    'Show fewer' => __('Show fewer', 'bit-social'),
+
+    /* translators: %d: placeholder value */
+    '+%d more' => __('+%d more', 'bit-social'),
+
+    /* translators: %d: placeholder value */
+    'Same on %d networks' => __('Same on %d networks', 'bit-social'),
+
+    'No message — only the media below is posted' => __('No message — only the media below is posted', 'bit-social'),
+
+    'Post type' => __('Post type', 'bit-social'),
+
+    'Any' => __('Any', 'bit-social'),
+
+    'Category / tag' => __('Category / tag', 'bit-social'),
+
+    'Chosen posts' => __('Chosen posts', 'bit-social'),
+
+    /* translators: %d: placeholder value */
+    'Posting to (%d)' => __('Posting to (%d)', 'bit-social'),
+
+    'Posting to' => __('Posting to', 'bit-social'),
+
+    'Edit this row and pick an account, or it will publish nowhere.' => __('Edit this row and pick an account, or it will publish nowhere.', 'bit-social'),
+
+    'No connected account' => __('No connected account', 'bit-social'),
+
+    'Posts it picks up' => __('Posts it picks up', 'bit-social'),
+
+    'When it runs' => __('When it runs', 'bit-social'),
+
+    'Message' => __('Message', 'bit-social'),
 
     'Doc Link' => __('Doc Link', 'bit-social'),
 
@@ -178,13 +331,14 @@ return [
 
     'Search accounts' => __('Search accounts', 'bit-social'),
 
-    'Reconnecting account…' => __('Reconnecting account…', 'bit-social'),
-
     'Account reconnect failed' => __('Account reconnect failed', 'bit-social'),
 
-    'The connected account does not match this account. Please sign in with the same account and try again.' => __('The connected account does not match this account. Please sign in with the same account and try again.', 'bit-social'),
-
     'Account reconnected successfully' => __('Account reconnected successfully', 'bit-social'),
+
+    /* translators: %s: placeholder value */
+    'Reconnect %s' => __('Reconnect %s', 'bit-social'),
+
+    'Only the highlighted account can be reconnected — the rest show what the sign-in returned.' => __('Only the highlighted account can be reconnected — the rest show what the sign-in returned.', 'bit-social'),
 
     'Profile' => __('Profile', 'bit-social'),
 
@@ -198,9 +352,32 @@ return [
 
     'Account connect failed' => __('Account connect failed', 'bit-social'),
 
+    'Fetching data, please wait...' => __('Fetching data, please wait...', 'bit-social'),
+
     'Manage' => __('Manage', 'bit-social'),
 
+    'No authorization code was received. Close this window and start the connection again.' => __('No authorization code was received. Close this window and start the connection again.', 'bit-social'),
+
+    'Authorization was cancelled' => __('Authorization was cancelled', 'bit-social'),
+
+    'The provider returned an error. Close this window and try connecting again.' => __('The provider returned an error. Close this window and try connecting again.', 'bit-social'),
+
+    'Authorization failed' => __('Authorization failed', 'bit-social'),
+
+    'Authorization received. This window should close automatically — if it does not, you can close it and return to the Accounts page.' => __('Authorization received. This window should close automatically — if it does not, you can close it and return to the Accounts page.', 'bit-social'),
+
+    'Finishing connection…' => __('Finishing connection…', 'bit-social'),
+
+    'Close Window' => __('Close Window', 'bit-social'),
+
+    'Go to Accounts' => __('Go to Accounts', 'bit-social'),
+
     'Connect Account' => __('Connect Account', 'bit-social'),
+
+    'Signing in returned no accounts for this platform. Check that the app still has permission to this profile, page or location, then try again.' => __('Signing in returned no accounts for this platform. Check that the app still has permission to this profile, page or location, then try again.', 'bit-social'),
+
+    /* translators: %s: placeholder value */
+    'Signing in returned %s, which does not include the account you are reconnecting. Sign in with the same account, or check that the app still has access to it.' => __('Signing in returned %s, which does not include the account you are reconnecting. Sign in with the same account, or check that the app still has access to it.', 'bit-social'),
 
     'This account also be deleted from related schedule!' => __('This account also be deleted from related schedule!', 'bit-social'),
 
@@ -264,8 +441,6 @@ return [
 
     'Active' => __('Active', 'bit-social'),
 
-    'Disabled' => __('Disabled', 'bit-social'),
-
     'Reconnect' => __('Reconnect', 'bit-social'),
 
     'Connect your social account first!' => __('Connect your social account first!', 'bit-social'),
@@ -296,7 +471,15 @@ return [
 
     'Back' => __('Back', 'bit-social'),
 
-    'Saved' => __('Saved', 'bit-social'),
+    'Please try again.' => __('Please try again.', 'bit-social'),
+
+    'The connection could not be completed. Please try again.' => __('The connection could not be completed. Please try again.', 'bit-social'),
+
+    'Connection failed' => __('Connection failed', 'bit-social'),
+
+    'Already connected' => __('Already connected', 'bit-social'),
+
+    'This account' => __('This account', 'bit-social'),
 
     'No' => __('No', 'bit-social'),
 
@@ -354,6 +537,10 @@ return [
 
     'Bot Token' => __('Bot Token', 'bit-social'),
 
+    'Reconnect it to resume posting.' => __('Reconnect it to resume posting.', 'bit-social'),
+
+    'Ask an administrator to reconnect it.' => __('Ask an administrator to reconnect it.', 'bit-social'),
+
     'Details & permissions' => __('Details & permissions', 'bit-social'),
 
     'Details' => __('Details', 'bit-social'),
@@ -369,6 +556,8 @@ return [
     'disable' => __('disable', 'bit-social'),
 
     'enable' => __('enable', 'bit-social'),
+
+    'Reconnect needed' => __('Reconnect needed', 'bit-social'),
 
     'All' => __('All', 'bit-social'),
 
@@ -648,15 +837,23 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
-    'Fixed' => __('Fixed', 'bit-social'),
-
     'Features' => __('Features', 'bit-social'),
 
     'Improvements' => __('Improvements', 'bit-social'),
 
+    'Fixed' => __('Fixed', 'bit-social'),
+
     'Settings' => __('Settings', 'bit-social'),
 
     'More' => __('More', 'bit-social'),
+
+    'The schedule slot passed without a publish attempt' => __('The schedule slot passed without a publish attempt', 'bit-social'),
+
+    'Published' => __('Published', 'bit-social'),
+
+    'No message returned — open for the full response' => __('No message returned — open for the full response', 'bit-social'),
+
+    'Schedule' => __('Schedule', 'bit-social'),
 
     'Facebook' => __('Facebook', 'bit-social'),
 
@@ -690,35 +887,97 @@ return [
 
     'Error' => __('Error', 'bit-social'),
 
-    'Schedule' => __('Schedule', 'bit-social'),
+    'Missed' => __('Missed', 'bit-social'),
 
     'Filter:' => __('Filter:', 'bit-social'),
 
+    'Search' => __('Search', 'bit-social'),
+
     'to' => __('to', 'bit-social'),
 
-    'Created by' => __('Created by', 'bit-social'),
+    'Search logs' => __('Search logs', 'bit-social'),
+
+    'Search by account, post, schedule or error' => __('Search by account, post, schedule or error', 'bit-social'),
+
+    'published' => __('published', 'bit-social'),
+
+    'failed' => __('failed', 'bit-social'),
+
+    'missed' => __('missed', 'bit-social'),
+
+    'Retrying…' => __('Retrying…', 'bit-social'),
+
+    'Failed' => __('Failed', 'bit-social'),
 
     'Account' => __('Account', 'bit-social'),
 
-    'Response' => __('Response', 'bit-social'),
+    'Unknown account' => __('Unknown account', 'bit-social'),
+
+    'Copy details' => __('Copy details', 'bit-social'),
+
+    'Stored response' => __('Stored response', 'bit-social'),
+
+    'No details recorded' => __('No details recorded', 'bit-social'),
+
+    'Open the published post' => __('Open the published post', 'bit-social'),
+
+    'No post link was recorded' => __('No post link was recorded', 'bit-social'),
 
     'Visit' => __('Visit', 'bit-social'),
 
-    'Retry' => __('Retry', 'bit-social'),
+    'Publish this account again' => __('Publish this account again', 'bit-social'),
 
     'Related schedule was deleted' => __('Related schedule was deleted', 'bit-social'),
 
+    'Retry' => __('Retry', 'bit-social'),
+
+    'By' => __('By', 'bit-social'),
+
+    'Created by' => __('Created by', 'bit-social'),
+
+    'Result' => __('Result', 'bit-social'),
+
+    'Publishing to the accounts that did not go out' => __('Publishing to the accounts that did not go out', 'bit-social'),
+
+    'Retry every account that did not publish' => __('Retry every account that did not publish', 'bit-social'),
+
     'Actions' => __('Actions', 'bit-social'),
 
-    'Hide' => __('Hide', 'bit-social'),
+    'Deleted schedule' => __('Deleted schedule', 'bit-social'),
 
-    'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'bit-social'),
+    'Auto post - Post ID:' => __('Auto post - Post ID:', 'bit-social'),
 
-    'Confirm' => __('Confirm', 'bit-social'),
+    'Auto post' => __('Auto post', 'bit-social'),
 
-    'Delete Logs' => __('Delete Logs', 'bit-social'),
+    'Custom written content' => __('Custom written content', 'bit-social'),
 
-    'Visit our documentation' => __('Visit our documentation', 'bit-social'),
+    'No post' => __('No post', 'bit-social'),
+
+    'Hide accounts' => __('Hide accounts', 'bit-social'),
+
+    'Show accounts' => __('Show accounts', 'bit-social'),
+
+    'Retry sent' => __('Retry sent', 'bit-social'),
+
+    'Retry failed' => __('Retry failed', 'bit-social'),
+
+    'Details copied' => __('Details copied', 'bit-social'),
+
+    'Could not copy — select the text and copy it' => __('Could not copy — select the text and copy it', 'bit-social'),
+
+    'selected' => __('selected', 'bit-social'),
+
+    '1 account entry' => __('1 account entry', 'bit-social'),
+
+    'account entries' => __('account entries', 'bit-social'),
+
+    'account entries will be permanently deleted.' => __('account entries will be permanently deleted.', 'bit-social'),
+
+    'logs?' => __('logs?', 'bit-social'),
+
+    'Documentation' => __('Documentation', 'bit-social'),
+
+    'Nothing published yet — runs show up here as your schedules fire' => __('Nothing published yet — runs show up here as your schedules fire', 'bit-social'),
 
     'Active Account' => __('Active Account', 'bit-social'),
 
@@ -754,8 +1013,6 @@ return [
 
     'Custom Images' => __('Custom Images', 'bit-social'),
 
-    'First comment' => __('First comment', 'bit-social'),
-
     'Add a button' => __('Add a button', 'bit-social'),
 
     'Customize post title' => __('Customize post title', 'bit-social'),
@@ -763,8 +1020,6 @@ return [
     'Post Link' => __('Post Link', 'bit-social'),
 
     'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'bit-social'),
-
-    'Topic' => __('Topic', 'bit-social'),
 
     'First reply' => __('First reply', 'bit-social'),
 
@@ -838,9 +1093,33 @@ return [
 
     'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'bit-social'),
 
-    'Created At' => __('Created At', 'bit-social'),
+    'Randomly, without repeats' => __('Randomly, without repeats', 'bit-social'),
 
-    'Start Scheduled Post' => __('Start Scheduled Post', 'bit-social'),
+    'Randomly' => __('Randomly', 'bit-social'),
+
+    'Oldest post first' => __('Oldest post first', 'bit-social'),
+
+    'Newest post first' => __('Newest post first', 'bit-social'),
+
+    'Oldest post first, including upcoming posts' => __('Oldest post first, including upcoming posts', 'bit-social'),
+
+    'Starts' => __('Starts', 'bit-social'),
+
+    'Posts every' => __('Posts every', 'bit-social'),
+
+    'Once, then stops' => __('Once, then stops', 'bit-social'),
+
+    'Order' => __('Order', 'bit-social'),
+
+    'Quiet hours' => __('Quiet hours', 'bit-social'),
+
+    'Skips' => __('Skips', 'bit-social'),
+
+    'Hide details' => __('Hide details', 'bit-social'),
+
+    'Show details' => __('Show details', 'bit-social'),
+
+    'Created At' => __('Created At', 'bit-social'),
 
     'Interval' => __('Interval', 'bit-social'),
 
@@ -850,11 +1129,21 @@ return [
 
     'Completed' => __('Completed', 'bit-social'),
 
+    'Nothing was published — WP-Cron ran after the scheduled time. Open the logs to retry it, and set up a real server cron to keep posts on time.' => __('Nothing was published — WP-Cron ran after the scheduled time. Open the logs to retry it, and set up a real server cron to keep posts on time.', 'bit-social'),
+
     'Paused' => __('Paused', 'bit-social'),
+
+    'Auto Post shares one post, so there is nothing to repeat. Retry it from the logs.' => __('Auto Post shares one post, so there is nothing to repeat. Retry it from the logs.', 'bit-social'),
 
     'Re-schedule' => __('Re-schedule', 'bit-social'),
 
+    'See logs' => __('See logs', 'bit-social'),
+
     'Search schedule' => __('Search schedule', 'bit-social'),
+
+    'Are you sure to delete this logs?' => __('Are you sure to delete this logs?', 'bit-social'),
+
+    'Delete Logs' => __('Delete Logs', 'bit-social'),
 
     'How to create schedule' => __('How to create schedule', 'bit-social'),
 
@@ -887,6 +1176,8 @@ return [
 
     'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval: 2 hours. Next post will be at 08:00 PM.', 'bit-social'),
 
+    'Visit our documentation' => __('Visit our documentation', 'bit-social'),
+
     'Order posts by' => __('Order posts by', 'bit-social'),
 
     'Random order. Each post is used only once.' => __('Random order. Each post is used only once.', 'bit-social'),
@@ -894,8 +1185,6 @@ return [
     'Randomly without duplicates' => __('Randomly without duplicates', 'bit-social'),
 
     'Random order. Posts may repeat.' => __('Random order. Posts may repeat.', 'bit-social'),
-
-    'Randomly' => __('Randomly', 'bit-social'),
 
     'Starts from earliest posts and moves forward.' => __('Starts from earliest posts and moves forward.', 'bit-social'),
 
@@ -933,10 +1222,6 @@ return [
 
     'Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!' => __('Activate Bit Social\'s external cron feature for continuous cron job operation even if there is no user\'s hit on your website. This cron will automatically awake your website externally and your scheduled post will automatically publish on your desired social platforms!', 'bit-social'),
 
-    'External Cron' => __('External Cron', 'bit-social'),
-
-    'Enable External Cron' => __('Enable External Cron', 'bit-social'),
-
     'Email Notifications' => __('Email Notifications', 'bit-social'),
 
     'Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.' => __('Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.', 'bit-social'),
@@ -950,6 +1235,10 @@ return [
     'Receive an email every time a scheduled post fails to publish on a social platform.' => __('Receive an email every time a scheduled post fails to publish on a social platform.', 'bit-social'),
 
     'Email on failure' => __('Email on failure', 'bit-social'),
+
+    'Receive an email when scheduled posts were not published because WP-Cron ran too late.' => __('Receive an email when scheduled posts were not published because WP-Cron ran too late.', 'bit-social'),
+
+    'Email on missed posts' => __('Email on missed posts', 'bit-social'),
 
     'Receive a scheduled summary email with both success and error reports.' => __('Receive a scheduled summary email with both success and error reports.', 'bit-social'),
 
@@ -1047,8 +1336,6 @@ return [
 
     'Write your custom post' => __('Write your custom post', 'bit-social'),
 
-    'Link' => __('Link', 'bit-social'),
-
     'https://example.com' => __('https://example.com', 'bit-social'),
 
     'Add Image' => __('Add Image', 'bit-social'),
@@ -1083,6 +1370,16 @@ return [
 
     'Enable to the link shared as a card' => __('Enable to the link shared as a card', 'bit-social'),
 
+    'Scheduled for' => __('Scheduled for', 'bit-social'),
+
+    'As soon as it was saved' => __('As soon as it was saved', 'bit-social'),
+
+    'Repeats' => __('Repeats', 'bit-social'),
+
+    'Every' => __('Every', 'bit-social'),
+
+    'Once only' => __('Once only', 'bit-social'),
+
     'Untitled Share Now' => __('Untitled Share Now', 'bit-social'),
 
     'Something went wrong!' => __('Something went wrong!', 'bit-social'),
@@ -1095,9 +1392,19 @@ return [
 
     'Draft' => __('Draft', 'bit-social'),
 
-    'Missed' => __('Missed', 'bit-social'),
+    'This post was not published because WP-Cron ran after its scheduled time. Set up a real server cron to keep posts on time.' => __('This post was not published because WP-Cron ran after its scheduled time. Set up a real server cron to keep posts on time.', 'bit-social'),
 
     'Re-post' => __('Re-post', 'bit-social'),
+
+    'It will be posted to the connected accounts right now.' => __('It will be posted to the connected accounts right now.', 'bit-social'),
+
+    'Yes, Publish' => __('Yes, Publish', 'bit-social'),
+
+    'Publish this missed post now?' => __('Publish this missed post now?', 'bit-social'),
+
+    'Publish now' => __('Publish now', 'bit-social'),
+
+    'Confirm' => __('Confirm', 'bit-social'),
 
     'How to share a post instantly' => __('How to share a post instantly', 'bit-social'),
 
@@ -1116,8 +1423,6 @@ return [
     'If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.' => __('If your start time has passed, updating the interval will set your next post to local time plus the new interval! For example, current time 06:00 PM, updated Post interval:2 hours. Next post will be at 08:00 PM.', 'bit-social'),
 
     'Only custom message' => __('Only custom message', 'bit-social'),
-
-    'Link card' => __('Link card', 'bit-social'),
 
     'Feature image' => __('Feature image', 'bit-social'),
 
@@ -1152,8 +1457,6 @@ return [
     'Google Business Profile Template Settings' => __('Google Business Profile Template Settings', 'bit-social'),
 
     'Select a post link button.' => __('Select a post link button.', 'bit-social'),
-
-    'All images' => __('All images', 'bit-social'),
 
     'Instagram Template Settings' => __('Instagram Template Settings', 'bit-social'),
 
@@ -1273,6 +1576,16 @@ You can add images, links, #hashtags and emojis 😎', 'bit-social'),
     /* translators: %s: placeholder value */
     'You can setup %s post settings below.' => __('You can setup %s post settings below.', 'bit-social'),
 
-    'Doc here.' => __('Doc here.', 'bit-social')
+    'Doc here.' => __('Doc here.', 'bit-social'),
+
+    'Saving…' => __('Saving…', 'bit-social'),
+
+    'Unsaved changes' => __('Unsaved changes', 'bit-social'),
+
+    'Could not save. Check your connection.' => __('Could not save. Check your connection.', 'bit-social'),
+
+    'Save failed, retrying…' => __('Save failed, retrying…', 'bit-social'),
+
+    'Retry now' => __('Retry now', 'bit-social')
 ];
 /* THIS IS THE END OF THE GENERATED FILE */

@@ -4,6 +4,7 @@ namespace BitApps\Social\HTTP\Services\Social\FacebookService;
 
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\Model\Account;
+use BitApps\Social\Utils\MetaGraph;
 use stdClass;
 
 class RefreshFacebookService
@@ -19,7 +20,7 @@ class RefreshFacebookService
 
     private $baseServerUrl = 'https://auth-apps.bitapps.pro/apps/';
 
-    private $version = 'v16.0';
+    private $version = MetaGraph::VERSION;
 
     private $facebookAppIdUrl;
 
@@ -59,6 +60,10 @@ class RefreshFacebookService
     public function refreshToken($accessToken)
     {
         $facebookAppIdData = $this->httpHandler->request($this->facebookAppIdUrl, 'GET', []);
+
+        if (!\is_object($facebookAppIdData) || empty($facebookAppIdData->clientId)) {
+            return false;
+        }
         $facebookAppId = $facebookAppIdData->clientId;
         $headers = [
             'Content-Type' => 'application/json',
@@ -82,7 +87,7 @@ class RefreshFacebookService
 
         $refreshTokenUrlWithParams = $this->refreshTokenUrl . http_build_query($longTimeAccessTokenParams);
         $apiResponse = $this->httpHandler->request($refreshTokenUrlWithParams, 'GET', []);
-        if (!property_exists($apiResponse, 'access_token')) {
+        if (!\is_object($apiResponse) || empty($apiResponse->access_token)) {
             return false;
         }
 
@@ -95,7 +100,11 @@ class RefreshFacebookService
         if (empty($accountId)) {
             return;
         }
-        $account = Account::findOne(['account_id' => $accountId]);
+        $account = Account::findOne(['account_id' => $accountId, 'platform' => 'facebook']);
+
+        if (!$account) {
+            return;
+        }
         $account->update(['details' => $account_detail])->save();
     }
 

@@ -6,6 +6,7 @@ use BitApps\Social\Config;
 use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\Model\Log;
+use BitApps\Social\Utils\LogRun;
 
 trait LoggerTrait
 {
@@ -23,6 +24,9 @@ trait LoggerTrait
             'details'     => $details,
             'platform'    => $platform,
             'status'      => $status,
+            // Ties this row to the other accounts of the same run so the Logs
+            // screen can show one line instead of one per account.
+            'run_id' => LogRun::current(),
         ]);
     }
 

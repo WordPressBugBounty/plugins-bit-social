@@ -8,6 +8,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\Model\Schedule;
 use BitApps\Social\Utils\Common;
 use BitApps\Social\Utils\Creator;
+use BitApps\Social\Utils\ScheduleSummary;
 
 class ShareNowController
 {
@@ -24,6 +25,7 @@ class ShareNowController
 
         foreach ($shareNowData['data'] as $data) {
             Creator::attachToSchedule($data);
+            ScheduleSummary::attachToSchedule($data);
 
             $actionHook = Config::VAR_PREFIX . $data->id . '_cron_exec';
             $hookArgument['schedule_id'] = $data->id;

@@ -59,7 +59,11 @@ class InstallerProvider
         if ($schedules && is_countable($schedules) && \count($schedules) > 0) {
             foreach ($schedules as $schedule) {
                 $hook = Config::VAR_PREFIX . $schedule['id'] . '_cron_exec';
-                wp_clear_scheduled_hook($hook, [$schedule->id]);
+                // Events are registered with the argument shape [['schedule_id' => id]]
+                // (see CustomSchedule::createScheduleEvent), so clear with the same shape —
+                // otherwise the args hash won't match and the event is never removed.
+                $hookArgument = ['schedule_id' => $schedule['id']];
+                wp_clear_scheduled_hook($hook, [$hookArgument]);
             }
         }
     }
@@ -87,6 +91,7 @@ class InstallerProvider
             'BSFreeGroupTableDrop',
             'BSSchedulesMigration',
             'BSLogsMigration',
+            'BSLogsRunIdMigration',
             'BSSettingsMigration',
             'BSPluginOptions',
             'BSPluginOptionsUpdate',

@@ -30,8 +30,9 @@ class AuthController
 
         $response = $authService->authHandler($request);
 
-        if (isset($response->status) && $response->status === 'error') {
-            return Response::error($response);
+        $error = $this->asErrorEnvelope($response);
+        if ($error !== null) {
+            return $error;
         }
 
         return Response::success($response);
@@ -58,10 +59,53 @@ class AuthController
 
         $response = $authService->authHandler($request);
 
+        $error = $this->asErrorEnvelope($response);
+        if ($error !== null) {
+            return $error;
+        }
+
+        return Response::success($response);
+    }
+
+    /**
+     * Turn a failed connection into an error envelope, or return null when the
+     * service reported success.
+     *
+     * Most services signal failure with a { status: 'error', message } object,
+     * but several return the framework's Response singleton instead. That has
+     * no public `status`, so it used to fall through to Response::success() --
+     * which then overwrote the singleton's own error state, and an unreachable
+     * provider reached the browser as `{"status":"success","data":{}}`. Connect
+     * then looked like it had silently done nothing.
+     *
+     * @param mixed $response
+     *
+     * @return null|Response
+     */
+    private function asErrorEnvelope($response)
+    {
         if (isset($response->status) && $response->status === 'error') {
             return Response::error($response);
         }
 
-        return Response::success($response);
+        if (!\is_object($response) || !method_exists($response, 'getStatus') || !method_exists($response, 'getData')) {
+            return;
+        }
+
+        // Read both before calling Response::error() below -- these are static
+        // on a singleton, so emitting our own response overwrites them. The
+        // pro services carry their own prefixed copy of the class, hence
+        // resolving the call off the returned instance rather than self::.
+        $serviceClass = \get_class($response);
+        $status = \call_user_func([$serviceClass, 'getStatus']);
+        $data = \call_user_func([$serviceClass, 'getData']);
+
+        if ($status !== Response::ERROR) {
+            return;
+        }
+
+        return Response::error(
+            \is_scalar($data) ? (object) ['status' => 'error', 'message' => $data] : $data
+        );
     }
 }
