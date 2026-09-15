@@ -3,6 +3,7 @@
 namespace BitApps\Social\HTTP\Controllers;
 
 use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPDatabase\Connection;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
 use BitApps\Social\Model\Schedule;
@@ -57,14 +58,13 @@ class ShareNowController
         }
 
         if (!empty($missedScheduleIds)) {
-            global $wpdb;
-            $table = $wpdb->prefix . Config::VAR_PREFIX . 'schedules';
+            $table = Config::withDBPrefix('schedules');
             $missedStatus = Schedule::status['MISSED'];
 
             $placeholders = implode(',', array_fill(0, \count($missedScheduleIds), '%d'));
 
             // phpcs:disable WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders, PluginCheck.Security.DirectDB -- Bulk UPDATE on custom table; placeholder count is dynamic.
-            $response = $wpdb->query($wpdb->prepare("UPDATE {$table} SET status = %d WHERE id IN ({$placeholders})", $missedStatus, ...$missedScheduleIds));
+            $response = Connection::query(Connection::prepare("UPDATE {$table} SET status = %d WHERE id IN ({$placeholders})", $missedStatus, ...$missedScheduleIds));
             // phpcs:enable WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders, PluginCheck.Security.DirectDB
 
             if ($response) {

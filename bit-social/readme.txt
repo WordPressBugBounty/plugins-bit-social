@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.18.0
+Stable tag: 1.19.0
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,16 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.19.0 (September 15, 2026) =
+* Features:
+   * Auto Post: Newly published posts now wait until their publish data has fully settled before sharing, so taxonomy filters, custom fields and classic meta-box saves are all included in the auto-post.
+* Improvements:
+   * Auto Post: A delayed rule still counts from the actual publish time even when the share waits for the post's data to finish saving.
+   * Scheduling: Delayed auto-post events are no longer spaced apart during cron catch-up, so multiple due rules for the same post can all publish on time without pushing back other schedules.
+* Fixed:
+   * Auto Post: Block editor follow-up saves no longer cause shares to miss their final taxonomy terms or meta values.
+   * Auto Post: Removed the outdated rule-filter note that said filtered posts share about a minute after publishing.
 
 = v1.18.0 (September 1, 2026) =
 * Features:

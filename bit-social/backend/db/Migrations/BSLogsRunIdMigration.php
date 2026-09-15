@@ -1,7 +1,9 @@
 <?php
 
 use BitApps\Social\Config;
+use BitApps\Social\Deps\BitApps\WPDatabase\Blueprint;
 use BitApps\Social\Deps\BitApps\WPDatabase\Connection;
+use BitApps\Social\Deps\BitApps\WPDatabase\Schema;
 use BitApps\Social\Deps\BitApps\WPKit\Migration\Migration;
 use BitApps\Social\Utils\LogRunBackfill;
 
@@ -28,18 +30,32 @@ final class BSLogsRunIdMigration extends Migration
 {
     public function up()
     {
-        global $wpdb;
+        $table = Config::withDBPrefix('logs');
 
-        $table = Connection::wpPrefix() . Config::VAR_PREFIX . 'logs';
-
-        // Migrations re-run on every version bump, and ALTER TABLE ADD COLUMN
-        // is not idempotent — ask first.
+        // Migrations re-run on every version bump, and Blueprint's edit() emits
+        // a bare ADD COLUMN — so ask the table itself whether the column is
+        // already there. A stored db_version would answer the wrong question on
+        // an install where the ALTER failed but the version still moved on.
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name cannot be bound as a parameter; it is built from the plugin's own prefix.
-        $exists = $wpdb->get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'");
+        $exists = Connection::get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'");
 
         if (empty($exists)) {
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- As above; no user input is interpolated.
-            $wpdb->query("ALTER TABLE `{$table}` ADD COLUMN `run_id` VARCHAR(32) NULL DEFAULT NULL, ADD INDEX `run_id_index` (`run_id`)");
+            try {
+                Schema::withPrefix(Config::get('WP_DB_PREFIX') . Config::VAR_PREFIX)
+                    ->edit('logs', function (Blueprint $column) {
+                        $column->string('run_id')
+                            ->length(32)
+                            ->nullable()
+                            ->defaultValue('NULL')
+                            ->index();
+                    });
+            } catch (Exception $e) {
+                // Blueprint throws on any SQL error and the migration runner
+                // calls up() without a catch of its own, so an unhandled throw
+                // here would fatal wp-admin and skip every migration queued
+                // behind this one. The column staying absent is survivable:
+                // the log screen falls back to grouping by schedule and time.
+            }
         }
 
         LogRunBackfill::start();

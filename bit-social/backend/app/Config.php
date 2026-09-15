@@ -4,6 +4,7 @@
 
 namespace BitApps\Social;
 
+use BitApps\Social\Deps\BitApps\WPDatabase\Connection;
 use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\SocialPro\Config as ProConfig;
 
@@ -22,7 +23,7 @@ class Config
 
     public const VAR_PREFIX = 'bit_social_';
 
-    public const VERSION = '1.18.0';
+    public const VERSION = '1.19.0';
 
     public const DB_VERSION = '1.2.1';
 
@@ -114,9 +115,7 @@ class Config
                 return file_exists($freeBuildCodeNameFile) ? trim((string) file_get_contents($freeBuildCodeNameFile)) : '';
 
             case 'WP_DB_PREFIX':
-                global $wpdb;
-
-                return $wpdb->prefix;
+                return Connection::wpPrefix();
             case 'WP_CRON_STATUS':
                 return \defined('DISABLE_WP_CRON') && DISABLE_WP_CRON ? false : true;
             default:
@@ -136,6 +135,28 @@ class Config
         }
 
         return false;
+    }
+
+    /**
+     * The version of the Pro build serving the admin app, or '' when Free's own
+     * is being served.
+     *
+     * With Pro licensed, ASSET_URI serves *Pro's* bundle (see above), so this
+     * is the release the JavaScript on screen was built from — which need not
+     * be the release of the PHP answering it. Free updates from wordpress.org,
+     * often automatically, and Pro is updated by hand, so a site runs one of
+     * each for as long as it takes to do the second update. Callers use this
+     * to keep a payload readable across that window.
+     *
+     * Only a licensed Pro answers, because that is exactly when its bundle is
+     * the one being served — an unlicensed Pro falls back to Free's own assets,
+     * which are always this release's.
+     *
+     * @return string
+     */
+    public static function proBundleVersion()
+    {
+        return self::isProActivated() ? ProConfig::VERSION : '';
     }
 
     /**

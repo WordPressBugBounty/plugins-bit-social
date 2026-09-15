@@ -212,9 +212,9 @@ final class SocialExecution
                 continue;
             }
 
-            if (isset($templates[$platformName])) {
-                $template = $templates[$platformName];
+            $template = isset($templates[$platformName]) ? $templates[$platformName] : null;
 
+            if (!empty($template)) {
                 $data = [
                     'template'        => $template,
                     'account_details' => $isPlatFormExists['details'],

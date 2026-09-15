@@ -492,13 +492,11 @@ class ScheduleInfo
      */
     private function nothingEverPublished($currentRunMissed)
     {
-        global $wpdb;
-
-        $table = Connection::wpPrefix() . Config::VAR_PREFIX . 'logs';
+        $table = Config::withDBPrefix('logs');
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Identifiers cannot be bound; the values go through prepare().
-        $tally = $wpdb->get_row(
-            $wpdb->prepare(
+        $tally = Connection::get_row(
+            Connection::prepare(
                 "SELECT SUM(`status` = 1) AS published, SUM(`status` = 0 AND `details` LIKE %s) AS missed
                 FROM `{$table}` WHERE `schedule_id` = %d",
                 '%"reason":"' . Log::reason['MISSED'] . '"%',

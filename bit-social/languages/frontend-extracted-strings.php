@@ -71,6 +71,8 @@ return [
 
     'is up to date' => __('is up to date', 'bit-social'),
 
+    'A community forum for WordPress where users raise feature requests, report issues, send feedback and vote on what gets built next.' => __('A community forum for WordPress where users raise feature requests, report issues, send feedback and vote on what gets built next.', 'bit-social'),
+
     'WordPress CRM to manage contacts, leads, deals, and invoices and run your whole sales pipeline right from your WordPress dashboard.' => __('WordPress CRM to manage contacts, leads, deals, and invoices and run your whole sales pipeline right from your WordPress dashboard.', 'bit-social'),
 
     'Zapier Alternative in WordPress Unlimited Task.' => __('Zapier Alternative in WordPress Unlimited Task.', 'bit-social'),
@@ -116,7 +118,49 @@ return [
 
     'Advance Schedule' => __('Advance Schedule', 'bit-social'),
 
+    'Unlimited connected accounts and auto-post rules' => __('Unlimited connected accounts and auto-post rules', 'bit-social'),
+
+    'WooCommerce product posts' => __('WooCommerce product posts', 'bit-social'),
+
+    'Per-account auto-post rules — filter by category or tag' => __('Per-account auto-post rules — filter by category or tag', 'bit-social'),
+
+    'Multiple images and the “All images” posting type' => __('Multiple images and the “All images” posting type', 'bit-social'),
+
+    'Advanced smart tags' => __('Advanced smart tags', 'bit-social'),
+
+    'Publishing' => __('Publishing', 'bit-social'),
+
+    'Advanced schedules' => __('Advanced schedules', 'bit-social'),
+
+    'Content calendar for queued and published posts' => __('Content calendar for queued and published posts', 'bit-social'),
+
+    'Advanced cron settings' => __('Advanced cron settings', 'bit-social'),
+
+    'Account groups to publish to many accounts at once' => __('Account groups to publish to many accounts at once', 'bit-social'),
+
+    'Planning' => __('Planning', 'bit-social'),
+
+    'Save reusable text and image prompts' => __('Save reusable text and image prompts', 'bit-social'),
+
+    'Drop a prompt into any template with a smart tag' => __('Drop a prompt into any template with a smart tag', 'bit-social'),
+
+    'Generate a matching image at posting time' => __('Generate a matching image at posting time', 'bit-social'),
+
+    'AI' => __('AI', 'bit-social'),
+
+    'Roles & access — choose who can use Bit Social' => __('Roles & access — choose who can use Bit Social', 'bit-social'),
+
+    'Per-account role permissions' => __('Per-account role permissions', 'bit-social'),
+
+    'Email alerts on failed posts and digest reports' => __('Email alerts on failed posts and digest reports', 'bit-social'),
+
+    'Team & control' => __('Team & control', 'bit-social'),
+
     'Bit Social Pro' => __('Bit Social Pro', 'bit-social'),
+
+    'Everything in the free plugin, plus:' => __('Everything in the free plugin, plus:', 'bit-social'),
+
+    'New' => __('New', 'bit-social'),
 
     'Unknown' => __('Unknown', 'bit-social'),
 
@@ -182,25 +226,17 @@ return [
 
     'Go to Dashboard' => __('Go to Dashboard', 'bit-social'),
 
-    'Publish anyway' => __('Publish anyway', 'bit-social'),
-
-    'Mark as Missed' => __('Mark as Missed', 'bit-social'),
-
-    'after' => __('after', 'bit-social'),
-
-    'A post WP-Cron runs more than an hour late is marked Missed rather than published stale. Upgrade to publish late posts anyway, or to set how much lateness each kind is worth.' => __('A post WP-Cron runs more than an hour late is marked Missed rather than published stale. Upgrade to publish late posts anyway, or to set how much lateness each kind is worth.', 'bit-social'),
-
     'Late post handling' => __('Late post handling', 'bit-social'),
 
-    'A delay here is about spacing, not an exact time — late is often still fine.' => __('A delay here is about spacing, not an exact time — late is often still fine.', 'bit-social'),
+    'A post WP-Cron runs more than an hour late is marked Missed rather than published stale.' => __('A post WP-Cron runs more than an hour late is marked Missed rather than published stale.', 'bit-social'),
 
-    'Auto Post' => __('Auto Post', 'bit-social'),
+    'Bit Social Pro lets you decide how late is too late, instead of running on the one-hour default.' => __('Bit Social Pro lets you decide how late is too late, instead of running on the one-hour default.', 'bit-social'),
 
-    'Hours' => __('Hours', 'bit-social'),
+    'Set how much lateness Auto Post is worth' => __('Set how much lateness Auto Post is worth', 'bit-social'),
 
-    'You picked this time yourself, so publishing hours late is rarely wanted.' => __('You picked this time yourself, so publishing hours late is rarely wanted.', 'bit-social'),
+    'Set a separate window for Share Now and Scheduled Share' => __('Set a separate window for Share Now and Scheduled Share', 'bit-social'),
 
-    'Share Now & Scheduled Share' => __('Share Now & Scheduled Share', 'bit-social'),
+    'Or publish a late post anyway, however late it is' => __('Or publish a late post anyway, however late it is', 'bit-social'),
 
     'A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.' => __('A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.', 'bit-social'),
 
@@ -222,7 +258,15 @@ return [
 
     'Minutes' => __('Minutes', 'bit-social'),
 
+    'Hours' => __('Hours', 'bit-social'),
+
     'Days' => __('Days', 'bit-social'),
+
+    'Publish anyway' => __('Publish anyway', 'bit-social'),
+
+    'Mark as Missed' => __('Mark as Missed', 'bit-social'),
+
+    'after' => __('after', 'bit-social'),
 
     'Amount' => __('Amount', 'bit-social'),
 
@@ -234,7 +278,11 @@ return [
 
     'A delay here is about spacing, not an exact time — late is usually fine.' => __('A delay here is about spacing, not an exact time — late is usually fine.', 'bit-social'),
 
+    'Auto Post' => __('Auto Post', 'bit-social'),
+
     'You picked this time yourself, so publishing hours late is rarely wanted. A repeating schedule still waits one interval, or an hour, whichever is longer — below that a slow cron would mark every run Missed.' => __('You picked this time yourself, so publishing hours late is rarely wanted. A repeating schedule still waits one interval, or an hour, whichever is longer — below that a slow cron would mark every run Missed.', 'bit-social'),
+
+    'Share Now & Scheduled Share' => __('Share Now & Scheduled Share', 'bit-social'),
 
     'When WP-Cron runs late, decide whether a post still goes out or is marked Missed instead so stale content does not reach your audience.' => __('When WP-Cron runs late, decide whether a post still goes out or is marked Missed instead so stale content does not reach your audience.', 'bit-social'),
 
@@ -316,6 +364,8 @@ return [
     'Show Smart Tags' => __('Show Smart Tags', 'bit-social'),
 
     'Prompt Tags' => __('Prompt Tags', 'bit-social'),
+
+    'See Pro' => __('See Pro', 'bit-social'),
 
     'Tutorial' => __('Tutorial', 'bit-social'),
 
@@ -399,21 +449,15 @@ return [
 
     'Delete' => __('Delete', 'bit-social'),
 
-    'Administrator' => __('Administrator', 'bit-social'),
+    'Bit Social Pro lets you choose which roles can publish through each connected account.' => __('Bit Social Pro lets you choose which roles can publish through each connected account.', 'bit-social'),
 
-    'Editor' => __('Editor', 'bit-social'),
+    'Restrict an account to the roles you pick' => __('Restrict an account to the roles you pick', 'bit-social'),
 
-    'Author' => __('Author', 'bit-social'),
+    'Grant roles that have no plugin access — their published posts still auto-post through this account' => __('Grant roles that have no plugin access — their published posts still auto-post through this account', 'bit-social'),
 
-    'Control which roles can publish through this account. Users without permission are skipped during auto-post and sharing.' => __('Control which roles can publish through this account. Users without permission are skipped during auto-post and sharing.', 'bit-social'),
+    'Users without permission are skipped during auto-post and sharing' => __('Users without permission are skipped during auto-post and sharing', 'bit-social'),
 
-    'Everyone with plugin access' => __('Everyone with plugin access', 'bit-social'),
-
-    'Any role allowed in Roles & Access can use this account' => __('Any role allowed in Roles & Access can use this account', 'bit-social'),
-
-    'Only selected roles' => __('Only selected roles', 'bit-social'),
-
-    'Restrict publishing to specific roles' => __('Restrict publishing to specific roles', 'bit-social'),
+    'Bit Social is administrators-only right now, so everyone who can open it already has full access to every account.' => __('Bit Social is administrators-only right now, so everyone who can open it already has full access to every account.', 'bit-social'),
 
     'Failed to save permissions' => __('Failed to save permissions', 'bit-social'),
 
@@ -423,7 +467,13 @@ return [
 
     'Control which roles can publish through this account. Selected roles do not need plugin access — their authored posts still run on auto-post through this account.' => __('Control which roles can publish through this account. Selected roles do not need plugin access — their authored posts still run on auto-post through this account.', 'bit-social'),
 
+    'Any role allowed in Roles & Access can use this account' => __('Any role allowed in Roles & Access can use this account', 'bit-social'),
+
+    'Everyone with plugin access' => __('Everyone with plugin access', 'bit-social'),
+
     'Restrict publishing to specific roles, even ones without plugin access' => __('Restrict publishing to specific roles, even ones without plugin access', 'bit-social'),
+
+    'Only selected roles' => __('Only selected roles', 'bit-social'),
 
     'Search roles…' => __('Search roles…', 'bit-social'),
 
@@ -616,6 +666,14 @@ return [
 
     'How to use AI Prompts?' => __('How to use AI Prompts?', 'bit-social'),
 
+    'Bit Social Pro writes your posts and generates images for them from prompts you define once.' => __('Bit Social Pro writes your posts and generates images for them from prompts you define once.', 'bit-social'),
+
+    'Drop a prompt into any post template with a smart tag' => __('Drop a prompt into any post template with a smart tag', 'bit-social'),
+
+    'AI prompts' => __('AI prompts', 'bit-social'),
+
+    'Preview of the AI Prompts screen in Bit Social Pro' => __('Preview of the AI Prompts screen in Bit Social Pro', 'bit-social'),
+
     'Platforms' => __('Platforms', 'bit-social'),
 
     'Prompts' => __('Prompts', 'bit-social'),
@@ -752,11 +810,41 @@ return [
 
     'immediately' => __('immediately', 'bit-social'),
 
+    'all posts' => __('all posts', 'bit-social'),
+
+    'in' => __('in', 'bit-social'),
+
+    'term' => __('term', 'bit-social'),
+
+    'terms' => __('terms', 'bit-social'),
+
+    'not in' => __('not in', 'bit-social'),
+
     'Select All' => __('Select All', 'bit-social'),
 
-    'Immediately' => __('Immediately', 'bit-social'),
+    'Facebook, X, Instagram, LinkedIn, Pinterest and more.' => __('Facebook, X, Instagram, LinkedIn, Pinterest and more.', 'bit-social'),
 
-    'Delay' => __('Delay', 'bit-social'),
+    'Connect an account' => __('Connect an account', 'bit-social'),
+
+    'Which posts it shares, where they go and what they say.' => __('Which posts it shares, where they go and what they say.', 'bit-social'),
+
+    'Add a rule' => __('Add a rule', 'bit-social'),
+
+    'Every post matching a rule shares itself from then on.' => __('Every post matching a rule shares itself from then on.', 'bit-social'),
+
+    'Publish a post' => __('Publish a post', 'bit-social'),
+
+    'Share every new post automatically' => __('Share every new post automatically', 'bit-social'),
+
+    'Auto post watches for posts you publish and shares them to the social accounts you choose — no scheduling, no copying links.' => __('Auto post watches for posts you publish and shares them to the social accounts you choose — no scheduling, no copying links.', 'bit-social'),
+
+    'Ask an administrator to connect a social account to get started.' => __('Ask an administrator to connect a social account to get started.', 'bit-social'),
+
+    'How auto post works' => __('How auto post works', 'bit-social'),
+
+    'Add a rule first!' => __('Add a rule first!', 'bit-social'),
+
+    'Rule' => __('Rule', 'bit-social'),
 
     'Auto Post Settings' => __('Auto Post Settings', 'bit-social'),
 
@@ -764,31 +852,91 @@ return [
 
     'Doc here' => __('Doc here', 'bit-social'),
 
-    'When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.' => __('When you publish a new wordpress post, the plugin shares the post on all active social accounts automatically.', 'bit-social'),
+    'The master switch. With it off, no rule shares anything when you publish a post.' => __('The master switch. With it off, no rule shares anything when you publish a post.', 'bit-social'),
 
     'Share posts automatically' => __('Share posts automatically', 'bit-social'),
 
-    'You have to create and select account first to enable this option!' => __('You have to create and select account first to enable this option!', 'bit-social'),
-
-    'Automatically share specific post types, like blogs or products, to your social accounts when published.' => __('Automatically share specific post types, like blogs or products, to your social accounts when published.', 'bit-social'),
-
-    'Share posts type' => __('Share posts type', 'bit-social'),
-
-    'Post Type: Post' => __('Post Type: Post', 'bit-social'),
-
-    'Share posts default type <b>Post</b>' => __('Share posts default type <b>Post</b>', 'bit-social'),
-
-    'Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing' => __('Optimize your sharing strategy with flexible timing options: use the dropdown menu to select when your posts will be shared after publishing', 'bit-social'),
-
-    'Share post delay' => __('Share post delay', 'bit-social'),
+    'You have to add a rule first to enable this option!' => __('You have to add a rule first to enable this option!', 'bit-social'),
 
     'If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.' => __('If you don\'t want to keep the shared post logs, you need to disable the option. Disabling the option prevents you view your insights and you might encounter duplicate posts when you use the schedule module.', 'bit-social'),
 
     'Enable auto post log' => __('Enable auto post log', 'bit-social'),
 
-    'Post templates' => __('Post templates', 'bit-social'),
+    'Auto post rules' => __('Auto post rules', 'bit-social'),
 
-    'Templates' => __('Templates', 'bit-social'),
+    'Each rule picks its own posts, accounts and post content — a post matching two rules is shared by both.' => __('Each rule picks its own posts, accounts and post content — a post matching two rules is shared by both.', 'bit-social'),
+
+    'Add rule' => __('Add rule', 'bit-social'),
+
+    'The update could not be started.' => __('The update could not be started.', 'bit-social'),
+
+    'Finish updating Bit Social' => __('Finish updating Bit Social', 'bit-social'),
+
+    'Bit Social and Bit Social Pro are from different versions right now. Auto post reads its settings from both, so it waits for the two to match — your rules and accounts are untouched in the meantime.' => __('Bit Social and Bit Social Pro are from different versions right now. Auto post reads its settings from both, so it waits for the two to match — your rules and accounts are untouched in the meantime.', 'bit-social'),
+
+    'Update now' => __('Update now', 'bit-social'),
+
+    'You can also update both plugins from the WordPress Plugins screen.' => __('You can also update both plugins from the WordPress Plugins screen.', 'bit-social'),
+
+    'No rules yet. Add one to start sharing new posts automatically.' => __('No rules yet. Add one to start sharing new posts automatically.', 'bit-social'),
+
+    'Draft' => __('Draft', 'bit-social'),
+
+    'Rule is active' => __('Rule is active', 'bit-social'),
+
+    'Edit' => __('Edit', 'bit-social'),
+
+    'Delete this rule?' => __('Delete this rule?', 'bit-social'),
+
+    'Name required' => __('Name required', 'bit-social'),
+
+    'No account selected' => __('No account selected', 'bit-social'),
+
+    'Save as draft' => __('Save as draft', 'bit-social'),
+
+    'Publish rule' => __('Publish rule', 'bit-social'),
+
+    'Update rule' => __('Update rule', 'bit-social'),
+
+    'Add auto post rule' => __('Add auto post rule', 'bit-social'),
+
+    'Edit auto post rule' => __('Edit auto post rule', 'bit-social'),
+
+    'Settings' => __('Settings', 'bit-social'),
+
+    'Accounts & Template' => __('Accounts & Template', 'bit-social'),
+
+    'Post filter' => __('Post filter', 'bit-social'),
+
+    'Share every post of the types above, or only the ones carrying the categories and tags you pick.' => __('Share every post of the types above, or only the ones carrying the categories and tags you pick.', 'bit-social'),
+
+    'All posts' => __('All posts', 'bit-social'),
+
+    'If post contains any of these taxonomies …' => __('If post contains any of these taxonomies …', 'bit-social'),
+
+    'If post doesn\'t contain any of these taxonomies …' => __('If post doesn\'t contain any of these taxonomies …', 'bit-social'),
+
+    'Select categories, tags or terms…' => __('Select categories, tags or terms…', 'bit-social'),
+
+    'Pick at least one post type' => __('Pick at least one post type', 'bit-social'),
+
+    'Name' => __('Name', 'bit-social'),
+
+    'Auto post' => __('Auto post', 'bit-social'),
+
+    'Post Type: Post' => __('Post Type: Post', 'bit-social'),
+
+    'Publishing one of these shares the post.' => __('Publishing one of these shares the post.', 'bit-social'),
+
+    'Share posts type' => __('Share posts type', 'bit-social'),
+
+    'Immediately' => __('Immediately', 'bit-social'),
+
+    'Delay' => __('Delay', 'bit-social'),
+
+    'Share right away, or wait a while first.' => __('Share right away, or wait a while first.', 'bit-social'),
+
+    'Share post delay' => __('Share post delay', 'bit-social'),
 
     'Add schedule' => __('Add schedule', 'bit-social'),
 
@@ -801,6 +949,22 @@ return [
     'Run Times:' => __('Run Times:', 'bit-social'),
 
     'Click here to know more about Calendar' => __('Click here to know more about Calendar', 'bit-social'),
+
+    'Bit Social Pro adds a calendar view of everything queued and already shared.' => __('Bit Social Pro adds a calendar view of everything queued and already shared.', 'bit-social'),
+
+    'See scheduled and published posts month by month' => __('See scheduled and published posts month by month', 'bit-social'),
+
+    'Spot gaps and clashes across all your accounts at once' => __('Spot gaps and clashes across all your accounts at once', 'bit-social'),
+
+    'Open any post from the calendar to edit it' => __('Open any post from the calendar to edit it', 'bit-social'),
+
+    'Your schedules and their history are already listed on the' => __('Your schedules and their history are already listed on the', 'bit-social'),
+
+    'Schedules page' => __('Schedules page', 'bit-social'),
+
+    'Content calendar' => __('Content calendar', 'bit-social'),
+
+    'Preview of the Calendar screen in Bit Social Pro' => __('Preview of the Calendar screen in Bit Social Pro', 'bit-social'),
 
     'Oops !' => __('Oops !', 'bit-social'),
 
@@ -818,6 +982,8 @@ return [
     'WP Post Schedules' => __('WP Post Schedules', 'bit-social'),
 
     'Calendar' => __('Calendar', 'bit-social'),
+
+    'Templates' => __('Templates', 'bit-social'),
 
     'Logs' => __('Logs', 'bit-social'),
 
@@ -842,8 +1008,6 @@ return [
     'Improvements' => __('Improvements', 'bit-social'),
 
     'Fixed' => __('Fixed', 'bit-social'),
-
-    'Settings' => __('Settings', 'bit-social'),
 
     'More' => __('More', 'bit-social'),
 
@@ -947,8 +1111,6 @@ return [
 
     'Auto post - Post ID:' => __('Auto post - Post ID:', 'bit-social'),
 
-    'Auto post' => __('Auto post', 'bit-social'),
-
     'Custom written content' => __('Custom written content', 'bit-social'),
 
     'No post' => __('No post', 'bit-social'),
@@ -1021,6 +1183,21 @@ return [
 
     'Share the post link on Pinterest' => __('Share the post link on Pinterest', 'bit-social'),
 
+    /* translators: %s: placeholder value */
+    'Bit Social Pro writes and schedules the %s post for every account you connect.' => __('Bit Social Pro writes and schedules the %s post for every account you connect.', 'bit-social'),
+
+    'A custom message, image and posting type per platform' => __('A custom message, image and posting type per platform', 'bit-social'),
+
+    'Auto post and scheduled posts to every connected account' => __('Auto post and scheduled posts to every connected account', 'bit-social'),
+
+    'A preview of the post as that platform will show it' => __('A preview of the post as that platform will show it', 'bit-social'),
+
+    /* translators: %s: placeholder value */
+    'The free version posts to Facebook and LinkedIn. %s accounts stay connected and keep their settings, but they are skipped until Pro is active again.' => __('The free version posts to Facebook and LinkedIn. %s accounts stay connected and keep their settings, but they are skipped until Pro is active again.', 'bit-social'),
+
+    /* translators: %s: placeholder value */
+    '%s templates are a Pro feature' => __('%s templates are a Pro feature', 'bit-social'),
+
     'First reply' => __('First reply', 'bit-social'),
 
     'Add video' => __('Add video', 'bit-social'),
@@ -1088,8 +1265,6 @@ return [
     'Start' => __('Start', 'bit-social'),
 
     'Next post' => __('Next post', 'bit-social'),
-
-    'Edit' => __('Edit', 'bit-social'),
 
     'Are you sure you want to delete this schedule?' => __('Are you sure you want to delete this schedule?', 'bit-social'),
 
@@ -1226,41 +1401,37 @@ return [
 
     'Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.' => __('Get notified by email when a post fails to publish, and receive scheduled reports of your successes and failures.', 'bit-social'),
 
-    'Enable email notifications' => __('Enable email notifications', 'bit-social'),
+    'Bit Social Pro emails you when something goes wrong, so you do not have to go looking.' => __('Bit Social Pro emails you when something goes wrong, so you do not have to go looking.', 'bit-social'),
 
-    'Comma separated email addresses that should receive notifications.' => __('Comma separated email addresses that should receive notifications.', 'bit-social'),
+    'Email the recipients you choose the moment a post fails' => __('Email the recipients you choose the moment a post fails', 'bit-social'),
 
-    'Recipients' => __('Recipients', 'bit-social'),
+    'Email you when WP-Cron ran too late and posts were missed' => __('Email you when WP-Cron ran too late and posts were missed', 'bit-social'),
 
-    'Receive an email every time a scheduled post fails to publish on a social platform.' => __('Receive an email every time a scheduled post fails to publish on a social platform.', 'bit-social'),
+    'Schedule a digest of successes and failures every few days or weeks' => __('Schedule a digest of successes and failures every few days or weeks', 'bit-social'),
 
-    'Email on failure' => __('Email on failure', 'bit-social'),
+    'Send a digest on demand to check it works' => __('Send a digest on demand to check it works', 'bit-social'),
 
-    'Receive an email when scheduled posts were not published because WP-Cron ran too late.' => __('Receive an email when scheduled posts were not published because WP-Cron ran too late.', 'bit-social'),
+    'Every success and failure is already recorded on the' => __('Every success and failure is already recorded on the', 'bit-social'),
 
-    'Email on missed posts' => __('Email on missed posts', 'bit-social'),
+    'Logs page' => __('Logs page', 'bit-social'),
 
-    'Receive a scheduled summary email with both success and error reports.' => __('Receive a scheduled summary email with both success and error reports.', 'bit-social'),
-
-    'Digest report' => __('Digest report', 'bit-social'),
-
-    'Send every' => __('Send every', 'bit-social'),
-
-    'Day(s)' => __('Day(s)', 'bit-social'),
-
-    'Week(s)' => __('Week(s)', 'bit-social'),
-
-    'Month(s)' => __('Month(s)', 'bit-social'),
-
-    'Contributor' => __('Contributor', 'bit-social'),
+    'Email notifications' => __('Email notifications', 'bit-social'),
 
     'Roles & Access' => __('Roles & Access', 'bit-social'),
 
     'Choose which WordPress roles can access Bit Social and trigger auto-post when publishing content. Administrators always have access.' => __('Choose which WordPress roles can access Bit Social and trigger auto-post when publishing content. Administrators always have access.', 'bit-social'),
 
-    'Search and select the roles that can use Bit Social.' => __('Search and select the roles that can use Bit Social.', 'bit-social'),
+    'Bit Social Pro opens the plugin up to the roles you choose, instead of administrators alone.' => __('Bit Social Pro opens the plugin up to the roles you choose, instead of administrators alone.', 'bit-social'),
 
-    'Allowed roles' => __('Allowed roles', 'bit-social'),
+    'Let editors or authors manage posts and schedules' => __('Let editors or authors manage posts and schedules', 'bit-social'),
+
+    'Decide which roles trigger auto-post when they publish' => __('Decide which roles trigger auto-post when they publish', 'bit-social'),
+
+    'Restrict individual accounts to specific roles' => __('Restrict individual accounts to specific roles', 'bit-social'),
+
+    'In the free version only administrators can open Bit Social, so there is no other role to grant access to.' => __('In the free version only administrators can open Bit Social, so there is no other role to grant access to.', 'bit-social'),
+
+    'Role-based access' => __('Role-based access', 'bit-social'),
 
     'Please check the form and try again.' => __('Please check the form and try again.', 'bit-social'),
 
@@ -1294,6 +1465,30 @@ return [
 
     'SMTP is not set up' => __('SMTP is not set up', 'bit-social'),
 
+    'Enable email notifications' => __('Enable email notifications', 'bit-social'),
+
+    'Comma separated email addresses that should receive notifications.' => __('Comma separated email addresses that should receive notifications.', 'bit-social'),
+
+    'Recipients' => __('Recipients', 'bit-social'),
+
+    'Receive an email every time a scheduled post fails to publish on a social platform.' => __('Receive an email every time a scheduled post fails to publish on a social platform.', 'bit-social'),
+
+    'Email on failure' => __('Email on failure', 'bit-social'),
+
+    'Receive an email when scheduled posts were not published because WP-Cron ran too late.' => __('Receive an email when scheduled posts were not published because WP-Cron ran too late.', 'bit-social'),
+
+    'Email on missed posts' => __('Email on missed posts', 'bit-social'),
+
+    'Receive a scheduled summary email with both success and error reports.' => __('Receive a scheduled summary email with both success and error reports.', 'bit-social'),
+
+    'Digest report' => __('Digest report', 'bit-social'),
+
+    'Day(s)' => __('Day(s)', 'bit-social'),
+
+    'Week(s)' => __('Week(s)', 'bit-social'),
+
+    'Month(s)' => __('Month(s)', 'bit-social'),
+
     'Check now' => __('Check now', 'bit-social'),
 
     'Open Bit Social and view the accounts they are permitted on' => __('Open Bit Social and view the accounts they are permitted on', 'bit-social'),
@@ -1326,6 +1521,10 @@ return [
 
     'Only administrators can' => __('Only administrators can', 'bit-social'),
 
+    'Search and select the roles that can use Bit Social.' => __('Search and select the roles that can use Bit Social.', 'bit-social'),
+
+    'Allowed roles' => __('Allowed roles', 'bit-social'),
+
     'Search and select roles…' => __('Search and select roles…', 'bit-social'),
 
     'Cron' => __('Cron', 'bit-social'),
@@ -1355,6 +1554,18 @@ return [
     'Add a link' => __('Add a link', 'bit-social'),
 
     'Telegram Media' => __('Telegram Media', 'bit-social'),
+
+    'Bit Social Pro composes and shares to every connected platform from Share Now.' => __('Bit Social Pro composes and shares to every connected platform from Share Now.', 'bit-social'),
+
+    'Write a custom post per platform before sharing' => __('Write a custom post per platform before sharing', 'bit-social'),
+
+    'Attach images and pick the posting type each platform supports' => __('Attach images and pick the posting type each platform supports', 'bit-social'),
+
+    'Share to all of them in one go' => __('Share to all of them in one go', 'bit-social'),
+
+    'The free version posts to Facebook and LinkedIn; accounts on the other platforms stay connected and keep their settings, but they are skipped until Pro is active again.' => __('The free version posts to Facebook and LinkedIn; accounts on the other platforms stay connected and keep their settings, but they are skipped until Pro is active again.', 'bit-social'),
+
+    'Share Now for this platform' => __('Share Now for this platform', 'bit-social'),
 
     'Threads Media' => __('Threads Media', 'bit-social'),
 
@@ -1389,8 +1600,6 @@ return [
     'Setup Schedule' => __('Setup Schedule', 'bit-social'),
 
     'Edit Share Now' => __('Edit Share Now', 'bit-social'),
-
-    'Draft' => __('Draft', 'bit-social'),
 
     'This post was not published because WP-Cron ran after its scheduled time. Set up a real server cron to keep posts on time.' => __('This post was not published because WP-Cron ran after its scheduled time. Set up a real server cron to keep posts on time.', 'bit-social'),
 

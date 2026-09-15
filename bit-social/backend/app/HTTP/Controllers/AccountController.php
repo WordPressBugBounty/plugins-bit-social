@@ -8,6 +8,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Request\Request;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Response;
+use BitApps\Social\HTTP\Services\AutoPost\AutoPostRuleService;
 use BitApps\Social\Model\Account;
 use BitApps\Social\Model\Group;
 use BitApps\Social\Model\Schedule;
@@ -96,19 +97,18 @@ class AccountController
             $this->accountRemoveFromSchedules($account->id, $scheduleIds);
         }
 
+        // Auto post keeps its accounts inside each rule, so the deleted one has
+        // to come out of every rule that named it — a leftover id would keep
+        // counting towards the rule's account total and could be re-matched if
+        // the id is ever handed to another connection.
         $autoPostSettings = Config::getOption('auto_post_settings');
 
-        if (!empty($autoPostSettings['accounts']['accountIds'])) {
-            $autoPostSettings['accounts']['accountIds'] = array_values(
-                array_filter(
-                    $autoPostSettings['accounts']['accountIds'],
-                    function ($id) use ($account) {
-                        return $id !== $account->id;
-                    }
-                )
-            );
+        if (\is_array($autoPostSettings)) {
+            $withoutAccount = AutoPostRuleService::removeAccount($autoPostSettings, $account->id);
 
-            Config::updateOption('auto_post_settings', $autoPostSettings);
+            if ($withoutAccount !== $autoPostSettings) {
+                Config::updateOption('auto_post_settings', $withoutAccount);
+            }
         }
 
         $accountId = $account->id;
@@ -183,7 +183,7 @@ class AccountController
 
     public function accountRemoveFromSchedules($accountId, $scheduleIds)
     {
-        $table = Config::get('WP_DB_PREFIX') . Config::VAR_PREFIX . 'schedules';
+        $table = Config::withDBPrefix('schedules');
         $cases = [];
         $ids = [];
         $placeholders = '';

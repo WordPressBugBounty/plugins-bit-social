@@ -27,6 +27,9 @@ if (!file_exists(__DIR__ . '/../vendor/autoload.php')) {
 // Autoload vendor files.
 require_once __DIR__ . '/../vendor/autoload.php';
 
+// The Vite dev server writes the DEV_URL of the port it actually bound to here.
+// Load it first: Dotenv never overwrites a key, so it wins over the one in .env.
+Dotenv::load(plugin_dir_path(__DIR__) . '.env.dev-server');
 Dotenv::load(plugin_dir_path(__DIR__) . '.env');
 
 // Initialize the plugin.

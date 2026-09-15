@@ -206,17 +206,15 @@ final class LogRunBackfill
      */
     public static function isSafeToRun()
     {
-        global $wpdb;
-
         $table = self::table();
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name cannot be bound; built from the plugin's own prefix.
-        if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table)) !== $table) {
+        if (Connection::get_var(Connection::prepare('SHOW TABLES LIKE %s', $table)) !== $table) {
             return false;
         }
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- As above.
-        return !empty($wpdb->get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'"));
+        return !empty(Connection::get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'"));
     }
 
     /**
@@ -230,13 +228,11 @@ final class LogRunBackfill
      */
     private static function backfillRunIds($deadline)
     {
-        global $wpdb;
-
         $table = self::table();
 
         do {
             // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Table name cannot be bound; the batch size is an int constant.
-            $updated = (int) $wpdb->query(
+            $updated = (int) Connection::query(
                 "UPDATE `{$table}`
                 SET `run_id` = MD5(CONCAT(COALESCE(`schedule_id`, 0), '-', `created_at`))
                 WHERE `run_id` IS NULL
@@ -283,19 +279,17 @@ final class LogRunBackfill
      */
     private static function autoPostRows()
     {
-        global $wpdb;
-
         $table = self::table();
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name cannot be bound; built from the plugin's own prefix.
-        $maxId = (int) $wpdb->get_var("SELECT MAX(`id`) FROM `{$table}`");
+        $maxId = (int) Connection::get_var("SELECT MAX(`id`) FROM `{$table}`");
         $floor = max(0, $maxId - self::AUTOPOST_ID_WINDOW);
 
         $postId = "TRIM(BOTH '\"' FROM TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(SUBSTRING_INDEX(`details`, '\"post_id\":', -1), ',', 1), '}', 1)))";
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Identifiers and a fixed expression; every value goes through prepare().
-        $rows = $wpdb->get_results(
-            $wpdb->prepare(
+        $rows = Connection::get_results(
+            Connection::prepare(
                 "SELECT `id`, `run_id`, `created_at`, {$postId} AS post_key
                 FROM `{$table}`
                 WHERE `schedule_id` IS NULL AND `details` LIKE %s AND `id` >= %d
@@ -432,8 +426,6 @@ final class LogRunBackfill
      */
     private static function merge($rows)
     {
-        global $wpdb;
-
         if (\count($rows) < 2) {
             return;
         }
@@ -450,8 +442,8 @@ final class LogRunBackfill
         $table = self::table();
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Table name cannot be bound; every value goes through prepare().
-        $wpdb->query(
-            $wpdb->prepare(
+        Connection::query(
+            Connection::prepare(
                 "UPDATE `{$table}` SET `run_id` = %s WHERE `id` IN ({$placeholders})",
                 array_merge([$runId], $ids)
             )
@@ -497,6 +489,6 @@ final class LogRunBackfill
      */
     private static function table()
     {
-        return Connection::wpPrefix() . Config::VAR_PREFIX . 'logs';
+        return Config::withDBPrefix('logs');
     }
 }

@@ -49,8 +49,6 @@ final class LogController
      */
     public function index(Request $request, $page, $limit)
     {
-        global $wpdb;
-
         $page = max(1, (int) $page);
         $limit = max(1, (int) $limit);
         $offset = ($page - 1) * $limit;
@@ -60,12 +58,12 @@ final class LogController
 
         $scope = $this->runScope($request);
 
-        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Identifiers cannot be bound; every value goes through $wpdb->prepare below.
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Identifiers cannot be bound; every value goes through Connection::prepare below.
         $countSql = "SELECT COUNT(DISTINCT {$groupKey}) FROM `{$table}` {$scope['sql']}";
 
         if (!empty($scope['bindings'])) {
             // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Prepared right here.
-            $countSql = $wpdb->prepare($countSql, $scope['bindings']);
+            $countSql = Connection::prepare($countSql, $scope['bindings']);
         }
 
         $totalRuns = $this->countRuns($countSql);
@@ -202,14 +200,12 @@ final class LogController
      */
     private function pageRunIds($scope, $limit, $offset)
     {
-        global $wpdb;
-
         $table = self::table();
         $groupKey = self::groupKey();
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Identifiers cannot be bound; every value goes through prepare().
-        $rows = $wpdb->get_results(
-            $wpdb->prepare(
+        $rows = Connection::get_results(
+            Connection::prepare(
                 "SELECT {$groupKey} AS group_id, MAX(`id`) AS anchor
                 FROM `{$table}` {$scope['sql']}
                 GROUP BY group_id
@@ -236,8 +232,6 @@ final class LogController
      */
     private function runTotals($runIds)
     {
-        global $wpdb;
-
         $runIds = array_values(array_filter($runIds, 'strlen'));
 
         if (empty($runIds)) {
@@ -254,8 +248,8 @@ final class LogController
         $runIdSelect = self::hasRunIdColumn() ? 'MAX(`run_id`)' : $groupKey;
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Identifiers cannot be bound; every value goes through prepare().
-        $rows = $wpdb->get_results(
-            $wpdb->prepare(
+        $rows = Connection::get_results(
+            Connection::prepare(
                 "SELECT {$groupKey} AS group_id,
                     {$runIdSelect} AS run_id,
                     MAX(`schedule_id`) AS schedule_id,
@@ -292,8 +286,6 @@ final class LogController
 
     private function countRuns($sql)
     {
-        global $wpdb;
-
         $key = Config::VAR_PREFIX . 'log_runs_' . self::countsVersion() . '_' . md5($sql);
         $cached = get_transient($key);
 
@@ -302,7 +294,7 @@ final class LogController
         }
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared -- Prepared by the caller.
-        $total = (int) $wpdb->get_var($sql);
+        $total = (int) Connection::get_var($sql);
 
         set_transient($key, $total, MINUTE_IN_SECONDS);
 
@@ -340,12 +332,10 @@ final class LogController
     private static function hasRunIdColumn()
     {
         if (self::$hasRunId === null) {
-            global $wpdb;
-
             $table = self::table();
 
             // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name cannot be bound; built from the plugin's own prefix.
-            self::$hasRunId = !empty($wpdb->get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'"));
+            self::$hasRunId = !empty(Connection::get_var("SHOW COLUMNS FROM `{$table}` LIKE 'run_id'"));
         }
 
         return self::$hasRunId;
@@ -406,12 +396,10 @@ final class LogController
             return self::$hasUnstamped = true;
         }
 
-        global $wpdb;
-
         $table = self::table();
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name cannot be bound; built from the plugin's own prefix.
-        self::$hasUnstamped = (bool) $wpdb->get_var("SELECT 1 FROM `{$table}` WHERE `run_id` IS NULL LIMIT 1");
+        self::$hasUnstamped = (bool) Connection::get_var("SELECT 1 FROM `{$table}` WHERE `run_id` IS NULL LIMIT 1");
 
         if (self::$hasUnstamped) {
             // Reading the slow key is the safe answer, not a resting state: left
@@ -427,7 +415,7 @@ final class LogController
 
     private static function table()
     {
-        return Connection::wpPrefix() . Config::VAR_PREFIX . 'logs';
+        return Config::withDBPrefix('logs');
     }
 
     /**
@@ -470,8 +458,6 @@ final class LogController
      */
     private function runScope(Request $request)
     {
-        global $wpdb;
-
         $table = self::table();
         $groupKey = self::groupKey();
 
@@ -490,7 +476,7 @@ final class LogController
             $conditions[] = self::searchCondition();
             // One term, matched against four places; the condition names them
             // in this order.
-            $bindings = array_merge($bindings, array_fill(0, 4, '%' . $wpdb->esc_like($search) . '%'));
+            $bindings = array_merge($bindings, array_fill(0, 4, '%' . Connection::esc_like($search) . '%'));
         }
 
         $date = self::filterValue($request, 'date');
@@ -568,9 +554,8 @@ final class LogController
      */
     private static function searchCondition()
     {
-        global $wpdb;
-
-        $schedules = Connection::wpPrefix() . Config::VAR_PREFIX . 'schedules';
+        $schedules = Config::withDBPrefix('schedules');
+        $posts = Connection::prop('posts');
 
         // Same extraction the auto-post backfill uses: the post id out of the
         // encoded details, without asking for JSON functions the plugin's
@@ -580,7 +565,7 @@ final class LogController
         return "(`details` LIKE %s
             OR `platform` LIKE %s
             OR `schedule_id` IN (SELECT `id` FROM `{$schedules}` WHERE `name` LIKE %s)
-            OR {$postId} IN (SELECT `ID` FROM `{$wpdb->posts}` WHERE `post_title` LIKE %s))";
+            OR {$postId} IN (SELECT `ID` FROM `{$posts}` WHERE `post_title` LIKE %s))";
     }
 
     /**
@@ -597,7 +582,7 @@ final class LogController
      */
     private function sourceCondition($source)
     {
-        $schedules = Connection::wpPrefix() . Config::VAR_PREFIX . 'schedules';
+        $schedules = Config::withDBPrefix('schedules');
 
         // Both ways a row can be marked as auto-post generated: the flag newer
         // rows carry, and the name older ones are only identifiable by.
@@ -637,8 +622,6 @@ final class LogController
      */
     private function runLogs($runIds)
     {
-        global $wpdb;
-
         $runIds = array_values(array_filter($runIds, 'strlen'));
 
         if (empty($runIds)) {
@@ -650,8 +633,8 @@ final class LogController
         $placeholders = implode(',', array_fill(0, \count($runIds), '%s'));
 
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- Identifiers cannot be bound; the run ids go through prepare().
-        $rows = $wpdb->get_results(
-            $wpdb->prepare(
+        $rows = Connection::get_results(
+            Connection::prepare(
                 "SELECT *, {$groupKey} AS group_id FROM `{$table}` WHERE {$groupKey} IN ({$placeholders}) ORDER BY `id` ASC",
                 $runIds
             ),
@@ -663,7 +646,7 @@ final class LogController
         }
 
         foreach ($rows as &$row) {
-            // Read straight from $wpdb, so the model's cast has not run.
+            // Read straight from the connection, so the model's cast has not run.
             $row['details'] = json_decode($row['details'], true);
         }
         unset($row);

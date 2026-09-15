@@ -94,6 +94,7 @@ class InstallerProvider
             'BSLogsRunIdMigration',
             'BSSettingsMigration',
             'BSPluginOptions',
+            'BSAutoPostRulesMigration',
             'BSPluginOptionsUpdate',
         ];
 

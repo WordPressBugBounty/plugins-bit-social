@@ -263,6 +263,15 @@ class CustomSchedule
                 continue;
             }
 
+            // An auto-post delay is "share this long after publishing", and a
+            // post matching several delayed rules has one event per rule, all
+            // due together. Spacing them would post every rule after the first
+            // minutes late. They go out on time, like immediate auto-posts do;
+            // one too late to be worth publishing is the reaper's to write off.
+            if (self::isAutoPostSchedule($schedule, $settings)) {
+                continue;
+            }
+
             $timestamp = $this->nextEventTimestamp($schedule['id']);
 
             if (!$timestamp || $timestamp > $now) {

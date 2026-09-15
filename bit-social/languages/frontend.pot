@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Tue Sep 01 2026 05:37:12 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Tue Sep 15 2026 10:08:28 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -120,6 +120,7 @@ msgid ""
 msgstr ""
 
 #: frontend/_plugin-commons/components/PluginUpdateNotice.tsx:79
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:77
 msgid "Updating..."
 msgstr ""
 
@@ -147,15 +148,21 @@ msgstr ""
 
 #: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:11
 msgid ""
+"A community forum for WordPress where users raise feature requests, report "
+"issues, send feedback and vote on what gets built next."
+msgstr ""
+
+#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:22
+msgid ""
 "WordPress CRM to manage contacts, leads, deals, and invoices and run your "
 "whole sales pipeline right from your WordPress dashboard."
 msgstr ""
 
-#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:22
+#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:33
 msgid "Zapier Alternative in WordPress Unlimited Task."
 msgstr ""
 
-#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:31
+#: frontend/_plugin-commons/components/SupportPage/data/pluginInfoData.ts:42
 msgid ""
 "An social media management plugin for WordPress, that allows you to share "
 "your post to different social media platform, schedule post, manage social "
@@ -237,8 +244,7 @@ msgid "Advance Schedule Feature on Pro!"
 msgstr ""
 
 #: frontend/src/components/AdvanceSchedule.tsx:36
-#: frontend/src/components/BuyPro.tsx:73
-#: frontend/src/components/utilities/ProWrapper.tsx:23
+#: frontend/src/components/BuyPro.tsx:164
 msgid "Buy Pro"
 msgstr ""
 
@@ -246,8 +252,95 @@ msgstr ""
 msgid "Advance Schedule"
 msgstr ""
 
-#: frontend/src/components/BuyPro.tsx:43
+#: frontend/src/components/BuyPro.tsx:26
+msgid "Unlimited connected accounts and auto-post rules"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:27
+msgid "WooCommerce product posts"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:28
+msgid "Per-account auto-post rules — filter by category or tag"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:29
+msgid "Multiple images and the “All images” posting type"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:30
+msgid "Advanced smart tags"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:32
+msgid "Publishing"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:36
+msgid "Advanced schedules"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:37
+msgid "Content calendar for queued and published posts"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:38
+msgid "Advanced cron settings"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:39
+msgid "Account groups to publish to many accounts at once"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:41
+msgid "Planning"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:45
+#: frontend/src/pages/AiHub/AiHub.free.tsx:29
+msgid "Save reusable text and image prompts"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:46
+msgid "Drop a prompt into any template with a smart tag"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:47
+#: frontend/src/pages/AiHub/AiHub.free.tsx:31
+msgid "Generate a matching image at posting time"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:49
+msgid "AI"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:53
+msgid "Roles & access — choose who can use Bit Social"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:54
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:23
+msgid "Per-account role permissions"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:55
+msgid "Email alerts on failed posts and digest reports"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:57
+msgid "Team & control"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:96
 msgid "Bit Social Pro"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:100
+msgid "Everything in the free plugin, plus:"
+msgstr ""
+
+#: frontend/src/components/BuyPro.tsx:144
+msgid "New"
 msgstr ""
 
 #: frontend/src/components/CreatedByCell.tsx:41
@@ -258,7 +351,7 @@ msgstr ""
 
 #: frontend/src/components/CronInfo.tsx:44
 #: frontend/src/components/ScheduleSummary/ScheduleSummary.tsx:149
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:69
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:88
 msgid "Disabled"
 msgstr ""
 
@@ -394,60 +487,37 @@ msgstr ""
 msgid "Go to Dashboard"
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:36
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:43
-msgid "Publish anyway"
-msgstr ""
-
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:37
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:44
-msgid "Mark as Missed"
-msgstr ""
-
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:42
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:118
-msgid "after"
-msgstr ""
-
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:70
-msgid ""
-"A post WP-Cron runs more than an hour late is marked Missed rather than "
-"published stale. Upgrade to publish late posts anyway, or to set how much "
-"lateness each kind is worth."
-msgstr ""
-
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:74
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:19
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:39
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:239
 msgid "Late post handling"
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:80
-msgid "A delay here is about spacing, not an exact time — late is often still fine."
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:21
+msgid ""
+"A post WP-Cron runs more than an hour late is marked Missed rather than "
+"published stale."
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:83
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:219
-#: frontend/src/pages/Logs/data/logSource.ts:11
-#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:149
-msgid "Auto Post"
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:27
+msgid ""
+"Bit Social Pro lets you decide how late is too late, instead of running on "
+"the one-hour default."
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:84
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:94
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:38
-msgid "Hours"
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:31
+msgid "Set how much lateness Auto Post is worth"
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:90
-msgid "You picked this time yourself, so publishing hours late is rarely wanted."
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:32
+msgid "Set a separate window for Share Now and Scheduled Share"
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:93
-#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:226
-msgid "Share Now & Scheduled Share"
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:33
+msgid "Or publish a late post anyway, however late it is"
 msgstr ""
 
-#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:101
+#: frontend/src/components/FreeMissedScheduleSettings.free.tsx:35
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:284
 msgid ""
 "A missed post is never deleted — you can still publish it by hand from the "
@@ -515,8 +585,25 @@ msgstr ""
 msgid "Minutes"
 msgstr ""
 
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:38
+msgid "Hours"
+msgstr ""
+
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:39
 msgid "Days"
+msgstr ""
+
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:43
+msgid "Publish anyway"
+msgstr ""
+
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:44
+msgid "Mark as Missed"
+msgstr ""
+
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:118
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:50
+msgid "after"
 msgstr ""
 
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:121
@@ -539,11 +626,21 @@ msgstr ""
 msgid "A delay here is about spacing, not an exact time — late is usually fine."
 msgstr ""
 
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:219
+#: frontend/src/pages/Logs/data/logSource.ts:11
+#: frontend/src/pages/Logs/internals/FilterLogs/FilterLogs.tsx:149
+msgid "Auto Post"
+msgstr ""
+
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:222
 msgid ""
 "You picked this time yourself, so publishing hours late is rarely wanted. A "
 "repeating schedule still waits one interval, or an hour, whichever is "
 "longer — below that a slow cron would mark every run Missed."
+msgstr ""
+
+#: frontend/src/components/ProMissedScheduleSettings.pro.tsx:226
+msgid "Share Now & Scheduled Share"
 msgstr ""
 
 #: frontend/src/components/ProMissedScheduleSettings.pro.tsx:233
@@ -725,13 +822,17 @@ msgstr ""
 msgid "Product Tags"
 msgstr ""
 
-#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:137
+#: frontend/src/components/utilities/MessageBox/MessageBox.tsx:143
 msgid "Show Smart Tags"
 msgstr ""
 
 #: frontend/src/components/utilities/MessageBox/PromptTags.pro.tsx:59
 #: frontend/src/components/utilities/MessageBox/PromptTags.tsx:22
 msgid "Prompt Tags"
+msgstr ""
+
+#: frontend/src/components/utilities/ProFeatureNotice.tsx:79
+msgid "See Pro"
 msgstr ""
 
 #: frontend/src/components/utilities/YoutubeLink.tsx:42
@@ -784,7 +885,6 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/Accounts.tsx:83
 #: frontend/src/pages/AutoPost/ui/AccountTree.tsx:131
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:178
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:14
 #: frontend/src/pages/root/DefaultDashboard.tsx:28
 #: frontend/src/pages/Schedules/internals/Accounts/Accounts.tsx:41
@@ -965,6 +1065,8 @@ msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountInfoTab.tsx:128
 #: frontend/src/pages/Accounts/internals/Platforms/ui/AccountCard.tsx:99
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:65
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:69
 #: frontend/src/pages/Logs/Logs.tsx:264
 #: frontend/src/pages/Logs/Logs.tsx:267
 #: frontend/src/pages/Logs/Logs.tsx:270
@@ -974,44 +1076,30 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:13
+msgid ""
+"Bit Social Pro lets you choose which roles can publish through each "
+"connected account."
+msgstr ""
+
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:17
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:16
-msgid "Administrator"
+msgid "Restrict an account to the roles you pick"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:18
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:17
-msgid "Editor"
+msgid ""
+"Grant roles that have no plugin access — their published posts still "
+"auto-post through this account"
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:19
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:18
-msgid "Author"
+msgid "Users without permission are skipped during auto-post and sharing"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:25
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:21
 msgid ""
-"Control which roles can publish through this account. Users without "
-"permission are skipped during auto-post and sharing."
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:51
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:159
-msgid "Everyone with plugin access"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:55
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:156
-msgid "Any role allowed in Roles & Access can use this account"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:84
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:167
-msgid "Only selected roles"
-msgstr ""
-
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.free.tsx:88
-msgid "Restrict publishing to specific roles"
+"Bit Social is administrators-only right now, so everyone who can open it "
+"already has full access to every account."
 msgstr ""
 
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:105
@@ -1033,27 +1121,41 @@ msgid ""
 "this account."
 msgstr ""
 
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:156
+msgid "Any role allowed in Roles & Access can use this account"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:159
+msgid "Everyone with plugin access"
+msgstr ""
+
 #: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:164
 msgid "Restrict publishing to specific roles, even ones without plugin access"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:177
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:167
+msgid "Only selected roles"
+msgstr ""
+
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:182
 msgid "Search roles…"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:185
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:190
 msgid "Admin roles are always included"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:194
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:199
 #: frontend/src/pages/Accounts/shared/Group/CreateGroupModal.tsx:49
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:64
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:113
 #: frontend/src/pages/Schedules/internals/CreateScheduleModal.tsx:149
 msgid "Cancel"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:196
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/AccountPermissionTab.pro.tsx:201
 #: frontend/src/pages/Accounts/internals/AppConnectCard/ui/AccountConnectCard.tsx:83
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:147
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:145
 #: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:116
 #: frontend/src/pages/SocialTemplates/internals/preview/InstagramPreview.tsx:19
 #: frontend/src/pages/SocialTemplates/internals/preview/PinterestPreview.tsx:19
@@ -1065,15 +1167,15 @@ msgstr ""
 msgid "Only administrators can manage account permissions."
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:40
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:53
 msgid "Info"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:50
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:63
 msgid "Permission"
 msgstr ""
 
-#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:69
+#: frontend/src/pages/Accounts/internals/AccountDetailsModal/index.tsx:88
 #: frontend/src/pages/Schedules/internals/ScheduleList.tsx:317
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:308
 msgid "Active"
@@ -1423,11 +1525,13 @@ msgid "Delete group"
 msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:141
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:53
 #: frontend/src/pages/Logs/internals/runColumns.tsx:122
 msgid "accounts"
 msgstr ""
 
 #: frontend/src/pages/Accounts/shared/Group/ProGroups.pro.tsx:141
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:53
 msgid "account"
 msgstr ""
 
@@ -1454,6 +1558,24 @@ msgstr ""
 #: frontend/src/pages/AiHub/AiHub.free.tsx:22
 #: frontend/src/pages/AiHub/ui/AiPromptConfigsTable.tsx:248
 msgid "How to use AI Prompts?"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.free.tsx:27
+msgid ""
+"Bit Social Pro writes your posts and generates images for them from prompts "
+"you define once."
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.free.tsx:30
+msgid "Drop a prompt into any post template with a smart tag"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.free.tsx:34
+msgid "AI prompts"
+msgstr ""
+
+#: frontend/src/pages/AiHub/AiHub.free.tsx:42
+msgid "Preview of the AI Prompts screen in Bit Social Pro"
 msgstr ""
 
 #: frontend/src/pages/AiHub/AiHub.pro.tsx:16
@@ -1752,96 +1874,291 @@ msgid "settings"
 msgstr ""
 
 #: frontend/src/pages/AutoPost/data/usePostDelayTypes.tsx:19
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:51
 msgid "immediately"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:39
+msgid "all posts"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:44
+msgid "in"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:44
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:45
+msgid "term"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:44
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:45
+msgid "terms"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/helper/autoPostRuleHelper.ts:45
+msgid "not in"
 msgstr ""
 
 #: frontend/src/pages/AutoPost/ui/accountTreeHelper.tsx:98
 msgid "Select All"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:161
-msgid "Immediately"
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:37
+msgid "Facebook, X, Instagram, LinkedIn, Pinterest and more."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:166
-msgid "Delay"
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:38
+msgid "Connect an account"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:199
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:41
+msgid "Which posts it shares, where they go and what they say."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:42
+msgid "Add a rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:45
+msgid "Every post matching a rule shares itself from then on."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:46
+msgid "Publish a post"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:92
+msgid "Share every new post automatically"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:98
+msgid ""
+"Auto post watches for posts you publish and shares them to the social "
+"accounts you choose — no scheduling, no copying links."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:108
+msgid "Ask an administrator to connect a social account to get started."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostEmpty.tsx:158
+msgid "How auto post works"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:73
+msgid "Add a rule first!"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:87
+msgid "Rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:149
 msgid "Auto Post Settings"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:201
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:151
 msgid "All auto post related settings here."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:209
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:159
 #: frontend/src/pages/Settings/FreeCronSettings.free.tsx:34
 #: frontend/src/pages/Settings/ProCronSettings.pro.tsx:54
 msgid "Doc here"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:217
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:167
 msgid ""
-"When you publish a new wordpress post, the plugin shares the post on all "
-"active social accounts automatically."
+"The master switch. With it off, no rule shares anything when you publish a "
+"post."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:220
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:170
 msgid "Share posts automatically"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:234
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:328
-msgid "You have to create and select account first to enable this option!"
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:180
+msgid "You have to add a rule first to enable this option!"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:243
-msgid ""
-"Automatically share specific post types, like blogs or products, to your "
-"social accounts when published."
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:246
-msgid "Share posts type"
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:256
-msgid "Post Type: Post"
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:264
-msgid "Share posts default type <b>Post</b>"
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:272
-msgid ""
-"Optimize your sharing strategy with flexible timing options: use the "
-"dropdown menu to select when your posts will be shared after publishing"
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:275
-msgid "Share post delay"
-msgstr ""
-
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:312
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:188
 msgid ""
 "If you don't want to keep the shared post logs, you need to disable the "
 "option. Disabling the option prevents you view your insights and you might "
 "encounter duplicate posts when you use the schedule module."
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:315
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:191
 msgid "Enable auto post log"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/TemplateBox.tsx:12
-msgid "Post templates"
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:207
+msgid "Auto post rules"
 msgstr ""
 
-#: frontend/src/pages/AutoPost/ui/TemplateBox.tsx:19
-#: frontend/src/pages/Layout/ui/Header/Header.tsx:20
-msgid "Templates"
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:210
+msgid ""
+"Each rule picks its own posts, accounts and post content — a post matching "
+"two rules is shared by both."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostSettings.tsx:215
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:116
+msgid "Add rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:35
+msgid "The update could not be started."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:60
+msgid "Finish updating Bit Social"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:64
+msgid ""
+"Bit Social and Bit Social Pro are from different versions right now. Auto "
+"post reads its settings from both, so it waits for the two to match — your "
+"rules and accounts are untouched in the meantime."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:77
+msgid "Update now"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/AutoPostUpdateRequired.tsx:81
+msgid "You can also update both plugins from the WordPress Plugins screen."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:28
+msgid "No rules yet. Add one to start sharing new posts automatically."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:45
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:327
+msgid "Draft"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:59
+msgid "Rule is active"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:62
+#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:96
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:389
+#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:392
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:378
+#: frontend/src/pages/ShareNow/ShareNowList.tsx:381
+msgid "Edit"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleList.tsx:67
+msgid "Delete this rule?"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:80
+msgid "Name required"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:90
+msgid "No account selected"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:114
+msgid "Save as draft"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:116
+msgid "Publish rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:116
+msgid "Update rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:133
+msgid "Add auto post rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:133
+msgid "Edit auto post rule"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:144
+#: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
+msgid "Settings"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/AutoPostRuleModal.tsx:164
+msgid "Accounts & Template"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:50
+msgid "Post filter"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:52
+msgid ""
+"Share every post of the types above, or only the ones carrying the "
+"categories and tags you pick."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:61
+msgid "All posts"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:62
+msgid "If post contains any of these taxonomies …"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:63
+msgid "If post doesn't contain any of these taxonomies …"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleFilter.tsx:75
+msgid "Select categories, tags or terms…"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:62
+msgid "Pick at least one post type"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:87
+msgid "Name"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:90
+#: frontend/src/pages/Logs/Logs.tsx:42
+msgid "Auto post"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:103
+msgid "Post Type: Post"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:108
+msgid "Publishing one of these shares the post."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:109
+msgid "Share posts type"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:118
+msgid "Immediately"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:122
+msgid "Delay"
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:155
+msgid "Share right away, or wait a while first."
+msgstr ""
+
+#: frontend/src/pages/AutoPost/ui/rule/RuleSettings.tsx:156
+msgid "Share post delay"
 msgstr ""
 
 #: frontend/src/pages/Calendar/DataCellRender.tsx:58
@@ -1864,8 +2181,40 @@ msgstr ""
 msgid "Run Times:"
 msgstr ""
 
-#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:22
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:23
 msgid "Click here to know more about Calendar"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:29
+msgid "Bit Social Pro adds a calendar view of everything queued and already shared."
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:31
+msgid "See scheduled and published posts month by month"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:32
+msgid "Spot gaps and clashes across all your accounts at once"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:33
+msgid "Open any post from the calendar to edit it"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:37
+msgid "Your schedules and their history are already listed on the"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:38
+msgid "Schedules page"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:42
+msgid "Content calendar"
+msgstr ""
+
+#: frontend/src/pages/Calendar/FreeCalendar.free.tsx:50
+msgid "Preview of the Calendar screen in Bit Social Pro"
 msgstr ""
 
 #: frontend/src/pages/Error404/Error404.tsx:24
@@ -1898,6 +2247,10 @@ msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:19
 msgid "Calendar"
+msgstr ""
+
+#: frontend/src/pages/Layout/ui/Header/Header.tsx:20
+msgid "Templates"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/Header.tsx:21
@@ -1939,35 +2292,34 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:77
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:112
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:150
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:180
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:198
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:35
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:102
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:137
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:175
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:205
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:223
 msgid "Features"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:27
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:88
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:129
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:16
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:52
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:113
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:154
 msgid "Improvements"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:37
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:65
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:95
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:118
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:136
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:156
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:169
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:187
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:23
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:62
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:90
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:120
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:143
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:161
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:181
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:194
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:212
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:224
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:237
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:249
 msgid "Fixed"
-msgstr ""
-
-#: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:26
-msgid "Settings"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/MoreOptionButton.tsx:99
@@ -2200,10 +2552,6 @@ msgstr ""
 msgid "Auto post - Post ID:"
 msgstr ""
 
-#: frontend/src/pages/Logs/Logs.tsx:42
-msgid "Auto post"
-msgstr ""
-
 #: frontend/src/pages/Logs/Logs.tsx:61
 msgid "Custom written content"
 msgstr ""
@@ -2422,6 +2770,34 @@ msgstr ""
 msgid "Share the post link on Pinterest"
 msgstr ""
 
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:25
+msgid ""
+"Bit Social Pro writes and schedules the %s post for every account you "
+"connect."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:29
+msgid "A custom message, image and posting type per platform"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:30
+msgid "Auto post and scheduled posts to every connected account"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:31
+msgid "A preview of the post as that platform will show it"
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:35
+msgid ""
+"The free version posts to Facebook and LinkedIn. %s accounts stay connected "
+"and keep their settings, but they are skipped until Pro is active again."
+msgstr ""
+
+#: frontend/src/pages/Schedules/internals/Platforms/ProTemplateNotice.tsx:41
+msgid "%s templates are a Pro feature"
+msgstr ""
+
 #: frontend/src/pages/Schedules/internals/Platforms/ProThreadsScheduleTemplate.tsx:154
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:110
 #: frontend/src/pages/SocialTemplates/internals/ProThreadsSettings.tsx:105
@@ -2588,14 +2964,6 @@ msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:88
 msgid "Next post"
-msgstr ""
-
-#: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:96
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:389
-#: frontend/src/pages/Schedules/internals/ScheduleList.tsx:392
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:378
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:381
-msgid "Edit"
 msgstr ""
 
 #: frontend/src/pages/Schedules/internals/ScheduleCard.tsx:99
@@ -2924,111 +3292,91 @@ msgid ""
 "automatically publish on your desired social platforms!"
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:17
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:140
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:18
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:138
 msgid "Email Notifications"
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:19
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:151
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:20
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:149
 msgid ""
 "Get notified by email when a post fails to publish, and receive scheduled "
 "reports of your successes and failures."
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:27
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:181
-msgid "Enable email notifications"
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:26
+msgid ""
+"Bit Social Pro emails you when something goes wrong, so you do not have to "
+"go looking."
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:34
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:192
-msgid "Comma separated email addresses that should receive notifications."
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:28
+msgid "Email the recipients you choose the moment a post fails"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:29
+msgid "Email you when WP-Cron ran too late and posts were missed"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:30
+msgid "Schedule a digest of successes and failures every few days or weeks"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:31
+msgid "Send a digest on demand to check it works"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:35
+msgid "Every success and failure is already recorded on the"
 msgstr ""
 
 #: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:36
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:194
-msgid "Recipients"
+msgid "Logs page"
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:44
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:211
-msgid ""
-"Receive an email every time a scheduled post fails to publish on a social "
-"platform."
+#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:40
+msgid "Email notifications"
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:46
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:215
-msgid "Email on failure"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:55
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:233
-msgid ""
-"Receive an email when scheduled posts were not published because WP-Cron "
-"ran too late."
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:59
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:237
-msgid "Email on missed posts"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:68
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:255
-msgid "Receive a scheduled summary email with both success and error reports."
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:70
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:257
-msgid "Digest report"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:76
-msgid "Send every"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:81
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:284
-msgid "Day(s)"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:82
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:285
-msgid "Week(s)"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeNotificationSettings.free.tsx:83
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:286
-msgid "Month(s)"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:19
-msgid "Contributor"
-msgstr ""
-
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:24
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:17
 #: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:106
 #: frontend/src/pages/Settings/settingsTabs.free.tsx:8
 #: frontend/src/pages/Settings/settingsTabs.pro.tsx:11
 msgid "Roles & Access"
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:26
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:19
 msgid ""
 "Choose which WordPress roles can access Bit Social and trigger auto-post "
 "when publishing content. Administrators always have access."
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:34
-#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:174
-msgid "Search and select the roles that can use Bit Social."
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:25
+msgid ""
+"Bit Social Pro opens the plugin up to the roles you choose, instead of "
+"administrators alone."
 msgstr ""
 
-#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:36
-#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:176
-msgid "Allowed roles"
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:27
+msgid "Let editors or authors manage posts and schedules"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:28
+msgid "Decide which roles trigger auto-post when they publish"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:29
+msgid "Restrict individual accounts to specific roles"
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:31
+msgid ""
+"In the free version only administrators can open Bit Social, so there is no "
+"other role to grant access to."
+msgstr ""
+
+#: frontend/src/pages/Settings/FreeRoleAccessSettings.free.tsx:33
+msgid "Role-based access"
 msgstr ""
 
 #: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:72
@@ -3069,27 +3417,27 @@ msgstr ""
 msgid "Enable email notifications first."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:130
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:128
 msgid "Turn on the digest report to set how often it is sent."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:135
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:133
 msgid "Last sent:"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:135
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:133
 msgid "Never"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:164
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:162
 msgid "Activate Bit SMTP"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:164
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:162
 msgid "Install Bit SMTP"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:168
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:166
 msgid ""
 "No SMTP service was detected. By default WordPress emails are often blocked "
 "or marked as spam, so failure alerts and digest reports may not be "
@@ -3097,11 +3445,63 @@ msgid ""
 "emails reliably."
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:171
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:169
 msgid "SMTP is not set up"
 msgstr ""
 
-#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:307
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:179
+msgid "Enable email notifications"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:190
+msgid "Comma separated email addresses that should receive notifications."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:192
+msgid "Recipients"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:209
+msgid ""
+"Receive an email every time a scheduled post fails to publish on a social "
+"platform."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:213
+msgid "Email on failure"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:231
+msgid ""
+"Receive an email when scheduled posts were not published because WP-Cron "
+"ran too late."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:235
+msgid "Email on missed posts"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:253
+msgid "Receive a scheduled summary email with both success and error reports."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:255
+msgid "Digest report"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:282
+msgid "Day(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:283
+msgid "Week(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:284
+msgid "Month(s)"
+msgstr ""
+
+#: frontend/src/pages/Settings/ProNotificationSettings.pro.tsx:305
 msgid "Check now"
 msgstr ""
 
@@ -3167,6 +3567,14 @@ msgstr ""
 msgid "Only administrators can"
 msgstr ""
 
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:174
+msgid "Search and select the roles that can use Bit Social."
+msgstr ""
+
+#: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:176
+msgid "Allowed roles"
+msgstr ""
+
 #: frontend/src/pages/Settings/ProRoleAccessSettings.pro.tsx:185
 msgid "Search and select roles…"
 msgstr ""
@@ -3188,7 +3596,6 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:110
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:120
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:68
-#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:10
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:87
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:107
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:106
@@ -3204,7 +3611,6 @@ msgstr ""
 #: frontend/src/pages/ShareNow/internals/platforms/ProLineShareNowTemplate.tsx:115
 #: frontend/src/pages/ShareNow/internals/platforms/ProPinterestShareNowTemplate.tsx:125
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:73
-#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:13
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:92
 #: frontend/src/pages/ShareNow/internals/platforms/ProTumblrShareNowTemplate.tsx:112
 #: frontend/src/pages/ShareNow/internals/platforms/ProTwitterShareNowTemplate.tsx:110
@@ -3271,6 +3677,35 @@ msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProTelegramShareNowTemplate.tsx:33
 msgid "Telegram Media"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:15
+msgid ""
+"Bit Social Pro composes and shares to every connected platform from Share "
+"Now."
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:17
+msgid "Write a custom post per platform before sharing"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:18
+msgid "Attach images and pick the posting type each platform supports"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:19
+msgid "Share to all of them in one go"
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:21
+msgid ""
+"The free version posts to Facebook and LinkedIn; accounts on the other "
+"platforms stay connected and keep their settings, but they are skipped "
+"until Pro is active again."
+msgstr ""
+
+#: frontend/src/pages/ShareNow/internals/platforms/ProTemplate.tsx:23
+msgid "Share Now for this platform"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/internals/platforms/ProThreadsShareNowTemplate.tsx:81
@@ -3341,10 +3776,6 @@ msgstr ""
 
 #: frontend/src/pages/ShareNow/ShareNow.tsx:41
 msgid "Edit Share Now"
-msgstr ""
-
-#: frontend/src/pages/ShareNow/ShareNowList.tsx:327
-msgid "Draft"
 msgstr ""
 
 #: frontend/src/pages/ShareNow/ShareNowList.tsx:332

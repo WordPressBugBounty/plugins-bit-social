@@ -143,6 +143,7 @@ class ComposerStaticInitc5ea52338d1ef71c74154e1c11a5628c
         'BitApps\\Social\\HTTP\\Requests\\ProxyRequest' => __DIR__ . '/../..' . '/backend/app/HTTP/Requests/ProxyRequest.php',
         'BitApps\\Social\\HTTP\\Requests\\ScheduleStoreRequest' => __DIR__ . '/../..' . '/backend/app/HTTP/Requests/ScheduleStoreRequest.php',
         'BitApps\\Social\\HTTP\\Requests\\SettingsUpdateRequest' => __DIR__ . '/../..' . '/backend/app/HTTP/Requests/SettingsUpdateRequest.php',
+        'BitApps\\Social\\HTTP\\Services\\AutoPost\\AutoPostRuleService' => __DIR__ . '/../..' . '/backend/app/HTTP/Services/AutoPost/AutoPostRuleService.php',
         'BitApps\\Social\\HTTP\\Services\\Factories\\AuthServiceFactory' => __DIR__ . '/../..' . '/backend/app/HTTP/Services/Factories/AuthServiceFactory.php',
         'BitApps\\Social\\HTTP\\Services\\Factories\\PlatformAppInfoResolverFactory' => __DIR__ . '/../..' . '/backend/app/HTTP/Services/Factories/PlatformAppInfoResolverFactory.php',
         'BitApps\\Social\\HTTP\\Services\\Interfaces\\AuthServiceInterface' => __DIR__ . '/../..' . '/backend/app/HTTP/Services/Interfaces/AuthServiceInterface.php',

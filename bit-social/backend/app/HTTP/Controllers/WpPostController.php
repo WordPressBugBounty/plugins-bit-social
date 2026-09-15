@@ -33,12 +33,18 @@ class WpPostController
             'postType' => ['string']
         ]);
 
-        $postType = $validatedData['postType'];
+        // Accepts one post type ('post') or a comma-separated list
+        // ('post,page') — auto-post can be configured for several at once.
+        $postTypes = array_values(array_filter(array_map('trim', explode(',', (string) $validatedData['postType']))));
 
         $allTaxonomiesTerms = [];
         $taxonomyData = [];
 
-        $taxonomies = get_object_taxonomies($postType, 'objects');
+        if (empty($postTypes)) {
+            return Response::success($allTaxonomiesTerms);
+        }
+
+        $taxonomies = get_object_taxonomies($postTypes, 'objects');
 
         // Collect public taxonomy data (key: label, value: name)
         foreach ($taxonomies as $taxonomy) {

@@ -100,6 +100,7 @@ return array(
     'BitApps\\Social\\HTTP\\Requests\\ProxyRequest' => $baseDir . '/backend/app/HTTP/Requests/ProxyRequest.php',
     'BitApps\\Social\\HTTP\\Requests\\ScheduleStoreRequest' => $baseDir . '/backend/app/HTTP/Requests/ScheduleStoreRequest.php',
     'BitApps\\Social\\HTTP\\Requests\\SettingsUpdateRequest' => $baseDir . '/backend/app/HTTP/Requests/SettingsUpdateRequest.php',
+    'BitApps\\Social\\HTTP\\Services\\AutoPost\\AutoPostRuleService' => $baseDir . '/backend/app/HTTP/Services/AutoPost/AutoPostRuleService.php',
     'BitApps\\Social\\HTTP\\Services\\Factories\\AuthServiceFactory' => $baseDir . '/backend/app/HTTP/Services/Factories/AuthServiceFactory.php',
     'BitApps\\Social\\HTTP\\Services\\Factories\\PlatformAppInfoResolverFactory' => $baseDir . '/backend/app/HTTP/Services/Factories/PlatformAppInfoResolverFactory.php',
     'BitApps\\Social\\HTTP\\Services\\Interfaces\\AuthServiceInterface' => $baseDir . '/backend/app/HTTP/Services/Interfaces/AuthServiceInterface.php',
