@@ -55,10 +55,14 @@ class SocialTemplateController
             'trimMessage' => true
         ],
         'instagram' => [
-            'postingType' => 'isFeaturedImage',
-            'content'     => '{post_title}',
-            'comment'     => '',
-            'trimMessage' => true
+            'postingType'     => 'isFeaturedImage',
+            'content'         => '{post_title}',
+            'comment'         => '',
+            'trimMessage'     => true,
+            // How images outside 4:5 to 1.91:1 are brought into range — see
+            // Common::getImageLayoutForPlatform().
+            'feedImageLayout' => 'fit',
+            'backgroundColor' => '#000000'
         ],
         'bluesky' => [
             'postingType' => 'onlyMessage',

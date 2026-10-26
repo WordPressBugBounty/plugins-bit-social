@@ -1,11 +1,11 @@
 === Bit Social – Social Media Auto Poster and Scheduler ===
 
-Contributors: bitpressadmin,shimulckbt,khoaiz,shuvomohajan,tanvirchy,arif25897,mazharul78,akaioum
+Contributors: bitpressadmin
 Tags: auto post, cross posting, auto share, social media automation, social media scheduler
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.19.0
+Stable tag: 1.20.1
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,20 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.20.1 (October 26, 2026) =
+* Fixed:
+   * Changelog notes.
+
+= v1.20.0 (October 26, 2026) =
+* Features:
+   * Instagram: A new "Feed image layout" setting fits images on a background color or crops them into Instagram's 4:5 to 1.91:1 range. The default is fit on a black background.
+* Improvements:
+   * Instagram: Images are now changed to JPEG and resized to a maximum of 1440px before posting.
+   * Instagram: The image ratio error now tells you which ratios and format Instagram accepts.
+* Fixed:
+   * Instagram: Images that are too tall or too wide no longer fail with an aspect ratio error.
+   * Instagram: Share Now images now get the same ratio, size and format fixes as auto posts and schedules.
 
 = v1.19.0 (September 15, 2026) =
 * Features:

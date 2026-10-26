@@ -240,6 +240,20 @@ return [
 
     'A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.' => __('A missed post is never deleted — you can still publish it by hand from the Schedules or Share Now list.', 'bit-social'),
 
+    'Shows the whole image and fills the empty space with a background color.' => __('Shows the whole image and fills the empty space with a background color.', 'bit-social'),
+
+    'Fit with background' => __('Fit with background', 'bit-social'),
+
+    'Fills the frame by cropping the edges from the center.' => __('Fills the frame by cropping the edges from the center.', 'bit-social'),
+
+    'Zoom and crop' => __('Zoom and crop', 'bit-social'),
+
+    'Common' => __('Common', 'bit-social'),
+
+    'Feed image layout' => __('Feed image layout', 'bit-social'),
+
+    'Background color' => __('Background color', 'bit-social'),
+
     '<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.' => __('<b>Accounts:</b> To add your desired social platform, click on the <b>"Connect Account"</b> button. A modal will appear displaying various social platforms where you will find two options. First one is <b>"Connect"</b> button to connect your platform directly and another one is <b>"Custom app"</b> option which will work by entering your personal app credentials.', 'bit-social'),
 
     'To set it up, click on the <b>"Connect Account"</b> button and follow the next step!' => __('To set it up, click on the <b>"Connect Account"</b> button and follow the next step!', 'bit-social'),
@@ -1003,11 +1017,11 @@ return [
 
     'Click Here' => __('Click Here', 'bit-social'),
 
+    'Fixed' => __('Fixed', 'bit-social'),
+
     'Features' => __('Features', 'bit-social'),
 
     'Improvements' => __('Improvements', 'bit-social'),
-
-    'Fixed' => __('Fixed', 'bit-social'),
 
     'More' => __('More', 'bit-social'),
 
@@ -1670,6 +1684,8 @@ return [
     'Instagram Template Settings' => __('Instagram Template Settings', 'bit-social'),
 
     'Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.' => __('Instagram media images must be 1.91:1 to 4:5 aspect ratio, 320-1440px resolution (recommended 1080px), and under 8MB.', 'bit-social'),
+
+    'How images that are too tall or too wide for Instagram are prepared.' => __('How images that are too tall or too wide for Instagram are prepared.', 'bit-social'),
 
     'Line Template Settings' => __('Line Template Settings', 'bit-social'),
 

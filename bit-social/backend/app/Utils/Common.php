@@ -213,7 +213,7 @@ trait Common
         $media = array_values(array_filter(array_unique($media)));
 
         if (property_exists($template, 'platform') && !empty($template->platform)) {
-            $media = $this->normalizeMediaForPlatform($media, $template->platform);
+            $media = $this->normalizeMediaForPlatform($media, $template->platform, $template);
         }
 
         $formattedPostData = [
@@ -359,10 +359,11 @@ trait Common
      * - Converts WebP to JPEG for platforms that do not accept WebP.
      * - Resizes overly large images to reduce API rejections.
      *
-     * @param mixed $media
-     * @param mixed $platform
+     * @param mixed       $media
+     * @param mixed       $platform
+     * @param null|object $template carries the platform's image layout choice
      */
-    protected function normalizeMediaForPlatform($media, $platform)
+    protected function normalizeMediaForPlatform($media, $platform, $template = null)
     {
         if (empty($media)) {
             return [];
@@ -376,13 +377,16 @@ trait Common
                 continue;
             }
 
-            $normalizedMedia[] = $this->normalizeSingleImageForPlatform($mediaUrl, (string) $platform);
+            $normalizedMedia[] = $this->normalizeSingleImageForPlatform($mediaUrl, (string) $platform, $template);
         }
 
         return array_values(array_filter(array_unique($normalizedMedia)));
     }
 
-    protected function normalizeSingleImageForPlatform(string $mediaUrl, string $platform): string
+    /**
+     * @param null|object $template
+     */
+    protected function normalizeSingleImageForPlatform(string $mediaUrl, string $platform, $template = null): string
     {
         if (!wp_http_validate_url($mediaUrl)) {
             return $mediaUrl;
@@ -413,11 +417,21 @@ trait Common
         $targetMimeType = $this->getTargetMimeTypeForPlatform($mimeType, $platform);
         $targetExtension = $this->mimeTypeToExtension($targetMimeType);
 
+        // An image outside the platform's ratio range is either center-cropped
+        // into it or padded out to it, whichever layout the site chose.
+        $layout = $this->getImageLayoutForPlatform($platform, $template);
+        $outOfRangeCrop = $this->getAspectRatioCrop((int) $imageSize['width'], (int) $imageSize['height'], $platform);
+        $crop = $layout['mode'] === 'crop' ? $outOfRangeCrop : null;
+        $padColor = $layout['mode'] === 'fit' && $outOfRangeCrop ? $layout['background'] : null;
+
+        $finalWidth = $crop ? $crop['width'] : $imageSize['width'];
+        $finalHeight = $crop ? $crop['height'] : $imageSize['height'];
+
         $currentExtension = strtolower((string) pathinfo($filePath, PATHINFO_EXTENSION));
-        $requiresResize = $imageSize['width'] > $maxWidth || $imageSize['height'] > $maxHeight;
+        $requiresResize = $finalWidth > $maxWidth || $finalHeight > $maxHeight;
         $requiresFormatChange = !empty($targetExtension) && $currentExtension !== $targetExtension;
 
-        if (!$requiresResize && !$requiresFormatChange) {
+        if (!$crop && !$padColor && !$requiresResize && !$requiresFormatChange) {
             return $mediaUrl;
         }
 
@@ -433,9 +447,15 @@ trait Common
             . '-bit-social-'
             . sanitize_key($platform)
             . '-' . $maxWidth . 'x' . $maxHeight
+            . ($crop ? '-crop' : '')
+            . ($padColor ? '-fit-' . ltrim($padColor, '#') : '')
             . '.' . $targetExtension;
 
         if (!file_exists($targetPath)) {
+            if ($crop && is_wp_error($editor->crop($crop['x'], $crop['y'], $crop['width'], $crop['height']))) {
+                return $mediaUrl;
+            }
+
             if ($requiresResize) {
                 $editor->resize($maxWidth, $maxHeight, false);
             }
@@ -446,9 +466,105 @@ trait Common
             }
 
             $targetPath = $saveResult['path'];
+
+            if ($padColor && !$this->padToAspectRatio($targetPath, $platform, $padColor)) {
+                wp_delete_file($targetPath);
+
+                return $mediaUrl;
+            }
         }
 
         return str_replace($uploadDir['basedir'], $uploadDir['baseurl'], $targetPath);
+    }
+
+    /**
+     * How an image outside the platform's ratio range is brought into it:
+     * "crop" (center-crop) or "fit" (pad with a background color).
+     *
+     * Only Instagram has a choice, set per template (feedImageLayout and
+     * backgroundColor). A template saved before the choice existed gets the
+     * defaults in SocialTemplateController::$defaultTemplateSettings.
+     *
+     * @param null|object $template
+     */
+    protected function getImageLayoutForPlatform(string $platform, $template = null): array
+    {
+        $crop = ['mode' => 'crop', 'background' => '#000000'];
+
+        if ($platform !== 'instagram') {
+            return $crop;
+        }
+
+        $mode = isset($template->feedImageLayout) ? $template->feedImageLayout : 'fit';
+        $background = sanitize_hex_color(isset($template->backgroundColor) ? (string) $template->backgroundColor : '') ?: '#000000';
+
+        // Anything but an explicit "crop" is the default fit. Padding draws on a
+        // GD canvas; without GD, cropping is the only way into range at all.
+        if ($mode !== 'crop' && \function_exists('imagecreatetruecolor')) {
+            return ['mode' => 'fit', 'background' => $background];
+        }
+
+        return $crop;
+    }
+
+    /**
+     * Places the saved image, centered, on a background-colored canvas at the
+     * nearest ratio the platform accepts, so the whole picture stays visible.
+     *
+     * Writes JPEG: Instagram, the only platform with a fit layout, takes
+     * nothing else.
+     */
+    protected function padToAspectRatio(string $path, string $platform, string $background): bool
+    {
+        $range = $this->getAspectRatioRangeForPlatform($platform);
+        $size = getimagesize($path);
+        if ($range === null || empty($size[0]) || empty($size[1])) {
+            return false;
+        }
+
+        [$minRatio, $maxRatio] = $range;
+        $width = (int) $size[0];
+        $height = (int) $size[1];
+        $ratio = $width / $height;
+
+        // Ceil the grown side so the canvas never lands just outside the range.
+        $canvasWidth = $ratio < $minRatio ? (int) ceil($height * $minRatio) : $width;
+        $canvasHeight = $ratio > $maxRatio ? (int) ceil($width / $maxRatio) : $height;
+
+        if ($canvasWidth === $width && $canvasHeight === $height) {
+            return true;
+        }
+
+        $source = imagecreatefromstring((string) file_get_contents($path));
+        if (!$source) {
+            return false;
+        }
+
+        $hex = ltrim($background, '#');
+        if (\strlen($hex) === 3) {
+            $hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+        }
+        [$red, $green, $blue] = array_map('hexdec', str_split($hex, 2));
+
+        $canvas = imagecreatetruecolor($canvasWidth, $canvasHeight);
+        imagefill($canvas, 0, 0, imagecolorallocate($canvas, $red, $green, $blue));
+        imagecopy(
+            $canvas,
+            $source,
+            (int) floor(($canvasWidth - $width) / 2),
+            (int) floor(($canvasHeight - $height) / 2),
+            0,
+            0,
+            $width,
+            $height
+        );
+
+        $saved = imagejpeg($canvas, $path, 90);
+
+        imagedestroy($source);
+        imagedestroy($canvas);
+
+        return $saved;
     }
 
     protected function getMaxDimensionsForPlatform(string $platform): array
@@ -456,13 +572,66 @@ trait Common
         $limits = [
             'facebook'              => [2000, 2000],
             'googleBusinessProfile' => [1200, 1200],
+            'instagram'             => [1440, 1440],
         ];
 
         return $limits[$platform] ?? [2000, 2000];
     }
 
+    /**
+     * The width / height range a platform accepts, or null when any ratio goes.
+     *
+     * Instagram rejects feed images outside 4:5 to 1.91:1 (error 2207009).
+     */
+    protected function getAspectRatioRangeForPlatform(string $platform): ?array
+    {
+        $ranges = [
+            'instagram' => [0.8, 1.91],
+        ];
+
+        return $ranges[$platform] ?? null;
+    }
+
+    /**
+     * The centered crop that brings an image into the platform's ratio range.
+     *
+     * Floors the kept side so the result never lands just outside the range.
+     *
+     * @return null|array{x: int, y: int, width: int, height: int} null when no crop is needed
+     */
+    protected function getAspectRatioCrop(int $width, int $height, string $platform): ?array
+    {
+        $range = $this->getAspectRatioRangeForPlatform($platform);
+        if ($range === null || $width < 1 || $height < 1) {
+            return null;
+        }
+
+        [$minRatio, $maxRatio] = $range;
+        $ratio = $width / $height;
+
+        if ($ratio < $minRatio) {
+            $newHeight = (int) floor($width / $minRatio);
+
+            return ['x' => 0, 'y' => (int) floor(($height - $newHeight) / 2), 'width' => $width, 'height' => $newHeight];
+        }
+
+        if ($ratio > $maxRatio) {
+            $newWidth = (int) floor($height * $maxRatio);
+
+            return ['x' => (int) floor(($width - $newWidth) / 2), 'y' => 0, 'width' => $newWidth, 'height' => $height];
+        }
+
+        return null;
+    }
+
     protected function getTargetMimeTypeForPlatform($mimeType, string $platform): string
     {
+        // Instagram's image_url only accepts JPEG; anything else fails with an
+        // unreadable aspect ratio.
+        if ($platform === 'instagram') {
+            return 'image/jpeg';
+        }
+
         $webpRestrictedPlatforms = ['facebook', 'googleBusinessProfile'];
         if (\in_array($platform, $webpRestrictedPlatforms, true) && $mimeType === 'image/webp') {
             return 'image/jpeg';
