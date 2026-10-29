@@ -71,17 +71,33 @@ class Helper
 
     public static function imageUpload($initializeImageUrl, $params, $initializeHeader, $media, $access_token, $httpHandler)
     {
+        $allImageUrns = [];
+
+        // A post that points at an image LinkedIn never received is accepted
+        // but never shows, so only keep the images that uploaded.
         foreach ($media as $image) {
             $response = $httpHandler->request($initializeImageUrl, 'POST', $params, $initializeHeader);
+
+            if (!isset($response->value->uploadUrl, $response->value->image)) {
+                continue;
+            }
 
             $upload_url = $response->value->uploadUrl;
             $imageUrn = $response->value->image;
 
             $parameters = self::getLocalImagePath($image);
 
+            if (empty($parameters)) {
+                continue;
+            }
+
             $uploadHeader = self::uploadHeader($access_token, $parameters);
 
-            $imageUploadResponse = $httpHandler->request($upload_url, 'PUT', $parameters, $uploadHeader);
+            $httpHandler->request($upload_url, 'PUT', $parameters, $uploadHeader);
+
+            if (!self::isSuccessCode($httpHandler->getResponseCode())) {
+                continue;
+            }
 
             $allImageUrns[] = $imageUrn;
         }
@@ -96,16 +112,36 @@ class Helper
         $localBaseDir = $localPath['basedir'];
         $localImagePath = str_replace($localBaseUrl, $localBaseDir, $image);
 
-        return file_get_contents($localImagePath);
+        if ($localImagePath !== $image && is_readable($localImagePath)) {
+            return file_get_contents($localImagePath);
+        }
+
+        // Media on a CDN or offloaded storage is not on disk, so download it.
+        $response = wp_remote_get($image, ['timeout' => 30]);
+
+        if (is_wp_error($response) || !self::isSuccessCode(wp_remote_retrieve_response_code($response))) {
+            return '';
+        }
+
+        return wp_remote_retrieve_body($response);
+    }
+
+    public static function isSuccessCode($code)
+    {
+        $code = (int) $code;
+
+        return $code >= 200 && $code < 300;
     }
 
     public static function uploadHeader($access_token, $parameters)
     {
+        $imageInfo = getimagesizefromstring($parameters);
+
         return [
             'Authorization'             => "Bearer {$access_token}",
             'LinkedIn-Version'          => static::LINKEDIN_VERSION,
             'X-RestLi-Protocol-Version' => '2.0.0',
-            'Content-Type'              => 'image/jpeg',
+            'Content-Type'              => empty($imageInfo['mime']) ? 'image/jpeg' : $imageInfo['mime'],
             'Content-Length'            => \strlen($parameters),
         ];
     }

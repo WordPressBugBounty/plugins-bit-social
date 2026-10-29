@@ -5,7 +5,7 @@ Tags: auto post, cross posting, auto share, social media automation, social medi
 Requires at least: 5.1
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.20.1
+Stable tag: 1.20.2
 License: GPLv2 or later
 
 Schedule WordPress posts to social media and auto share content across Facebook, Twitter (X), Instagram, Pinterest, TikTok, and LinkedIn.
@@ -368,6 +368,12 @@ Go to **Plugins** → **Add New** in your WordPress dashboard and search for **B
 9. Post Scheduling Progress
 
 == Changelog ==
+
+= v1.20.2 (October 29, 2026) =
+* Fixed:
+   * Schedule: A schedule no longer publishes more than one post when two runs start at the same time.
+   * Accounts: Instagram, Facebook group, Threads, LinkedIn and Tumblr tokens now renew correctly, and a network error no longer asks for a reconnect.
+   * LinkedIn and Tumblr: Scheduled posts with images now publish correctly.
 
 = v1.20.1 (October 26, 2026) =
 * Fixed:

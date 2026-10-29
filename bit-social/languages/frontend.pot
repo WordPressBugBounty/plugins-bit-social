@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"POT-Creation-Date: Mon Oct 26 2026 11:34:00 GMT+0000 (Coordinated Universal "
+"POT-Creation-Date: Thu Oct 29 2026 11:10:20 GMT+0000 (Coordinated Universal "
 "Time)\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -2324,37 +2324,38 @@ msgid "Click Here"
 msgstr ""
 
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:10
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:32
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:57
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:96
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:124
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:154
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:177
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:195
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:215
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:23
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:45
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:70
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:109
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:137
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:167
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:190
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:208
 #: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:228
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:246
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:271
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:283
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:241
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:259
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:284
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:296
 msgid "Fixed"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:19
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:44
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:69
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:136
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:171
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:209
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:239
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:257
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:32
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:57
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:82
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:149
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:184
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:222
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:252
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:270
 msgid "Features"
 msgstr ""
 
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:25
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:50
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:86
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:147
-#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:188
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:38
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:63
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:99
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:160
+#: frontend/src/pages/Layout/ui/Header/internals/Changelog/data/changelogInfo.tsx:201
 msgid "Improvements"
 msgstr ""
 

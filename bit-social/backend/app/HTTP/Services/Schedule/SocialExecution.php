@@ -26,7 +26,8 @@ final class SocialExecution
 
     public function isSleep($settings)
     {
-        $currentDay = gmdate('D');
+        // Site time, like the sleep time below and the next run time in the UI.
+        $currentDay = current_time('D');
         $sleepTime = isset($settings['sleep_days']) ? $settings['sleep_days'] : [];
 
         if (\in_array($currentDay, $sleepTime)) {
@@ -68,13 +69,19 @@ final class SocialExecution
      */
     public function publishPost()
     {
-        LogRun::start();
-
         // Tells the missed-post reaper that this schedule is busy, not stuck:
         // the event is already consumed and the row still says ACTIVE, so from
         // the outside a run in progress and a run that never happened look the
         // same. Released in the same breath as the log run.
-        PublishLock::acquire($this->schedule->scheduleId);
+        //
+        // It also stops a second run. Overlapping cron requests (an external
+        // cron and a spawned WP-Cron) can fire the same event at once, and each
+        // run would publish a different post.
+        if (!PublishLock::acquire($this->schedule->scheduleId)) {
+            return false;
+        }
+
+        LogRun::start();
 
         try {
             return $this->runPublish();

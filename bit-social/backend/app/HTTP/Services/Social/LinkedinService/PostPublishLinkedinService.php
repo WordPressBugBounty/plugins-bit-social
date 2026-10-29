@@ -158,18 +158,18 @@ class PostPublishLinkedinService implements SocialInterface
         $data = Helper::commonParams($ownerUrn, $post_content);
 
         $requestBody = $this->httpHandler->request($postPublishUrl, 'POST', wp_json_encode($data), $header, null);
-        $responseHeader = $this->httpHandler->getResponseHeaders();
+        $publishedPostId = $this->publishedPostId();
 
-        if (isset($responseHeader['x-restli-id'])) {
+        if ($publishedPostId) {
             return [
                 'status'  => 1,
-                'message' => $responseHeader['x-restli-id']
+                'message' => $publishedPostId
             ];
         }
 
         return [
             'status'  => 0,
-            'message' => $requestBody->message
+            'message' => $requestBody->message ?? 'LinkedIn did not publish the post.'
         ];
     }
 
@@ -195,21 +195,26 @@ class PostPublishLinkedinService implements SocialInterface
 
         $response = $this->httpHandler->request($postPublishUrl, 'POST', wp_json_encode($params), $header, null);
 
-        $responseHeader = $this->httpHandler->getResponseHeaders();
+        $publishedPostId = $this->publishedPostId();
 
-        if (property_exists($response, 'errorDetails')) {
+        if (\is_object($response) && property_exists($response, 'errorDetails')) {
             return [
                 'status'  => 0,
                 'message' => wp_json_encode($response->errorDetails)
             ];
         }
 
-        if (isset($responseHeader['x-restli-id'])) {
+        if ($publishedPostId) {
             return [
                 'status'  => 1,
-                'message' => $responseHeader['x-restli-id']
+                'message' => $publishedPostId
             ];
         }
+
+        return [
+            'status'  => 0,
+            'message' => $response->message ?? 'LinkedIn did not publish the post.'
+        ];
     }
 
     public function uploadImage($access_token, $ownerUrn, $media)
@@ -227,6 +232,13 @@ class PostPublishLinkedinService implements SocialInterface
 
     public function linkedinPhotoPost($accessToken, $ownerUrn, $allImageUrns, $post_content)
     {
+        if (empty($allImageUrns)) {
+            return [
+                'status'  => 0,
+                'message' => 'LinkedIn did not accept the images. Make sure that the image URLs are public.'
+            ];
+        }
+
         $postPublish = $this->baseUrl . '/v2/posts';
 
         $commonDataParams = Helper::commonParams($ownerUrn, $post_content);
@@ -240,12 +252,12 @@ class PostPublishLinkedinService implements SocialInterface
 
         $this->httpHandler->request($postPublish, 'POST', $params, $header);
 
-        $responseHeader = $this->httpHandler->getResponseHeaders();
+        $publishedPostId = $this->publishedPostId();
 
-        if (isset($responseHeader['x-restli-id'])) {
+        if ($publishedPostId) {
             return [
                 'status'  => 1,
-                'message' => $responseHeader['x-restli-id']
+                'message' => $publishedPostId
             ];
         }
 
@@ -366,11 +378,11 @@ class PostPublishLinkedinService implements SocialInterface
 
         try {
             $this->httpHandler->request($post_publish_url, 'POST', $finalVideoData, $sendVideoHeaders);
-            $videoPostHeaderRes = $this->httpHandler->getResponseHeaders();
-            if (isset($videoPostHeaderRes['x-restli-id'])) {
+            $publishedPostId = $this->publishedPostId();
+            if ($publishedPostId) {
                 return [
                     'status'  => 1,
-                    'message' => $videoPostHeaderRes['x-restli-id']
+                    'message' => $publishedPostId
                 ];
             }
 
@@ -409,7 +421,10 @@ class PostPublishLinkedinService implements SocialInterface
 
         if (!empty($meta['og:image'])) {
             $thumbnail = $this->uploadImage($accessToken, $ownerUrn, [$meta['og:image']]);
-            $linkData['thumbnail'] = $thumbnail[0];
+
+            if (!empty($thumbnail)) {
+                $linkData['thumbnail'] = $thumbnail[0];
+            }
         }
 
         if (!empty($meta['og:description'])) {
@@ -417,6 +432,22 @@ class PostPublishLinkedinService implements SocialInterface
         }
 
         return $linkData;
+    }
+
+    /**
+     * The id of the post LinkedIn created by the last request, or null.
+     * The client keeps the headers of an earlier request when a request
+     * fails, so the status code must also be a success.
+     */
+    private function publishedPostId()
+    {
+        $responseHeader = $this->httpHandler->getResponseHeaders();
+
+        if (!Helper::isSuccessCode($this->httpHandler->getResponseCode()) || !isset($responseHeader['x-restli-id'])) {
+            return;
+        }
+
+        return $responseHeader['x-restli-id'];
     }
 
     private function logAndRetry($schedule_id, $account_id, $account_name, $postId, $postPublishResponse, $retry, $logId, $data)

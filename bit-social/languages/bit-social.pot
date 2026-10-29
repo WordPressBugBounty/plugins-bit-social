@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bit Social 1.20.1\n"
+"Project-Id-Version: Bit Social 1.20.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bit-social\n"
 "Last-Translator: Bit Apps <developer@bitapps.pro>\n"
 "Language-Team: Bit Apps <support@bitapps.pro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T11:34:00+00:00\n"
+"POT-Creation-Date: 2026-10-29T11:10:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -70,7 +70,11 @@ msgstr ""
 msgid "Every %1$s %2$s (Bit Social)"
 msgstr ""
 
-#: backend/app/HTTP/Services/Social/LinkedinService/LinkedinRefreshTokenService.php:72
+#: backend/app/HTTP/Services/Social/FacebookService/PostPublishFacebookService.php:108
+msgid "Facebook does not accept the access token. Connect Facebook again and select this account."
+msgstr ""
+
+#: backend/app/HTTP/Services/Social/LinkedinService/LinkedinRefreshTokenService.php:75
 msgid "LinkedIn could not renew the access token."
 msgstr ""
 
@@ -3964,11 +3968,11 @@ msgstr ""
 msgid "Google could not renew the access token."
 msgstr ""
 
-#: pro/backend/app/HTTP/Services/Social/InstagramService/PostPublishInstagramService.php:88
+#: pro/backend/app/HTTP/Services/Social/InstagramService/PostPublishInstagramService.php:89
 msgid "Instagram could not renew the access token."
 msgstr ""
 
-#: pro/backend/app/HTTP/Services/Social/InstagramService/PostPublishInstagramService.php:402
+#: pro/backend/app/HTTP/Services/Social/InstagramService/PostPublishInstagramService.php:403
 msgid "Instagram accepts JPEG images with an aspect ratio between 4:5 and 1.91:1. Please use an image within that range."
 msgstr ""
 
@@ -3976,7 +3980,7 @@ msgstr ""
 msgid "Pinterest could not renew the access token."
 msgstr ""
 
-#: pro/backend/app/HTTP/Services/Social/ThreadsService/ThreadsRefreshTokenService.php:66
+#: pro/backend/app/HTTP/Services/Social/ThreadsService/ThreadsRefreshTokenService.php:75
 msgid "Threads could not renew the access token."
 msgstr ""
 
@@ -3984,7 +3988,7 @@ msgstr ""
 msgid "TikTok could not renew the access token."
 msgstr ""
 
-#: pro/backend/app/HTTP/Services/Social/TumblrService/TumblrRefreshTokenService.php:152
+#: pro/backend/app/HTTP/Services/Social/TumblrService/TumblrRefreshTokenService.php:155
 msgid "Tumblr could not renew the access token."
 msgstr ""
 

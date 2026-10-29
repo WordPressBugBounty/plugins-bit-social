@@ -8,6 +8,7 @@ use BitApps\Social\Deps\BitApps\WPKit\Hooks\Hooks;
 use BitApps\Social\Deps\BitApps\WPKit\Http\Client\HttpClient;
 use BitApps\Social\HTTP\Services\Interfaces\SocialInterface;
 use BitApps\Social\HTTP\Services\Traits\LoggerTrait;
+use BitApps\Social\Model\Account;
 use BitApps\Social\Model\Schedule;
 use BitApps\Social\Utils\Common;
 use BitApps\Social\Utils\MetaGraph;
@@ -99,6 +100,13 @@ class PostPublishFacebookService implements SocialInterface
 
         $publishPostResponse = $response['response'];
         $publishPostImageError = $response['imageErrors'];
+
+        // Code 190: Facebook no longer accepts the token. This happens when
+        // the user removes the Page from the app or loses the Page role. Every
+        // later publish fails the same way, so warn on the account card.
+        if (isset($publishPostResponse->error->code) && (int) $publishPostResponse->error->code === 190) {
+            Account::flagNeedsReconnect('facebook', $account_id, __('Facebook does not accept the access token. Connect Facebook again and select this account.', 'bit-social'));
+        }
 
         $logData = [
             'schedule_id' => $schedule_id,

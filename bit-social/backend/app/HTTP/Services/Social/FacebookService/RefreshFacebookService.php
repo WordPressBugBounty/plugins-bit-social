@@ -10,9 +10,11 @@ use stdClass;
 class RefreshFacebookService
 {
     /**
-     * Long lived user tokens last 60 days; renew them with a margin.
+     * Long lived user tokens last 60 days. A renewal happens only when a post
+     * goes out, so renew after 20 days: a weekly or monthly schedule then
+     * always publishes once while the token is still valid.
      */
-    private const USER_TOKEN_LIFETIME = 50 * 24 * 60 * 60;
+    private const USER_TOKEN_LIFETIME = 20 * 24 * 60 * 60;
 
     private $httpHandler;
 

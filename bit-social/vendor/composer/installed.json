@@ -25,6 +25,7 @@
                 "sirbrillig/phpcs-variable-analysis": "*"
             },
             "time": "2024-07-07T11:30:42+00:00",
+            "published-time": "2024-07-07T12:04:32+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -84,6 +85,7 @@
                 "sirbrillig/phpcs-variable-analysis": "*"
             },
             "time": "2026-07-19T05:39:32+00:00",
+            "published-time": "2026-07-20T05:45:56+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -137,6 +139,7 @@
                 "squizlabs/php_codesniffer": "*"
             },
             "time": "2026-03-31T05:04:09+00:00",
+            "published-time": "2026-03-31T05:05:20+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -204,6 +207,7 @@
                 "typisttech/imposter-plugin": "Composer plugin to integrate composer and imposter"
             },
             "time": "2020-12-06T22:57:09+00:00",
+            "published-time": "2020-12-06T22:57:45+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -293,6 +297,7 @@
                 "typisttech/codeception-composer-project-module": "^0.1.1"
             },
             "time": "2020-12-06T23:41:30+00:00",
+            "published-time": "2020-12-06T23:43:44+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "TypistTech\\Imposter\\Plugin\\ImposterPlugin",

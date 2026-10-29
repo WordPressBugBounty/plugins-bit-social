@@ -69,7 +69,11 @@ class LinkedinRefreshTokenService
             // The grant itself is gone (revoked, or the refresh token aged
             // out after a year), so every later publish fails the same way
             // until the user re-authorizes. Warn on the account card.
-            Account::flagNeedsReconnect('linkedin', $this->accountId, __('LinkedIn could not renew the access token.', 'bit-social'));
+            // A network error says nothing about the grant, so the next
+            // publish tries again with the same refresh token.
+            if (!is_wp_error($tokenResponse)) {
+                Account::flagNeedsReconnect('linkedin', $this->accountId, __('LinkedIn could not renew the access token.', 'bit-social'));
+            }
 
             return false;
         }
